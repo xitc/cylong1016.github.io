@@ -1,0 +1,1023 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ubuntu,windows,linux,shadowsocks,android,翻墙,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="笑话人生" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="国内的网络环境我不说相信大家都懂。虽然墙内的世界很丰富，但是墙外的世界还有着更加精彩的内容。这不得不让我想起了曾经看过的一部漫画——进击的巨人。大部分人都在墙内过着安逸的生活，但是总有那么一帮人，想要去墙外探索未知的世界。我就是这样的人！【然后收到了女票的好人卡一张😃】之前因为想要体验 Google 搜索、体验 Youtube、查阅学习资料，还有玩的部分游戏需要翻墙，找了很多免费的代理和 VP">
+<meta name="keywords" content="ubuntu,windows,linux,shadowsocks,android,翻墙">
+<meta property="og:type" content="article">
+<meta property="og:title" content="站在 Shadowsocks 的肩膀上发现精彩的世界">
+<meta property="og:url" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/index.html">
+<meta property="og:site_name" content="笑话人生">
+<meta property="og:description" content="国内的网络环境我不说相信大家都懂。虽然墙内的世界很丰富，但是墙外的世界还有着更加精彩的内容。这不得不让我想起了曾经看过的一部漫画——进击的巨人。大部分人都在墙内过着安逸的生活，但是总有那么一帮人，想要去墙外探索未知的世界。我就是这样的人！【然后收到了女票的好人卡一张😃】之前因为想要体验 Google 搜索、体验 Youtube、查阅学习资料，还有玩的部分游戏需要翻墙，找了很多免费的代理和 VP">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-basic.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/my-service.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Windows-Shadowsocks-gui.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-menu.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-Android.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/search-shadowsocks.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-Qt5-GUI.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/config.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-icon.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/SwitchySharp-config.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-IOS.png">
+<meta property="og:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowrocket.png">
+<meta property="og:updated_time" content="2017-04-08T16:16:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="站在 Shadowsocks 的肩膀上发现精彩的世界">
+<meta name="twitter:description" content="国内的网络环境我不说相信大家都懂。虽然墙内的世界很丰富，但是墙外的世界还有着更加精彩的内容。这不得不让我想起了曾经看过的一部漫画——进击的巨人。大部分人都在墙内过着安逸的生活，但是总有那么一帮人，想要去墙外探索未知的世界。我就是这样的人！【然后收到了女票的好人卡一张😃】之前因为想要体验 Google 搜索、体验 Youtube、查阅学习资料，还有玩的部分游戏需要翻墙，找了很多免费的代理和 VP">
+<meta name="twitter:image" content="http://www.cylong.com/blog/2016/05/26/shadowsocks/Shadowsocks-basic.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 站在 Shadowsocks 的肩膀上发现精彩的世界 | 笑话人生 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-77162231-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0442bffd067501ab6af54ee3386c07fd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">笑话人生</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">年华易逝 懂得珍惜</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                站在 Shadowsocks 的肩膀上发现精彩的世界
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T13:51:29+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Shadowsocks/" itemprop="url" rel="index">
+                    <span itemprop="name">Shadowsocks</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/05/26/shadowsocks/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="blog/2016/05/26/shadowsocks/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-eye"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>国内的网络环境我不说相信大家都懂。虽然墙内的世界很丰富，但是墙外的世界还有着更加精彩的内容。这不得不让我想起了曾经看过的一部漫画——进击的巨人。大部分人都在墙内过着安逸的生活，但是总有那么一帮人，想要去墙外探索未知的世界。我就是这样的人！【然后收到了女票的好人卡一张😃】之前因为想要体验 Google 搜索、体验 Youtube、查阅学习资料，还有玩的部分游戏需要翻墙，找了很多免费的代理和 VPN，效果都不好，断断续续的。后来经过舍友的推荐，入了 Shadowsocks 的坑。体验了有两个月左右，效果很棒，访问速度也很快，强烈推荐给大家使用！！！(●’◡’●)</p>
+<a id="more"></a>
+<h1 id="购买服务"><a href="#购买服务" class="headerlink" title="购买服务"></a>购买服务</h1><ol>
+<li>点击进入 <a href="https://secure.shadowsocks.ch/aff.php?aff=8883" title="Shadowsocks" target="_blank" rel="noopener">Shadowsocks</a>【此链接是我的推广链接，你点击后还是会直接进入首页，但是通过这个链接购买服务后我也会获得一些好处啦，嘿嘿(<em>^_^</em>)】，进入首页后选择 <code>订购服务</code>。</li>
+<li>之后选择你想要购买的服务，点击现在订购。我选择的是 <code>Shadowsocks.com 普通版</code>。需要注意的是，虽然显示的价格是美元，但是在后面支付的时候会自动转化为人民币。<br><img src="Shadowsocks-basic.png" alt="Shadowsocks普通版"></li>
+<li>界面上选择你的付款年限，然后点击继续。</li>
+<li>在结账页面，你需要填写各种信息，需要认真填写，这也是在创建账号。</li>
+<li>Shadowsocks 支持 Alipay 支付宝国际版。之后付款就可以了，现在大约是 104 块钱一年。我买的时候，订购服务时显示的还是人民币，99块钱一年。虽然贵了一点点，不过还是可以接受的。</li>
+<li>之后进入 <a href="https://portal.shadowsocks.com/clientarea.php" title="客户中心 - Shadowsocks" target="_blank" rel="noopener">客户中心</a>，用第4步创建的账号登陆。</li>
+<li>点击产品服务，可以看到你刚刚购买的服务，状态为有效。<br><img src="my-service.png" alt="我的服务"></li>
+<li>点击刚刚购买的服务，会看到产品详情。下面有配置文件下载，选择 Windows 版下载。下载下来是 <code>gui-config.json</code>。</li>
+</ol>
+<h1 id="客户端安装使用"><a href="#客户端安装使用" class="headerlink" title="客户端安装使用"></a>客户端安装使用</h1><p>支持的客户端：OS X， Windows， Linux， iOS， Android， OpenWRT 路由器等。<br>详情请参考：<a href="https://shadowsocks.com/client.html" title="客户端 - Shadowsocks" target="_blank" rel="noopener">客户端 - Shadowsocks</a>，客户端都在 Github 上。</p>
+<h2 id="Windows-客户端"><a href="#Windows-客户端" class="headerlink" title="Windows 客户端"></a>Windows 客户端</h2><ol>
+<li>点击下载 <a href="https://github.com/shadowsocks/shadowsocks-windows/releases/download/3.0/Shadowsocks-3.0.zip" title="Shadowsocks-3.0.zip" target="_blank" rel="noopener">Shadowsocks-3.0.zip</a>【写这篇博客时候的最新版本】，或者去 <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" title="Github - Shadowsocks Windows" target="_blank" rel="noopener">Github - Shadowsocks Windows</a> 上寻找其他版本。</li>
+<li>解压后有一个 <code>Shadowsocks.exe</code> 文件。最好把这个文件放到一个目录下，比如新建一个 Shadowsocks 文件夹。</li>
+<li>把刚刚下载的 <code>gui-config.json</code> 文件放到与 <code>Shadowsocks.exe</code> 相同的目录下。</li>
+<li>双击 <code>Shadowsocks.exe</code>，会出现一个 GUI 界面，自动读取了 <code>gui-config.json</code> 文件中的内容。<br><img src="Windows-Shadowsocks-gui.png" alt="Windows Shadowsocks 图形界面"></li>
+<li>在右下角托盘图标上会有一个好像纸飞机的 Shadowsocks 图标，<code>右键-&gt;启动系统代理</code>，就可以越过墙壁，浏览更多丰富多彩的内容啦~<br><img src="Shadowsocks-menu.png" alt="Shadowsocks 菜单"></li>
+<li>另外建议设置成 <code>右键-&gt;开机启动</code>，这样不用每次开机手动启动了。还可以在 <code>右键-&gt;服务器</code> 中选择不同的服务器。</li>
+</ol>
+<h2 id="Android-客户端"><a href="#Android-客户端" class="headerlink" title="Android 客户端"></a>Android 客户端</h2><ol>
+<li>点击下载 <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v2.10.3/shadowsocks-nightly-2.10.3.apk" title="shadowsocks-nightly-2.10.3.apk" target="_blank" rel="noopener">Shadowsocks-nightly-2.10.3.apk</a>【写这篇博客时候的最新版本】，或者去 <a href="https://github.com/shadowsocks/shadowsocks-android/releases" title="Github - Shadowsocks Android" target="_blank" rel="noopener">Github - Shadowsocks Android</a> 上寻找其他版本。</li>
+<li>把这个 apk 安装到手机上【可以传到手机里，打开这个 apk 就能安装了】，中文叫影梭。</li>
+<li>安装完成后仍然需要配置，支持扫描二维码配置，但是需要下载一个客户端。我不喜欢下太多的客户端，所以就手动配置，具体的值可以用记事本打开 <code>gui-config.json</code> 查看。<br><img src="Shadowsocks-Android.png" alt="Shadowsocks Android"></li>
+<li>翻墙后就可以去 Google Play 商店更新 Shadowsocks 了(●’◡’●)</li>
+</ol>
+<p><strong>2016-09-27 更新</strong></p>
+<ol start="5">
+<li>目前最新版的 Shadowsocks 已经支持直接扫码配置了，不需要下载额外的客户端。在 Shadowsocks 官网里<code>客户中心--有效产品与服务</code>里就可以找到各个节点的二维码。</li>
+</ol>
+<h2 id="Linux-客户端"><a href="#Linux-客户端" class="headerlink" title="Linux 客户端"></a>Linux 客户端</h2><p>经历了N天之后,终于在舍友的指导下配置完成了。不得不说，Linux 真是一个让人折腾的系统。不过后来发现，其实还蛮简单的（╯－＿－）╯╧╧</p>
+<ol>
+<li>首先你需要下载 <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="Chrome 浏览器" target="_blank" rel="noopener">Chrome 浏览器</a> 【不需要翻墙】，已经有的小伙伴就不用重新下载了。</li>
+<li>使用如下命令安装你下载下来的 Chrome 安装包：<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i xxx-chrome-xxx.deb</span><br></pre></td></tr></table></figure></li>
+<li>通过 PPA 源安装 Shadowsocks-qt5，仅支持 Ubuntu 14.04 或更高版本。<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure></li>
+<li>之后就可以在应用列表里搜索到 Shadowsocks-qt5 了<br><img src="search-shadowsocks.png" alt="搜索应用列表"></li>
+<li>打开图形化界面，点击 <code>文件 -&gt; 从 gui-config.json 导入链接</code>，接着就会像下图一样。<br><img src="Shadowsocks-Qt5-GUI.png" alt="Shadowsocks-Qt5 图形界面"></li>
+<li>上图的 jp01 和 us01 都是后来配置好的，导入 gui-config.json 后还是有些需要自己配置。双击某一条连接，像我如下这样配置【默认有的配置就不要改了】：<br><img src="config.png" alt="连接配置"></li>
+<li>配置完成后点击 <code>OK</code>，再点击界面上面的 <code>连接</code>，测试下延迟，看看是否能连接上。可以多配置几个，方便切换~</li>
+<li>接下来就是配置 Chrome，让 Chrome 可以使用代理。下载安装 <a href="http://switchysharp.com/install.html" title="SwitchySharp" target="_blank" rel="noopener">SwitchySharp</a> 【目前此应用已经更新为 SwitchyOmega，请参考 <a href="/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">Chrome 配置 SwitchyOmega</a>】。</li>
+<li>打开 Chrome， 点击右上角的 <span class="fa fa-globe" aria-hidden="true"></span> 图标，再点击 <code>选项</code>。<br><img src="Shadowsocks-icon.png" alt="Shadowsocks 图标"></li>
+<li>点击 <code>新建情景模式</code>，做如下配置。<br><img src="SwitchySharp-config.png" alt="SwitchySharp 配置"></li>
+<li>保存后再点击 <span class="fa fa-globe" aria-hidden="true"></span> 图标就会有你刚刚配置的情景模式，选择后就可以使用 Chrome 浏览器浏览墙外的世界啦~【另外 SwitchySharp 可以升级成 SwitchyOmega 了，有兴趣的小伙伴可以试一试！】</li>
+<li>做了上述一系列操作后只有在 Chrome 中可以翻出墙外，至于全局代理我正在研究，过几天会出教程，有会的小伙伴也可以交 ♂ 流下~【此坑算是没时间填了(╯‵□′)╯︵┻━┻】</li>
+</ol>
+<h2 id="IOS-客户端"><a href="#IOS-客户端" class="headerlink" title="IOS 客户端"></a>IOS 客户端</h2><p>由于本渣没有任何的苹果设备。。。所以自己研究吧，相信聪明的你可以完成的！去 <a href="https://shadowsocks.com/client.html" title="客户端 - Shadowsocks" target="_blank" rel="noopener">客户端 - Shadowsocks</a> 可以找到相关的客户端。</p>
+<p><strong>2016-09-27 更新</strong></p>
+<p>最近也是人品爆表，抽奖抽到了个 IPad mini 2，自然就研究了下如何在 IOS 中试用 Shadowsocks 了。官方推荐的客户端是 <code>shadowrocket</code>。App Store 里卖6块钱。我找到的是 <code>Lifi客户端-Shadowsocks and ShadowsocksR VPN</code>，也是在 App Store 里下载，不过是免费的。两者的配置方式基本一样，都可以扫码配置。在 Shadowsocks 官网里<code>客户中心--我的产品与服务</code>里就可以找到各个节点的二维码。</p>
+<ol>
+<li><p>Lifi 配置，在应用里选择<code>设置--从二维码导入</code>就会打开扫码界面，之后配置一下代理名称，打开系统 VPN 就可以了，非常简单【我觉得有张图挺好看的，于是强行加了张图(<em>^_^</em>)】。：<br><img src="Shadowsocks-IOS.png" alt="Shadowsocks IOS"></p>
+</li>
+<li><p>Shadowrocket 配置，打开应用，点击左上角的扫码图标就可以打开扫码页面：<br><img src="Shadowrocket.png" alt="Shadowrocket"></p>
+</li>
+</ol>
+<p>看评论说<code>Lifi客户端-Shadowsocks and ShadowsocksR VPN</code>是拿的 Potatso 源码？我也不知道是否真实，有了解的小伙伴欢迎联系我。不过在我一天的试用中发现这个客户端一直掉线，而且舍友 IOS 10 也没法使用，于是我俩都换成了 <code>shadowrocket</code>，IOS 10 可以用，不过也是一直掉线啊，而且有时候还闪退(╯‵□′)╯︵┻━┻！如果用 Shadowrocket 的小伙伴发现QQ聊天的时候没法接收和发送图片，可以在应用的 <code>Settings-Global Routing</code>中选择 Proxy 就好了。大家可以先试一下免费的 Lifi，如果不好用再换成收费的那个 Shadowrocket 吧。有更好的客户端也欢迎在下面讨论。</p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li>要是偶尔发现网络不稳定，切换线路试一下。</li>
+<li>不要同时在多台设备上使用，也不要把配置文件分享给其他人，可能会遭到封号行为。不过手机和 PC 同时使用时没事的。</li>
+<li>我遇到一个问题就是启动某些服务器无法下载 Google Play 里的应用，而且有些应用也提示无法在你所在的国家或者地区购买，这个时候就切换下线路，并且清除 Google Play 数据重启就行了。</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki" title="中文文档 - Shadowsocks-qt5" target="_blank" rel="noopener">中文文档 - Shadowsocks-qt5</a><br><a href="blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega - 笑话人生">Chrome 配置 SwitchyOmega - 笑话人生</a> 【Shadowsocks 配合 SwitchyOmega 使用有奇效，建议尝试下(●’◡’●)】</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">站在 Shadowsocks 的肩膀上发现精彩的世界</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">http://www.cylong.com/blog/2016/05/26/shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+          
+            <a href="/tags/windows/" rel="tag">#windows</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/shadowsocks/" rel="tag">#shadowsocks</a>
+          
+            <a href="/tags/android/" rel="tag">#android</a>
+          
+            <a href="/tags/翻墙/" rel="tag">#翻墙</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/05/22/google-baidu-search/" rel="next" title="如何在 Google 和百度里搜索到自己的网站">
+                <i class="fa fa-chevron-left"></i> 如何在 Google 和百度里搜索到自己的网站
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/06/07/windows-10-metro-shadowsocks/" rel="prev" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">
+                Windows 10 Metro 应用使用本地 Shadowsocks 代理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="cylong">
+          <p class="site-author-name" itemprop="name">cylong</p>
+          <p class="site-description motion-element" itemprop="description">我说来不及，你就不努力了么？</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="/about/#联系我" target="_blank" title="Email">
+                  
+                    <i class="fa fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cylong1016" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cyl19941016" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cylong1016" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/cylong1016" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cylong1016" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element">
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-globe fa-fw"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://disinuo.github.io/" title="Disinuo的博客" target="_blank">Disinuo的博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.lsysummer.com/" title="lsySummer" target="_blank">lsySummer</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liaodanqi.me/" title="Jane" target="_blank">Jane</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://agneszing.com/" title="Zing" target="_blank">Zing</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#购买服务"><span class="nav-number">1.</span> <span class="nav-text">购买服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#客户端安装使用"><span class="nav-number">2.</span> <span class="nav-text">客户端安装使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-客户端"><span class="nav-number">2.1.</span> <span class="nav-text">Windows 客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-客户端"><span class="nav-number">2.2.</span> <span class="nav-text">Android 客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-客户端"><span class="nav-number">2.3.</span> <span class="nav-text">Linux 客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOS-客户端"><span class="nav-number">2.4.</span> <span class="nav-text">IOS 客户端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cylong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客共32.8k字</span>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'cylong1016';
+      var disqus_identifier = 'blog/2016/05/26/shadowsocks/';
+      var disqus_title = '站在 Shadowsocks 的肩膀上发现精彩的世界';
+      var disqus_url = 'http://www.cylong.com/blog/2016/05/26/shadowsocks/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+  <!--
+  <script type="text/javascript" src="/js/src/quietflow.js"></script>
+  <script type="text/javascript">
+    $("body").quietflow();
+  </script>
+  -->
+  <!-- <script type="text/javascript" src="/js/src/particle.js"></script> -->
+</body>
+</html>
