@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>与青春有关的日子（2001&amp;2011）十年纪之全明星</title>
-    <url>/blog/2011/02/24/iverson-2001-2011/</url>
+    <title>Atom 的炫酷插件 activate-power-mode</title>
+    <url>/blog/2016/04/22/activate-power-mode/</url>
     <content><![CDATA[<hr>
-<p>没有奇迹。<br>纵使勒布朗·詹姆斯率东部“殊死”抵抗一番，依旧未能填平那将近20分的沟壑。<br>终于，有人怀念起十年以前，那个与世界为敌，狂妄得无法无天的小子来了。<br>“我离开后，你们才会真正明白我的价值。”<br>我们的艾如是说道。</p>
+<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
 <a id="more"></a>
-<p>还记得那时的全明星吗？<br>尚在湖人的沙克，梳着辫子头的天尊，拄着双拐的希尔，笑容灿烂的马布里，引爆全场的卡特，顶着怪异头型的科比，一副无所谓表情的麦迪，以及，那时风华绝代的阿伦艾弗森。<br>那些是时代的宠儿。他们不知道未来的命运，不知道沙克会与科比闹翻，不知道希尔把最好的年华献给了队医，不知道卡特有一天失去翅膀也会泯然众人，不知道马布里会被视为球队毒药，不知道麦迪会被带上“软”与“炸伤”的帽子，不知道AI有一天会流浪到土耳其，不知道未来的某一天，自己会成为时代的倒影。</p>
-<p>那仅仅是2001年，那时的华盛顿是属于他们的舞台。<br>遥远的十年以前，轻狂的AI连走起路来都放荡不羁。那些个意气风发的少年，一张张微笑的脸，试图把这世界改变。<br>如果有十年前的照片，那一定已经泛黄。只有在比赛录像中，现场DJ充满激情的呼喊才依旧清晰，那些故人的笑容也依然明朗。那总会让我们产生错觉，闭上眼，仿佛一切发生在昨天。心微微的疼，因为那些人已不复当年。</p>
-<p>那是场高低悬殊的比赛，至少东部七名队员身高都不足两米，所有人都觉得他们不够强壮，无法取得比赛的胜利。只是，AI与马布里联手向世界证明了，胜利与身体无关，与之有关的，只是——心！那颗为胜利而跳动的心脏。<br>于是造就了如此一场惊心动魄荡气回肠的比赛。看看今年的全明星，再与十年前做对比，你就会发现，一代人已经走向妥协，这个世界的反面英雄已经几乎绝迹。再也没有人会在落后二十几分时依旧骄傲的说我们会赢了；再也没有人可以那么勇敢地站在权威的背面了；再也没有人会玩世不恭地对这个世界竖起中指了。<br>十年过去了，那时叱咤风云的人物都离开了。<br>但使龙城飞将在，不教胡马度阴山。</p>
-<p>但，当年轻的球员们看到阿伦艾弗森与世界为敌后的下场时，恐怕已经没有多少人愿意和他再走上同一条道路。那种坚持与忠诚，执着与顽强，反抗与斗争，那首属于英雄的赞歌再也不会在NBA响起了，这个世界也许还需要个人英雄主义，只是没有人愿意去做那个英雄了。<br>单挑篮球之神，全明星逆转，总决赛与繁华的洛杉矶为敌，纹身，嘻哈，垄沟头，轻描淡写，不爱训练，我行我素，史诗般的对决，胜利失败，爱与恨。<br>再也没有人可以承受这一切了。答案，真的无法被取代。<br>阿伦艾弗森走的，的确是一条前无古人后无来者的道路，因为再也没有人还有勇气如他一般。<br>单凭这一点，他所做的一切，就值得所有人，脱帽致敬。</p>
-<p>所以，纵使上赛季被球队裁掉，老将底薪，球队备胎，依旧全明星。<br>你所做的事情，权威不喜欢，我们却深爱。<br>那些传奇，权威可以淡漠，我们却会铭记。<br>无论你是无限风光如日中天，还是黯然神伤举步维艰，我们都站在你的身后。<br>你是我们无法消散的光芒，<br>你是我们此生不变的信仰。</p>
-<p>无论未来有多远，我们等你。</p>
+<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
+<p>先上图！</p>
+<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
+<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
+<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
+<ul>
+<li>Windows：直接双击安装就可以。</li>
+<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
+</ul>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
+<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
+<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
+<ul>
+<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
+<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
+<li>找到 <code>packages</code> 设置</li>
+<li>找到  <code>activate-power-mode</code></li>
+<li>进入到  <code>Settings</code></li>
+<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
+</ul>
+<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
+<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
 <hr>
-<h1 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h1><p>骄傲的狮子座,喜欢笑,喜欢明亮到刺眼的阳光,喜欢初春时节融化的冰雪，喜欢湛蓝色的天空，喜欢一生都在飞翔的北极燕鸥，喜欢伤感的文字,喜欢动人的故事,喜欢费城，此生挚爱 Allen Iverson。</p>
-<h1 id="笔者附言"><a href="#笔者附言" class="headerlink" title="笔者附言"></a>笔者附言</h1><p>嘿嘿，偷偷搬运下！不要让原作者发现！(●’◡’●)【2016-11-22 16:10:55】</p>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/" title="与青春有关的日子（2001&2011）十年纪之全明星">与青春有关的日子（2001&2011）十年纪之全明星</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/" title="与青春有关的日子（2001&2011）十年纪之全明星">http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>艾已成诗</category>
+        <category>Atom</category>
       </categories>
       <tags>
-        <tag>艾弗森</tag>
-        <tag>艾已成诗</tag>
-        <tag>全明星</tag>
-        <tag>流年</tag>
+        <tag>atom</tag>
+        <tag>插件</tag>
+        <tag>ubuntu</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -113,60 +134,10 @@ f1g1ns2.dnspod.net
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
         <tag>git</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Atom 的炫酷插件 activate-power-mode</title>
-    <url>/blog/2016/04/22/activate-power-mode/</url>
-    <content><![CDATA[<hr>
-<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
-<a id="more"></a>
-<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
-<p>先上图！</p>
-<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
-<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
-<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
-<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
-<ul>
-<li>Windows：直接双击安装就可以。</li>
-<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
-</ul>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
-<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
-<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
-<ul>
-<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
-<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
-<li>找到 <code>packages</code> 设置</li>
-<li>找到  <code>activate-power-mode</code></li>
-<li>进入到  <code>Settings</code></li>
-<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
-</ul>
-<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
-<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Atom</category>
-      </categories>
-      <tags>
-        <tag>atom</tag>
-        <tag>插件</tag>
-        <tag>ubuntu</tag>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -285,109 +256,32 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>网站首选域</title>
-    <url>/blog/2016/05/02/preferred-domain/</url>
+    <title>与青春有关的日子（2001&amp;2011）十年纪之全明星</title>
+    <url>/blog/2011/02/24/iverson-2001-2011/</url>
     <content><![CDATA[<hr>
-<h1 id="什么是首选域"><a href="#什么是首选域" class="headerlink" title="什么是首选域"></a>什么是首选域</h1><p>当我们在访问一个网站的时候，使用 <a href="http://www.cylong.com">http://www.cylong.com</a> 和 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 访问网站，获得的内容并没有区别。对于用户来说，带 www 和不带 www 访问是一样的，但是对于搜索引擎就不一样了，两种域会被视为不同的网页，使得权重分散。Google 解释如下：</p>
-<blockquote><p>首选网域是您希望 Google 用来将您的网页编入索引的网域（有时也称为规范网域）。指向您网站的链接可能会同时使用 www 版和非 www 版网址（例如，<a href="http://www.example.com" target="_blank" rel="noopener">http://www.example.com</a> 和 <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a>）。首选域是您希望 Google 用来在搜索结果中显示您网站的版本。</p>
-<footer><strong>Search Console帮助</strong><cite><a href="https://support.google.com/webmasters/answer/44231" target="_blank" rel="noopener">设置您的首选网域（www 版网址或非 www 版网址）</a></cite></footer></blockquote>
+<p>没有奇迹。<br>纵使勒布朗·詹姆斯率东部“殊死”抵抗一番，依旧未能填平那将近20分的沟壑。<br>终于，有人怀念起十年以前，那个与世界为敌，狂妄得无法无天的小子来了。<br>“我离开后，你们才会真正明白我的价值。”<br>我们的艾如是说道。</p>
 <a id="more"></a>
-<h1 id="设置首选域"><a href="#设置首选域" class="headerlink" title="设置首选域"></a>设置首选域</h1><h2 id="使用-Google-Search-Console-设置"><a href="#使用-Google-Search-Console-设置" class="headerlink" title="使用 Google Search Console 设置"></a>使用 Google Search Console 设置</h2><p><b>注意：</b> <em>此方式仅适合 Google</em></p>
-<ol>
-<li>点击 <a href="https://www.google.com/webmasters/" title="Google 网站站长" target="_blank" rel="noopener">Google 网站站长</a>，然后点击首页的 <code>SEARCH CONSOLE</code>。</li>
-<li>登陆后，点击想设置首选域的网站（没有网站就添加下）。</li>
-<li>点击右上角的齿轮设置图标 <span class="fa fa-cog" aria-hidden="true"></span>，然后点击 <code>网站设置</code>。</li>
-<li>选择对应的首选域。</li>
-</ol>
-<h2 id="使用-301-重定向"><a href="#使用-301-重定向" class="headerlink" title="使用 301 重定向"></a>使用 301 重定向</h2><p>为了使其他搜索引擎和访问者都采用你的首选版本，建议你使用 301 重定向对你的非首选网域的访问重定向到首选网域。在 <code>.htaccess</code> 文件里添加如下代码（要针对托管在运行 Apache 的服务器上的网站实施 301 重定向，你需要有访问权限，日后可能会写什么是 <code>.htaccess</code> 文件，先挖个坑）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;http_host&#125; ^cylong.com [NC]</span><br><span class="line">RewriteRule ^(.*)$ http://www.cylong.com/$1 [L,R=301]</span><br></pre></td></tr></table></figure>
-<p>使访问 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 的时候就会自动转到 <a href="http://www.cylong.com">http://www.cylong.com</a>。</p>
-<h2 id="Hexo-博客框架设置首选域"><a href="#Hexo-博客框架设置首选域" class="headerlink" title="Hexo 博客框架设置首选域"></a>Hexo 博客框架设置首选域</h2><p>我的博客是由 <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 搭建的。没有部署到一个 Apache 服务器上，所以上面的设置方法就没用了。博客源码由 Hexo 生成，部署在 <a href="https://github.com/cylong1016/cylong1016.github.io" target="_blank" rel="noopener">Github</a> 上。如何搭建 Hexo 博客请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> 。</p>
-</blockquote>
-<p>如果你使用的是 GitHub 提供的域名，比如我的是 <a href="http://cylong1016.github.com" target="_blank" rel="noopener">http://cylong1016.github.com</a>。就不需要往下看了，如果你使用的是自己购买的域名，则只需要在 CNAME 中填写你所希望的首选域就可以了，比如我的是:</p>
-<figure class="highlight plain"><figcaption><span>CNAME</span></figcaption><table><tr><td class="code"><pre><span class="line">www.cylong.com</span><br></pre></td></tr></table></figure>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>当你确定你的首选域之后，在以后的 SEO 工作中，比如友情链接、链接推广时，都要采用你设置的首选域。</p>
+<p>还记得那时的全明星吗？<br>尚在湖人的沙克，梳着辫子头的天尊，拄着双拐的希尔，笑容灿烂的马布里，引爆全场的卡特，顶着怪异头型的科比，一副无所谓表情的麦迪，以及，那时风华绝代的阿伦艾弗森。<br>那些是时代的宠儿。他们不知道未来的命运，不知道沙克会与科比闹翻，不知道希尔把最好的年华献给了队医，不知道卡特有一天失去翅膀也会泯然众人，不知道马布里会被视为球队毒药，不知道麦迪会被带上“软”与“炸伤”的帽子，不知道AI有一天会流浪到土耳其，不知道未来的某一天，自己会成为时代的倒影。</p>
+<p>那仅仅是2001年，那时的华盛顿是属于他们的舞台。<br>遥远的十年以前，轻狂的AI连走起路来都放荡不羁。那些个意气风发的少年，一张张微笑的脸，试图把这世界改变。<br>如果有十年前的照片，那一定已经泛黄。只有在比赛录像中，现场DJ充满激情的呼喊才依旧清晰，那些故人的笑容也依然明朗。那总会让我们产生错觉，闭上眼，仿佛一切发生在昨天。心微微的疼，因为那些人已不复当年。</p>
+<p>那是场高低悬殊的比赛，至少东部七名队员身高都不足两米，所有人都觉得他们不够强壮，无法取得比赛的胜利。只是，AI与马布里联手向世界证明了，胜利与身体无关，与之有关的，只是——心！那颗为胜利而跳动的心脏。<br>于是造就了如此一场惊心动魄荡气回肠的比赛。看看今年的全明星，再与十年前做对比，你就会发现，一代人已经走向妥协，这个世界的反面英雄已经几乎绝迹。再也没有人会在落后二十几分时依旧骄傲的说我们会赢了；再也没有人可以那么勇敢地站在权威的背面了；再也没有人会玩世不恭地对这个世界竖起中指了。<br>十年过去了，那时叱咤风云的人物都离开了。<br>但使龙城飞将在，不教胡马度阴山。</p>
+<p>但，当年轻的球员们看到阿伦艾弗森与世界为敌后的下场时，恐怕已经没有多少人愿意和他再走上同一条道路。那种坚持与忠诚，执着与顽强，反抗与斗争，那首属于英雄的赞歌再也不会在NBA响起了，这个世界也许还需要个人英雄主义，只是没有人愿意去做那个英雄了。<br>单挑篮球之神，全明星逆转，总决赛与繁华的洛杉矶为敌，纹身，嘻哈，垄沟头，轻描淡写，不爱训练，我行我素，史诗般的对决，胜利失败，爱与恨。<br>再也没有人可以承受这一切了。答案，真的无法被取代。<br>阿伦艾弗森走的，的确是一条前无古人后无来者的道路，因为再也没有人还有勇气如他一般。<br>单凭这一点，他所做的一切，就值得所有人，脱帽致敬。</p>
+<p>所以，纵使上赛季被球队裁掉，老将底薪，球队备胎，依旧全明星。<br>你所做的事情，权威不喜欢，我们却深爱。<br>那些传奇，权威可以淡漠，我们却会铭记。<br>无论你是无限风光如日中天，还是黯然神伤举步维艰，我们都站在你的身后。<br>你是我们无法消散的光芒，<br>你是我们此生不变的信仰。</p>
+<p>无论未来有多远，我们等你。</p>
 <hr>
+<h1 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h1><p>骄傲的狮子座,喜欢笑,喜欢明亮到刺眼的阳光,喜欢初春时节融化的冰雪，喜欢湛蓝色的天空，喜欢一生都在飞翔的北极燕鸥，喜欢伤感的文字,喜欢动人的故事,喜欢费城，此生挚爱 Allen Iverson。</p>
+<h1 id="笔者附言"><a href="#笔者附言" class="headerlink" title="笔者附言"></a>笔者附言</h1><p>嘿嘿，偷偷搬运下！不要让原作者发现！(●’◡’●)【2016-11-22 16:10:55】</p>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">网站首选域</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">http://www.cylong.com/blog/2016/05/02/preferred-domain/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/" title="与青春有关的日子（2001&2011）十年纪之全明星">与青春有关的日子（2001&2011）十年纪之全明星</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/" title="与青春有关的日子（2001&2011）十年纪之全明星">http://www.cylong.com/blog/2011/02/24/iverson-2001-2011/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Web</category>
+        <category>艾已成诗</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>apache</tag>
-        <tag>seo</tag>
-        <tag>301重定向</tag>
-        <tag>htaccess</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Apache 如何设置 404 错误页面</title>
-    <url>/blog/2016/04/29/apache-404/</url>
-    <content><![CDATA[<hr>
-<p>当我们浏览网站的时候，有时候会发现访问的页面不存在了，页面会有“你访问的页面不存在了，跳转到主页”或者“404 Not Found”等等的提示。我们通常称之为 404 页面。所谓的 404 页面就是当用户输入一个错误或非存在的链接时，显示的一个页面。当 Web 服务器接到类似请求时，会返回一个 404 状态码，告诉浏览器要请求的资源并不存在。显示的 404 页面主要作用是告诉用户，你输入的网址多请求的页面是不存在的或者是一个错误的链接，引导用户进入网站的其他页面。但是 Web 的默认 404 页面非常的简陋，对用户很不友好，这就需要我们自己定义个性化的 404 页面，提升用户体验。</p>
-<a id="more"></a>
-<h1 id="Apache-设置-404-错误页面"><a href="#Apache-设置-404-错误页面" class="headerlink" title="Apache 设置 404 错误页面"></a>Apache 设置 404 错误页面</h1><p>在 <code>.htaccess</code> 文件中加入代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ErrorDocument 404 /404.html</span><br></pre></td></tr></table></figure></p>
-<p>之后在网站根目录建立一个 <code>404.html</code> 文件，编写你的 404 页面。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>不要将 404 页面直接指向到网站主页，这可能导致你的首页不被搜索引擎收录。</li>
-<li>/404.html 不要带域名，比如(错误写法：<a href="http://www.cylong.com/404.html">http://www.cylong.com/404.html</a>)，否则返回的状态码不是 404，而是 302、200。</li>
-</ul>
-<h1 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO(搜索引擎优化)"></a>SEO(搜索引擎优化)</h1><p>404 状态码对搜索引擎是非常重要的。需要注意的是，有时候我们看到一个 404 的错误页面，但返回的状态码可能并不是 404。用户并不会关心状态码是多少，但是对于搜索引擎就不一样了。当搜索引擎获取到404 状态码，就表示此 URL 已经失效，页面已经不存在了。搜索引擎就不会索引这个页面，并且删除数据库中的索引。若返回的是 200，搜索引擎就会对此 URL 建立索引，这样就会产生多个不同的 URL 具有相同的页面内容，搜索引擎就认为你的网站有大量重复的内容，可能会被降权。</p>
-<p>所以当我们自定义错误页面的时候，一定要保证状态码也是 404，不仅要对用户友好，也要对搜索引擎友好。</p>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://bbs.20z.com/thread-5162-1-1.html" title="网站如何设置404页面，什么是404错误，404页面代码怎么写" target="_blank" rel="noopener">网站如何设置404页面，什么是404错误，404页面代码怎么写</a><br><a href="http://www.yzznl.cn/archives/19.html" title="园子博客 - 如何设置404页面" target="_blank" rel="noopener">园子博客 - 如何设置404页面</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/29/apache-404/" title="Apache 如何设置 404 错误页面">Apache 如何设置 404 错误页面</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/29/apache-404/" title="Apache 如何设置 404 错误页面">http://www.cylong.com/blog/2016/04/29/apache-404/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Apache</category>
-      </categories>
-      <tags>
-        <tag>apache</tag>
-        <tag>seo</tag>
-        <tag>htaccess</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Struts2 参数依赖注入失败</title>
-    <url>/blog/2016/05/10/struts2-jsp-param/</url>
-    <content><![CDATA[<hr>
-<p>这是在 <a href="https://segmentfault.com/" title="SegmentFault" target="_blank" rel="noopener">SegmentFault</a> 上看到的一个问题，正好前不久学习了 J2EE 的 SSH 框架，看到这个问题忍不住答了一下。结果问题并不像表面上那么简单。没办法，自己挖的坑，跪着也要填完( ▼-▼ )。原问题链接：</p>
-<blockquote>
-<p><a href="https://segmentfault.com/q/1010000005088213/a-1020000005088292" title="struct2框架jsp页面传参失败" target="_blank" rel="noopener">struct2框架jsp页面传参失败</a></p>
-</blockquote>
-<a id="more"></a>
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>和提问者要了源码，方便查找BUG。源代码太长，我就截取了部分代码。</p>
-<figure class="highlight html"><figcaption><span>addFlower.jsp</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">action</span>=<span class="string">"addFlower"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"380"</span> &gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span>鲜花ID：<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">id</span>=<span class="string">"goodsId"</span> <span class="attr">name</span>=<span class="string">"goods.goodsId"</span>/&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"添加"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>struts.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"addFlower"</span> <span class="attr">class</span>=<span class="string">"flowers"</span> <span class="attr">method</span>=<span class="string">"addFlowerInfo"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"index"</span>&gt;</span>/flowerInformation/flowerInformation.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.FlowerAction"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"flowerBiz"</span> <span class="attr">ref</span>=<span class="string">"flowerBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><figcaption><span>FlowerAction.java</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowerAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">RequestAware</span>, <span class="title">SessionAware</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">getGoods</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGoods</span><span class="params">(Goods goods)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.goods = goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addFlowerInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"goods:"</span> + goods);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>基本上看这些代码是完全正确的啊，并没有什么错误【后来证明确实也没有错误( ╯□╰ )】。拿到项目代码的我运行了下【运行前由于环境不同，我配置了好久啊啊啊啊！】，输出一直是 <code>goods:null</code>。这我就非常奇怪了，和之前写的 J2EE 项目对比了下，套路都是一样的啊！后来我发现了上面的一堆错误信息【为什么不早点看这些错误信息呢】，基本上都是围绕着下面这个错误：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Caused by: java.lang.IllegalStateException: Cannot convert value of type [com.xhydxs.action.AdminUserAction] to required type [com.xhydxs.entity.AdminUser] for property &apos;adminUser&apos;: no matching editors or conversion strategy found</span><br></pre></td></tr></table></figure>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>可以发现是类型转化问题，为什么会让 AdminUserAction 转化成 AdminUser 呢？这两个类怎么会互相转化呢？于是我使用全局查找 AdminUserAction 和 AdminUser 这两个关键词【用 Atom 编辑器】。终于让我发现以下的代码！！！</p>
-<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>Goods.hbm.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">many-to-one</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.entity.AdminUser"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">fetch</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"UPD_OPR"</span> <span class="attr">length</span>=<span class="string">"20"</span> <span class="attr">not-null</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">many-to-one</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>发现了么？name 都是 adminUser，然而 class 分别对应着 AdminUserAction 和 AdminUser。然后把 AdminUserAction 对应的 name 改掉就行了。。。。至于为什么上面这个错误会导致 goods 为 null，因为在 Goods 类里有一个 AdminUser 成员变量，导致 struts 没法构建 goods 这个实例了&gt;3&lt;</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">Struts2 参数依赖注入失败</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>java</tag>
-        <tag>jsp</tag>
+        <tag>艾弗森</tag>
+        <tag>艾已成诗</tag>
+        <tag>全明星</tag>
+        <tag>流年</tag>
       </tags>
   </entry>
   <entry>
@@ -457,6 +351,117 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>网站首选域</title>
+    <url>/blog/2016/05/02/preferred-domain/</url>
+    <content><![CDATA[<hr>
+<h1 id="什么是首选域"><a href="#什么是首选域" class="headerlink" title="什么是首选域"></a>什么是首选域</h1><p>当我们在访问一个网站的时候，使用 <a href="http://www.cylong.com">http://www.cylong.com</a> 和 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 访问网站，获得的内容并没有区别。对于用户来说，带 www 和不带 www 访问是一样的，但是对于搜索引擎就不一样了，两种域会被视为不同的网页，使得权重分散。Google 解释如下：</p>
+<blockquote><p>首选网域是您希望 Google 用来将您的网页编入索引的网域（有时也称为规范网域）。指向您网站的链接可能会同时使用 www 版和非 www 版网址（例如，<a href="http://www.example.com" target="_blank" rel="noopener">http://www.example.com</a> 和 <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a>）。首选域是您希望 Google 用来在搜索结果中显示您网站的版本。</p>
+<footer><strong>Search Console帮助</strong><cite><a href="https://support.google.com/webmasters/answer/44231" target="_blank" rel="noopener">设置您的首选网域（www 版网址或非 www 版网址）</a></cite></footer></blockquote>
+<a id="more"></a>
+<h1 id="设置首选域"><a href="#设置首选域" class="headerlink" title="设置首选域"></a>设置首选域</h1><h2 id="使用-Google-Search-Console-设置"><a href="#使用-Google-Search-Console-设置" class="headerlink" title="使用 Google Search Console 设置"></a>使用 Google Search Console 设置</h2><p><b>注意：</b> <em>此方式仅适合 Google</em></p>
+<ol>
+<li>点击 <a href="https://www.google.com/webmasters/" title="Google 网站站长" target="_blank" rel="noopener">Google 网站站长</a>，然后点击首页的 <code>SEARCH CONSOLE</code>。</li>
+<li>登陆后，点击想设置首选域的网站（没有网站就添加下）。</li>
+<li>点击右上角的齿轮设置图标 <span class="fa fa-cog" aria-hidden="true"></span>，然后点击 <code>网站设置</code>。</li>
+<li>选择对应的首选域。</li>
+</ol>
+<h2 id="使用-301-重定向"><a href="#使用-301-重定向" class="headerlink" title="使用 301 重定向"></a>使用 301 重定向</h2><p>为了使其他搜索引擎和访问者都采用你的首选版本，建议你使用 301 重定向对你的非首选网域的访问重定向到首选网域。在 <code>.htaccess</code> 文件里添加如下代码（要针对托管在运行 Apache 的服务器上的网站实施 301 重定向，你需要有访问权限，日后可能会写什么是 <code>.htaccess</code> 文件，先挖个坑）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;http_host&#125; ^cylong.com [NC]</span><br><span class="line">RewriteRule ^(.*)$ http://www.cylong.com/$1 [L,R=301]</span><br></pre></td></tr></table></figure>
+<p>使访问 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 的时候就会自动转到 <a href="http://www.cylong.com">http://www.cylong.com</a>。</p>
+<h2 id="Hexo-博客框架设置首选域"><a href="#Hexo-博客框架设置首选域" class="headerlink" title="Hexo 博客框架设置首选域"></a>Hexo 博客框架设置首选域</h2><p>我的博客是由 <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 搭建的。没有部署到一个 Apache 服务器上，所以上面的设置方法就没用了。博客源码由 Hexo 生成，部署在 <a href="https://github.com/cylong1016/cylong1016.github.io" target="_blank" rel="noopener">Github</a> 上。如何搭建 Hexo 博客请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> 。</p>
+</blockquote>
+<p>如果你使用的是 GitHub 提供的域名，比如我的是 <a href="http://cylong1016.github.com" target="_blank" rel="noopener">http://cylong1016.github.com</a>。就不需要往下看了，如果你使用的是自己购买的域名，则只需要在 CNAME 中填写你所希望的首选域就可以了，比如我的是:</p>
+<figure class="highlight plain"><figcaption><span>CNAME</span></figcaption><table><tr><td class="code"><pre><span class="line">www.cylong.com</span><br></pre></td></tr></table></figure>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>当你确定你的首选域之后，在以后的 SEO 工作中，比如友情链接、链接推广时，都要采用你设置的首选域。</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">网站首选域</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">http://www.cylong.com/blog/2016/05/02/preferred-domain/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>apache</tag>
+        <tag>seo</tag>
+        <tag>301重定向</tag>
+        <tag>htaccess</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 使用 cmd(命令提示符)创建文件</title>
+    <url>/blog/2016/05/09/windows-linux-new-file/</url>
+    <content><![CDATA[<hr>
+<p>最近在研究 <a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a>，于是想创建一个 <code>.gitignore</code> 文件做测试，<code>右键-&gt;新建-&gt;文本文档</code> 再输入文件名后，惊讶的发现，Windows 竟然提示： 请键入文件名！【不得不去吐槽！】。看样子 Windows 是把 gitignore 当成文件名的后缀了。没办法，只好打开 cmd(命令提示符)去创建文件了。</p>
+<a id="more"></a>
+<h1 id="打开-cmd"><a href="#打开-cmd" class="headerlink" title="打开 cmd"></a>打开 cmd</h1><p>一般有以下方式打开 cmd【<em>我使用的是 Windows 10 系统，某些方法可能没用</em>】：</p>
+<ul>
+<li>在某个文件夹下按住 <code>Shift</code> 键，然后点击 <code>鼠标右键</code>，选择 <code>在此处打开命令窗口</code>（建议使用此方式，这样你就不用 cd 到指定的文件夹了）。</li>
+<li>键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>cmd</code> 并确定。</li>
+<li>键盘组合键 <span class="fa fa-windows"></span> + X，然后选择 <code>命令提示符</code>。</li>
+<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 cmd 并确认（Windows 10才支持）。</li>
+</ul>
+<h1 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo hello &gt; .abc</span><br></pre></td></tr></table></figure>
+<p>解释：</p>
+<ol>
+<li>“echo hello” ：输出 “hello” 到控制台。</li>
+<li>“> .abc” ：输出重定向到 .abc 文件中【没有此文件就会创建】。</li>
+<li>当然你也可以使用其他的命令，比如 <code>type</code>，来输出重定向。核心思想就是把某些字符串输出重定向到指定文件里就可以了。</li>
+</ol>
+<h1 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir .abc</span><br></pre></td></tr></table></figure>
+<h1 id="Linux-使用-shell-创建文件"><a href="#Linux-使用-shell-创建文件" class="headerlink" title="Linux 使用 shell 创建文件"></a>Linux 使用 shell 创建文件</h1><p>顺便说一下使用 shell 创建文件吧。上面的那些命令在 shell 中都可以使用，另外说一个在 shell 中更方便的命令。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">touch .abc</span><br></pre></td></tr></table></figure>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>写本文的目的是在 Windows 下创建类似 .abc 这样的文件没法使用 <code>右键-&gt;新建</code> 来创建文件。如果你想创建一个 abc.txt 就不要这么麻烦啦【也没人会这么做吧(●’◡’●)】</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>cmd</tag>
+        <tag>linux</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Apache 如何设置 404 错误页面</title>
+    <url>/blog/2016/04/29/apache-404/</url>
+    <content><![CDATA[<hr>
+<p>当我们浏览网站的时候，有时候会发现访问的页面不存在了，页面会有“你访问的页面不存在了，跳转到主页”或者“404 Not Found”等等的提示。我们通常称之为 404 页面。所谓的 404 页面就是当用户输入一个错误或非存在的链接时，显示的一个页面。当 Web 服务器接到类似请求时，会返回一个 404 状态码，告诉浏览器要请求的资源并不存在。显示的 404 页面主要作用是告诉用户，你输入的网址多请求的页面是不存在的或者是一个错误的链接，引导用户进入网站的其他页面。但是 Web 的默认 404 页面非常的简陋，对用户很不友好，这就需要我们自己定义个性化的 404 页面，提升用户体验。</p>
+<a id="more"></a>
+<h1 id="Apache-设置-404-错误页面"><a href="#Apache-设置-404-错误页面" class="headerlink" title="Apache 设置 404 错误页面"></a>Apache 设置 404 错误页面</h1><p>在 <code>.htaccess</code> 文件中加入代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ErrorDocument 404 /404.html</span><br></pre></td></tr></table></figure></p>
+<p>之后在网站根目录建立一个 <code>404.html</code> 文件，编写你的 404 页面。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>不要将 404 页面直接指向到网站主页，这可能导致你的首页不被搜索引擎收录。</li>
+<li>/404.html 不要带域名，比如(错误写法：<a href="http://www.cylong.com/404.html">http://www.cylong.com/404.html</a>)，否则返回的状态码不是 404，而是 302、200。</li>
+</ul>
+<h1 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO(搜索引擎优化)"></a>SEO(搜索引擎优化)</h1><p>404 状态码对搜索引擎是非常重要的。需要注意的是，有时候我们看到一个 404 的错误页面，但返回的状态码可能并不是 404。用户并不会关心状态码是多少，但是对于搜索引擎就不一样了。当搜索引擎获取到404 状态码，就表示此 URL 已经失效，页面已经不存在了。搜索引擎就不会索引这个页面，并且删除数据库中的索引。若返回的是 200，搜索引擎就会对此 URL 建立索引，这样就会产生多个不同的 URL 具有相同的页面内容，搜索引擎就认为你的网站有大量重复的内容，可能会被降权。</p>
+<p>所以当我们自定义错误页面的时候，一定要保证状态码也是 404，不仅要对用户友好，也要对搜索引擎友好。</p>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://bbs.20z.com/thread-5162-1-1.html" title="网站如何设置404页面，什么是404错误，404页面代码怎么写" target="_blank" rel="noopener">网站如何设置404页面，什么是404错误，404页面代码怎么写</a><br><a href="http://www.yzznl.cn/archives/19.html" title="园子博客 - 如何设置404页面" target="_blank" rel="noopener">园子博客 - 如何设置404页面</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/29/apache-404/" title="Apache 如何设置 404 错误页面">Apache 如何设置 404 错误页面</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/29/apache-404/" title="Apache 如何设置 404 错误页面">http://www.cylong.com/blog/2016/04/29/apache-404/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Apache</category>
+      </categories>
+      <tags>
+        <tag>apache</tag>
+        <tag>seo</tag>
+        <tag>htaccess</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows 10 Metro 应用闪退、无法打开修复方法</title>
     <url>/blog/2016/05/15/windows-10-metro-error/</url>
     <content><![CDATA[<hr>
@@ -523,42 +528,37 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Windows 使用 cmd(命令提示符)创建文件</title>
-    <url>/blog/2016/05/09/windows-linux-new-file/</url>
+    <title>Struts2 参数依赖注入失败</title>
+    <url>/blog/2016/05/10/struts2-jsp-param/</url>
     <content><![CDATA[<hr>
-<p>最近在研究 <a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a>，于是想创建一个 <code>.gitignore</code> 文件做测试，<code>右键-&gt;新建-&gt;文本文档</code> 再输入文件名后，惊讶的发现，Windows 竟然提示： 请键入文件名！【不得不去吐槽！】。看样子 Windows 是把 gitignore 当成文件名的后缀了。没办法，只好打开 cmd(命令提示符)去创建文件了。</p>
+<p>这是在 <a href="https://segmentfault.com/" title="SegmentFault" target="_blank" rel="noopener">SegmentFault</a> 上看到的一个问题，正好前不久学习了 J2EE 的 SSH 框架，看到这个问题忍不住答了一下。结果问题并不像表面上那么简单。没办法，自己挖的坑，跪着也要填完( ▼-▼ )。原问题链接：</p>
+<blockquote>
+<p><a href="https://segmentfault.com/q/1010000005088213/a-1020000005088292" title="struct2框架jsp页面传参失败" target="_blank" rel="noopener">struct2框架jsp页面传参失败</a></p>
+</blockquote>
 <a id="more"></a>
-<h1 id="打开-cmd"><a href="#打开-cmd" class="headerlink" title="打开 cmd"></a>打开 cmd</h1><p>一般有以下方式打开 cmd【<em>我使用的是 Windows 10 系统，某些方法可能没用</em>】：</p>
-<ul>
-<li>在某个文件夹下按住 <code>Shift</code> 键，然后点击 <code>鼠标右键</code>，选择 <code>在此处打开命令窗口</code>（建议使用此方式，这样你就不用 cd 到指定的文件夹了）。</li>
-<li>键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>cmd</code> 并确定。</li>
-<li>键盘组合键 <span class="fa fa-windows"></span> + X，然后选择 <code>命令提示符</code>。</li>
-<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 cmd 并确认（Windows 10才支持）。</li>
-</ul>
-<h1 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo hello &gt; .abc</span><br></pre></td></tr></table></figure>
-<p>解释：</p>
-<ol>
-<li>“echo hello” ：输出 “hello” 到控制台。</li>
-<li>“> .abc” ：输出重定向到 .abc 文件中【没有此文件就会创建】。</li>
-<li>当然你也可以使用其他的命令，比如 <code>type</code>，来输出重定向。核心思想就是把某些字符串输出重定向到指定文件里就可以了。</li>
-</ol>
-<h1 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir .abc</span><br></pre></td></tr></table></figure>
-<h1 id="Linux-使用-shell-创建文件"><a href="#Linux-使用-shell-创建文件" class="headerlink" title="Linux 使用 shell 创建文件"></a>Linux 使用 shell 创建文件</h1><p>顺便说一下使用 shell 创建文件吧。上面的那些命令在 shell 中都可以使用，另外说一个在 shell 中更方便的命令。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">touch .abc</span><br></pre></td></tr></table></figure>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>写本文的目的是在 Windows 下创建类似 .abc 这样的文件没法使用 <code>右键-&gt;新建</code> 来创建文件。如果你想创建一个 abc.txt 就不要这么麻烦啦【也没人会这么做吧(●’◡’●)】</p>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>和提问者要了源码，方便查找BUG。源代码太长，我就截取了部分代码。</p>
+<figure class="highlight html"><figcaption><span>addFlower.jsp</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">action</span>=<span class="string">"addFlower"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"380"</span> &gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span>鲜花ID：<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">id</span>=<span class="string">"goodsId"</span> <span class="attr">name</span>=<span class="string">"goods.goodsId"</span>/&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"添加"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>struts.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"addFlower"</span> <span class="attr">class</span>=<span class="string">"flowers"</span> <span class="attr">method</span>=<span class="string">"addFlowerInfo"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"index"</span>&gt;</span>/flowerInformation/flowerInformation.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.FlowerAction"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"flowerBiz"</span> <span class="attr">ref</span>=<span class="string">"flowerBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>FlowerAction.java</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowerAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">RequestAware</span>, <span class="title">SessionAware</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">getGoods</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGoods</span><span class="params">(Goods goods)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.goods = goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addFlowerInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"goods:"</span> + goods);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>基本上看这些代码是完全正确的啊，并没有什么错误【后来证明确实也没有错误( ╯□╰ )】。拿到项目代码的我运行了下【运行前由于环境不同，我配置了好久啊啊啊啊！】，输出一直是 <code>goods:null</code>。这我就非常奇怪了，和之前写的 J2EE 项目对比了下，套路都是一样的啊！后来我发现了上面的一堆错误信息【为什么不早点看这些错误信息呢】，基本上都是围绕着下面这个错误：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Caused by: java.lang.IllegalStateException: Cannot convert value of type [com.xhydxs.action.AdminUserAction] to required type [com.xhydxs.entity.AdminUser] for property &apos;adminUser&apos;: no matching editors or conversion strategy found</span><br></pre></td></tr></table></figure>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>可以发现是类型转化问题，为什么会让 AdminUserAction 转化成 AdminUser 呢？这两个类怎么会互相转化呢？于是我使用全局查找 AdminUserAction 和 AdminUser 这两个关键词【用 Atom 编辑器】。终于让我发现以下的代码！！！</p>
+<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>Goods.hbm.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">many-to-one</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.entity.AdminUser"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">fetch</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"UPD_OPR"</span> <span class="attr">length</span>=<span class="string">"20"</span> <span class="attr">not-null</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">many-to-one</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>发现了么？name 都是 adminUser，然而 class 分别对应着 AdminUserAction 和 AdminUser。然后把 AdminUserAction 对应的 name 改掉就行了。。。。至于为什么上面这个错误会导致 goods 为 null，因为在 Goods 类里有一个 AdminUser 成员变量，导致 struts 没法构建 goods 这个实例了&gt;3&lt;</p>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">Struts2 参数依赖注入失败</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Windows</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>windows</tag>
-        <tag>cmd</tag>
-        <tag>linux</tag>
-        <tag>shell</tag>
+        <tag>ssh</tag>
+        <tag>java</tag>
+        <tag>jsp</tag>
       </tags>
   </entry>
   <entry>
@@ -598,12 +598,60 @@ f1g1ns2.dnspod.net
         <category>Search</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
         <tag>git</tag>
         <tag>seo</tag>
         <tag>爬虫</tag>
         <tag>search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
+    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
+    <content><![CDATA[<hr>
+<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
+<a id="more"></a>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
+</li>
+<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
+<p>回车后就大功告成了。</p>
+</li>
+<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
+</li>
+</ol>
+<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
+<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
+<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
+<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
+</blockquote>
+</li>
+<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
+</li>
+<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
+</ul>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -687,85 +735,8 @@ f1g1ns2.dnspod.net
         <tag>windows</tag>
         <tag>linux</tag>
         <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
         <tag>android</tag>
-        <tag>翻墙</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
-    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
-    <content><![CDATA[<hr>
-<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
-<a id="more"></a>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
-</li>
-<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
-<p>回车后就大功告成了。</p>
-</li>
-<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
-</li>
-</ol>
-<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
-<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
-<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
-<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
-</ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
-<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
-</blockquote>
-</li>
-<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
-</li>
-<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
-</ul>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳耐风波愿始从</title>
-    <url>/blog/2016/06/09/iverson/</url>
-    <content><![CDATA[<hr>
-<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
-<a id="more"></a>
-<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
-<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
-<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
-<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
-<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
-<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
-<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
-<hr>
-<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>艾已成诗</category>
-      </categories>
-      <tags>
-        <tag>艾弗森</tag>
-        <tag>艾已成诗</tag>
-        <tag>篮球</tag>
       </tags>
   </entry>
   <entry>
@@ -837,6 +808,35 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>稳耐风波愿始从</title>
+    <url>/blog/2016/06/09/iverson/</url>
+    <content><![CDATA[<hr>
+<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
+<a id="more"></a>
+<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
+<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
+<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
+<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
+<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
+<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
+<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
+<hr>
+<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>艾已成诗</category>
+      </categories>
+      <tags>
+        <tag>艾弗森</tag>
+        <tag>艾已成诗</tag>
+        <tag>篮球</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用 Eclipse 根据 WSDL 生成 Java 代码</title>
     <url>/blog/2016/07/01/wsdl-to-java/</url>
     <content><![CDATA[<hr>
@@ -869,6 +869,28 @@ f1g1ns2.dnspod.net
         <tag>wsdl</tag>
         <tag>web service client</tag>
         <tag>eclipse</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笑话人生，才刚刚开始</title>
+    <url>/blog/2016/10/20/my-life-is-just-beginning/</url>
+    <content><![CDATA[<hr>
+<p>很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。</p>
+<a id="more"></a>
+<p>即将面临毕业的我也是很纠结的，在考研和工作中二选一，最后决定脚踏两条船，还好没有翻船。从9月份开始不断的投递各个公司，陆陆续续投了接近20家。不断的参加宣讲笔试面试、参加宣讲笔试面试……有成功也有失败，两个月的时光转瞬即逝，不得不说，找工作真是一件头疼的事情【其实考研更让我头疼啊！(╯‵□′)╯︵┻━┻】。</p>
+<p>…………【此处省略10000字，最后确定下来再填坑】</p>
+<p>这两个月完全是在煎熬，找工作的焦急导致心情跌落到了低谷，有一段时间甚至什么都不想干，就坐在那发呆。最后终于在收到某 Offer 后，跌落到低谷的心情瞬间上升到了天堂，一切都放松了下来，可以安心的做一些其他事情了呢~~我相信我的人生才刚刚开始，后面会有更大的挑战在等着我，加油！Fighting！【怎么中二起来了啊！而且文笔也不好啊！(╯‵□′)╯︵┻━┻另外我只想记录下这一天啊！但是又不知道说什么好啊！】</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">笑话人生，才刚刚开始</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
@@ -933,65 +955,48 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>笑话人生，才刚刚开始</title>
-    <url>/blog/2016/10/20/my-life-is-just-beginning/</url>
+    <title>Jackson - Java Object 与 JSON 之间的转化工具</title>
+    <url>/blog/2017/03/31/jackson-java-json/</url>
     <content><![CDATA[<hr>
-<p>很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。</p>
+<p>一直在找一个 Java Object 与 JSON 之间方便快捷的转化工具，在舍友的推荐下了解到了 Jackson，使用之后对其爱不释手，现在推荐给大家。</p>
+<h1 id="JSON-简介"><a href="#JSON-简介" class="headerlink" title="JSON 简介"></a>JSON 简介</h1><blockquote><p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。</p>
+<footer><strong>JSON 中文</strong><cite><a href="http://www.json.org/json-zh.html" target="_blank" rel="noopener">介绍 JSON</a></cite></footer></blockquote>
+<p>以上链接中包含了 JSON 的详细介绍，其实 JSON 对象【”名称/值”对的集合】和 Java 对象是对应的，JSON 数组【值的有序列表】和 Java 的数组是对应的。下面就用一些具体的实例來说明。</p>
 <a id="more"></a>
-<p>即将面临毕业的我也是很纠结的，在考研和工作中二选一，最后决定脚踏两条船，还好没有翻船。从9月份开始不断的投递各个公司，陆陆续续投了接近20家。不断的参加宣讲笔试面试、参加宣讲笔试面试……有成功也有失败，两个月的时光转瞬即逝，不得不说，找工作真是一件头疼的事情【其实考研更让我头疼啊！(╯‵□′)╯︵┻━┻】。</p>
-<p>…………【此处省略10000字，最后确定下来再填坑】</p>
-<p>这两个月完全是在煎熬，找工作的焦急导致心情跌落到了低谷，有一段时间甚至什么都不想干，就坐在那发呆。最后终于在收到某 Offer 后，跌落到低谷的心情瞬间上升到了天堂，一切都放松了下来，可以安心的做一些其他事情了呢~~我相信我的人生才刚刚开始，后面会有更大的挑战在等着我，加油！Fighting！【怎么中二起来了啊！而且文笔也不好啊！(╯‵□′)╯︵┻━┻另外我只想记录下这一天啊！但是又不知道说什么好啊！】</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">笑话人生，才刚刚开始</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 集成 Disqus 评论</title>
-    <url>/blog/2017/03/26/hexo-next-disqus/</url>
-    <content><![CDATA[<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
-<blockquote>
-<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
-</blockquote>
-<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
-<a id="more"></a>
-<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
-<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
-<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
-<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
-<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
-<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
-<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
-<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
+<h1 id="JSON-和-Java-的映射"><a href="#JSON-和-Java-的映射" class="headerlink" title="JSON 和 Java 的映射"></a>JSON 和 Java 的映射</h1><ol>
+<li><p>JSON 示例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;cylong&quot;,</span><br><span class="line">  &quot;age&quot; : 33,</span><br><span class="line">  &quot;position&quot; : &quot;Developer&quot;,</span><br><span class="line">  &quot;salary&quot; : 7500,</span><br><span class="line">  &quot;skills&quot; : [ &quot;java&quot;, &quot;python&quot; ],</span><br><span class="line">  &quot;date&quot; : &quot;2017-03-31 12:29:42&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>接下来就可以进入后台管理设置你的评论了。</li>
+<li><p>对应的 Java 类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Staff</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> String position;</span><br><span class="line">  <span class="keyword">private</span> BigDecimal salary;</span><br><span class="line">  <span class="keyword">private</span> List&lt;String&gt; skills;</span><br><span class="line">  <span class="comment">// Jackson 语法</span></span><br><span class="line">  <span class="meta">@JsonFormat</span>(shape = JsonFormat.Shape.STRING, pattern = <span class="string">"yyyy-MM-dd HH:mm:ss"</span>, timezone = <span class="string">"GMT+8"</span>)</span><br><span class="line">  <span class="keyword">private</span> Date date;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// getter and setter</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
+<p>相信以上的例子可以让你很好的理解两者之间的对应关系。其实不仅 Java，其他语言也类似。</p>
+<h1 id="Jackson-使用"><a href="#Jackson-使用" class="headerlink" title="Jackson 使用"></a>Jackson 使用</h1><ol>
+<li>在 <code>pom.xml</code> 中添加依赖项<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Java 对象转化成 JSON</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">Staff obj = <span class="keyword">new</span> Staff();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 Java 对象转化成 JSON 并写入文件中</span></span><br><span class="line">mapper.writeValue(<span class="keyword">new</span> File(<span class="string">"c:\\file.json"</span>), obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 Java 对象转化成 JSON 字符串</span></span><br><span class="line">String jsonInString = mapper.writeValueAsString(obj);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSON 转化成 Java 对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">String jsonInString = <span class="string">"&#123;'name' : 'mkyong'&#125;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从文件中读取 JSON 并转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(<span class="keyword">new</span> File(<span class="string">"c:\\file.json"</span>), Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从 URL 中读取 JSON 并转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(<span class="keyword">new</span> URL(<span class="string">"http://mkyong.com/api/staff.json"</span>), Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 JSON 字符串转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(jsonInString, Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>其实以上的内容在下面的链接中均有详细的介绍，我只是一个代码的搬运工( ╯□╰ )，就当是自己的笔记好了。</p>
 <blockquote>
-<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
+<p><a href="https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/" title="Jackson 2 – Convert Java Object to / from JSON" target="_blank" rel="noopener">Jackson 2 – Convert Java Object to / from JSON</a> 【Jackson 使用详细教程】<br><a href="http://www.baeldung.com/jackson-serialize-dates" title="Jackson Date" target="_blank" rel="noopener">Jackson Date</a> 【有关 Jackson 对日期的处理】<br><a href="http://www.json.org/json-zh.html" title="JSON 中文文档" target="_blank" rel="noopener">JSON 中文文档</a> 【概念性的东西，最下面也有不同语言的支持】<br><a href="http://wiki.jikexueyuan.com/project/json/" title="JSON 教程 - 极客学院" target="_blank" rel="noopener">JSON 教程 - 极客学院</a> 【包含 JSON 基础介绍和在其他语言中使用 JSON】</p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/31/jackson-java-json/" title="Jackson - Java Object 与 JSON 之间的转化工具">Jackson - Java Object 与 JSON 之间的转化工具</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/31/jackson-java-json/" title="Jackson - Java Object 与 JSON 之间的转化工具">http://www.cylong.com/blog/2017/03/31/jackson-java-json/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>插件</tag>
+        <tag>java</tag>
+        <tag>jackson</tag>
+        <tag>json</tag>
       </tags>
   </entry>
   <entry>
@@ -1087,48 +1092,43 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Jackson - Java Object 与 JSON 之间的转化工具</title>
-    <url>/blog/2017/03/31/jackson-java-json/</url>
+    <title>Hexo 集成 Disqus 评论</title>
+    <url>/blog/2017/03/26/hexo-next-disqus/</url>
     <content><![CDATA[<hr>
-<p>一直在找一个 Java Object 与 JSON 之间方便快捷的转化工具，在舍友的推荐下了解到了 Jackson，使用之后对其爱不释手，现在推荐给大家。</p>
-<h1 id="JSON-简介"><a href="#JSON-简介" class="headerlink" title="JSON 简介"></a>JSON 简介</h1><blockquote><p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。</p>
-<footer><strong>JSON 中文</strong><cite><a href="http://www.json.org/json-zh.html" target="_blank" rel="noopener">介绍 JSON</a></cite></footer></blockquote>
-<p>以上链接中包含了 JSON 的详细介绍，其实 JSON 对象【”名称/值”对的集合】和 Java 对象是对应的，JSON 数组【值的有序列表】和 Java 的数组是对应的。下面就用一些具体的实例來说明。</p>
-<a id="more"></a>
-<h1 id="JSON-和-Java-的映射"><a href="#JSON-和-Java-的映射" class="headerlink" title="JSON 和 Java 的映射"></a>JSON 和 Java 的映射</h1><ol>
-<li><p>JSON 示例</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;cylong&quot;,</span><br><span class="line">  &quot;age&quot; : 33,</span><br><span class="line">  &quot;position&quot; : &quot;Developer&quot;,</span><br><span class="line">  &quot;salary&quot; : 7500,</span><br><span class="line">  &quot;skills&quot; : [ &quot;java&quot;, &quot;python&quot; ],</span><br><span class="line">  &quot;date&quot; : &quot;2017-03-31 12:29:42&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对应的 Java 类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Staff</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">private</span> String position;</span><br><span class="line">  <span class="keyword">private</span> BigDecimal salary;</span><br><span class="line">  <span class="keyword">private</span> List&lt;String&gt; skills;</span><br><span class="line">  <span class="comment">// Jackson 语法</span></span><br><span class="line">  <span class="meta">@JsonFormat</span>(shape = JsonFormat.Shape.STRING, pattern = <span class="string">"yyyy-MM-dd HH:mm:ss"</span>, timezone = <span class="string">"GMT+8"</span>)</span><br><span class="line">  <span class="keyword">private</span> Date date;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// getter and setter</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>相信以上的例子可以让你很好的理解两者之间的对应关系。其实不仅 Java，其他语言也类似。</p>
-<h1 id="Jackson-使用"><a href="#Jackson-使用" class="headerlink" title="Jackson 使用"></a>Jackson 使用</h1><ol>
-<li>在 <code>pom.xml</code> 中添加依赖项<figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>Java 对象转化成 JSON</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">Staff obj = <span class="keyword">new</span> Staff();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 Java 对象转化成 JSON 并写入文件中</span></span><br><span class="line">mapper.writeValue(<span class="keyword">new</span> File(<span class="string">"c:\\file.json"</span>), obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 Java 对象转化成 JSON 字符串</span></span><br><span class="line">String jsonInString = mapper.writeValueAsString(obj);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JSON 转化成 Java 对象</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">String jsonInString = <span class="string">"&#123;'name' : 'mkyong'&#125;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从文件中读取 JSON 并转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(<span class="keyword">new</span> File(<span class="string">"c:\\file.json"</span>), Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从 URL 中读取 JSON 并转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(<span class="keyword">new</span> URL(<span class="string">"http://mkyong.com/api/staff.json"</span>), Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 JSON 字符串转化成 Java 对象</span></span><br><span class="line">Staff obj = mapper.readValue(jsonInString, Staff<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>其实以上的内容在下面的链接中均有详细的介绍，我只是一个代码的搬运工( ╯□╰ )，就当是自己的笔记好了。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
 <blockquote>
-<p><a href="https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/" title="Jackson 2 – Convert Java Object to / from JSON" target="_blank" rel="noopener">Jackson 2 – Convert Java Object to / from JSON</a> 【Jackson 使用详细教程】<br><a href="http://www.baeldung.com/jackson-serialize-dates" title="Jackson Date" target="_blank" rel="noopener">Jackson Date</a> 【有关 Jackson 对日期的处理】<br><a href="http://www.json.org/json-zh.html" title="JSON 中文文档" target="_blank" rel="noopener">JSON 中文文档</a> 【概念性的东西，最下面也有不同语言的支持】<br><a href="http://wiki.jikexueyuan.com/project/json/" title="JSON 教程 - 极客学院" target="_blank" rel="noopener">JSON 教程 - 极客学院</a> 【包含 JSON 基础介绍和在其他语言中使用 JSON】</p>
+<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
+</blockquote>
+<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
+<a id="more"></a>
+<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
+<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
+<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
+<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
+<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
+<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
+<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>接下来就可以进入后台管理设置你的评论了。</li>
+</ol>
+<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
+<blockquote>
+<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/31/jackson-java-json/" title="Jackson - Java Object 与 JSON 之间的转化工具">Jackson - Java Object 与 JSON 之间的转化工具</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/31/jackson-java-json/" title="Jackson - Java Object 与 JSON 之间的转化工具">http://www.cylong.com/blog/2017/03/31/jackson-java-json/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>java</tag>
-        <tag>jackson</tag>
-        <tag>json</tag>
+        <tag>hexo</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1180,126 +1180,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>三数之和</title>
-    <url>/blog/2020/05/30/three-sum/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c，使得 a + b + c = 0？请你找出所有满足条件且不重复的三元组。</p>
-<p>注意：答案中不可以包含重复的三元组。</p>
-<p><strong>示例:</strong></p>
-<blockquote>
-<p>给定数组 nums = [-1, 0, 1, 2, -1, -4]，<br>满足要求的三元组集合为：<br>[[-1, 0, 1], [-1, -1, 2]]</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p> 之前做过<a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和</a>这道题，所以第一想法就是转化成两次两数之和解决，思路就是先求 b + c 两数之和 z，再求 a + z 两数之和等于0，也就是相反数。</p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 求出两数之和的组合，和为-nums[i]</span></span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; twoSumList = twoSum(nums, i + <span class="number">1</span>, -nums[i]);</span><br><span class="line">        <span class="keyword">for</span> (List&lt;Integer&gt; list : twoSumList) &#123;</span><br><span class="line">            list.add(nums[i]);</span><br><span class="line">            Collections.sort(list);</span><br><span class="line">            result.add(list);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.stream().distinct().collect(Collectors.toList());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> index, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            list.add(nums[i]);</span><br><span class="line">            list.add(nums[map.get(complement)]);</span><br><span class="line">            result.add(list);</span><br><span class="line">            <span class="comment">// 去重，防止重复执行超时</span></span><br><span class="line">            map.remove(nums[i]);</span><br><span class="line">            map.remove(complement);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 其实这道题有更好的解法，受之前两数之和的影响，两数之和的那道题，是没法给数组排序的，因为输出是数组下标，而这道题，输出是三元组，可以进行数组排序的，以下是来自LeetCode的题解：</p>
-<ul>
-<li>首先对数组进行排序，排序后固定一个数 nums[i]，再使用左右指针指向 nums[i] 后面的两端，数字分别为 nums[L] 和 nums[R]，计算三个数的和 sum 判断是否满足为 0，满足则添加进结果集。</li>
-<li>如果 nums[i]大于 0，则三数之和必然无法等于 0，结束循环。</li>
-<li>如果 nums[i] == nums[i−1]，则说明该数字重复，会导致结果重复，所以应该跳过。</li>
-<li>当 sum == 0 时，nums[L] == nums[L+1] 则会导致结果重复，应该跳过，L++。</li>
-<li><p>当 sum == 0 时，nums[R] == nums[R−1] 则会导致结果重复，应该跳过，R−−。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">   List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">int</span> len = nums.length;</span><br><span class="line">   <span class="keyword">if</span> (nums == <span class="keyword">null</span> || len &lt; <span class="number">3</span>)</span><br><span class="line">       <span class="keyword">return</span> res;</span><br><span class="line">   Arrays.sort(nums);</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">       <span class="keyword">if</span> (nums[i] &gt; <span class="number">0</span>)</span><br><span class="line">           <span class="keyword">break</span>; <span class="comment">// 如果当前数字大于0，则三数之和一定大于0，所以结束循环</span></span><br><span class="line">       <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>])</span><br><span class="line">           <span class="keyword">continue</span>; <span class="comment">// 去重</span></span><br><span class="line">       <span class="keyword">int</span> L = i + <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">int</span> R = len - <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span> (L &lt; R) &#123;</span><br><span class="line">           <span class="keyword">int</span> sum = nums[i] + nums[L] + nums[R];</span><br><span class="line">           <span class="keyword">if</span> (sum == <span class="number">0</span>) &#123;</span><br><span class="line">               res.add(Arrays.asList(nums[i], nums[L], nums[R]));</span><br><span class="line">               <span class="keyword">while</span> (L &lt; R &amp;&amp; nums[L] == nums[L + <span class="number">1</span>])</span><br><span class="line">                   L++; <span class="comment">// 去重</span></span><br><span class="line">               <span class="keyword">while</span> (L &lt; R &amp;&amp; nums[R] == nums[R - <span class="number">1</span>])</span><br><span class="line">                   R--; <span class="comment">// 去重</span></span><br><span class="line">               L++;</span><br><span class="line">               R--;</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; <span class="number">0</span>)</span><br><span class="line">               L++;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>)</span><br><span class="line">               R--;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/3sum" title="三数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">三数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/3sum/solution/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/" title="三数之和 | 题解 | guanpengchn]" target="_blank" rel="noopener">三数之和 | 题解 | guanpengchn</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">三数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">http://www.cylong.com/blog/2020/05/30/three-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言头文件使用总结</title>
-    <url>/blog/2018/06/25/c-header/</url>
-    <content><![CDATA[<hr>
-<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
-<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
-<a id="more"></a>
-<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
-<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
-<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
-<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
-<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
-<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>C/C++</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>头文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2018年立个FLAG-坚持写博客！</title>
-    <url>/blog/2018/06/24/new-2018/</url>
-    <content><![CDATA[<hr>
-<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
-<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>愚人节快乐</title>
-    <url>/blog/2019/04/01/april-fools-day/</url>
-    <content><![CDATA[<hr>
-<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
-<a id="more"></a>
-<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
-<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
-</blockquote>
-<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>随笔</tag>
-        <tag>lambda</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>520·答辩·校庆·校园文化夜·非酋高级成就</title>
     <url>/blog/2017/05/20/520/</url>
     <content><![CDATA[<hr>
@@ -1332,34 +1212,21 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>两数之和</title>
-    <url>/blog/2019/11/06/two-sum/</url>
+    <title>2018年立个FLAG-坚持写博客！</title>
+    <url>/blog/2018/06/24/new-2018/</url>
     <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<p><strong>示例:</strong></p>
-<blockquote>
-<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p>
-</blockquote>
+<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
+<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>LeetCode</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1437,6 +1304,178 @@ f1g1ns2.dnspod.net
       <tags>
         <tag>java</tag>
         <tag>lambda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言头文件使用总结</title>
+    <url>/blog/2018/06/25/c-header/</url>
+    <content><![CDATA[<hr>
+<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
+<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
+<a id="more"></a>
+<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
+<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
+<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
+<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
+<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
+<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>头文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Z 字形变换</title>
+    <url>/blog/2019/12/30/zigzag-conversion/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。比如输入字符串为 “LEETCODEISHIRING” 行数为 3 时，排列如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L   C   I   R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E   D   H   N</span><br></pre></td></tr></table></figure></p>
+<p>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：”LCIRETOESIIGEDHN”。</p>
+<p><strong>示例 1:</strong></p>
+<blockquote>
+<p>输入: s = “LEETCODEISHIRING”, numRows = 3<br>输出: “LCIRETOESIIGEDHN”</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: s = “LEETCODEISHIRING”, numRows = 4<br>输出: “LDREOEIIECIHNTSG”</p>
+</blockquote>
+<p>解释:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们可以知道numRows为行数，输出的时候我们只要把每行的字符按顺序输出即可，其实上面的输出，为了美观，使用了空格，当我们把空格拿掉，就转换成了下面的输出。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L C I R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E D H N</span><br></pre></td></tr></table></figure></p>
+<p>那么我们只要知道第i个字符，要放到哪一行即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;List&lt;Character&gt;&gt; zList = <span class="keyword">new</span> ArrayList&lt;&gt;(numRows);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.add(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> j; <span class="comment">// 判断字符放到哪一行</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">        <span class="comment">// 多少字母为一个循环</span></span><br><span class="line">        <span class="keyword">int</span> cycle = numRows + numRows - <span class="number">2</span>;</span><br><span class="line">        j = i % cycle;</span><br><span class="line">        j = Math.min(cycle - j, j);</span><br><span class="line">        zList.get(j).add(c);</span><br><span class="line">    &#125;</span><br><span class="line">    StringBuilder sBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.get(i).forEach(sBuilder::append);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sBuilder.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>官方解法和我的思路差不多，只不过他细节上处理的比我好，行数是 <code>numRows</code> 和 <code>len(s)</code> 的较小值，其每行数据没有使用<code>List&lt;Character&gt;</code>，而是使用StringBuilder，另外使用了方向变量<code>goingDown</code>来判断此时在哪一行。以下是官方解法：</p>
+<p>我们可以使用 <code>min(numRows, len(s))</code> 个列表来表示 Z 字形图案中的非空行。从左到右迭代 s，将每个字符添加到合适的行。可以使用当前行和当前方向这两个变量对合适的行进行跟踪。只有当我们向上移动到最上面的行或向下移动到最下面的行时，当前方向才会发生改变。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">    List&lt;StringBuilder&gt; rows = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Math.min(numRows, s.length()); i++)</span><br><span class="line">        rows.add(<span class="keyword">new</span> StringBuilder());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> curRow = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span> goingDown = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">        rows.get(curRow).append(c);</span><br><span class="line">        <span class="keyword">if</span> (curRow == <span class="number">0</span> || curRow == numRows - <span class="number">1</span>)</span><br><span class="line">            goingDown = !goingDown;</span><br><span class="line">        curRow += goingDown ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    StringBuilder ret = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (StringBuilder row : rows)</span><br><span class="line">        ret.append(row);</span><br><span class="line">    <span class="keyword">return</span> ret.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/zigzag-conversion/" title="Z 字形变换 | 力扣（LeetCode）" target="_blank" rel="noopener">Z 字形变换 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/zigzag-conversion/solution/z-zi-xing-bian-huan-by-leetcode/" title="Z 字形变换 | 题解" target="_blank" rel="noopener">Z 字形变换 | 题解</a></p>
+</blockquote>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">Z 字形变换</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">http://www.cylong.com/blog/2019/12/30/zigzag-conversion/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愚人节快乐</title>
+    <url>/blog/2019/04/01/april-fools-day/</url>
+    <content><![CDATA[<hr>
+<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
+<a id="more"></a>
+<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
+</blockquote>
+<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>随笔</tag>
+        <tag>lambda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两数之和</title>
+    <url>/blog/2019/11/06/two-sum/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<p><strong>示例:</strong></p>
+<blockquote>
+<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三数之和</title>
+    <url>/blog/2020/05/30/three-sum/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c，使得 a + b + c = 0？请你找出所有满足条件且不重复的三元组。</p>
+<p>注意：答案中不可以包含重复的三元组。</p>
+<p><strong>示例:</strong></p>
+<blockquote>
+<p>给定数组 nums = [-1, 0, 1, 2, -1, -4]，<br>满足要求的三元组集合为：<br>[[-1, 0, 1], [-1, -1, 2]]</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p> 之前做过<a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和</a>这道题，所以第一想法就是转化成两次两数之和解决，思路就是先求 b + c 两数之和 z，再求 a + z 两数之和等于0，也就是相反数。</p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 求出两数之和的组合，和为-nums[i]</span></span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; twoSumList = twoSum(nums, i + <span class="number">1</span>, -nums[i]);</span><br><span class="line">        <span class="keyword">for</span> (List&lt;Integer&gt; list : twoSumList) &#123;</span><br><span class="line">            list.add(nums[i]);</span><br><span class="line">            Collections.sort(list);</span><br><span class="line">            result.add(list);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.stream().distinct().collect(Collectors.toList());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> index, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            list.add(nums[i]);</span><br><span class="line">            list.add(nums[map.get(complement)]);</span><br><span class="line">            result.add(list);</span><br><span class="line">            <span class="comment">// 去重，防止重复执行超时</span></span><br><span class="line">            map.remove(nums[i]);</span><br><span class="line">            map.remove(complement);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 其实这道题有更好的解法，受之前两数之和的影响，两数之和的那道题，是没法给数组排序的，因为输出是数组下标，而这道题，输出是三元组，可以进行数组排序的，以下是来自LeetCode的题解：</p>
+<ul>
+<li>首先对数组进行排序，排序后固定一个数 nums[i]，再使用左右指针指向 nums[i] 后面的两端，数字分别为 nums[L] 和 nums[R]，计算三个数的和 sum 判断是否满足为 0，满足则添加进结果集。</li>
+<li>如果 nums[i]大于 0，则三数之和必然无法等于 0，结束循环。</li>
+<li>如果 nums[i] == nums[i−1]，则说明该数字重复，会导致结果重复，所以应该跳过。</li>
+<li>当 sum == 0 时，nums[L] == nums[L+1] 则会导致结果重复，应该跳过，L++。</li>
+<li><p>当 sum == 0 时，nums[R] == nums[R−1] 则会导致结果重复，应该跳过，R−−。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">   List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">int</span> len = nums.length;</span><br><span class="line">   <span class="keyword">if</span> (nums == <span class="keyword">null</span> || len &lt; <span class="number">3</span>)</span><br><span class="line">       <span class="keyword">return</span> res;</span><br><span class="line">   Arrays.sort(nums);</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">       <span class="keyword">if</span> (nums[i] &gt; <span class="number">0</span>)</span><br><span class="line">           <span class="keyword">break</span>; <span class="comment">// 如果当前数字大于0，则三数之和一定大于0，所以结束循环</span></span><br><span class="line">       <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>])</span><br><span class="line">           <span class="keyword">continue</span>; <span class="comment">// 去重</span></span><br><span class="line">       <span class="keyword">int</span> L = i + <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">int</span> R = len - <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span> (L &lt; R) &#123;</span><br><span class="line">           <span class="keyword">int</span> sum = nums[i] + nums[L] + nums[R];</span><br><span class="line">           <span class="keyword">if</span> (sum == <span class="number">0</span>) &#123;</span><br><span class="line">               res.add(Arrays.asList(nums[i], nums[L], nums[R]));</span><br><span class="line">               <span class="keyword">while</span> (L &lt; R &amp;&amp; nums[L] == nums[L + <span class="number">1</span>])</span><br><span class="line">                   L++; <span class="comment">// 去重</span></span><br><span class="line">               <span class="keyword">while</span> (L &lt; R &amp;&amp; nums[R] == nums[R - <span class="number">1</span>])</span><br><span class="line">                   R--; <span class="comment">// 去重</span></span><br><span class="line">               L++;</span><br><span class="line">               R--;</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; <span class="number">0</span>)</span><br><span class="line">               L++;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>)</span><br><span class="line">               R--;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/3sum" title="三数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">三数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/3sum/solution/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/" title="三数之和 | 题解 | guanpengchn]" target="_blank" rel="noopener">三数之和 | 题解 | guanpengchn</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">三数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">http://www.cylong.com/blog/2020/05/30/three-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
 </search>
