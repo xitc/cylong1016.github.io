@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</loc>
+    
+    <lastmod>2020-06-22T06:33:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cylong.com/about/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/categories/index.html</loc>
+    <loc>http://www.cylong.com/tags/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/index.html</loc>
+    <loc>http://www.cylong.com/categories/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
     
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</loc>
+    <loc>http://www.cylong.com/blog/2016/09/26/git-svn/</loc>
     
     <lastmod>2020-06-06T08:31:19.084Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/09/26/git-svn/</loc>
+    <loc>http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</loc>
     
     <lastmod>2020-06-06T08:31:19.084Z</lastmod>
     
@@ -93,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
+    <loc>http://www.cylong.com/blog/2016/04/29/apache-404/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/04/29/apache-404/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -114,14 +121,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
