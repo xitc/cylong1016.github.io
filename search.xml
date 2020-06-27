@@ -113,10 +113,60 @@ f1g1ns2.dnspod.net
         <category>Hexo</category>
       </categories>
       <tags>
+        <tag>github</tag>
         <tag>hexo</tag>
         <tag>git</tag>
         <tag>node.js</tag>
-        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Atom 的炫酷插件 activate-power-mode</title>
+    <url>/blog/2016/04/22/activate-power-mode/</url>
+    <content><![CDATA[<hr>
+<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
+<a id="more"></a>
+<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
+<p>先上图！</p>
+<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
+<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
+<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
+<ul>
+<li>Windows：直接双击安装就可以。</li>
+<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
+</ul>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
+<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
+<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
+<ul>
+<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
+<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
+<li>找到 <code>packages</code> 设置</li>
+<li>找到  <code>activate-power-mode</code></li>
+<li>进入到  <code>Settings</code></li>
+<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
+</ul>
+<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
+<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Atom</category>
+      </categories>
+      <tags>
+        <tag>atom</tag>
+        <tag>插件</tag>
+        <tag>ubuntu</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -235,72 +285,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Hexo 集成多说评论 + 多说分享 + 美化多说</title>
-    <url>/blog/2016/04/25/hexo-next-duoshuo/</url>
-    <content><![CDATA[<hr>
-<h1 id="多说简介"><a href="#多说简介" class="headerlink" title="多说简介"></a>多说简介</h1><p>多说是一款追求极致体验的社会化评论框，可以用微博、QQ、人人、豆瓣等帐号登录并评论。功能强大且永久免费。Hexo 默认使用的评论插件是国外的 Disqus，。对于国内来说，使用多说无非是最好的。这篇文章就介绍下如何在 Hexo 中添加多说评论插件和多说 CSS 的美化，顺便说一下多说分享插件。至于如何搭建 Hexo 博客请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> </p>
-</blockquote>
-<a id="more"></a>
-<h1 id="集成多说"><a href="#集成多说" class="headerlink" title="集成多说"></a>集成多说</h1><p><b>注意:</b> <em>我使用的是 Next 主题，集成多说插件非常简单，这也是我喜欢这个主题的原因，简单、高效。其他主题的配置需要你们自己研究了，不过都差不多的。Next 主题更多第三方服务请参考：</em></p>
-<blockquote>
-<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="第三方服务集成 - Next 使用文档" target="_blank" rel="noopener">第三方服务集成 - Next 使用文档</a></p>
-</blockquote>
-<h2 id="Next-主题"><a href="#Next-主题" class="headerlink" title="Next 主题"></a>Next 主题</h2><p>下面说一下 Next 主题如何集成多说。首先要在 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a> 创建一个站点，具体步骤如下：</p>
-<ol>
-<li>登录后在首页选择 “我要安装”。</li>
-<li>创建站点，填写表单。如图：<br><img src="duoshuo_create.png" alt="多说创建站点"></li>
-<li>在博客站点配置文件 <code>_config.yml</code> 中添加如下代码：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 多说评论功能</span><br><span class="line">duoshuo_shortname: xxx # 你填写在多说域名中的值</span><br><span class="line"></span><br><span class="line"># 多说分享服务，必须与多说评论同时使用</span><br><span class="line">duoshuo_share: true</span><br></pre></td></tr></table></figure></li>
-<li>启用后默认在所有页面都会显示多说评论框，比如分类页面、标签页面、自定义的关于页面，如果不想在这些页面显示评论框，找到对应的<code>index.md</code>文档，在<code>Front-matter</code>(文件最上方以 <code>---</code> 分隔的区域)中加入 <code>comments: false</code> 这一行代码就行了</li>
-</ol>
-<h2 id="Landscape-主题"><a href="#Landscape-主题" class="headerlink" title="Landscape 主题"></a>Landscape 主题</h2><p>顺便说一下 Hexo 默认的 Landscape 主题如何集成多说，具体步骤如下：</p>
-<ol>
-<li>与上面相同</li>
-<li>修改 <code>themes\landscape\layout\_partial\article.ejs</code> 模板，把：</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-<p>改为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.duoshuo_shortname</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-thread"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-thread-key</span>=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-title</span>=<span class="string">"&lt;%= post.title %&gt;"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-url</span>=<span class="string">"&lt;%= page.permalink %&gt;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="xml">        var duoshuoQuery = &#123;short_name:'<span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.duoshuo_shortname</span> %&gt;</span>'&#125;;</span></span><br><span class="line">        (function() &#123;</span><br><span class="line">            var ds = document.createElement('script');</span><br><span class="line">            ds.type = 'text/javascript';ds.async = true;</span><br><span class="line">            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';</span><br><span class="line">            ds.charset = 'UTF-8';</span><br><span class="line">            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);</span><br><span class="line">        &#125;)();</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="美化多说"><a href="#美化多说" class="headerlink" title="美化多说"></a>美化多说</h1><h2 id="多说设置"><a href="#多说设置" class="headerlink" title="多说设置"></a>多说设置</h2><p>登陆 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a>，点击后台管理，在<code>设置</code>中修改，包括基本设置、自定义文本、默认头像、外观主题。如图：</p>
-<p><img src="duoshuo_text.png" alt="多说自定义文本"></p>
-<h2 id="自定义多说分享图标"><a href="#自定义多说分享图标" class="headerlink" title="自定义多说分享图标"></a>自定义多说分享图标</h2><p>多说提供很多平台的分享服务，有时候我们肯能并不需要这么多，要如何修改呢？<br>首先，进入到 <code>themes\next\layout\_partials\share\duoshuo_share.swig</code> ，在这里就可以修改图标，至于都有什么图标，请参考：</p>
-<blockquote>
-<p><a href="http://dev.duoshuo.com/docs/5497972ba1165bfd53cf4263" title="多说分享组件自定义图标 - 多说开发者中心" target="_blank" rel="noopener">多说分享组件自定义图标 - 多说开发者中心</a></p>
-</blockquote>
-<h2 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h2><p>在每一条多说评论后显示评论者所使用的代理信息（如 操作系统、浏览器），效果如下：</p>
-<p><img src="duoshuo_ua.png" alt="多说评论显示 UA 示例"></p>
-<p>启用此功能，需要编辑<code>主题配置文件</code> <code>_congig.yml</code> 如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Make duoshuo show UA</span><br><span class="line"># user_id must NOT be null when admin_enable is true!</span><br><span class="line"># you can visit http://dev.duoshuo.com get duoshuo user id.</span><br><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: true</span><br><span class="line">  admin_enable: true</span><br><span class="line">  user_id: xxxxxx</span><br><span class="line">  admin_nickname: 权限汪</span><br></pre></td></tr></table></figure>
-<p>只要设置 <code>ua_enable</code> 为 true 即可显示 UA 信息。 <code>admin_enable</code> 是用于显示 <code>博主</code> 文字，表明评论者是博主【默认显示的是博主，我给改成权限汪了】，此字段需要同时配置 user_id。 请访问 <a href="http://dev.duoshuo.com/" title="多说开发者中心" target="_blank" rel="noopener">多说开发者中心</a>，登录并访问 <code>我的主页</code> 获取 user_id ， 此 ID 是网址最后那串数字。</p>
-<h2 id="自定义-CSS"><a href="#自定义-CSS" class="headerlink" title="自定义 CSS"></a>自定义 CSS</h2><p>登陆 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a>，点击后台管理，在 <code>设置/基本设置/自定义CSS</code> 中可以修改多说的 CSS 样式，如图：</p>
-<p><img src="duoshuo_css.png" alt="多说 - 自定义 CSS"></p>
-<p>我的修改如下（可以使用键盘上的上下左右查看看不到的代码）：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 设置圆形头像 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">54px</span>; <span class="attribute">height</span>:<span class="number">54px</span>;   <span class="comment">/*设置图像的长和宽*/</span></span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">27px</span>;        <span class="comment">/*设置图像圆角效果,在这里我直接设置了超过 width/2 的像素，即为圆形了*/</span></span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">27px</span>;<span class="comment">/*圆角效果：兼容webkit浏览器*/</span></span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">27px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有样式 */</span></span><br><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0px</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 喜欢按钮 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">a</span><span class="selector-class">.ds-like-thread-button</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f3726d</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0px</span> <span class="number">0</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 点击喜欢后弹出的分享图标 */</span></span><br><span class="line"><span class="selector-class">.ds-service-link</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.png?v=2"</span>) no-repeat;</span><br><span class="line">    <span class="attribute">_background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.gif?v=2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 上面那个分享图标我是想改成扁平化的，但是修改了后 */</span></span><br><span class="line"><span class="comment">/* 下面这几个图标的坐标位置属性（多说原生的代码）就无效了，不知道为什么，于是自己手动写上去了 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-qzone</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">128px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-qqt</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">64px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-renren</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">32px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-kaixin</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-douban</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">96px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-baidu</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">208px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 被顶起来的评论 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-gradient-bg</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#E9E9E9</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框默认显示文字样式 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-tag">textarea</span>, <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-class">.ds-hidden-text</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>, Verdana, sans-serif <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布评论按钮 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-button</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>, Verdana, sans-serif <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span> none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#FFFFFF</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: none repeat scroll <span class="number">0</span> <span class="number">0</span> <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0px</span> <span class="number">0</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布评论按钮  hover */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: none repeat scroll <span class="number">0</span> <span class="number">0</span> <span class="number">#303030</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">color</span>: white <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框边框 */</span></span><br><span class="line"><span class="selector-class">.theme-next</span> <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> &#123;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#DEDEDE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框下面框的边框(好绕啊！) */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-toolbar</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#DEDEDE</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#E9E9E9</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 昵称 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-highlight</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 顶 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-liked</span> <span class="selector-tag">a</span><span class="selector-class">.ds-post-likes</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布旁边的“分享到”图标 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-service-icon</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.png"</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">_background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.gif"</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 隐藏多说底部的版权 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-powered-by</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 最近访客的头像 */</span></span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 最近访客的头像 */</span></span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我比较喜欢简洁扁平化的风格，所以做了上述的更改。小伙伴们具体看那些组件不顺眼，要修改掉，在网页上右键，选择 <code>检查元素</code> 就可以看到相对应的类名和 ID 等等。如果不会 CSS，建议你去 <a href="http://www.w3school.com.cn/css/index.asp" title="CSS 教程 - W3School" target="_blank" rel="noopener">CSS 教程 - W3School</a> 简单的学习一下 CSS 的基本知识。</p>
-<p>另外我发现 Next 主题也对多说的 CSS 样式做了些更改，CSS路径 <code>themes\next\source\css\_common\components\third-party\duoshuo.styl</code>，所以如果小伙伴用了其他主题，显示样式可能有点区别。 目前就先改这么多，更多的样式还在开发中，会不定期的更新。如果小伙伴有什么更好的样式，欢迎留言~</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-28 更新</strong></p>
-<h2 id="添加站点最近访客功能"><a href="#添加站点最近访客功能" class="headerlink" title="添加站点最近访客功能"></a>添加站点最近访客功能</h2><p>你只需要在想要显示的地方添加如下代码即可：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-recent-visitors"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">data-num-items</span>=<span class="string">"36"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">data-avatar-size</span>=<span class="string">"42"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>data-num-items：显示的最近访客数量<br>data-avatar-size： 访客头像大小<br>CSS 设置：请参考上面的自定义CSS</p>
-<p>当然，前提是你使用了多说评论功能，因为最近访客功能就是由多说提供的。我是直接写在了 <code>about/index.md</code> 文件中。<a href="http://www.cylong.com/about/" title="关于我 - 笑话人生">点此</a> 看看我的访客功能(●’◡’●)</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="http://dev.duoshuo.com/docs/" title="多说使用帮助 - 多说开发者中心" target="_blank" rel="noopener">多说使用帮助 - 多说开发者中心</a><br><a href="http://dev.duoshuo.com/discussion" title="讨论区 - 多说开发者中心" target="_blank" rel="noopener">讨论区 - 多说开发者中心</a><br><a href="http://theme-next.iissnan.com/theme-settings.html" title="主题配置 - Next 使用文档" target="_blank" rel="noopener">主题配置 - Next 使用文档</a><br><a href="http://theme-next.iissnan.com/third-party-services.html" title="第三方服务集成 - Next 使用文档" target="_blank" rel="noopener">第三方服务集成 - Next 使用文档</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/" title="Hexo 集成多说评论 + 多说分享 + 美化多说">Hexo 集成多说评论 + 多说分享 + 美化多说</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/" title="Hexo 集成多说评论 + 多说分享 + 美化多说">http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Apache 如何设置 404 错误页面</title>
     <url>/blog/2016/04/29/apache-404/</url>
     <content><![CDATA[<hr>
@@ -373,90 +357,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Atom 的炫酷插件 activate-power-mode</title>
-    <url>/blog/2016/04/22/activate-power-mode/</url>
-    <content><![CDATA[<hr>
-<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
-<a id="more"></a>
-<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
-<p>先上图！</p>
-<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
-<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
-<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
-<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
-<ul>
-<li>Windows：直接双击安装就可以。</li>
-<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
-</ul>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
-<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
-<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
-<ul>
-<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
-<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
-<li>找到 <code>packages</code> 设置</li>
-<li>找到  <code>activate-power-mode</code></li>
-<li>进入到  <code>Settings</code></li>
-<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
-</ul>
-<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
-<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Atom</category>
-      </categories>
-      <tags>
-        <tag>插件</tag>
-        <tag>atom</tag>
-        <tag>ubuntu</tag>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Struts2 参数依赖注入失败</title>
-    <url>/blog/2016/05/10/struts2-jsp-param/</url>
-    <content><![CDATA[<hr>
-<p>这是在 <a href="https://segmentfault.com/" title="SegmentFault" target="_blank" rel="noopener">SegmentFault</a> 上看到的一个问题，正好前不久学习了 J2EE 的 SSH 框架，看到这个问题忍不住答了一下。结果问题并不像表面上那么简单。没办法，自己挖的坑，跪着也要填完( ▼-▼ )。原问题链接：</p>
-<blockquote>
-<p><a href="https://segmentfault.com/q/1010000005088213/a-1020000005088292" title="struct2框架jsp页面传参失败" target="_blank" rel="noopener">struct2框架jsp页面传参失败</a></p>
-</blockquote>
-<a id="more"></a>
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>和提问者要了源码，方便查找BUG。源代码太长，我就截取了部分代码。</p>
-<figure class="highlight html"><figcaption><span>addFlower.jsp</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">action</span>=<span class="string">"addFlower"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"380"</span> &gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span>鲜花ID：<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">id</span>=<span class="string">"goodsId"</span> <span class="attr">name</span>=<span class="string">"goods.goodsId"</span>/&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"添加"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>struts.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"addFlower"</span> <span class="attr">class</span>=<span class="string">"flowers"</span> <span class="attr">method</span>=<span class="string">"addFlowerInfo"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"index"</span>&gt;</span>/flowerInformation/flowerInformation.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.FlowerAction"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"flowerBiz"</span> <span class="attr">ref</span>=<span class="string">"flowerBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><figcaption><span>FlowerAction.java</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowerAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">RequestAware</span>, <span class="title">SessionAware</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">getGoods</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGoods</span><span class="params">(Goods goods)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.goods = goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addFlowerInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"goods:"</span> + goods);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>基本上看这些代码是完全正确的啊，并没有什么错误【后来证明确实也没有错误( ╯□╰ )】。拿到项目代码的我运行了下【运行前由于环境不同，我配置了好久啊啊啊啊！】，输出一直是 <code>goods:null</code>。这我就非常奇怪了，和之前写的 J2EE 项目对比了下，套路都是一样的啊！后来我发现了上面的一堆错误信息【为什么不早点看这些错误信息呢】，基本上都是围绕着下面这个错误：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Caused by: java.lang.IllegalStateException: Cannot convert value of type [com.xhydxs.action.AdminUserAction] to required type [com.xhydxs.entity.AdminUser] for property &apos;adminUser&apos;: no matching editors or conversion strategy found</span><br></pre></td></tr></table></figure>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>可以发现是类型转化问题，为什么会让 AdminUserAction 转化成 AdminUser 呢？这两个类怎么会互相转化呢？于是我使用全局查找 AdminUserAction 和 AdminUser 这两个关键词【用 Atom 编辑器】。终于让我发现以下的代码！！！</p>
-<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>Goods.hbm.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">many-to-one</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.entity.AdminUser"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">fetch</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"UPD_OPR"</span> <span class="attr">length</span>=<span class="string">"20"</span> <span class="attr">not-null</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">many-to-one</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>发现了么？name 都是 adminUser，然而 class 分别对应着 AdminUserAction 和 AdminUser。然后把 AdminUserAction 对应的 name 改掉就行了。。。。至于为什么上面这个错误会导致 goods 为 null，因为在 Goods 类里有一个 AdminUser 成员变量，导致 struts 没法构建 goods 这个实例了&gt;3&lt;</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">Struts2 参数依赖注入失败</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>ssh</tag>
-        <tag>jsp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 使用 cmd(命令提示符)创建文件</title>
     <url>/blog/2016/05/09/windows-linux-new-file/</url>
     <content><![CDATA[<hr>
@@ -496,48 +396,103 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>解决 Github Pages 禁止百度爬虫抓取的问题</title>
-    <url>/blog/2016/05/22/github-baidu-spider-exception/</url>
+    <title>Hexo 集成多说评论 + 多说分享 + 美化多说</title>
+    <url>/blog/2016/04/25/hexo-next-duoshuo/</url>
     <content><![CDATA[<hr>
-<p>最近在研究网站在 Google 和百度的收录问题，Google 收录很轻松，抓取提交下链接就好了，但是百度却花了我好长时间才搞定，这也是为什么这篇博客写的这么晚 ( ╯□╰ )。有关如何能让你的网站被搜索到请参考：</p>
+<h1 id="多说简介"><a href="#多说简介" class="headerlink" title="多说简介"></a>多说简介</h1><p>多说是一款追求极致体验的社会化评论框，可以用微博、QQ、人人、豆瓣等帐号登录并评论。功能强大且永久免费。Hexo 默认使用的评论插件是国外的 Disqus，。对于国内来说，使用多说无非是最好的。这篇文章就介绍下如何在 Hexo 中添加多说评论插件和多说 CSS 的美化，顺便说一下多说分享插件。至于如何搭建 Hexo 博客请参考：</p>
 <blockquote>
-<p><a href="/blog/2016/05/22/google-baidu-search/" title="如何在 Google 和百度里搜索到自己的网站">如何在 Google 和百度里搜索到自己的网站</a></p>
+<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> </p>
 </blockquote>
 <a id="more"></a>
-<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>在 <a href="http://zhanzhang.baidu.com/" title="百度站长平台" target="_blank" rel="noopener">百度站长平台</a> 上进行抓取诊断的时候，发现一直抓取失败，如图：</p>
-<p><img src="spider-test.png" alt="百度爬虫抓取错误"><br><img src="exception.png" alt="百度爬虫抓取错误"></p>
-<p>后来才发现，原来是 Github 禁止百度爬虫抓取，原因是百度的抓取太猛烈，给 Github 的用户造成了可用性问题，而且会一直禁用下去。。。 【我该吐槽 Github 呢？还是百度呢？大家心知肚明就好。（╯－＿－）╯╧╧】</p>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>我想了想，既然 Github 不让百度抓取，那么我干脆把博客部署到其他地方吧。于是找到了国内的 <a href="https://coding.net" title="CODING" target="_blank" rel="noopener">CODING</a> 【之前可能有很多小伙伴使用的是 <a href="https://gitcafe.com/" title="Gitcafe" target="_blank" rel="noopener">Gitcafe</a>，不过已经被 CODING 收购了，2016-05-31 号就会停止服务】。CODING 中也提供和 Github 相同的 Pages 服务。下面是具体步骤：</p>
-<ol>
-<li>注册登录 <a href="https://coding.net" title="CODING" target="_blank" rel="noopener">CODING</a>。</li>
-<li>创建新项目，项目的后缀必须是和你的个性后缀一样。</li>
-<li>创建项目的时候你可以选择从 Github 上导入你的博客仓库或者之后自己部署到 CODING 上，如下图：<br><img src="import-from-github.png" alt="从 Github 上导入仓库"></li>
-<li>进入你的项目，点击左侧的 <code>代码</code>，再选择 <code>Pages 服务</code>，选择 <code>部署分支</code>，默认是 <code>coding-pages</code>，建议换成 <code>master</code> 分支和 Github 保持一致。然后点击 <code>立即开启</code>。</li>
-<li>绑定自己的域名，如下图：<br><img src="coding-pages.png" alt="Coding Pages"></li>
-<li>到你的 DNS 服务商修改你的域名解析记录，这里不需要删除解析到 Github 的记录，像我下面这样配置就可以，这样正常访问还是访问到 Github 上，百度抓取的时候是抓取的 CODING 上的项目。<br>万网 DNS 设置：<br><img src="dns-parse.png" alt="DNS 解析记录 - 万网"><br>DNSPod 设置：<br><img src="dns-parse-dnspod.png" alt="DNS 解析记录 - DNSPod"><br>注意：我的域名在万网购买的，默认使用的是万网的 DNS，设置成百度后开始是好用的，后来就又抓取不到了（╯－＿－）╯╧╧。 于是我就换成了 <a href="https://www.dnspod.cn/" title="DNSPod-免费智能DNS解析服务商" target="_blank" rel="noopener">DNSPod</a> 的服务，把线路类型设置成百度、搜索引擎或者国内都可以。如果设置成搜索引擎的话注意 Google 也会去 Coding.net 抓取页面。设置成国内的话，国内的其他用户访问也访问的是 Coding.net 中的页面，相比访问 Github Pages 会更快一点。</li>
-</ol>
-<h1 id="Hexo-同时部署到-Github-和-Coding"><a href="#Hexo-同时部署到-Github-和-Coding" class="headerlink" title="Hexo 同时部署到 Github 和 Coding"></a>Hexo 同时部署到 Github 和 Coding</h1><p>既然上面的 DNS 分流到了 Github 和 Coding 上，那么我们在部署的时候就要同时维护这两个仓库，好消息是 Hexo 框架支持同时部署到 Github 和 Coding 上，详细介绍请参考：</p>
+<h1 id="集成多说"><a href="#集成多说" class="headerlink" title="集成多说"></a>集成多说</h1><p><b>注意:</b> <em>我使用的是 Next 主题，集成多说插件非常简单，这也是我喜欢这个主题的原因，简单、高效。其他主题的配置需要你们自己研究了，不过都差不多的。Next 主题更多第三方服务请参考：</em></p>
 <blockquote>
-<p><a href="/blog/2016/04/25/hexo-faq/#配置-SSH-公钥免去部署的时候输入密码" title="配置 SSH 公钥免去部署的时候输入密码">配置 SSH 公钥免去部署的时候输入密码</a></p>
+<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="第三方服务集成 - Next 使用文档" target="_blank" rel="noopener">第三方服务集成 - Next 使用文档</a></p>
 </blockquote>
-<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><blockquote>
-<p><a href="http://jerryzou.com/posts/feasibility-of-allowing-baiduSpider-for-Github-Pages/" title="解决 Github Pages 禁止百度爬虫的方法与可行性分析 - 咀嚼之味" target="_blank" rel="noopener">解决 Github Pages 禁止百度爬虫的方法与可行性分析 - 咀嚼之味</a><br><a href="http://www.ezlippi.com/blog/2016/02/baidu-spider-forbidden.html" title="解决百度爬虫无法抓取github pages - Lippi-浮生志" target="_blank" rel="noopener">解决百度爬虫无法抓取github pages - Lippi-浮生志</a></p>
+<h2 id="Next-主题"><a href="#Next-主题" class="headerlink" title="Next 主题"></a>Next 主题</h2><p>下面说一下 Next 主题如何集成多说。首先要在 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a> 创建一个站点，具体步骤如下：</p>
+<ol>
+<li>登录后在首页选择 “我要安装”。</li>
+<li>创建站点，填写表单。如图：<br><img src="duoshuo_create.png" alt="多说创建站点"></li>
+<li>在博客站点配置文件 <code>_config.yml</code> 中添加如下代码：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 多说评论功能</span><br><span class="line">duoshuo_shortname: xxx # 你填写在多说域名中的值</span><br><span class="line"></span><br><span class="line"># 多说分享服务，必须与多说评论同时使用</span><br><span class="line">duoshuo_share: true</span><br></pre></td></tr></table></figure></li>
+<li>启用后默认在所有页面都会显示多说评论框，比如分类页面、标签页面、自定义的关于页面，如果不想在这些页面显示评论框，找到对应的<code>index.md</code>文档，在<code>Front-matter</code>(文件最上方以 <code>---</code> 分隔的区域)中加入 <code>comments: false</code> 这一行代码就行了</li>
+</ol>
+<h2 id="Landscape-主题"><a href="#Landscape-主题" class="headerlink" title="Landscape 主题"></a>Landscape 主题</h2><p>顺便说一下 Hexo 默认的 Landscape 主题如何集成多说，具体步骤如下：</p>
+<ol>
+<li>与上面相同</li>
+<li>修改 <code>themes\landscape\layout\_partial\article.ejs</code> 模板，把：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>改为：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.duoshuo_shortname</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-thread"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-thread-key</span>=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-title</span>=<span class="string">"&lt;%= post.title %&gt;"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-url</span>=<span class="string">"&lt;%= page.permalink %&gt;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="xml">        var duoshuoQuery = &#123;short_name:'<span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.duoshuo_shortname</span> %&gt;</span>'&#125;;</span></span><br><span class="line">        (function() &#123;</span><br><span class="line">            var ds = document.createElement('script');</span><br><span class="line">            ds.type = 'text/javascript';ds.async = true;</span><br><span class="line">            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';</span><br><span class="line">            ds.charset = 'UTF-8';</span><br><span class="line">            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);</span><br><span class="line">        &#125;)();</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="美化多说"><a href="#美化多说" class="headerlink" title="美化多说"></a>美化多说</h1><h2 id="多说设置"><a href="#多说设置" class="headerlink" title="多说设置"></a>多说设置</h2><p>登陆 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a>，点击后台管理，在<code>设置</code>中修改，包括基本设置、自定义文本、默认头像、外观主题。如图：</p>
+<p><img src="duoshuo_text.png" alt="多说自定义文本"></p>
+<h2 id="自定义多说分享图标"><a href="#自定义多说分享图标" class="headerlink" title="自定义多说分享图标"></a>自定义多说分享图标</h2><p>多说提供很多平台的分享服务，有时候我们肯能并不需要这么多，要如何修改呢？<br>首先，进入到 <code>themes\next\layout\_partials\share\duoshuo_share.swig</code> ，在这里就可以修改图标，至于都有什么图标，请参考：</p>
+<blockquote>
+<p><a href="http://dev.duoshuo.com/docs/5497972ba1165bfd53cf4263" title="多说分享组件自定义图标 - 多说开发者中心" target="_blank" rel="noopener">多说分享组件自定义图标 - 多说开发者中心</a></p>
+</blockquote>
+<h2 id="多说评论显示-UA"><a href="#多说评论显示-UA" class="headerlink" title="多说评论显示 UA"></a>多说评论显示 UA</h2><p>在每一条多说评论后显示评论者所使用的代理信息（如 操作系统、浏览器），效果如下：</p>
+<p><img src="duoshuo_ua.png" alt="多说评论显示 UA 示例"></p>
+<p>启用此功能，需要编辑<code>主题配置文件</code> <code>_congig.yml</code> 如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Make duoshuo show UA</span><br><span class="line"># user_id must NOT be null when admin_enable is true!</span><br><span class="line"># you can visit http://dev.duoshuo.com get duoshuo user id.</span><br><span class="line">duoshuo_info:</span><br><span class="line">  ua_enable: true</span><br><span class="line">  admin_enable: true</span><br><span class="line">  user_id: xxxxxx</span><br><span class="line">  admin_nickname: 权限汪</span><br></pre></td></tr></table></figure>
+<p>只要设置 <code>ua_enable</code> 为 true 即可显示 UA 信息。 <code>admin_enable</code> 是用于显示 <code>博主</code> 文字，表明评论者是博主【默认显示的是博主，我给改成权限汪了】，此字段需要同时配置 user_id。 请访问 <a href="http://dev.duoshuo.com/" title="多说开发者中心" target="_blank" rel="noopener">多说开发者中心</a>，登录并访问 <code>我的主页</code> 获取 user_id ， 此 ID 是网址最后那串数字。</p>
+<h2 id="自定义-CSS"><a href="#自定义-CSS" class="headerlink" title="自定义 CSS"></a>自定义 CSS</h2><p>登陆 <a href="http://duoshuo.com/" title="多说" target="_blank" rel="noopener">多说</a>，点击后台管理，在 <code>设置/基本设置/自定义CSS</code> 中可以修改多说的 CSS 样式，如图：</p>
+<p><img src="duoshuo_css.png" alt="多说 - 自定义 CSS"></p>
+<p>我的修改如下（可以使用键盘上的上下左右查看看不到的代码）：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 设置圆形头像 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">54px</span>; <span class="attribute">height</span>:<span class="number">54px</span>;   <span class="comment">/*设置图像的长和宽*/</span></span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">27px</span>;        <span class="comment">/*设置图像圆角效果,在这里我直接设置了超过 width/2 的像素，即为圆形了*/</span></span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">27px</span>;<span class="comment">/*圆角效果：兼容webkit浏览器*/</span></span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">27px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有样式 */</span></span><br><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0px</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 喜欢按钮 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">a</span><span class="selector-class">.ds-like-thread-button</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f3726d</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0px</span> <span class="number">0</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 点击喜欢后弹出的分享图标 */</span></span><br><span class="line"><span class="selector-class">.ds-service-link</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.png?v=2"</span>) no-repeat;</span><br><span class="line">    <span class="attribute">_background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.gif?v=2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 上面那个分享图标我是想改成扁平化的，但是修改了后 */</span></span><br><span class="line"><span class="comment">/* 下面这几个图标的坐标位置属性（多说原生的代码）就无效了，不知道为什么，于是自己手动写上去了 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-qzone</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">128px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-qqt</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">64px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-renren</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">32px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-kaixin</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-douban</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">96px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-baidu</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> -<span class="number">208px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 被顶起来的评论 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-gradient-bg</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#E9E9E9</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框默认显示文字样式 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-tag">textarea</span>, <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> <span class="selector-class">.ds-hidden-text</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>, Verdana, sans-serif <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布评论按钮 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-button</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>, Verdana, sans-serif <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span> none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#FFFFFF</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: none repeat scroll <span class="number">0</span> <span class="number">0</span> <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0px</span> <span class="number">0</span> <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布评论按钮  hover */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: none repeat scroll <span class="number">0</span> <span class="number">0</span> <span class="number">#303030</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">color</span>: white <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框边框 */</span></span><br><span class="line"><span class="selector-class">.theme-next</span> <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-textarea-wrapper</span> &#123;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#DEDEDE</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 评论框下面框的边框(好绕啊！) */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-toolbar</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#DEDEDE</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#E9E9E9</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 昵称 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-highlight</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 顶 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-liked</span> <span class="selector-tag">a</span><span class="selector-class">.ds-post-likes</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#F3726D</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 发布旁边的“分享到”图标 */</span></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-service-icon</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.png"</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">_background-image</span>: <span class="built_in">url</span>(<span class="string">"//static.duoshuo.com/images/service-icons-color-flat.gif"</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 隐藏多说底部的版权 */</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-powered-by</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 最近访客的头像 */</span></span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">27px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 最近访客的头像 */</span></span><br><span class="line"><span class="selector-id">#ds-recent-visitors</span> <span class="selector-class">.ds-avatar</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我比较喜欢简洁扁平化的风格，所以做了上述的更改。小伙伴们具体看那些组件不顺眼，要修改掉，在网页上右键，选择 <code>检查元素</code> 就可以看到相对应的类名和 ID 等等。如果不会 CSS，建议你去 <a href="http://www.w3school.com.cn/css/index.asp" title="CSS 教程 - W3School" target="_blank" rel="noopener">CSS 教程 - W3School</a> 简单的学习一下 CSS 的基本知识。</p>
+<p>另外我发现 Next 主题也对多说的 CSS 样式做了些更改，CSS路径 <code>themes\next\source\css\_common\components\third-party\duoshuo.styl</code>，所以如果小伙伴用了其他主题，显示样式可能有点区别。 目前就先改这么多，更多的样式还在开发中，会不定期的更新。如果小伙伴有什么更好的样式，欢迎留言~</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-28 更新</strong></p>
+<h2 id="添加站点最近访客功能"><a href="#添加站点最近访客功能" class="headerlink" title="添加站点最近访客功能"></a>添加站点最近访客功能</h2><p>你只需要在想要显示的地方添加如下代码即可：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-recent-visitors"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">data-num-items</span>=<span class="string">"36"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">data-avatar-size</span>=<span class="string">"42"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>data-num-items：显示的最近访客数量<br>data-avatar-size： 访客头像大小<br>CSS 设置：请参考上面的自定义CSS</p>
+<p>当然，前提是你使用了多说评论功能，因为最近访客功能就是由多说提供的。我是直接写在了 <code>about/index.md</code> 文件中。<a href="http://www.cylong.com/about/" title="关于我 - 笑话人生">点此</a> 看看我的访客功能(●’◡’●)</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="http://dev.duoshuo.com/docs/" title="多说使用帮助 - 多说开发者中心" target="_blank" rel="noopener">多说使用帮助 - 多说开发者中心</a><br><a href="http://dev.duoshuo.com/discussion" title="讨论区 - 多说开发者中心" target="_blank" rel="noopener">讨论区 - 多说开发者中心</a><br><a href="http://theme-next.iissnan.com/theme-settings.html" title="主题配置 - Next 使用文档" target="_blank" rel="noopener">主题配置 - Next 使用文档</a><br><a href="http://theme-next.iissnan.com/third-party-services.html" title="第三方服务集成 - Next 使用文档" target="_blank" rel="noopener">第三方服务集成 - Next 使用文档</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/" title="解决 Github Pages 禁止百度爬虫抓取的问题">解决 Github Pages 禁止百度爬虫抓取的问题</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/" title="解决 Github Pages 禁止百度爬虫抓取的问题">http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/" title="Hexo 集成多说评论 + 多说分享 + 美化多说">Hexo 集成多说评论 + 多说分享 + 美化多说</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/" title="Hexo 集成多说评论 + 多说分享 + 美化多说">http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Search</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>git</tag>
-        <tag>github</tag>
-        <tag>seo</tag>
-        <tag>爬虫</tag>
-        <tag>search</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Struts2 参数依赖注入失败</title>
+    <url>/blog/2016/05/10/struts2-jsp-param/</url>
+    <content><![CDATA[<hr>
+<p>这是在 <a href="https://segmentfault.com/" title="SegmentFault" target="_blank" rel="noopener">SegmentFault</a> 上看到的一个问题，正好前不久学习了 J2EE 的 SSH 框架，看到这个问题忍不住答了一下。结果问题并不像表面上那么简单。没办法，自己挖的坑，跪着也要填完( ▼-▼ )。原问题链接：</p>
+<blockquote>
+<p><a href="https://segmentfault.com/q/1010000005088213/a-1020000005088292" title="struct2框架jsp页面传参失败" target="_blank" rel="noopener">struct2框架jsp页面传参失败</a></p>
+</blockquote>
+<a id="more"></a>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>和提问者要了源码，方便查找BUG。源代码太长，我就截取了部分代码。</p>
+<figure class="highlight html"><figcaption><span>addFlower.jsp</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">action</span>=<span class="string">"addFlower"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">table</span> <span class="attr">width</span>=<span class="string">"380"</span> &gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span>鲜花ID：<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">id</span>=<span class="string">"goodsId"</span> <span class="attr">name</span>=<span class="string">"goods.goodsId"</span>/&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"添加"</span> <span class="attr">class</span>=<span class="string">"btn"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>struts.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"addFlower"</span> <span class="attr">class</span>=<span class="string">"flowers"</span> <span class="attr">method</span>=<span class="string">"addFlowerInfo"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"index"</span>&gt;</span>/flowerInformation/flowerInformation.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"flowers"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.FlowerAction"</span> <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"flowerBiz"</span> <span class="attr">ref</span>=<span class="string">"flowerBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>FlowerAction.java</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowerAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">RequestAware</span>, <span class="title">SessionAware</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">getGoods</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGoods</span><span class="params">(Goods goods)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.goods = goods;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addFlowerInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"goods:"</span> + goods);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>基本上看这些代码是完全正确的啊，并没有什么错误【后来证明确实也没有错误( ╯□╰ )】。拿到项目代码的我运行了下【运行前由于环境不同，我配置了好久啊啊啊啊！】，输出一直是 <code>goods:null</code>。这我就非常奇怪了，和之前写的 J2EE 项目对比了下，套路都是一样的啊！后来我发现了上面的一堆错误信息【为什么不早点看这些错误信息呢】，基本上都是围绕着下面这个错误：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Caused by: java.lang.IllegalStateException: Cannot convert value of type [com.xhydxs.action.AdminUserAction] to required type [com.xhydxs.entity.AdminUser] for property &apos;adminUser&apos;: no matching editors or conversion strategy found</span><br></pre></td></tr></table></figure>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>可以发现是类型转化问题，为什么会让 AdminUserAction 转化成 AdminUser 呢？这两个类怎么会互相转化呢？于是我使用全局查找 AdminUserAction 和 AdminUser 这两个关键词【用 Atom 编辑器】。终于让我发现以下的代码！！！</p>
+<figure class="highlight xml"><figcaption><span>applicationContext.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.action.AdminUserAction"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">"prototype"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"adminUserBiz"</span> <span class="attr">ref</span>=<span class="string">"adminUserBiz"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><figcaption><span>Goods.hbm.xml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">many-to-one</span> <span class="attr">name</span>=<span class="string">"adminUser"</span> <span class="attr">class</span>=<span class="string">"com.xhydxs.entity.AdminUser"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">fetch</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">column</span> <span class="attr">name</span>=<span class="string">"UPD_OPR"</span> <span class="attr">length</span>=<span class="string">"20"</span> <span class="attr">not-null</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">many-to-one</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>发现了么？name 都是 adminUser，然而 class 分别对应着 AdminUserAction 和 AdminUser。然后把 AdminUserAction 对应的 name 改掉就行了。。。。至于为什么上面这个错误会导致 goods 为 null，因为在 Goods 类里有一个 AdminUser 成员变量，导致 struts 没法构建 goods 这个实例了&gt;3&lt;</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">Struts2 参数依赖注入失败</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/" title="Struts2 参数依赖注入失败">http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>java</tag>
+        <tag>jsp</tag>
       </tags>
   </entry>
   <entry>
@@ -566,6 +521,92 @@ f1g1ns2.dnspod.net
       </categories>
       <tags>
         <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>.gitignore 的使用</title>
+    <url>/blog/2016/05/19/gitignore/</url>
+    <content><![CDATA[<hr>
+<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
+<a id="more"></a>
+<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
+<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
+</blockquote>
+<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
+<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
+<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
+<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
+<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
+<blockquote>
+<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
+</blockquote>
+<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>gitignore</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
+    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
+    <content><![CDATA[<hr>
+<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
+<a id="more"></a>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
+</li>
+<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
+<p>回车后就大功告成了。</p>
+</li>
+<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
+</li>
+</ol>
+<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
+<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
+<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
+<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
+</blockquote>
+</li>
+<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
+</li>
+<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
+</ul>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -637,41 +678,48 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>.gitignore 的使用</title>
-    <url>/blog/2016/05/19/gitignore/</url>
+    <title>解决 Github Pages 禁止百度爬虫抓取的问题</title>
+    <url>/blog/2016/05/22/github-baidu-spider-exception/</url>
     <content><![CDATA[<hr>
-<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
+<p>最近在研究网站在 Google 和百度的收录问题，Google 收录很轻松，抓取提交下链接就好了，但是百度却花了我好长时间才搞定，这也是为什么这篇博客写的这么晚 ( ╯□╰ )。有关如何能让你的网站被搜索到请参考：</p>
+<blockquote>
+<p><a href="/blog/2016/05/22/google-baidu-search/" title="如何在 Google 和百度里搜索到自己的网站">如何在 Google 和百度里搜索到自己的网站</a></p>
+</blockquote>
 <a id="more"></a>
-<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
-<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
+<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>在 <a href="http://zhanzhang.baidu.com/" title="百度站长平台" target="_blank" rel="noopener">百度站长平台</a> 上进行抓取诊断的时候，发现一直抓取失败，如图：</p>
+<p><img src="spider-test.png" alt="百度爬虫抓取错误"><br><img src="exception.png" alt="百度爬虫抓取错误"></p>
+<p>后来才发现，原来是 Github 禁止百度爬虫抓取，原因是百度的抓取太猛烈，给 Github 的用户造成了可用性问题，而且会一直禁用下去。。。 【我该吐槽 Github 呢？还是百度呢？大家心知肚明就好。（╯－＿－）╯╧╧】</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>我想了想，既然 Github 不让百度抓取，那么我干脆把博客部署到其他地方吧。于是找到了国内的 <a href="https://coding.net" title="CODING" target="_blank" rel="noopener">CODING</a> 【之前可能有很多小伙伴使用的是 <a href="https://gitcafe.com/" title="Gitcafe" target="_blank" rel="noopener">Gitcafe</a>，不过已经被 CODING 收购了，2016-05-31 号就会停止服务】。CODING 中也提供和 Github 相同的 Pages 服务。下面是具体步骤：</p>
+<ol>
+<li>注册登录 <a href="https://coding.net" title="CODING" target="_blank" rel="noopener">CODING</a>。</li>
+<li>创建新项目，项目的后缀必须是和你的个性后缀一样。</li>
+<li>创建项目的时候你可以选择从 Github 上导入你的博客仓库或者之后自己部署到 CODING 上，如下图：<br><img src="import-from-github.png" alt="从 Github 上导入仓库"></li>
+<li>进入你的项目，点击左侧的 <code>代码</code>，再选择 <code>Pages 服务</code>，选择 <code>部署分支</code>，默认是 <code>coding-pages</code>，建议换成 <code>master</code> 分支和 Github 保持一致。然后点击 <code>立即开启</code>。</li>
+<li>绑定自己的域名，如下图：<br><img src="coding-pages.png" alt="Coding Pages"></li>
+<li>到你的 DNS 服务商修改你的域名解析记录，这里不需要删除解析到 Github 的记录，像我下面这样配置就可以，这样正常访问还是访问到 Github 上，百度抓取的时候是抓取的 CODING 上的项目。<br>万网 DNS 设置：<br><img src="dns-parse.png" alt="DNS 解析记录 - 万网"><br>DNSPod 设置：<br><img src="dns-parse-dnspod.png" alt="DNS 解析记录 - DNSPod"><br>注意：我的域名在万网购买的，默认使用的是万网的 DNS，设置成百度后开始是好用的，后来就又抓取不到了（╯－＿－）╯╧╧。 于是我就换成了 <a href="https://www.dnspod.cn/" title="DNSPod-免费智能DNS解析服务商" target="_blank" rel="noopener">DNSPod</a> 的服务，把线路类型设置成百度、搜索引擎或者国内都可以。如果设置成搜索引擎的话注意 Google 也会去 Coding.net 抓取页面。设置成国内的话，国内的其他用户访问也访问的是 Coding.net 中的页面，相比访问 Github Pages 会更快一点。</li>
+</ol>
+<h1 id="Hexo-同时部署到-Github-和-Coding"><a href="#Hexo-同时部署到-Github-和-Coding" class="headerlink" title="Hexo 同时部署到 Github 和 Coding"></a>Hexo 同时部署到 Github 和 Coding</h1><p>既然上面的 DNS 分流到了 Github 和 Coding 上，那么我们在部署的时候就要同时维护这两个仓库，好消息是 Hexo 框架支持同时部署到 Github 和 Coding 上，详细介绍请参考：</p>
 <blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
+<p><a href="/blog/2016/04/25/hexo-faq/#配置-SSH-公钥免去部署的时候输入密码" title="配置 SSH 公钥免去部署的时候输入密码">配置 SSH 公钥免去部署的时候输入密码</a></p>
 </blockquote>
-<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
-<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
-<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
-<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
-<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
-<blockquote>
-<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
-</blockquote>
-<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
+<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><blockquote>
+<p><a href="http://jerryzou.com/posts/feasibility-of-allowing-baiduSpider-for-Github-Pages/" title="解决 Github Pages 禁止百度爬虫的方法与可行性分析 - 咀嚼之味" target="_blank" rel="noopener">解决 Github Pages 禁止百度爬虫的方法与可行性分析 - 咀嚼之味</a><br><a href="http://www.ezlippi.com/blog/2016/02/baidu-spider-forbidden.html" title="解决百度爬虫无法抓取github pages - Lippi-浮生志" target="_blank" rel="noopener">解决百度爬虫无法抓取github pages - Lippi-浮生志</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/" title="解决 Github Pages 禁止百度爬虫抓取的问题">解决 Github Pages 禁止百度爬虫抓取的问题</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/" title="解决 Github Pages 禁止百度爬虫抓取的问题">http://www.cylong.com/blog/2016/05/22/github-baidu-spider-exception/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Git</category>
+        <category>Search</category>
       </categories>
       <tags>
+        <tag>github</tag>
+        <tag>hexo</tag>
         <tag>git</tag>
-        <tag>gitignore</tag>
+        <tag>seo</tag>
+        <tag>search</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -755,85 +803,8 @@ f1g1ns2.dnspod.net
         <tag>windows</tag>
         <tag>linux</tag>
         <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
         <tag>android</tag>
-        <tag>翻墙</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳耐风波愿始从</title>
-    <url>/blog/2016/06/09/iverson/</url>
-    <content><![CDATA[<hr>
-<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
-<a id="more"></a>
-<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
-<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
-<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
-<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
-<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
-<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
-<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
-<hr>
-<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>艾已成诗</category>
-      </categories>
-      <tags>
-        <tag>艾弗森</tag>
-        <tag>艾已成诗</tag>
-        <tag>篮球</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
-    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
-    <content><![CDATA[<hr>
-<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
-<a id="more"></a>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
-</li>
-<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
-<p>回车后就大功告成了。</p>
-</li>
-<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
-</li>
-</ol>
-<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
-<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
-<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
-<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
-</ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
-<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
-</blockquote>
-</li>
-<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
-</li>
-<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
-</ul>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -872,6 +843,35 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>稳耐风波愿始从</title>
+    <url>/blog/2016/06/09/iverson/</url>
+    <content><![CDATA[<hr>
+<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
+<a id="more"></a>
+<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
+<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
+<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
+<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
+<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
+<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
+<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
+<hr>
+<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>艾已成诗</category>
+      </categories>
+      <tags>
+        <tag>艾弗森</tag>
+        <tag>艾已成诗</tag>
+        <tag>篮球</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>集中式和分布式版本控制学习整理</title>
     <url>/blog/2016/09/26/git-svn/</url>
     <content><![CDATA[<hr>
@@ -904,32 +904,25 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>找出有序数组中 3 个和为 0 的数</title>
-    <url>/blog/2016/11/08/three-number/</url>
-    <content><![CDATA[<p>前几天偶尔看到一道题，感觉蛮有意思的，在自己思考，外加上网查询之后，找到了一个比较完美的算法解决。问题描述如下：</p>
-<blockquote>
-<p> 给定有序排列的N个整数，找出其中3个数相加和为0，输出所有的不重复的3个数，要求输出的结果依然有序。<br> 在单行内，输出的顺序和原来一致，每行之间的顺序和第一个数字在原数列中的顺序一致（如果相同则向后依次比较）<br> INPUT :<br> 5<br> -2 -1 0 1 2<br> OUTPUT:<br> -2 0 2<br> -1 0 1<br> INPUT :<br> 5<br> 2 2 0 -2 -4<br> OUTPUT:<br> 2 2 -4<br> 2 0 -2</p>
-</blockquote>
+    <title>笑话人生，才刚刚开始</title>
+    <url>/blog/2016/10/20/my-life-is-just-beginning/</url>
+    <content><![CDATA[<hr>
+<p>很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。</p>
 <a id="more"></a>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
-<li><p>首先思考：寻找有序数组（下文说的数组均是升序排列的）中两个和为 k 的值。很简单，两个指针 i 和 j 分别指向数组两端，计算两数的和，大于 k 则 <code>j--</code>，否则 <code>i++</code>，直到寻找到两个数和为 k 或者 <code>i &gt; j</code> 时停止。</p>
-</li>
-<li><p>上题中可以转换为寻找数组中两个和为 -k 的数，k 为数组中的元素，我们只需要再加一层循环，遍历数组中的值，作为 k 就可以了。</p>
-</li>
-<li><p>那么如何解决结果中有重复值的情况呢？比如我们输入 [-4, -2, 0, 2, 2] 这5个数，会输出两次 [-2, 0, 2]。其实这个也很好判断，当我们确定了三个数中的一个数，那么后面求出的两个数就确定下来了，比如我们确定”第一个数”是 -5，那么可能求出后面两个数是 [2, 3] 和 [1, 4]，当我们循环到下一个”第一个数”的时候，如果还是 -5，那求出的数据肯定还是重复的，所以直接跳过就好。【这块的描述好像不是很清楚啊！(╯‵□′)╯︵┻━┻ 不明白的话看下面的代码肯定一下子就明白了呢！】</p>
-</li>
-</ol>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">findThreeNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr, <span class="keyword">bool</span> asc)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> size = arr.size();</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;	<span class="comment">// 保存结果</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;	<span class="comment">// 保证"第一个数"在数组中</span></span><br><span class="line">		<span class="keyword">int</span> m = i + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> n = size - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (m &lt; n) &#123;</span><br><span class="line">			<span class="keyword">int</span> sum = arr[m] + arr[n];	<span class="comment">// 另外两个数的和</span></span><br><span class="line">			<span class="keyword">if</span> (sum + arr[i]  &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				asc ? n-- : m++;	<span class="comment">// 升序和降序的操作不一样</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (sum + arr[i] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">				asc ? m++ : n--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;	<span class="comment">// 找到三数和为0</span></span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(<span class="number">3</span>);</span><br><span class="line">				v[<span class="number">0</span>] = arr[i];</span><br><span class="line">				v[<span class="number">1</span>] = arr[m];</span><br><span class="line">				v[<span class="number">2</span>] = arr[n];</span><br><span class="line">				result.push_back(v);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// "第二个数"和"第三个数"分别判断其下个数是否重复</span></span><br><span class="line">				<span class="keyword">do</span> &#123;</span><br><span class="line">					m++;</span><br><span class="line">				&#125; <span class="keyword">while</span> (m &lt; n &amp;&amp; arr[m - <span class="number">1</span>] == arr[m]);</span><br><span class="line"></span><br><span class="line">				<span class="keyword">do</span> &#123;</span><br><span class="line">					n--;</span><br><span class="line">				&#125; <span class="keyword">while</span> (m &lt; n &amp;&amp; arr[n + <span class="number">1</span>] == arr[n]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 外层循环"第一个数"，如果下一个"第一个数"相同，则为重复数据</span></span><br><span class="line">		<span class="keyword">while</span> (i &lt; size - <span class="number">2</span> &amp;&amp; arr[i + <span class="number">1</span>] == arr[i]) &#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> asc = <span class="literal">true</span>;	<span class="comment">// 升序</span></span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">arr</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; arr[i];</span><br><span class="line">		<span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; arr[i] &lt; arr[i - <span class="number">1</span>]) &#123;</span><br><span class="line">			asc = <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result = findThreeNumber(arr, asc);</span><br><span class="line">	<span class="function"><span class="keyword">for</span> <span class="title">each</span> <span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v in result)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; v[<span class="number">0</span>] &lt;&lt; <span class="string">" "</span> &lt;&lt; v[<span class="number">1</span>] &lt;&lt; <span class="string">" "</span> &lt;&lt; v[<span class="number">2</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>即将面临毕业的我也是很纠结的，在考研和工作中二选一，最后决定脚踏两条船，还好没有翻船。从9月份开始不断的投递各个公司，陆陆续续投了接近20家。不断的参加宣讲笔试面试、参加宣讲笔试面试……有成功也有失败，两个月的时光转瞬即逝，不得不说，找工作真是一件头疼的事情【其实考研更让我头疼啊！(╯‵□′)╯︵┻━┻】。</p>
+<p>…………【此处省略10000字，最后确定下来再填坑】</p>
+<p>这两个月完全是在煎熬，找工作的焦急导致心情跌落到了低谷，有一段时间甚至什么都不想干，就坐在那发呆。最后终于在收到某 Offer 后，跌落到低谷的心情瞬间上升到了天堂，一切都放松了下来，可以安心的做一些其他事情了呢~~我相信我的人生才刚刚开始，后面会有更大的挑战在等着我，加油！Fighting！【怎么中二起来了啊！而且文笔也不好啊！(╯‵□′)╯︵┻━┻另外我只想记录下这一天啊！但是又不知道说什么好啊！】</p>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/11/08/three-number/" title="找出有序数组中 3 个和为 0 的数">找出有序数组中 3 个和为 0 的数</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/11/08/three-number/" title="找出有序数组中 3 个和为 0 的数">http://www.cylong.com/blog/2016/11/08/three-number/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">笑话人生，才刚刚开始</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>算法</tag>
+        <tag>随笔</tag>
+        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
@@ -973,42 +966,32 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Java 通过 DOM 方式解析、创建 XML</title>
-    <url>/blog/2017/04/04/java-dom-xml/</url>
-    <content><![CDATA[<hr>
-<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
-<a id="more"></a>
-<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
-<li><p>创建 XML Document 对象</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">"college"</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student.setAttribute(<span class="string">"id"</span>, <span class="string">"0"</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">"cylong"</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">"Hello"</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">"24"</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">"id"</span>, <span class="string">"1"</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">"cylong1"</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">"World"</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">"25"</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生0"</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生1"</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将创建的 XML Document 写入到文件中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">	TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">	Transformer transformer = tf.newTransformer();</span><br><span class="line">	DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">"utf8"</span>);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">"yes"</span>);</span><br><span class="line">	PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">	StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line"> 	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
-<li><p>解析 XML 文件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">"Root element : "</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">"student"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">":"</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work" target="_blank" rel="noopener">点此链接</a> 了解其用处。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java" target="_blank" rel="noopener">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/" target="_blank" rel="noopener">How to read XML file in Java – (DOM Parser)</a></p>
+    <title>找出有序数组中 3 个和为 0 的数</title>
+    <url>/blog/2016/11/08/three-number/</url>
+    <content><![CDATA[<p>前几天偶尔看到一道题，感觉蛮有意思的，在自己思考，外加上网查询之后，找到了一个比较完美的算法解决。问题描述如下：</p>
+<blockquote>
+<p> 给定有序排列的N个整数，找出其中3个数相加和为0，输出所有的不重复的3个数，要求输出的结果依然有序。<br> 在单行内，输出的顺序和原来一致，每行之间的顺序和第一个数字在原数列中的顺序一致（如果相同则向后依次比较）<br> INPUT :<br> 5<br> -2 -1 0 1 2<br> OUTPUT:<br> -2 0 2<br> -1 0 1<br> INPUT :<br> 5<br> 2 2 0 -2 -4<br> OUTPUT:<br> 2 2 -4<br> 2 0 -2</p>
 </blockquote>
+<a id="more"></a>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
+<li><p>首先思考：寻找有序数组（下文说的数组均是升序排列的）中两个和为 k 的值。很简单，两个指针 i 和 j 分别指向数组两端，计算两数的和，大于 k 则 <code>j--</code>，否则 <code>i++</code>，直到寻找到两个数和为 k 或者 <code>i &gt; j</code> 时停止。</p>
+</li>
+<li><p>上题中可以转换为寻找数组中两个和为 -k 的数，k 为数组中的元素，我们只需要再加一层循环，遍历数组中的值，作为 k 就可以了。</p>
+</li>
+<li><p>那么如何解决结果中有重复值的情况呢？比如我们输入 [-4, -2, 0, 2, 2] 这5个数，会输出两次 [-2, 0, 2]。其实这个也很好判断，当我们确定了三个数中的一个数，那么后面求出的两个数就确定下来了，比如我们确定”第一个数”是 -5，那么可能求出后面两个数是 [2, 3] 和 [1, 4]，当我们循环到下一个”第一个数”的时候，如果还是 -5，那求出的数据肯定还是重复的，所以直接跳过就好。【这块的描述好像不是很清楚啊！(╯‵□′)╯︵┻━┻ 不明白的话看下面的代码肯定一下子就明白了呢！】</p>
+</li>
+</ol>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">findThreeNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr, <span class="keyword">bool</span> asc)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> size = arr.size();</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;	<span class="comment">// 保存结果</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;	<span class="comment">// 保证"第一个数"在数组中</span></span><br><span class="line">		<span class="keyword">int</span> m = i + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> n = size - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (m &lt; n) &#123;</span><br><span class="line">			<span class="keyword">int</span> sum = arr[m] + arr[n];	<span class="comment">// 另外两个数的和</span></span><br><span class="line">			<span class="keyword">if</span> (sum + arr[i]  &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				asc ? n-- : m++;	<span class="comment">// 升序和降序的操作不一样</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (sum + arr[i] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">				asc ? m++ : n--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;	<span class="comment">// 找到三数和为0</span></span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(<span class="number">3</span>);</span><br><span class="line">				v[<span class="number">0</span>] = arr[i];</span><br><span class="line">				v[<span class="number">1</span>] = arr[m];</span><br><span class="line">				v[<span class="number">2</span>] = arr[n];</span><br><span class="line">				result.push_back(v);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// "第二个数"和"第三个数"分别判断其下个数是否重复</span></span><br><span class="line">				<span class="keyword">do</span> &#123;</span><br><span class="line">					m++;</span><br><span class="line">				&#125; <span class="keyword">while</span> (m &lt; n &amp;&amp; arr[m - <span class="number">1</span>] == arr[m]);</span><br><span class="line"></span><br><span class="line">				<span class="keyword">do</span> &#123;</span><br><span class="line">					n--;</span><br><span class="line">				&#125; <span class="keyword">while</span> (m &lt; n &amp;&amp; arr[n + <span class="number">1</span>] == arr[n]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 外层循环"第一个数"，如果下一个"第一个数"相同，则为重复数据</span></span><br><span class="line">		<span class="keyword">while</span> (i &lt; size - <span class="number">2</span> &amp;&amp; arr[i + <span class="number">1</span>] == arr[i]) &#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> asc = <span class="literal">true</span>;	<span class="comment">// 升序</span></span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">arr</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; arr[i];</span><br><span class="line">		<span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; arr[i] &lt; arr[i - <span class="number">1</span>]) &#123;</span><br><span class="line">			asc = <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result = findThreeNumber(arr, asc);</span><br><span class="line">	<span class="function"><span class="keyword">for</span> <span class="title">each</span> <span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v in result)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; v[<span class="number">0</span>] &lt;&lt; <span class="string">" "</span> &lt;&lt; v[<span class="number">1</span>] &lt;&lt; <span class="string">" "</span> &lt;&lt; v[<span class="number">2</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/11/08/three-number/" title="找出有序数组中 3 个和为 0 的数">找出有序数组中 3 个和为 0 的数</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/11/08/three-number/" title="找出有序数组中 3 个和为 0 的数">http://www.cylong.com/blog/2016/11/08/three-number/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>java</tag>
-        <tag>dom</tag>
-        <tag>xml</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1057,73 +1040,42 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>笑话人生，才刚刚开始</title>
-    <url>/blog/2016/10/20/my-life-is-just-beginning/</url>
+    <title>Java 通过 DOM 方式解析、创建 XML</title>
+    <url>/blog/2017/04/04/java-dom-xml/</url>
     <content><![CDATA[<hr>
-<p>很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。</p>
+<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
 <a id="more"></a>
-<p>即将面临毕业的我也是很纠结的，在考研和工作中二选一，最后决定脚踏两条船，还好没有翻船。从9月份开始不断的投递各个公司，陆陆续续投了接近20家。不断的参加宣讲笔试面试、参加宣讲笔试面试……有成功也有失败，两个月的时光转瞬即逝，不得不说，找工作真是一件头疼的事情【其实考研更让我头疼啊！(╯‵□′)╯︵┻━┻】。</p>
-<p>…………【此处省略10000字，最后确定下来再填坑】</p>
-<p>这两个月完全是在煎熬，找工作的焦急导致心情跌落到了低谷，有一段时间甚至什么都不想干，就坐在那发呆。最后终于在收到某 Offer 后，跌落到低谷的心情瞬间上升到了天堂，一切都放松了下来，可以安心的做一些其他事情了呢~~我相信我的人生才刚刚开始，后面会有更大的挑战在等着我，加油！Fighting！【怎么中二起来了啊！而且文笔也不好啊！(╯‵□′)╯︵┻━┻另外我只想记录下这一天啊！但是又不知道说什么好啊！】</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">笑话人生，才刚刚开始</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chrome 配置 SwitchyOmega</title>
-    <url>/blog/2017/04/09/chrome-SwitchyOmega/</url>
-    <content><![CDATA[<hr>
-<p>此文章是以 Shadowsocks 代理为例，若想使用 Shadowsocks 请先安装对应系统的客户端并启动。详情请参考：</p>
-<blockquote>
-<p><a href="/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">站在 Shadowsocks 的肩膀上发现精彩的世界</a></p>
-</blockquote>
-<h1 id="Chrome-浏览器"><a href="#Chrome-浏览器" class="headerlink" title="Chrome 浏览器"></a>Chrome 浏览器</h1><p>无论是用户体验、强大的功能还是丰富的扩展程序都完爆国内的各种浏览器好不好(╯‵□′)╯︵┻━┻。强烈推荐啊！目前已经可以在不翻墙的情况下去 <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="Chrome（桌面版）" target="_blank" rel="noopener">下载 Chrome（桌面版）</a>了，账号数据同步方面也不需要翻墙了。【鼓掌撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。】</p>
-<h1 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h1><p>Google Chrome 浏览器上的一个代理扩展程序，可以轻松快捷地管理和切换多个代理设置。比如我们接下来要介绍的 <code>自动切换模式</code>。</p>
-<a id="more"></a>
-<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>点击 <a href="https://github.com/FelisCatus/SwitchyOmega/releases" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a>，下载页面有详细的安装教程，仔细看一下就好。</p>
-<h2 id="配置-Shadowsocks-情景模式"><a href="#配置-Shadowsocks-情景模式" class="headerlink" title="配置 Shadowsocks 情景模式"></a>配置 Shadowsocks 情景模式</h2><ol>
-<li>打开 Chrome， 点击右上角的 <span class="fa fa-globe" aria-hidden="true"></span> 图标，再点击 <code>选项</code>。<br><img src="Shadowsocks-icon.png" alt="Shadowsocks 图标"></li>
-<li>点击左侧的 <code>新建情景模式</code>，输入情景模式名称 <code>Shadowsocks</code>【自己任意设置名称】，类型选择第一个<code>代理服务器</code>。创建完成后做如下配置：<br><img src="new.png" alt="新建情景模式"><br>你也可以自己设置不代理的地址列表。如上图。</li>
-<li>保存后你就可以通过这个情景模式科学上网了~</li>
-</ol>
-<h2 id="配置自动切换模式"><a href="#配置自动切换模式" class="headerlink" title="配置自动切换模式"></a>配置自动切换模式</h2><p>配置好 Shadowsocks 情景模式后虽然可以使用 Chrome 浏览器科学上网了，但是这样的话无论你访问什么网站都会走代理，有时候访问国内的一些网站反而会很慢，这时候自动切换模式就解决了这个问题。下面介绍一下如何配置自动切换模式。</p>
-<ol>
-<li>点击左侧的 <code>自动切换</code>，或者自己新建情景模式，类型选择第二个 <code>自动切换模式</code>。然后做如下配置：<br><img src="auto.png" alt="自动切换模式"></li>
-</ol>
-<ul>
-<li><code>切换规则</code> 是在访问 <code>条件设置</code> 的域名时候使用后面设置的 <code>情景模式</code>。比如图中我设置 <code>*.google.com</code> 和 <code>*.github.com</code> 使用 <code>Shadowsocks</code> 情景模式【刚刚创建的那个情景模式】。我们可以点击 <code>添加条件</code> 来添加自己的规则。</li>
-<li>将图中 <code>规则列表规则</code> 前面的框打√，再将后面的 <code>情景模式</code> 设置为 <code>Shadowsocks</code>，意思是规则列表中的内容，我们使用 <code>Shadowsocks</code> 情景模式。然后 <code>规则列表设置</code> 中：<ul>
-<li>规则列表格式： AutoProxy；</li>
-<li>规则列表网址： <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
-</ul>
+<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
+<li><p>创建 XML Document 对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">"college"</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student.setAttribute(<span class="string">"id"</span>, <span class="string">"0"</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">"cylong"</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">"Hello"</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">"24"</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">"id"</span>, <span class="string">"1"</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">"cylong1"</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">"World"</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">"25"</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生0"</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生1"</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>这样设置完成 <code>规则列表规则</code> 后就不需要在切换规则中一个一个添加条件了。</li>
-<li><code>切换规则</code> 最后一行的 <code>默认情景模式</code> 代表不在规则列表中网址我们使用 <code>直接连接</code> 情景模式，也就是说不走代理。</li>
-</ul>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="https://github.com/FelisCatus/SwitchyOmega" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a><br><a href="https://github.com/gfwlist/gfwlist" title="gfwlist/gfwlist" target="_blank" rel="noopener">Github-gfwlist</a></p>
+<li><p>将创建的 XML Document 写入到文件中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">	TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">	Transformer transformer = tf.newTransformer();</span><br><span class="line">	DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">"utf8"</span>);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">"yes"</span>);</span><br><span class="line">	PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">	StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line"> 	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
+<li><p>解析 XML 文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">"Root element : "</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">"student"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">":"</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work" target="_blank" rel="noopener">点此链接</a> 了解其用处。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java" target="_blank" rel="noopener">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/" target="_blank" rel="noopener">How to read XML file in Java – (DOM Parser)</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">Chrome 配置 SwitchyOmega</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Shadowsocks</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
-        <tag>SwitchyOmega</tag>
+        <tag>java</tag>
+        <tag>dom</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
@@ -1180,6 +1132,54 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>Chrome 配置 SwitchyOmega</title>
+    <url>/blog/2017/04/09/chrome-SwitchyOmega/</url>
+    <content><![CDATA[<hr>
+<p>此文章是以 Shadowsocks 代理为例，若想使用 Shadowsocks 请先安装对应系统的客户端并启动。详情请参考：</p>
+<blockquote>
+<p><a href="/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">站在 Shadowsocks 的肩膀上发现精彩的世界</a></p>
+</blockquote>
+<h1 id="Chrome-浏览器"><a href="#Chrome-浏览器" class="headerlink" title="Chrome 浏览器"></a>Chrome 浏览器</h1><p>无论是用户体验、强大的功能还是丰富的扩展程序都完爆国内的各种浏览器好不好(╯‵□′)╯︵┻━┻。强烈推荐啊！目前已经可以在不翻墙的情况下去 <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="Chrome（桌面版）" target="_blank" rel="noopener">下载 Chrome（桌面版）</a>了，账号数据同步方面也不需要翻墙了。【鼓掌撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。】</p>
+<h1 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h1><p>Google Chrome 浏览器上的一个代理扩展程序，可以轻松快捷地管理和切换多个代理设置。比如我们接下来要介绍的 <code>自动切换模式</code>。</p>
+<a id="more"></a>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>点击 <a href="https://github.com/FelisCatus/SwitchyOmega/releases" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a>，下载页面有详细的安装教程，仔细看一下就好。</p>
+<h2 id="配置-Shadowsocks-情景模式"><a href="#配置-Shadowsocks-情景模式" class="headerlink" title="配置 Shadowsocks 情景模式"></a>配置 Shadowsocks 情景模式</h2><ol>
+<li>打开 Chrome， 点击右上角的 <span class="fa fa-globe" aria-hidden="true"></span> 图标，再点击 <code>选项</code>。<br><img src="Shadowsocks-icon.png" alt="Shadowsocks 图标"></li>
+<li>点击左侧的 <code>新建情景模式</code>，输入情景模式名称 <code>Shadowsocks</code>【自己任意设置名称】，类型选择第一个<code>代理服务器</code>。创建完成后做如下配置：<br><img src="new.png" alt="新建情景模式"><br>你也可以自己设置不代理的地址列表。如上图。</li>
+<li>保存后你就可以通过这个情景模式科学上网了~</li>
+</ol>
+<h2 id="配置自动切换模式"><a href="#配置自动切换模式" class="headerlink" title="配置自动切换模式"></a>配置自动切换模式</h2><p>配置好 Shadowsocks 情景模式后虽然可以使用 Chrome 浏览器科学上网了，但是这样的话无论你访问什么网站都会走代理，有时候访问国内的一些网站反而会很慢，这时候自动切换模式就解决了这个问题。下面介绍一下如何配置自动切换模式。</p>
+<ol>
+<li>点击左侧的 <code>自动切换</code>，或者自己新建情景模式，类型选择第二个 <code>自动切换模式</code>。然后做如下配置：<br><img src="auto.png" alt="自动切换模式"></li>
+</ol>
+<ul>
+<li><code>切换规则</code> 是在访问 <code>条件设置</code> 的域名时候使用后面设置的 <code>情景模式</code>。比如图中我设置 <code>*.google.com</code> 和 <code>*.github.com</code> 使用 <code>Shadowsocks</code> 情景模式【刚刚创建的那个情景模式】。我们可以点击 <code>添加条件</code> 来添加自己的规则。</li>
+<li>将图中 <code>规则列表规则</code> 前面的框打√，再将后面的 <code>情景模式</code> 设置为 <code>Shadowsocks</code>，意思是规则列表中的内容，我们使用 <code>Shadowsocks</code> 情景模式。然后 <code>规则列表设置</code> 中：<ul>
+<li>规则列表格式： AutoProxy；</li>
+<li>规则列表网址： <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
+</ul>
+</li>
+<li>这样设置完成 <code>规则列表规则</code> 后就不需要在切换规则中一个一个添加条件了。</li>
+<li><code>切换规则</code> 最后一行的 <code>默认情景模式</code> 代表不在规则列表中网址我们使用 <code>直接连接</code> 情景模式，也就是说不走代理。</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="https://github.com/FelisCatus/SwitchyOmega" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a><br><a href="https://github.com/gfwlist/gfwlist" title="gfwlist/gfwlist" target="_blank" rel="noopener">Github-gfwlist</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">Chrome 配置 SwitchyOmega</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Shadowsocks</category>
+      </categories>
+      <tags>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
+        <tag>SwitchyOmega</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>520·答辩·校庆·校园文化夜·非酋高级成就</title>
     <url>/blog/2017/05/20/520/</url>
     <content><![CDATA[<hr>
@@ -1202,24 +1202,6 @@ f1g1ns2.dnspod.net
 <hr>
 <blockquote>
 <p>文章标题：<a href="http://www.cylong.com/blog/2017/05/20/520/" title="520·答辩·校庆·校园文化夜·非酋高级成就">520·答辩·校庆·校园文化夜·非酋高级成就</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/05/20/520/" title="520·答辩·校庆·校园文化夜·非酋高级成就">http://www.cylong.com/blog/2017/05/20/520/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2018年立个FLAG-坚持写博客！</title>
-    <url>/blog/2018/06/24/new-2018/</url>
-    <content><![CDATA[<hr>
-<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
-<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1262,6 +1244,51 @@ f1g1ns2.dnspod.net
       <tags>
         <tag>C/C++</tag>
         <tag>头文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愚人节快乐</title>
+    <url>/blog/2019/04/01/april-fools-day/</url>
+    <content><![CDATA[<hr>
+<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
+<a id="more"></a>
+<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
+</blockquote>
+<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>随笔</tag>
+        <tag>lambda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2018年立个FLAG-坚持写博客！</title>
+    <url>/blog/2018/06/24/new-2018/</url>
+    <content><![CDATA[<hr>
+<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
+<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,33 +1365,6 @@ f1g1ns2.dnspod.net
       </categories>
       <tags>
         <tag>java</tag>
-        <tag>lambda</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>愚人节快乐</title>
-    <url>/blog/2019/04/01/april-fools-day/</url>
-    <content><![CDATA[<hr>
-<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
-<a id="more"></a>
-<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
-<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
-</blockquote>
-<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>随笔</tag>
         <tag>lambda</tag>
       </tags>
   </entry>
