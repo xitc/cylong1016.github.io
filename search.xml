@@ -113,60 +113,10 @@ f1g1ns2.dnspod.net
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
         <tag>git</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Atom 的炫酷插件 activate-power-mode</title>
-    <url>/blog/2016/04/22/activate-power-mode/</url>
-    <content><![CDATA[<hr>
-<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
-<a id="more"></a>
-<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
-<p>先上图！</p>
-<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
-<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
-<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
-<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
-<ul>
-<li>Windows：直接双击安装就可以。</li>
-<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
-</ul>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
-<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
-<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
-<ul>
-<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
-<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
-<li>找到 <code>packages</code> 设置</li>
-<li>找到  <code>activate-power-mode</code></li>
-<li>进入到  <code>Settings</code></li>
-<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
-</ul>
-<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
-<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Atom</category>
-      </categories>
-      <tags>
-        <tag>atom</tag>
-        <tag>插件</tag>
-        <tag>ubuntu</tag>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -285,6 +235,56 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>Atom 的炫酷插件 activate-power-mode</title>
+    <url>/blog/2016/04/22/activate-power-mode/</url>
+    <content><![CDATA[<hr>
+<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
+<a id="more"></a>
+<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
+<p>先上图！</p>
+<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
+<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
+<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
+<ul>
+<li>Windows：直接双击安装就可以。</li>
+<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
+</ul>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
+<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
+<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
+<ul>
+<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
+<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
+<li>找到 <code>packages</code> 设置</li>
+<li>找到  <code>activate-power-mode</code></li>
+<li>进入到  <code>Settings</code></li>
+<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
+</ul>
+<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
+<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Atom</category>
+      </categories>
+      <tags>
+        <tag>atom</tag>
+        <tag>插件</tag>
+        <tag>ubuntu</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Apache 如何设置 404 错误页面</title>
     <url>/blog/2016/04/29/apache-404/</url>
     <content><![CDATA[<hr>
@@ -313,47 +313,6 @@ f1g1ns2.dnspod.net
         <tag>apache</tag>
         <tag>seo</tag>
         <tag>htaccess</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站首选域</title>
-    <url>/blog/2016/05/02/preferred-domain/</url>
-    <content><![CDATA[<hr>
-<h1 id="什么是首选域"><a href="#什么是首选域" class="headerlink" title="什么是首选域"></a>什么是首选域</h1><p>当我们在访问一个网站的时候，使用 <a href="http://www.cylong.com">http://www.cylong.com</a> 和 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 访问网站，获得的内容并没有区别。对于用户来说，带 www 和不带 www 访问是一样的，但是对于搜索引擎就不一样了，两种域会被视为不同的网页，使得权重分散。Google 解释如下：</p>
-<blockquote><p>首选网域是您希望 Google 用来将您的网页编入索引的网域（有时也称为规范网域）。指向您网站的链接可能会同时使用 www 版和非 www 版网址（例如，<a href="http://www.example.com" target="_blank" rel="noopener">http://www.example.com</a> 和 <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a>）。首选域是您希望 Google 用来在搜索结果中显示您网站的版本。</p>
-<footer><strong>Search Console帮助</strong><cite><a href="https://support.google.com/webmasters/answer/44231" target="_blank" rel="noopener">设置您的首选网域（www 版网址或非 www 版网址）</a></cite></footer></blockquote>
-<a id="more"></a>
-<h1 id="设置首选域"><a href="#设置首选域" class="headerlink" title="设置首选域"></a>设置首选域</h1><h2 id="使用-Google-Search-Console-设置"><a href="#使用-Google-Search-Console-设置" class="headerlink" title="使用 Google Search Console 设置"></a>使用 Google Search Console 设置</h2><p><b>注意：</b> <em>此方式仅适合 Google</em></p>
-<ol>
-<li>点击 <a href="https://www.google.com/webmasters/" title="Google 网站站长" target="_blank" rel="noopener">Google 网站站长</a>，然后点击首页的 <code>SEARCH CONSOLE</code>。</li>
-<li>登陆后，点击想设置首选域的网站（没有网站就添加下）。</li>
-<li>点击右上角的齿轮设置图标 <span class="fa fa-cog" aria-hidden="true"></span>，然后点击 <code>网站设置</code>。</li>
-<li>选择对应的首选域。</li>
-</ol>
-<h2 id="使用-301-重定向"><a href="#使用-301-重定向" class="headerlink" title="使用 301 重定向"></a>使用 301 重定向</h2><p>为了使其他搜索引擎和访问者都采用你的首选版本，建议你使用 301 重定向对你的非首选网域的访问重定向到首选网域。在 <code>.htaccess</code> 文件里添加如下代码（要针对托管在运行 Apache 的服务器上的网站实施 301 重定向，你需要有访问权限，日后可能会写什么是 <code>.htaccess</code> 文件，先挖个坑）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;http_host&#125; ^cylong.com [NC]</span><br><span class="line">RewriteRule ^(.*)$ http://www.cylong.com/$1 [L,R=301]</span><br></pre></td></tr></table></figure>
-<p>使访问 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 的时候就会自动转到 <a href="http://www.cylong.com">http://www.cylong.com</a>。</p>
-<h2 id="Hexo-博客框架设置首选域"><a href="#Hexo-博客框架设置首选域" class="headerlink" title="Hexo 博客框架设置首选域"></a>Hexo 博客框架设置首选域</h2><p>我的博客是由 <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 搭建的。没有部署到一个 Apache 服务器上，所以上面的设置方法就没用了。博客源码由 Hexo 生成，部署在 <a href="https://github.com/cylong1016/cylong1016.github.io" target="_blank" rel="noopener">Github</a> 上。如何搭建 Hexo 博客请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> 。</p>
-</blockquote>
-<p>如果你使用的是 GitHub 提供的域名，比如我的是 <a href="http://cylong1016.github.com" target="_blank" rel="noopener">http://cylong1016.github.com</a>。就不需要往下看了，如果你使用的是自己购买的域名，则只需要在 CNAME 中填写你所希望的首选域就可以了，比如我的是:</p>
-<figure class="highlight plain"><figcaption><span>CNAME</span></figcaption><table><tr><td class="code"><pre><span class="line">www.cylong.com</span><br></pre></td></tr></table></figure>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>当你确定你的首选域之后，在以后的 SEO 工作中，比如友情链接、链接推广时，都要采用你设置的首选域。</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">网站首选域</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">http://www.cylong.com/blog/2016/05/02/preferred-domain/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>apache</tag>
-        <tag>seo</tag>
-        <tag>htaccess</tag>
-        <tag>301重定向</tag>
       </tags>
   </entry>
   <entry>
@@ -423,6 +382,47 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>网站首选域</title>
+    <url>/blog/2016/05/02/preferred-domain/</url>
+    <content><![CDATA[<hr>
+<h1 id="什么是首选域"><a href="#什么是首选域" class="headerlink" title="什么是首选域"></a>什么是首选域</h1><p>当我们在访问一个网站的时候，使用 <a href="http://www.cylong.com">http://www.cylong.com</a> 和 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 访问网站，获得的内容并没有区别。对于用户来说，带 www 和不带 www 访问是一样的，但是对于搜索引擎就不一样了，两种域会被视为不同的网页，使得权重分散。Google 解释如下：</p>
+<blockquote><p>首选网域是您希望 Google 用来将您的网页编入索引的网域（有时也称为规范网域）。指向您网站的链接可能会同时使用 www 版和非 www 版网址（例如，<a href="http://www.example.com" target="_blank" rel="noopener">http://www.example.com</a> 和 <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a>）。首选域是您希望 Google 用来在搜索结果中显示您网站的版本。</p>
+<footer><strong>Search Console帮助</strong><cite><a href="https://support.google.com/webmasters/answer/44231" target="_blank" rel="noopener">设置您的首选网域（www 版网址或非 www 版网址）</a></cite></footer></blockquote>
+<a id="more"></a>
+<h1 id="设置首选域"><a href="#设置首选域" class="headerlink" title="设置首选域"></a>设置首选域</h1><h2 id="使用-Google-Search-Console-设置"><a href="#使用-Google-Search-Console-设置" class="headerlink" title="使用 Google Search Console 设置"></a>使用 Google Search Console 设置</h2><p><b>注意：</b> <em>此方式仅适合 Google</em></p>
+<ol>
+<li>点击 <a href="https://www.google.com/webmasters/" title="Google 网站站长" target="_blank" rel="noopener">Google 网站站长</a>，然后点击首页的 <code>SEARCH CONSOLE</code>。</li>
+<li>登陆后，点击想设置首选域的网站（没有网站就添加下）。</li>
+<li>点击右上角的齿轮设置图标 <span class="fa fa-cog" aria-hidden="true"></span>，然后点击 <code>网站设置</code>。</li>
+<li>选择对应的首选域。</li>
+</ol>
+<h2 id="使用-301-重定向"><a href="#使用-301-重定向" class="headerlink" title="使用 301 重定向"></a>使用 301 重定向</h2><p>为了使其他搜索引擎和访问者都采用你的首选版本，建议你使用 301 重定向对你的非首选网域的访问重定向到首选网域。在 <code>.htaccess</code> 文件里添加如下代码（要针对托管在运行 Apache 的服务器上的网站实施 301 重定向，你需要有访问权限，日后可能会写什么是 <code>.htaccess</code> 文件，先挖个坑）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;http_host&#125; ^cylong.com [NC]</span><br><span class="line">RewriteRule ^(.*)$ http://www.cylong.com/$1 [L,R=301]</span><br></pre></td></tr></table></figure>
+<p>使访问 <a href="http://cylong.com" target="_blank" rel="noopener">http://cylong.com</a> 的时候就会自动转到 <a href="http://www.cylong.com">http://www.cylong.com</a>。</p>
+<h2 id="Hexo-博客框架设置首选域"><a href="#Hexo-博客框架设置首选域" class="headerlink" title="Hexo 博客框架设置首选域"></a>Hexo 博客框架设置首选域</h2><p>我的博客是由 <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 搭建的。没有部署到一个 Apache 服务器上，所以上面的设置方法就没用了。博客源码由 Hexo 生成，部署在 <a href="https://github.com/cylong1016/cylong1016.github.io" target="_blank" rel="noopener">Github</a> 上。如何搭建 Hexo 博客请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客">Hexo + Git 搭建免费的个人博客</a> 。</p>
+</blockquote>
+<p>如果你使用的是 GitHub 提供的域名，比如我的是 <a href="http://cylong1016.github.com" target="_blank" rel="noopener">http://cylong1016.github.com</a>。就不需要往下看了，如果你使用的是自己购买的域名，则只需要在 CNAME 中填写你所希望的首选域就可以了，比如我的是:</p>
+<figure class="highlight plain"><figcaption><span>CNAME</span></figcaption><table><tr><td class="code"><pre><span class="line">www.cylong.com</span><br></pre></td></tr></table></figure>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>当你确定你的首选域之后，在以后的 SEO 工作中，比如友情链接、链接推广时，都要采用你设置的首选域。</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">网站首选域</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/02/preferred-domain/" title="网站首选域">http://www.cylong.com/blog/2016/05/02/preferred-domain/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>apache</tag>
+        <tag>seo</tag>
+        <tag>htaccess</tag>
+        <tag>301重定向</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows 使用 cmd(命令提示符)创建文件</title>
     <url>/blog/2016/05/09/windows-linux-new-file/</url>
     <content><![CDATA[<hr>
@@ -462,34 +462,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Windows 10 Metro 应用闪退、无法打开修复方法</title>
-    <url>/blog/2016/05/15/windows-10-metro-error/</url>
-    <content><![CDATA[<hr>
-<p>最近在使用 WindowsModernAppsTools 研究 <a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows Metro 应用翻墙</a> 问题，由于我的手贱删除了些不该删除的东西，导致我的系统中很多 Win 10 应用没法打开了，比如日历、资讯、天气、必应词典等等都打不开了。虽然平时不常用，但是强迫症的我表示没法忍受啊！于是找了很多资料，终于搞定了！</p>
-<a id="more"></a>
-<p><strong>注意：</strong> 我说的应用都是 Windows 应用商店里的应用。</p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 PowerShell。在结果中的 PowerShell 上 <code>右键-&gt;以管理员身份运行</code>。</li>
-<li>输入以下命令：<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Get-AppXPackage -AllUsers | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register <span class="string">"<span class="variable">$($_.InstallLocation)</span>\AppXManifest.xml"</span>&#125;</span><br></pre></td></tr></table></figure></li>
-<li>回车后等待命令执行完毕即可。</li>
-<li>以上其实是对应用进行了重置</li>
-</ol>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://www.ithome.com/html/win10/166832.htm" title="Win10应用商店、应用打不开或闪退的解决方法 - IT之家" target="_blank" rel="noopener">Win10应用商店、应用打不开或闪退的解决方法 - IT之家</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Struts2 参数依赖注入失败</title>
     <url>/blog/2016/05/10/struts2-jsp-param/</url>
     <content><![CDATA[<hr>
@@ -524,41 +496,31 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>.gitignore 的使用</title>
-    <url>/blog/2016/05/19/gitignore/</url>
+    <title>Windows 10 Metro 应用闪退、无法打开修复方法</title>
+    <url>/blog/2016/05/15/windows-10-metro-error/</url>
     <content><![CDATA[<hr>
-<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
+<p>最近在使用 WindowsModernAppsTools 研究 <a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows Metro 应用翻墙</a> 问题，由于我的手贱删除了些不该删除的东西，导致我的系统中很多 Win 10 应用没法打开了，比如日历、资讯、天气、必应词典等等都打不开了。虽然平时不常用，但是强迫症的我表示没法忍受啊！于是找了很多资料，终于搞定了！</p>
 <a id="more"></a>
-<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
-<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
-</blockquote>
-<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
-<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
-<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
-<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
-<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
-<blockquote>
-<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
-</blockquote>
-<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong> 我说的应用都是 Windows 应用商店里的应用。</p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 PowerShell。在结果中的 PowerShell 上 <code>右键-&gt;以管理员身份运行</code>。</li>
+<li>输入以下命令：<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Get-AppXPackage -AllUsers | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register <span class="string">"<span class="variable">$($_.InstallLocation)</span>\AppXManifest.xml"</span>&#125;</span><br></pre></td></tr></table></figure></li>
+<li>回车后等待命令执行完毕即可。</li>
+<li>以上其实是对应用进行了重置</li>
+</ol>
 <h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
+<p><a href="http://www.ithome.com/html/win10/166832.htm" title="Win10应用商店、应用打不开或闪退的解决方法 - IT之家" target="_blank" rel="noopener">Win10应用商店、应用打不开或闪退的解决方法 - IT之家</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Git</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>git</tag>
-        <tag>gitignore</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -598,12 +560,50 @@ f1g1ns2.dnspod.net
         <category>Search</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github</tag>
+        <tag>hexo</tag>
         <tag>git</tag>
         <tag>seo</tag>
         <tag>爬虫</tag>
         <tag>search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>.gitignore 的使用</title>
+    <url>/blog/2016/05/19/gitignore/</url>
+    <content><![CDATA[<hr>
+<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
+<a id="more"></a>
+<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
+<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
+</blockquote>
+<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
+<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
+<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
+<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
+<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
+<blockquote>
+<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
+</blockquote>
+<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>gitignore</tag>
       </tags>
   </entry>
   <entry>
@@ -672,83 +672,6 @@ f1g1ns2.dnspod.net
         <tag>hexo</tag>
         <tag>seo</tag>
         <tag>search</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稳耐风波愿始从</title>
-    <url>/blog/2016/06/09/iverson/</url>
-    <content><![CDATA[<hr>
-<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
-<a id="more"></a>
-<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
-<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
-<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
-<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
-<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
-<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
-<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
-<hr>
-<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>艾已成诗</category>
-      </categories>
-      <tags>
-        <tag>艾弗森</tag>
-        <tag>艾已成诗</tag>
-        <tag>篮球</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
-    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
-    <content><![CDATA[<hr>
-<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
-<a id="more"></a>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
-</li>
-<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
-<p>回车后就大功告成了。</p>
-</li>
-<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
-</li>
-</ol>
-<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
-<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
-<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
-<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
-</ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
-<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
-</blockquote>
-</li>
-<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
-</li>
-<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
-</ul>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -832,8 +755,85 @@ f1g1ns2.dnspod.net
         <tag>windows</tag>
         <tag>linux</tag>
         <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
         <tag>android</tag>
+        <tag>翻墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
+    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
+    <content><![CDATA[<hr>
+<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
+<a id="more"></a>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
+</li>
+<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
+<p>回车后就大功告成了。</p>
+</li>
+<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
+</li>
+</ol>
+<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
+<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
+<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
+<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
+</blockquote>
+</li>
+<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
+</li>
+<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
+</ul>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稳耐风波愿始从</title>
+    <url>/blog/2016/06/09/iverson/</url>
+    <content><![CDATA[<hr>
+<p>夕阳西下。<br>我看着AI坐在斯台普斯客队替补席上，呆呆望着场内发生的一切。他看着科比在他面前超越了他领先十三年的得分，听着为24号的喝彩，再看着记分牌上一点点被拉大的分数，他只是呆坐，眼神迷茫，无动于衷，仿佛自己来自另一个世界。惨败，又是惨败，第三次惨败。哨声响起，他低着头，快步走出球员通道。我看得到他的背影看不到他的落寞。<br>怎么能低头离开斯台普斯？就在一年前他还是昂首走出去。八年前他只手遮天，梦想就断裂在这金黄的球馆，唯一一次六月的征战，旧队友，老照片，八年的风霜，未改的容颜，怎敢遗忘那些瞬间？最震耳欲聋的欢呼，让洛杉矶的轻歌曼舞画上一道休止符，晃倒泰龙卢，最骄傲的迈步，是谁再说，他踏上的是一条荆棘密布，无人可能成功的路？<br>只是，八年了，我们早已认不出那块泰龙卢摔倒的地板。<br>物是人非。<br>隔了个半个地球，有人在心痛。</p>
+<a id="more"></a>
+<p>隔了半个美国，也会有人难过吗？<br>流年，剪影，十年。<br>费城，1996，状元，三号，金链子，狐朋狗友，唱片，嘘声，对神的挑战，拉里布朗，训练，爱恨交错，忠诚，2001，洛杉矶，MVP，得分王……<br>时间，路途，前进的光，没有回望。<br>以为会与费城到地老天荒，只是寥寥的胜场，深深的惆怅，时光在云顶嘹亮地唱，分别的波澜轻轻地荡，刻不下的时光，注定一人去流浪。<br>再见了，我爱的费城；<br>再见了，我们爱的AI。<br>断肠人去天涯。<br>天涯远吗？不远，他在天涯，天涯怎么会远！</p>
+<p>谁道飘零不可怜，断肠人去自经年。<br>那个精灵飞翔的故事还在上演，只是不再属于瓦乔维亚球馆。只是那个夜晚，是个例外——<br>那个夜晚很美，他们的欢呼他们的笑，他们的拥抱他们记得他的好。他的亲吻他的奔跑，他微微润湿的双眼，告诉我们他同样忘不掉。<br>WELCOME BACK, AI，THANKS FOR TEN GREAT YEARS OF HEART&amp;SOUL.<br>轻轻把手放在耳边，绕场慢慢的跑，聆听。<br>还记得吗？费城的欢呼是世界上最美妙的音乐。<br>俯身，深深的亲吻。<br>WE MISS YOU,AI.<br>费城的天空，我们想你时，它落泪了。<br>风雨中，陪你走，不要相忘于江湖。<br>可，踏上回丹佛的飞机，便是陌路。<br>天咫尺，人南北。</p>
+<p>叹人生，几番离合，便成迟暮。<br>三年了，沧海桑田，人事变迁，谁会相信什么永远。<br>当他终于回到家，发现一切都变了样，是熟悉的让人陌生？还是恍如隔世陌生的让人难过？<br>曾经的一代枭雄，走到穷途末路，不甘就此推出，于是来场豪赌，一次搭上全部，输了就退出江湖。<br>感谢我爱的费城——他的退役宣言里这样说。<br>终于等到了费城的橄榄枝。<br>我们爱的AI，请回家。<br>有一种答案叫落叶归根。<br>俯身，深深的亲吻，第二次。<br>弧线不同了是吗，可那份情意此生不变。<br>谁谓我生，我思议如风，历历人生。</p>
+<p>莫回首斜阳下，诉不尽离人话。<br>当费城故事确定未完待续时，我高兴的快要疯掉，你没有去湖人，谁在乎什么总冠军？我只要你幸福。<br>有些泪水是坚硬的，它从英雄的脸上滑过，但与懦弱无关。<br>AI说，那是看到家门后的鼻酸反应。<br>多好！爱费城的AI又回到了爱AI的费城。<br>从此无关胜负，誓死守护。<br>陪君醉笑三万场，不用诉离殇。</p>
+<p>落魄江湖还载酒，一种悲凉滋味。<br>当两个费城之子相遇在费城——他出生成长的地方，他扬名立万的地方。他们早已不如十三年前那般锋芒毕露。久经沙场，看惯人世冷暖，他们，已不再年轻。<br>只是他正如日中天，他似乎已日薄西山。<br>有悬念吗？有奇迹吗？有人相信吗？<br>似乎费城倒戈喊几声MVP也是正常的。<br>只是他摇头，说不。<br>那美妙的第三节，十五分，已无需我赘述。<br>兄弟友爱之城的尊严，从来都要他来维护。<br>没有悬念，没有奇迹，剧本已写好，不会改变，我们输了，只是，我们开始相信：<br>弯弓射日，看我卷土重来。</p>
+<p>谁谓我悲，意如花信，瞳清若水。<br>我从未想过有一天还会看到阿伦艾弗森穿上那件印有SIXER的球衣——那件神圣的为曾有旁人触动过的球衣，自始至终只属于一个人的球衣。<br>我看着你在费城，看着你与费城荣辱与共，休戚相关，还你那份倔强，许你那份坚强。享受你的每一场胜利与失败——我也不清楚这样的日子还会有多久，如果费城真的是你的最后一站，我们陪你走完，直到你离开你最爱的篮球场，直到那件三号球衣在瓦乔维亚上空飘扬。</p>
+<p>任往事随风，他们自随波逐流，自始至终，稳耐风波愿始从。</p>
+<hr>
+<p>这篇文章是我女票大概在2009年【那个时候她真是青涩又可爱(/▽＼=)】写在百度空间里的，但是百度空间在15年就关闭了。然后我就要来发到自己的博客里，作为一种回忆 o(^▽^)o【<del>还是自己的网站靠谱~</del>】</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">稳耐风波愿始从</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/09/iverson/" title="稳耐风波愿始从">http://www.cylong.com/blog/2016/06/09/iverson/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>艾已成诗</category>
+      </categories>
+      <tags>
+        <tag>艾弗森</tag>
+        <tag>艾已成诗</tag>
+        <tag>篮球</tag>
       </tags>
   </entry>
   <entry>
@@ -872,6 +872,38 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>集中式和分布式版本控制学习整理</title>
+    <url>/blog/2016/09/26/git-svn/</url>
+    <content><![CDATA[<hr>
+<p>在面试的时候被问到平时喜欢用 Git 还是 SVN，他们之间的区别是什么？这自然就谈到了分布式和集中式的区别。作为一个学生党，免费的 Github 给我提供了很大的便利，我的所有项目都是放在 Github 上，毕竟 Github 还是一个全球最大的同性交友网站 ╮(╯▽╰)╭。下面就说说集中式和分布式版本控制的区别。</p>
+<a id="more"></a>
+<h1 id="为什么使用版本控制"><a href="#为什么使用版本控制" class="headerlink" title="为什么使用版本控制"></a>为什么使用版本控制</h1><p>在我们平时的开发过程中，大部分情况下是团队开发，即使是个人开发，我们也想对整个项目进行代码管理与备份等等。每次复制一份达成压缩包分类命名这样的肯定不是一个河里的解决办法，这只会让我们的磁盘空间越来越小，备份版本越来越多。在团队开发的时候，对代码进行合并管理的时候，总需要一些工具可以自动合并，版本控制系统应运而生。运用版本控制系统，我们可以对代码进行版本管理，可以随时查看之前版本的内容，随时回溯到之前版本中。团队合作的时候也可以自动合并代码，而不需要用一个共享文件，或者是进行定期的备份。</p>
+<h1 id="集中式和分布式"><a href="#集中式和分布式" class="headerlink" title="集中式和分布式"></a>集中式和分布式</h1><p>版本控制系统也分为两类，集中式和分布式版本控制，我们所熟知的 Git 是分布式，SVN 是集中式，下面说说两者的区别。</p>
+<h2 id="集中式"><a href="#集中式" class="headerlink" title="集中式"></a>集中式</h2><p>集中式版本控制系统有一个中央服务器，每个人在工作的时候都需要从中央服务器获取最新版本，修改后提交到中央服务器。其他人再获取最新代码进行更改。这种方式的缺点就是，我们必须有一个中央服务器，由于网络原因没法连接到服务器，或者服务器宕机，我们就没法进行数据获取和提交。而且由于是联网操作，网络环境也会影响到提交和下载速度。</p>
+<p><img src="集中式.jpg" alt="集中式"></p>
+<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>那么分布式版本控制系统是如何解决这些问题的呢？首先，分布式版本控制系统没有所谓的中央服务器，每个站点【就是自己用来开发的电脑】都有一个完整的版本库，我们可以在本地进行修改提交。这样在没有网络的环境下也可以进行开发。当需要进行代码合并的时候，我们只要把自己的版本库推送给你的合作伙伴就可以了，这样他就可以看到你做的更改。同时，他也可以把他的版本库推送给你，这样你就可以看到他的修改了。由于每个人电脑里都是一个完整的版本库，所以自己不小心丢失数据的话，从其他地方里拷贝一份就可以了。不过平时开发中，我们不会用这样笨拙的方式来互相推送代码。毕竟每个人的电脑不是24小时开机，总不能打个电话给他说：我要推送代码给你啦！(╯‵□′)╯︵┻━┻因此，Github 就起到了一个“中央服务器”的作用。我们把代码提交到 Github 上，任何人都可以随时下载合并代码，给我们提供了很多便利。</p>
+<p><img src="分布式.jpg" alt="分布式"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完以上的介绍，很多人可能会比较模糊，我们在开发的过程中不是总需要一个中央服务器嘛？感觉上平时使用 Git 或者 SVN 操作都是一样的啊！出现这种混淆是因为我们平时开发的时候总是有一个中央服务器，总是再联网状态下。首先说明，Git 不需要一个中央服务器，我们平时使用 Github 是为了让我们的团队开发更便利，如果你不嫌麻烦，完全可以不用中央服务器。而 SVN 是必须使用一个中央服务器，而且如果没法联网或者服务器宕机，所有人都没法工作。其次，Git 是可以在断网状态下提交，因为每个人的电脑里都是一个完整的代码仓库，包含提交历史等等。而 SVN 在断网的时候是没法提交的，也没法查看历史记录。当然，Git 优于 SVN 的不仅有上面的这些，还有很多强大的功能优于 SVN。比如强大的分支功能，Git 做一个小小的标记就会产生一个分支。而 SVN 是复制一份代码到分支目录。Git 还可以进行本地回滚【因为自己电脑里也是一个完整的版本库，但是提交到中央服务器上的时候可以减少冗余版本】</p>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>以上这些知识都是参考下面这些连接里的内容，本意是我自己的学习笔记，特此对其进行感谢。</p>
+<blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000" title="集中式vs分布式 - 廖雪峰的官方网站" target="_blank" rel="noopener">集中式vs分布式 - 廖雪峰的官方网站</a><br><a href="https://www.zhihu.com/question/20093241" title="如何理解 Git 的分布式？ - 知乎" target="_blank" rel="noopener">如何理解 Git 的分布式？ - 知乎</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">集中式和分布式版本控制学习整理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">http://www.cylong.com/blog/2016/09/26/git-svn/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>svn</tag>
+        <tag>分布式版本控制</tag>
+        <tag>集中式版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>笑话人生，才刚刚开始</title>
     <url>/blog/2016/10/20/my-life-is-just-beginning/</url>
     <content><![CDATA[<hr>
@@ -891,6 +923,46 @@ f1g1ns2.dnspod.net
       <tags>
         <tag>随笔</tag>
         <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 集成 Disqus 评论</title>
+    <url>/blog/2017/03/26/hexo-next-disqus/</url>
+    <content><![CDATA[<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
+<blockquote>
+<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
+</blockquote>
+<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
+<a id="more"></a>
+<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
+<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
+<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
+<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
+<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
+<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
+<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>接下来就可以进入后台管理设置你的评论了。</li>
+</ol>
+<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
+<blockquote>
+<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -968,78 +1040,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>集中式和分布式版本控制学习整理</title>
-    <url>/blog/2016/09/26/git-svn/</url>
-    <content><![CDATA[<hr>
-<p>在面试的时候被问到平时喜欢用 Git 还是 SVN，他们之间的区别是什么？这自然就谈到了分布式和集中式的区别。作为一个学生党，免费的 Github 给我提供了很大的便利，我的所有项目都是放在 Github 上，毕竟 Github 还是一个全球最大的同性交友网站 ╮(╯▽╰)╭。下面就说说集中式和分布式版本控制的区别。</p>
-<a id="more"></a>
-<h1 id="为什么使用版本控制"><a href="#为什么使用版本控制" class="headerlink" title="为什么使用版本控制"></a>为什么使用版本控制</h1><p>在我们平时的开发过程中，大部分情况下是团队开发，即使是个人开发，我们也想对整个项目进行代码管理与备份等等。每次复制一份达成压缩包分类命名这样的肯定不是一个河里的解决办法，这只会让我们的磁盘空间越来越小，备份版本越来越多。在团队开发的时候，对代码进行合并管理的时候，总需要一些工具可以自动合并，版本控制系统应运而生。运用版本控制系统，我们可以对代码进行版本管理，可以随时查看之前版本的内容，随时回溯到之前版本中。团队合作的时候也可以自动合并代码，而不需要用一个共享文件，或者是进行定期的备份。</p>
-<h1 id="集中式和分布式"><a href="#集中式和分布式" class="headerlink" title="集中式和分布式"></a>集中式和分布式</h1><p>版本控制系统也分为两类，集中式和分布式版本控制，我们所熟知的 Git 是分布式，SVN 是集中式，下面说说两者的区别。</p>
-<h2 id="集中式"><a href="#集中式" class="headerlink" title="集中式"></a>集中式</h2><p>集中式版本控制系统有一个中央服务器，每个人在工作的时候都需要从中央服务器获取最新版本，修改后提交到中央服务器。其他人再获取最新代码进行更改。这种方式的缺点就是，我们必须有一个中央服务器，由于网络原因没法连接到服务器，或者服务器宕机，我们就没法进行数据获取和提交。而且由于是联网操作，网络环境也会影响到提交和下载速度。</p>
-<p><img src="集中式.jpg" alt="集中式"></p>
-<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>那么分布式版本控制系统是如何解决这些问题的呢？首先，分布式版本控制系统没有所谓的中央服务器，每个站点【就是自己用来开发的电脑】都有一个完整的版本库，我们可以在本地进行修改提交。这样在没有网络的环境下也可以进行开发。当需要进行代码合并的时候，我们只要把自己的版本库推送给你的合作伙伴就可以了，这样他就可以看到你做的更改。同时，他也可以把他的版本库推送给你，这样你就可以看到他的修改了。由于每个人电脑里都是一个完整的版本库，所以自己不小心丢失数据的话，从其他地方里拷贝一份就可以了。不过平时开发中，我们不会用这样笨拙的方式来互相推送代码。毕竟每个人的电脑不是24小时开机，总不能打个电话给他说：我要推送代码给你啦！(╯‵□′)╯︵┻━┻因此，Github 就起到了一个“中央服务器”的作用。我们把代码提交到 Github 上，任何人都可以随时下载合并代码，给我们提供了很多便利。</p>
-<p><img src="分布式.jpg" alt="分布式"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完以上的介绍，很多人可能会比较模糊，我们在开发的过程中不是总需要一个中央服务器嘛？感觉上平时使用 Git 或者 SVN 操作都是一样的啊！出现这种混淆是因为我们平时开发的时候总是有一个中央服务器，总是再联网状态下。首先说明，Git 不需要一个中央服务器，我们平时使用 Github 是为了让我们的团队开发更便利，如果你不嫌麻烦，完全可以不用中央服务器。而 SVN 是必须使用一个中央服务器，而且如果没法联网或者服务器宕机，所有人都没法工作。其次，Git 是可以在断网状态下提交，因为每个人的电脑里都是一个完整的代码仓库，包含提交历史等等。而 SVN 在断网的时候是没法提交的，也没法查看历史记录。当然，Git 优于 SVN 的不仅有上面的这些，还有很多强大的功能优于 SVN。比如强大的分支功能，Git 做一个小小的标记就会产生一个分支。而 SVN 是复制一份代码到分支目录。Git 还可以进行本地回滚【因为自己电脑里也是一个完整的版本库，但是提交到中央服务器上的时候可以减少冗余版本】</p>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>以上这些知识都是参考下面这些连接里的内容，本意是我自己的学习笔记，特此对其进行感谢。</p>
-<blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000" title="集中式vs分布式 - 廖雪峰的官方网站" target="_blank" rel="noopener">集中式vs分布式 - 廖雪峰的官方网站</a><br><a href="https://www.zhihu.com/question/20093241" title="如何理解 Git 的分布式？ - 知乎" target="_blank" rel="noopener">如何理解 Git 的分布式？ - 知乎</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">集中式和分布式版本控制学习整理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">http://www.cylong.com/blog/2016/09/26/git-svn/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>svn</tag>
-        <tag>分布式版本控制</tag>
-        <tag>集中式版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 集成 Disqus 评论</title>
-    <url>/blog/2017/03/26/hexo-next-disqus/</url>
-    <content><![CDATA[<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
-<blockquote>
-<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
-</blockquote>
-<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
-<a id="more"></a>
-<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
-<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
-<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
-<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
-<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
-<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
-<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
-<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-<li>接下来就可以进入后台管理设置你的评论了。</li>
-</ol>
-<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
-<blockquote>
-<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java 通过 DOM 方式解析、创建 XML</title>
     <url>/blog/2017/04/04/java-dom-xml/</url>
     <content><![CDATA[<hr>
@@ -1079,21 +1079,51 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>2018年立个FLAG-坚持写博客！</title>
-    <url>/blog/2018/06/24/new-2018/</url>
+    <title>Chrome 配置 SwitchyOmega</title>
+    <url>/blog/2017/04/09/chrome-SwitchyOmega/</url>
     <content><![CDATA[<hr>
-<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
-<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
+<p>此文章是以 Shadowsocks 代理为例，若想使用 Shadowsocks 请先安装对应系统的客户端并启动。详情请参考：</p>
+<blockquote>
+<p><a href="/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">站在 Shadowsocks 的肩膀上发现精彩的世界</a></p>
+</blockquote>
+<h1 id="Chrome-浏览器"><a href="#Chrome-浏览器" class="headerlink" title="Chrome 浏览器"></a>Chrome 浏览器</h1><p>无论是用户体验、强大的功能还是丰富的扩展程序都完爆国内的各种浏览器好不好(╯‵□′)╯︵┻━┻。强烈推荐啊！目前已经可以在不翻墙的情况下去 <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="Chrome（桌面版）" target="_blank" rel="noopener">下载 Chrome（桌面版）</a>了，账号数据同步方面也不需要翻墙了。【鼓掌撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。】</p>
+<h1 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h1><p>Google Chrome 浏览器上的一个代理扩展程序，可以轻松快捷地管理和切换多个代理设置。比如我们接下来要介绍的 <code>自动切换模式</code>。</p>
+<a id="more"></a>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>点击 <a href="https://github.com/FelisCatus/SwitchyOmega/releases" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a>，下载页面有详细的安装教程，仔细看一下就好。</p>
+<h2 id="配置-Shadowsocks-情景模式"><a href="#配置-Shadowsocks-情景模式" class="headerlink" title="配置 Shadowsocks 情景模式"></a>配置 Shadowsocks 情景模式</h2><ol>
+<li>打开 Chrome， 点击右上角的 <span class="fa fa-globe" aria-hidden="true"></span> 图标，再点击 <code>选项</code>。<br><img src="Shadowsocks-icon.png" alt="Shadowsocks 图标"></li>
+<li>点击左侧的 <code>新建情景模式</code>，输入情景模式名称 <code>Shadowsocks</code>【自己任意设置名称】，类型选择第一个<code>代理服务器</code>。创建完成后做如下配置：<br><img src="new.png" alt="新建情景模式"><br>你也可以自己设置不代理的地址列表。如上图。</li>
+<li>保存后你就可以通过这个情景模式科学上网了~</li>
+</ol>
+<h2 id="配置自动切换模式"><a href="#配置自动切换模式" class="headerlink" title="配置自动切换模式"></a>配置自动切换模式</h2><p>配置好 Shadowsocks 情景模式后虽然可以使用 Chrome 浏览器科学上网了，但是这样的话无论你访问什么网站都会走代理，有时候访问国内的一些网站反而会很慢，这时候自动切换模式就解决了这个问题。下面介绍一下如何配置自动切换模式。</p>
+<ol>
+<li>点击左侧的 <code>自动切换</code>，或者自己新建情景模式，类型选择第二个 <code>自动切换模式</code>。然后做如下配置：<br><img src="auto.png" alt="自动切换模式"></li>
+</ol>
+<ul>
+<li><code>切换规则</code> 是在访问 <code>条件设置</code> 的域名时候使用后面设置的 <code>情景模式</code>。比如图中我设置 <code>*.google.com</code> 和 <code>*.github.com</code> 使用 <code>Shadowsocks</code> 情景模式【刚刚创建的那个情景模式】。我们可以点击 <code>添加条件</code> 来添加自己的规则。</li>
+<li>将图中 <code>规则列表规则</code> 前面的框打√，再将后面的 <code>情景模式</code> 设置为 <code>Shadowsocks</code>，意思是规则列表中的内容，我们使用 <code>Shadowsocks</code> 情景模式。然后 <code>规则列表设置</code> 中：<ul>
+<li>规则列表格式： AutoProxy；</li>
+<li>规则列表网址： <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
+</ul>
+</li>
+<li>这样设置完成 <code>规则列表规则</code> 后就不需要在切换规则中一个一个添加条件了。</li>
+<li><code>切换规则</code> 最后一行的 <code>默认情景模式</code> 代表不在规则列表中网址我们使用 <code>直接连接</code> 情景模式，也就是说不走代理。</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="https://github.com/FelisCatus/SwitchyOmega" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a><br><a href="https://github.com/gfwlist/gfwlist" title="gfwlist/gfwlist" target="_blank" rel="noopener">Github-gfwlist</a></p>
+</blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">Chrome 配置 SwitchyOmega</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>Shadowsocks</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
+        <tag>SwitchyOmega</tag>
       </tags>
   </entry>
   <entry>
@@ -1150,54 +1180,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Chrome 配置 SwitchyOmega</title>
-    <url>/blog/2017/04/09/chrome-SwitchyOmega/</url>
-    <content><![CDATA[<hr>
-<p>此文章是以 Shadowsocks 代理为例，若想使用 Shadowsocks 请先安装对应系统的客户端并启动。详情请参考：</p>
-<blockquote>
-<p><a href="/blog/2016/05/26/shadowsocks/" title="站在 Shadowsocks 的肩膀上发现精彩的世界">站在 Shadowsocks 的肩膀上发现精彩的世界</a></p>
-</blockquote>
-<h1 id="Chrome-浏览器"><a href="#Chrome-浏览器" class="headerlink" title="Chrome 浏览器"></a>Chrome 浏览器</h1><p>无论是用户体验、强大的功能还是丰富的扩展程序都完爆国内的各种浏览器好不好(╯‵□′)╯︵┻━┻。强烈推荐啊！目前已经可以在不翻墙的情况下去 <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="Chrome（桌面版）" target="_blank" rel="noopener">下载 Chrome（桌面版）</a>了，账号数据同步方面也不需要翻墙了。【鼓掌撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。】</p>
-<h1 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h1><p>Google Chrome 浏览器上的一个代理扩展程序，可以轻松快捷地管理和切换多个代理设置。比如我们接下来要介绍的 <code>自动切换模式</code>。</p>
-<a id="more"></a>
-<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>点击 <a href="https://github.com/FelisCatus/SwitchyOmega/releases" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a>，下载页面有详细的安装教程，仔细看一下就好。</p>
-<h2 id="配置-Shadowsocks-情景模式"><a href="#配置-Shadowsocks-情景模式" class="headerlink" title="配置 Shadowsocks 情景模式"></a>配置 Shadowsocks 情景模式</h2><ol>
-<li>打开 Chrome， 点击右上角的 <span class="fa fa-globe" aria-hidden="true"></span> 图标，再点击 <code>选项</code>。<br><img src="Shadowsocks-icon.png" alt="Shadowsocks 图标"></li>
-<li>点击左侧的 <code>新建情景模式</code>，输入情景模式名称 <code>Shadowsocks</code>【自己任意设置名称】，类型选择第一个<code>代理服务器</code>。创建完成后做如下配置：<br><img src="new.png" alt="新建情景模式"><br>你也可以自己设置不代理的地址列表。如上图。</li>
-<li>保存后你就可以通过这个情景模式科学上网了~</li>
-</ol>
-<h2 id="配置自动切换模式"><a href="#配置自动切换模式" class="headerlink" title="配置自动切换模式"></a>配置自动切换模式</h2><p>配置好 Shadowsocks 情景模式后虽然可以使用 Chrome 浏览器科学上网了，但是这样的话无论你访问什么网站都会走代理，有时候访问国内的一些网站反而会很慢，这时候自动切换模式就解决了这个问题。下面介绍一下如何配置自动切换模式。</p>
-<ol>
-<li>点击左侧的 <code>自动切换</code>，或者自己新建情景模式，类型选择第二个 <code>自动切换模式</code>。然后做如下配置：<br><img src="auto.png" alt="自动切换模式"></li>
-</ol>
-<ul>
-<li><code>切换规则</code> 是在访问 <code>条件设置</code> 的域名时候使用后面设置的 <code>情景模式</code>。比如图中我设置 <code>*.google.com</code> 和 <code>*.github.com</code> 使用 <code>Shadowsocks</code> 情景模式【刚刚创建的那个情景模式】。我们可以点击 <code>添加条件</code> 来添加自己的规则。</li>
-<li>将图中 <code>规则列表规则</code> 前面的框打√，再将后面的 <code>情景模式</code> 设置为 <code>Shadowsocks</code>，意思是规则列表中的内容，我们使用 <code>Shadowsocks</code> 情景模式。然后 <code>规则列表设置</code> 中：<ul>
-<li>规则列表格式： AutoProxy；</li>
-<li>规则列表网址： <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></li>
-</ul>
-</li>
-<li>这样设置完成 <code>规则列表规则</code> 后就不需要在切换规则中一个一个添加条件了。</li>
-<li><code>切换规则</code> 最后一行的 <code>默认情景模式</code> 代表不在规则列表中网址我们使用 <code>直接连接</code> 情景模式，也就是说不走代理。</li>
-</ul>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="https://github.com/FelisCatus/SwitchyOmega" title="FelisCatus/SwitchyOmega" target="_blank" rel="noopener">Github-SwitchyOmega</a><br><a href="https://github.com/gfwlist/gfwlist" title="gfwlist/gfwlist" target="_blank" rel="noopener">Github-gfwlist</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">Chrome 配置 SwitchyOmega</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/" title="Chrome 配置 SwitchyOmega">http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Shadowsocks</category>
-      </categories>
-      <tags>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
-        <tag>SwitchyOmega</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>520·答辩·校庆·校园文化夜·非酋高级成就</title>
     <url>/blog/2017/05/20/520/</url>
     <content><![CDATA[<hr>
@@ -1227,136 +1209,6 @@ f1g1ns2.dnspod.net
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言头文件使用总结</title>
-    <url>/blog/2018/06/25/c-header/</url>
-    <content><![CDATA[<hr>
-<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
-<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
-<a id="more"></a>
-<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
-<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
-<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
-<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
-<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
-<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>C/C++</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>头文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>愚人节快乐</title>
-    <url>/blog/2019/04/01/april-fools-day/</url>
-    <content><![CDATA[<hr>
-<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
-<a id="more"></a>
-<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
-<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
-</blockquote>
-<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>随笔</tag>
-        <tag>lambda</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两数之和</title>
-    <url>/blog/2019/11/06/two-sum/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<p><strong>示例:</strong></p>
-<blockquote>
-<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两数相加</title>
-    <url>/blog/2019/11/25/add-two-numbers/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
-<p><strong>示例：</strong></p>
-<blockquote>
-<p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>由于各自的位数是按照逆序的方式存储的，所以我们只要一位一位进行加法就可以了，同时考虑溢出的情况，使用进位 carry 来表示。</p>
-<p><img src="add_two_numbers.svg" alt="两数相加图解"></p>
-<p>对于两个相加的链表，可能出现长度不一样的情况，这个时候，我们只要处理长的链表，单独加此链表的值即可。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> carry;</span><br><span class="line">    ListNode l3 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    ListNode l3_res = l3;</span><br><span class="line">    <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (l1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            l3.val += l2.val;</span><br><span class="line">            l2 = l2.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            l3.val += l1.val;</span><br><span class="line">            l1 = l1.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            l3.val += (l1.val + l2.val);</span><br><span class="line">            l1 = l1.next;</span><br><span class="line">            l2 = l2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        carry = l3.val / <span class="number">10</span>;</span><br><span class="line">        l3.val = l3.val % <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">if</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry == <span class="number">1</span>) &#123;</span><br><span class="line">            l3.next = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">            l3 = l3.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l3_res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>另外一种处理两个链表长度不一样的方法就是，我们就将短的链表补0，继续与长的链表相加即可。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    ListNode p = l1;</span><br><span class="line">    ListNode q = l2;</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (q != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = carry + p.val + q.val;</span><br><span class="line">        p.val = sum % <span class="number">10</span>;</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">if</span> (p.next == <span class="keyword">null</span> &amp;&amp; q.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            p.next = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p.next != <span class="keyword">null</span> &amp;&amp; q.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            q.next = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p.next == <span class="keyword">null</span> &amp;&amp; q.next == <span class="keyword">null</span> &amp;&amp; carry != <span class="number">0</span>) &#123;</span><br><span class="line">            p.next = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">        &#125;</span><br><span class="line">        p = p.next;</span><br><span class="line">        q = q.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
-<li>时间复杂度：Ο(max(m,n))，假设 m 和 n 分别表示 l1 和 l2 的长度，上面的算法最多重复 max(m,n) 次。</li>
-<li>空间复杂度：Ο(max(m,n))，新列表的长度最多为 max(m,n) + 1。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/add-two-numbers/" title="两数相加 | 力扣（LeetCode）" target="_blank" rel="noopener">两数相加 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/add-two-numbers/solution/" title="两数相加 | 题解" target="_blank" rel="noopener">两数相加 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/25/add-two-numbers/" title="两数相加">两数相加</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/25/add-two-numbers/" title="两数相加">http://www.cylong.com/blog/2019/11/25/add-two-numbers/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1437,25 +1289,111 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>路经总和</title>
-    <url>/blog/2020/07/06/path-sum/</url>
+    <title>C语言头文件使用总结</title>
+    <url>/blog/2018/06/25/c-header/</url>
     <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br>说明: 叶子节点是指没有子节点的节点。</p>
-<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 sum = 22<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \      \</span><br><span class="line">7    2      1</span><br></pre></td></tr></table></figure></p>
-<p>返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</p>
+<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
+<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
 <a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
-<li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li>
-<li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-by-leetcode-solution/" title="路径总和 | 题解" target="_blank" rel="noopener">路径总和 | 题解</a></p>
+<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
+<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
+<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
+<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
+<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
+<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">路经总和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">http://www.cylong.com/blog/2020/07/06/path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>头文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2018年立个FLAG-坚持写博客！</title>
+    <url>/blog/2018/06/24/new-2018/</url>
+    <content><![CDATA[<hr>
+<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
+<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愚人节快乐</title>
+    <url>/blog/2019/04/01/april-fools-day/</url>
+    <content><![CDATA[<hr>
+<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
+<a id="more"></a>
+<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
+</blockquote>
+<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>随笔</tag>
+        <tag>lambda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两数相加</title>
+    <url>/blog/2019/11/25/add-two-numbers/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<p><strong>示例：</strong></p>
+<blockquote>
+<p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>由于各自的位数是按照逆序的方式存储的，所以我们只要一位一位进行加法就可以了，同时考虑溢出的情况，使用进位 carry 来表示。</p>
+<p><img src="add_two_numbers.svg" alt="两数相加图解"></p>
+<p>对于两个相加的链表，可能出现长度不一样的情况，这个时候，我们只要处理长的链表，单独加此链表的值即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> carry;</span><br><span class="line">    ListNode l3 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    ListNode l3_res = l3;</span><br><span class="line">    <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (l1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            l3.val += l2.val;</span><br><span class="line">            l2 = l2.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            l3.val += l1.val;</span><br><span class="line">            l1 = l1.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            l3.val += (l1.val + l2.val);</span><br><span class="line">            l1 = l1.next;</span><br><span class="line">            l2 = l2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        carry = l3.val / <span class="number">10</span>;</span><br><span class="line">        l3.val = l3.val % <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">if</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry == <span class="number">1</span>) &#123;</span><br><span class="line">            l3.next = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">            l3 = l3.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l3_res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外一种处理两个链表长度不一样的方法就是，我们就将短的链表补0，继续与长的链表相加即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    ListNode p = l1;</span><br><span class="line">    ListNode q = l2;</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (q != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = carry + p.val + q.val;</span><br><span class="line">        p.val = sum % <span class="number">10</span>;</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">if</span> (p.next == <span class="keyword">null</span> &amp;&amp; q.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            p.next = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p.next != <span class="keyword">null</span> &amp;&amp; q.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            q.next = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p.next == <span class="keyword">null</span> &amp;&amp; q.next == <span class="keyword">null</span> &amp;&amp; carry != <span class="number">0</span>) &#123;</span><br><span class="line">            p.next = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">        &#125;</span><br><span class="line">        p = p.next;</span><br><span class="line">        q = q.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<li>时间复杂度：Ο(max(m,n))，假设 m 和 n 分别表示 l1 和 l2 的长度，上面的算法最多重复 max(m,n) 次。</li>
+<li>空间复杂度：Ο(max(m,n))，新列表的长度最多为 max(m,n) + 1。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/add-two-numbers/" title="两数相加 | 力扣（LeetCode）" target="_blank" rel="noopener">两数相加 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/add-two-numbers/solution/" title="两数相加 | 题解" target="_blank" rel="noopener">两数相加 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/25/add-two-numbers/" title="两数相加">两数相加</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/25/add-two-numbers/" title="两数相加">http://www.cylong.com/blog/2019/11/25/add-two-numbers/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1507,23 +1445,25 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>另一个树的子树</title>
-    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
+    <title>两数之和</title>
+    <url>/blog/2019/11/06/two-sum/</url>
     <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
-<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure></p>
-<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">    /</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure></p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<p><strong>示例:</strong></p>
+<blockquote>
+<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+</blockquote>
 <a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解" target="_blank" rel="noopener">另一个树的子树 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1564,6 +1504,93 @@ f1g1ns2.dnspod.net
 <hr>
 <blockquote>
 <p>文章标题：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">三数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/05/30/three-sum/" title="三数之和">http://www.cylong.com/blog/2020/05/30/three-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>另一个树的子树</title>
+    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
+<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure></p>
+<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">    /</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解" target="_blank" rel="noopener">另一个树的子树 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路经总和</title>
+    <url>/blog/2020/07/06/path-sum/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
+<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 sum = 22<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \      \</span><br><span class="line">7    2      1</span><br></pre></td></tr></table></figure></p>
+<p>返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li>
+<li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-by-leetcode-solution/" title="路径总和 | 题解" target="_blank" rel="noopener">路径总和 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">路经总和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">http://www.cylong.com/blog/2020/07/06/path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路径总和 II</title>
+    <url>/blog/2020/07/07/path-sum-ii/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
+<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 sum = 22，<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br></pre></td></tr></table></figure></p>
+<p>返回:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">   [5,4,11,2],</span><br><span class="line">   [5,8,4,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>做此题之前，可以先做一道简单版的<a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和</a>，简单版的只要遍历全部节点，遇到满足条件的路径返回 true 即可，而此题不仅要遍历全部节点，还要记录满足条件的路径。此题是典型的回溯算法，思路就是，先声明一个<code>LinkedList&lt;Integer&gt; path</code>保存路径，<code>List&lt;List&lt;Integer&gt;&gt; ans</code>保存所有路径，我们每遍历到一个节点，就将这个节点的值保存在 path 中，当判断到子节点，如果此节点的值满足 sum 等于 val，则将 path 加入到 ans 中，否则继续进行递归遍历左右子树。注意入参 root 可能为空，另外递归的结束条件也包含节点为空。当递归回溯的时候，我们就删除最后加入到 path 中的节点。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">LinkedList&lt;Integer&gt; path = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, <span class="keyword">int</span> sum) &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    path.add(root.val);</span><br><span class="line">    <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sum == root.val) &#123;</span><br><span class="line">            <span class="comment">// 此处new LinkedList&lt;&gt;(path)新建一个链表</span></span><br><span class="line">            <span class="comment">// 因为如果直接add(path)，ans中的路径和path是相同的引用，后面操作path后，ans中的路径也将一起被修改。</span></span><br><span class="line">            ans.add(<span class="keyword">new</span> LinkedList&lt;&gt;(path));</span><br><span class="line">            <span class="comment">// 此处无需return，因为后续pathSum递归的时候root.left和root.right都为空，满足递归结束条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    pathSum(root.left, sum - root.val);</span><br><span class="line">    pathSum(root.right, sum - root.val);</span><br><span class="line">    <span class="comment">// 递归回溯的时候删除最后一个节点，此处使用LinkedList提升效率</span></span><br><span class="line">    path.removeLast();</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/path-sum-ii/" title="路径总和 II | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和 II | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum-ii/solution/" title="路径总和 II | 题解" target="_blank" rel="noopener">路径总和 II | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/07/path-sum-ii/" title="路径总和 II">路径总和 II</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/07/path-sum-ii/" title="路径总和 II">http://www.cylong.com/blog/2020/07/07/path-sum-ii/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
