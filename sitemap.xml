@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/categories/index.html</loc>
-    
-    <lastmod>2020-06-06T08:31:19.099Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/about/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
@@ -44,14 +37,21 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2017/04/04/java-dom-xml/</loc>
+    <loc>http://www.cylong.com/categories/index.html</loc>
+    
+    <lastmod>2020-06-06T08:31:19.099Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/blog/2017/03/31/jackson-java-json/</loc>
     
     <lastmod>2020-06-06T08:31:19.088Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2017/03/31/jackson-java-json/</loc>
+    <loc>http://www.cylong.com/blog/2017/04/04/java-dom-xml/</loc>
     
     <lastmod>2020-06-06T08:31:19.088Z</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
