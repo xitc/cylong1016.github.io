@@ -43,6 +43,18 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
+    
+      <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+      <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="中序遍历" scheme="http://www.cylong.com/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
+      <category term="回溯算法" scheme="http://www.cylong.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
   </entry>
   
   <entry>
@@ -72,6 +84,16 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
+    
+      <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+      <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="中序遍历" scheme="http://www.cylong.com/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
   </entry>
   
   <entry>
@@ -100,6 +122,14 @@
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
+    
+      <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+      <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   
@@ -132,6 +162,12 @@
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+      <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -170,6 +206,10 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+      <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
+    
   </entry>
   
   <entry>
@@ -201,6 +241,10 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="单向链表" scheme="http://www.cylong.com/tags/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    
   </entry>
   
   <entry>
@@ -231,6 +275,10 @@
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="哈希表" scheme="http://www.cylong.com/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
