@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="java,leetcode,学习笔记,递归,树,二叉树,深度优先搜索,回溯算法,中序遍历,">
+  <meta name="keywords" content="java,leetcode,学习笔记,递归,树,二叉树,深度优先搜索,中序遍历,回溯算法,">
 
 
 
@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 22，1234567      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1 返回:1234[   [5,4,11,2],   [5,8">
-<meta name="keywords" content="java,leetcode,学习笔记,递归,树,二叉树,深度优先搜索,回溯算法,中序遍历">
+<meta name="description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:12345678910111213给定如下二叉树，以及目标和 sum = 22，      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1返回:[   [5,4,11,2],">
+<meta name="keywords" content="java,leetcode,学习笔记,递归,树,二叉树,深度优先搜索,中序遍历,回溯算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="路径总和 II">
 <meta property="og:url" content="http://www.cylong.com/blog/2020/07/07/path-sum-ii/index.html">
 <meta property="og:site_name" content="笑话人生">
-<meta property="og:description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 22，1234567      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1 返回:1234[   [5,4,11,2],   [5,8">
+<meta property="og:description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:12345678910111213给定如下二叉树，以及目标和 sum = 22，      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1返回:[   [5,4,11,2],">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-07-06T16:03:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="路径总和 II">
-<meta name="twitter:description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 22，1234567      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1 返回:1234[   [5,4,11,2],   [5,8">
+<meta name="twitter:description" content="题目描述给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。说明: 叶子节点是指没有子节点的节点。 示例:12345678910111213给定如下二叉树，以及目标和 sum = 22，      5     / \    4   8   /   / \  11  13  4 /  \    / \7    2  5   1返回:[   [5,4,11,2],">
 
 
 
@@ -366,8 +366,7 @@
       
         <hr>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
-<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 sum = 22，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br></pre></td></tr></table></figure></p>
-<p>返回:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">   [5,4,11,2],</span><br><span class="line">   [5,8,4,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p><strong>示例:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">给定如下二叉树，以及目标和 sum = 22，</span><br><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br><span class="line">返回:</span><br><span class="line">[</span><br><span class="line">   [5,4,11,2],</span><br><span class="line">   [5,8,4,5]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>做此题之前，可以先做一道简单版的<a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和</a>，简单版的只要遍历全部节点，遇到满足条件的路径返回 true 即可，而此题不仅要遍历全部节点，还要记录满足条件的路径。此题是典型的回溯算法，思路就是，先声明一个<code>LinkedList&lt;Integer&gt; path</code>保存路径，<code>List&lt;List&lt;Integer&gt;&gt; ans</code>保存所有路径，我们每遍历到一个节点，就将这个节点的值保存在 path 中，当判断到子节点，如果此节点的值满足 sum 等于 val，则将 path 加入到 ans 中，否则继续进行递归遍历左右子树。注意入参 root 可能为空，另外递归的结束条件也包含节点为空。当递归回溯的时候，我们就删除最后加入到 path 中的节点。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">LinkedList&lt;Integer&gt; path = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, <span class="keyword">int</span> sum) &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    path.add(root.val);</span><br><span class="line">    <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sum == root.val) &#123;</span><br><span class="line">            <span class="comment">// 此处new LinkedList&lt;&gt;(path)新建一个链表</span></span><br><span class="line">            <span class="comment">// 因为如果直接add(path)，ans中的路径和path是相同的引用，后面操作path后，ans中的路径也将一起被修改。</span></span><br><span class="line">            ans.add(<span class="keyword">new</span> LinkedList&lt;&gt;(path));</span><br><span class="line">            <span class="comment">// 此处无需return，因为后续pathSum递归的时候root.left和root.right都为空，满足递归结束条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    pathSum(root.left, sum - root.val);</span><br><span class="line">    pathSum(root.right, sum - root.val);</span><br><span class="line">    <span class="comment">// 递归回溯的时候删除最后一个节点，此处使用LinkedList提升效率</span></span><br><span class="line">    path.removeLast();</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -412,9 +411,9 @@
           
             <a href="/tags/深度优先搜索/" rel="tag">#深度优先搜索</a>
           
-            <a href="/tags/回溯算法/" rel="tag">#回溯算法</a>
-          
             <a href="/tags/中序遍历/" rel="tag">#中序遍历</a>
+          
+            <a href="/tags/回溯算法/" rel="tag">#回溯算法</a>
           
         </div>
       
@@ -430,6 +429,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2020/07/15/kda-jie-dian-lcof/" rel="prev" title="二叉搜索树的第k大节点">
+                二叉搜索树的第k大节点 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +505,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">38</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -519,7 +522,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -676,7 +679,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共36.6k字</span>
+  <span class="post-count">博客共37.2k字</span>
 </div>
 
         

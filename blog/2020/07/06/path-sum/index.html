@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 221234567      5     / \    4   8   /   / \  11  13  4 /  \      \7    2      1 返回 true, 因为存在目标和为 2">
+<meta name="description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:123456789给定如下二叉树，以及目标和 sum = 22        5       / \      4   8     /   / \    11  13  4   /  \      \  7    2      1返回 t">
 <meta name="keywords" content="java,leetcode,学习笔记,递归,树,二叉树,深度优先搜索,中序遍历">
 <meta property="og:type" content="article">
 <meta property="og:title" content="路经总和">
 <meta property="og:url" content="http://www.cylong.com/blog/2020/07/06/path-sum/index.html">
 <meta property="og:site_name" content="笑话人生">
-<meta property="og:description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 221234567      5     / \    4   8   /   / \  11  13  4 /  \      \7    2      1 返回 true, 因为存在目标和为 2">
+<meta property="og:description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:123456789给定如下二叉树，以及目标和 sum = 22        5       / \      4   8     /   / \    11  13  4   /  \      \  7    2      1返回 t">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-07-06T14:49:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="路经总和">
-<meta name="twitter:description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:给定如下二叉树，以及目标和 sum = 221234567      5     / \    4   8   /   / \  11  13  4 /  \      \7    2      1 返回 true, 因为存在目标和为 2">
+<meta name="twitter:description" content="题目描述给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。说明: 叶子节点是指没有子节点的节点。 示例:123456789给定如下二叉树，以及目标和 sum = 22        5       / \      4   8     /   / \    11  13  4   /  \      \  7    2      1返回 t">
 
 
 
@@ -366,8 +366,7 @@
       
         <hr>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
-<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 sum = 22<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \      \</span><br><span class="line">7    2      1</span><br></pre></td></tr></table></figure></p>
-<p>返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</p>
+<p><strong>示例:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">给定如下二叉树，以及目标和 sum = 22</span><br><span class="line">        5</span><br><span class="line">       / \</span><br><span class="line">      4   8</span><br><span class="line">     /   / \</span><br><span class="line">    11  13  4</span><br><span class="line">   /  \      \</span><br><span class="line">  7    2      1</span><br><span class="line">返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -508,7 +507,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">38</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -525,7 +524,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -682,7 +681,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共36.6k字</span>
+  <span class="post-count">博客共37.2k字</span>
 </div>
 
         
