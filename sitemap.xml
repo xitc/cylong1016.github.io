@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/about/index.html</loc>
+    <loc>http://www.cylong.com/categories/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/categories/index.html</loc>
+    <loc>http://www.cylong.com/about/index.html</loc>
     
     <lastmod>2020-06-06T08:31:19.099Z</lastmod>
     
@@ -114,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
-    
-    <lastmod>2020-06-06T08:31:19.057Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/blog/2016/04/29/apache-404/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
@@ -135,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -143,6 +136,13 @@
   
   <url>
     <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
+    
+    <lastmod>2020-06-06T08:31:19.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -180,6 +180,13 @@
     <loc>http://www.cylong.com/blog/2020/05/30/three-sum/</loc>
     
     <lastmod>2020-05-30T13:48:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</loc>
+    
+    <lastmod>2020-03-17T14:29:14.000Z</lastmod>
     
   </url>
   

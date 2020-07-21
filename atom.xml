@@ -212,6 +212,52 @@
   </entry>
   
   <entry>
+    <title>拼写单词</title>
+    <link href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/"/>
+    <id>http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</id>
+    <published>2020-03-17T14:29:14.000Z</published>
+    <updated>2020-03-17T14:29:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』（字符串），那么我们就认为你掌握了这个单词。返回词汇表 words 中你掌握的所有单词的长度之和。</p><p><strong>注意：每次拼写（指拼写词汇表中的一个单词）时，chars 中的每个字母都只能用一次。</strong></p><p><strong>示例 1：</strong></p><blockquote><p>输入：words = [“cat”, “bt”, “hat”, “tree”], chars = “atach”<br>输出：6<br>解释：可以形成字符串 “cat” 和 “hat”，所以答案是 3 + 3 = 6。</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>输入：words = [“hello”, “world”, “leetcode”], chars = “welldonehoneyr”<br>输出：10<br>解释：可以形成字符串 “hello” 和 “world”，所以答案是 5 + 5 = 10。</p></blockquote><p><strong>提示：</strong></p><ul><li>1 &lt;= words.length &lt;= 1000</li><li>1 &lt;= words[i].length, chars.length &lt;= 100</li><li>所有字符串中都仅包含小写英文字母</li></ul><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>最简单的方法，暴力方法，我们遍历全部的word，判断word的中的所有字符是否都在chars中存在，同时我们标记下已经被记录的字符，防止重复使用。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span>[] charArr = chars.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 判断chars中是否包含word</span></span><br><span class="line">        <span class="keyword">if</span> (findWord(word, charArr)) &#123;</span><br><span class="line">            length += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findWord</span><span class="params">(String word, <span class="keyword">char</span>[] charArr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[charArr.length];</span><br><span class="line">    <span class="keyword">char</span>[] wordArr = word.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordArr.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 从chars中找到word中的字符</span></span><br><span class="line">        <span class="keyword">if</span> (!findChar(wordArr[i], charArr, flag)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findChar</span><span class="params">(<span class="keyword">char</span> c, <span class="keyword">char</span>[] charArr, <span class="keyword">boolean</span>[] flag)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; charArr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (charArr[i] == c &amp;&amp; !flag[i]) &#123;</span><br><span class="line">            <span class="comment">// 保证每个字符只用到一次</span></span><br><span class="line">            flag[i] = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度为Ο(MN)：M为words中所有字符数，N为chars字符数。</li></ul><h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p>显然，对于一个单词 word，只要其中的每个字母的数量都不大于 chars 中对应的字母的数量，那么就可以用 chars 中的字母拼写出 word。由于题目中的限制条件是小写英文字母，所以我们只要使用int[26]数组，分别保存字母表中的字母出现次数和word中字母出现的次数即可。</p><p><img src="图解.gif" alt="图解"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 统计字母表中字符出现的次数</span></span><br><span class="line">    <span class="keyword">int</span>[] charNum = getCharNum(chars);</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 统计word中字符出现的次数</span></span><br><span class="line">        <span class="keyword">int</span>[] wordNum = getCharNum(word);</span><br><span class="line">        <span class="keyword">if</span> (isContain(charNum, wordNum)) &#123;</span><br><span class="line">            len += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isContain</span><span class="params">(<span class="keyword">int</span>[] charNum, <span class="keyword">int</span>[] wordNum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordNum.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 判断如果word中的字符数大于chars中的字符数，则无法拼写单词</span></span><br><span class="line">        <span class="keyword">if</span> (charNum[i] &lt; wordNum[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[] getCharNum(String word) &#123;</span><br><span class="line">    <span class="keyword">int</span>[] charNum = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : word.toCharArray()) &#123;</span><br><span class="line">        charNum[c - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> charNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：Ο(n)，其中 n 为所有字符串的长度和。我们需要遍历每个字符串，包括 chars 以及数组 words 中的每个单词。</li><li>空间复杂度：Ο(S)，其中 S 为字符集大小，在本题中 S 的值为 26（所有字符串仅包含小写字母）。程序运行过程中，最多同时存在两个统计字符数的数组，使用的空间均不超过字符集大小 S，因此空间复杂度为 O(S)。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/" title="二叉搜索树的第k大节点 | 力扣（LeetCode）" target="_blank" rel="noopener">拼写单词 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/solution/tong-ji-zi-mu-chu-xian-de-ci-shu-shu-zu-ji-qiao-cj/" title="二叉搜索树的第k大节点 | 题解" target="_blank" rel="noopener">拼写单词 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">拼写单词</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』（字符串），那么我们就认为你掌握了这个单词。返回词汇表 words 中你掌握的所有单词的长度之和。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：每次拼写（指拼写词汇表中的一个单词）时，chars 中的每个字母都只能用一次。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入：words = [“cat”, “bt”, “hat”, “tree”], chars = “atach”&lt;br&gt;输出：6&lt;br&gt;解释：可以形成字符串 “cat” 和 “hat”，所以答案是 3 + 3 = 6。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入：words = [“hello”, “world”, “leetcode”], chars = “welldonehoneyr”&lt;br&gt;输出：10&lt;br&gt;解释：可以形成字符串 “hello” 和 “world”，所以答案是 5 + 5 = 10。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 &amp;lt;= words.length &amp;lt;= 1000&lt;/li&gt;
+&lt;li&gt;1 &amp;lt;= words[i].length, chars.length &amp;lt;= 100&lt;/li&gt;
+&lt;li&gt;所有字符串中都仅包含小写英文字母&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Z 字形变换</title>
     <link href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/"/>
     <id>http://www.cylong.com/blog/2019/12/30/zigzag-conversion/</id>
@@ -617,31 +663,6 @@
     
     
       <category term="算法" scheme="http://www.cylong.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笑话人生，才刚刚开始</title>
-    <link href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/"/>
-    <id>http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</id>
-    <published>2016-10-20T09:11:50.000Z</published>
-    <updated>2020-06-06T08:31:19.084Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。</p><a id="more"></a><p>即将面临毕业的我也是很纠结的，在考研和工作中二选一，最后决定脚踏两条船，还好没有翻船。从9月份开始不断的投递各个公司，陆陆续续投了接近20家。不断的参加宣讲笔试面试、参加宣讲笔试面试……有成功也有失败，两个月的时光转瞬即逝，不得不说，找工作真是一件头疼的事情【其实考研更让我头疼啊！(╯‵□′)╯︵┻━┻】。</p><p>…………【此处省略10000字，最后确定下来再填坑】</p><p>这两个月完全是在煎熬，找工作的焦急导致心情跌落到了低谷，有一段时间甚至什么都不想干，就坐在那发呆。最后终于在收到某 Offer 后，跌落到低谷的心情瞬间上升到了天堂，一切都放松了下来，可以安心的做一些其他事情了呢~~我相信我的人生才刚刚开始，后面会有更大的挑战在等着我，加油！Fighting！【怎么中二起来了啊！而且文笔也不好啊！(╯‵□′)╯︵┻━┻另外我只想记录下这一天啊！但是又不知道说什么好啊！】</p><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">笑话人生，才刚刚开始</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/" title="笑话人生，才刚刚开始">http://www.cylong.com/blog/2016/10/20/my-life-is-just-beginning/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;很多人的人生都有三个重大的转折点，第一是中考，第二是高考，第三是大学毕业。我很庆幸在这三个转折点，我都选择了或者有幸得到了自己心仪的结果，虽然有自己努力的结果，但不乏有很多幸运的元素。中考高考分别都是自己在初中和高中所有考试中发挥最好的一次，也许总有那种一到关键时候就超长发挥的光环。但我坚信，努力就会有好的结果。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.cylong.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://www.cylong.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="人生" scheme="http://www.cylong.com/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
