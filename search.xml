@@ -30,6 +30,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Atom 的炫酷插件 activate-power-mode</title>
+    <url>/blog/2016/04/22/activate-power-mode/</url>
+    <content><![CDATA[<hr>
+<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
+<a id="more"></a>
+<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
+<p>先上图！</p>
+<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
+<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
+<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
+<ul>
+<li>Windows：直接双击安装就可以。</li>
+<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
+</ul>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
+<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
+<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
+<ul>
+<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
+<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
+<li>找到 <code>packages</code> 设置</li>
+<li>找到  <code>activate-power-mode</code></li>
+<li>进入到  <code>Settings</code></li>
+<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
+</ul>
+<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
+<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Atom</category>
+      </categories>
+      <tags>
+        <tag>atom</tag>
+        <tag>插件</tag>
+        <tag>ubuntu</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo + Git 搭建免费的个人博客</title>
     <url>/blog/2016/04/19/hexo-git/</url>
     <content><![CDATA[<hr>
@@ -117,56 +167,6 @@ f1g1ns2.dnspod.net
         <tag>hexo</tag>
         <tag>git</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Atom 的炫酷插件 activate-power-mode</title>
-    <url>/blog/2016/04/22/activate-power-mode/</url>
-    <content><![CDATA[<hr>
-<h1 id="Atom-简介"><a href="#Atom-简介" class="headerlink" title="Atom 简介"></a>Atom 简介</h1><p><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 是一款免费的编辑器，我一般在写 Web 项目的时候使用。写 Java 项目用 Eclipse， 其他直接用 Notepad++，别问我为什么不用 Sublime。喜欢这款编辑器的主要原因是它的黑色扁平化主题风格非常炫酷，功能也比较强大，缺点就是比较吃内存，启动比较慢( ╯□╰ )。最近使用 Atom 写自己的博客【没错，就是现在这个博客】，想到了 <a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a> 插件的炫酷效果，于是就体验了一下。下面介绍下详细安装过程。</p>
-<a id="more"></a>
-<h1 id="安装使用-activate-power-mode"><a href="#安装使用-activate-power-mode" class="headerlink" title="安装使用 activate-power-mode"></a>安装使用 activate-power-mode</h1><p>注意：本文针对 <em>Windows</em> 和 <em>Ubuntu</em> 平台，其他平台也差不多，自己琢磨吧~</p>
-<p>先上图！</p>
-<p><img src="activate-power-mode.gif" alt="activate-power-mode"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
-<li><a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a></li>
-<li><a href="https://github.com/JoelBesada/activate-power-mode" title="activate-power-mode" target="_blank" rel="noopener">activate-power-mode</a></li>
-<li><a href="http://nodejs.org/" title="Node.js" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<p>点击上面的三个链接，分别下载下来 Atom、activate-power-mode、Node.js，然后安装 Atom、Node.js。</p>
-<ul>
-<li>Windows：直接双击安装就可以。</li>
-<li>Ubuntu： 运行 <code>sudo dpkg -i xxx-atom-xxx.deb</code> 安装 Atom。</li>
-</ul>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>解压下载下来的 activate-power-mode zip 包，移动到 <code>~\.atom\packages</code> 下，比如 Windows 是  <code>C:\Users\cylong\.atom\packages</code> ，Ubuntu 是 <code>home/cylong/.atom/packages</code>，接下来进入到 <code>activate-power-mode</code> 目录下，打开终端，输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install <span class="comment"># 安装必要的 module</span></span><br></pre></td></tr></table></figure>
-<p>之后重启 Atom ，使用右键选择 <code>Toggle</code> 或者 <code>Ctrl ＋ Alt ＋ O</code> 就启动插件了，体验炫酷的效果吧！</p>
-<h2 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h2><p>刚开始用的时候感觉蛮好玩的，非常爽。然后用了不到一分钟，我就觉得眼睛要瞎了！估计在玩个几分钟就真的瞎了！！屏幕震动效果闪瞎我的双眼！要是能够把震动效果删除会不会好一点？于是自己开始找这个插件的设置，果然有！</p>
-<ul>
-<li>首先点击 Atom 左上角的 <code>File</code> 按钮，Ubuntu 是 <code>Edit</code></li>
-<li>Windows 进入到 <code>Settings</code>，Ubuntu 是 <code>Preferences</code></li>
-<li>找到 <code>packages</code> 设置</li>
-<li>找到  <code>activate-power-mode</code></li>
-<li>进入到  <code>Settings</code></li>
-<li>找到 <code>Screen Shake - Enable</code>， 将前面的 √ 去掉</li>
-</ul>
-<p>之后就只有颗粒效果啦，现在感觉好多了吧(●’◡’●)。插件设置中还有颗粒大小的设置，自己根据需要修改吧~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>把屏幕震动效果关掉后感觉好很多了。也一直在用这个效果，感觉还是蛮帅的~不过，如果一行中字符太多，Atom 会自动换行显示，但是这些字符还是在同一行的，这个时候这个插件产生的效果就会错位，就是产生的颗粒不是在当前输入的字符位置，目前我还没解决 ( ╯□╰ )，谁有好的解决办法欢迎联系我。另外，如果读者有更好的 Atom 插件或者使用技巧，欢迎留言或者 <a href="/about/#联系我" title="联系我">联系我</a>。最后推荐下自己比较喜欢的编辑器 <a href="https://atom.io/" title="Atom" target="_blank" rel="noopener">Atom</a> 吧 (●’◡’●)</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p><strong>2016-05-15 更新</strong><br>这个插件的作者是比较良心的，修复了 Atom 自动换行后，插件产生的颗粒位置错位的 BUG。现在一直在用这个插件，写代码越来越有激情了呢 o(^▽^)o</p>
-<p><strong>2016-06-01 更新</strong><br>我有点傻了( ╯□╰ )，我发现直接进入到 <code>Preferences(首选项)-&gt; install(安装)</code>，就可以直接安装 activate-power-mode 插件了。</p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">Atom 的炫酷插件 activate-power-mode</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/04/22/activate-power-mode/" title="Atom 的炫酷插件 activate-power-mode">http://www.cylong.com/blog/2016/04/22/activate-power-mode/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Atom</category>
-      </categories>
-      <tags>
-        <tag>atom</tag>
-        <tag>插件</tag>
-        <tag>ubuntu</tag>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -524,6 +524,44 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>.gitignore 的使用</title>
+    <url>/blog/2016/05/19/gitignore/</url>
+    <content><![CDATA[<hr>
+<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
+<a id="more"></a>
+<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
+<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
+</blockquote>
+<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
+<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
+<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
+<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
+<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
+<blockquote>
+<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
+</blockquote>
+<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>gitignore</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决 Github Pages 禁止百度爬虫抓取的问题</title>
     <url>/blog/2016/05/22/github-baidu-spider-exception/</url>
     <content><![CDATA[<hr>
@@ -566,44 +604,6 @@ f1g1ns2.dnspod.net
         <tag>seo</tag>
         <tag>爬虫</tag>
         <tag>search</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>.gitignore 的使用</title>
-    <url>/blog/2016/05/19/gitignore/</url>
-    <content><![CDATA[<hr>
-<p>当我们在项目开发的时候，常常使用 Git 做版本控制工具。有时候，我们不希望某些文件或者文件夹被 Git 追踪，比如项目产生的中间文件【.class 、 .o】 ，比如某些编辑器的副本文件【一般文件名带有 ~ 符号】，还有一些 log 文件等等。使用命令行的小伙伴可以不使用 <code>git add</code> 把他们加到索引中，不过随即而来的就是一些麻烦事，在你使用 <code>git add .</code> 的时候还是会追踪这些文件。使用 <code>git status</code> 也会显示 <code>Untracked files……</code>。我一直在使用 Github For Windows ，如果没有 .gitignore 文件，每次提交之前也要取消勾选那些不想上传的文件，非常的麻烦。</p>
-<a id="more"></a>
-<h1 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建 .gitignore"></a>创建 .gitignore</h1><p>以上说的那些问题都可以通过一个或者更多的 .gitignore 文件搞定，你可以在项目的任意目录下创建 .gitignore 文件，此文件的影响范围是当前目录和其所有子目录，可以在不同目录创建多个 .gitignore 文件【不过一般都是在项目根目录创建一个就行了】。</p>
-<p>需要注意的是 Windows 下直接<code>右键-&gt;新建文本文档</code>，然后键入文件名是没法创建的。。。详情请参考我的另一篇博客【这两篇博客应该是同一天写完的啊！拖延症得治呀( ╯□╰ )】：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/" title="Windows 使用 cmd(命令提示符)创建文件">Windows 使用 cmd(命令提示符)创建文件</a></p>
-</blockquote>
-<p>你还可以在 Github 上新建一个仓库的同时指定生成特定的 .gitignore 文件，如下图：</p>
-<p><img src="create-gitignore.png" alt="Github 自动创建指定的 .gitignore"></p>
-<h1 id="编辑-gitignore"><a href="#编辑-gitignore" class="headerlink" title="编辑 .gitignore"></a>编辑 .gitignore</h1><p>创建好后，我们就可以用任何编辑器打开了，在其中填写你想要忽略的文件的文件名，Git 就会忽略这些文件。例子请往下看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以'#' 开始的行，被视为注释。</span></span><br><span class="line"><span class="comment"># 忽略掉所有文件名是 cylong 的文件和文件夹。</span></span><br><span class="line">cylong</span><br><span class="line"><span class="comment"># 如果只想忽略 cylong 文件夹【不能有上面那段代码】。</span></span><br><span class="line">cylong/</span><br><span class="line"><span class="comment"># 如果只想忽略 doc/ 下面的 cylong 文件【同样不能有上面的 cylong 和 cylong/ 】</span></span><br><span class="line">doc/cylong</span><br><span class="line"><span class="comment"># 忽略所有后缀为 html 文件。</span></span><br><span class="line">*.html</span><br><span class="line"><span class="comment"># about.html 不想被忽略。</span></span><br><span class="line">!about.html</span><br><span class="line"><span class="comment"># 忽略所有后缀为 .o 和 .a文件。</span></span><br><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
-<p>除上面的一些例子以外，[abc]、[0-9]、[a-z]、? 这些正则表达式也是支持的。</p>
-<h1 id="使用-Github-的配置文件"><a href="#使用-Github-的配置文件" class="headerlink" title="使用 Github 的配置文件"></a>使用 Github 的配置文件</h1><p>如果只是我们自己写的话，可能并不会写的很全【重要的是比较麻烦是吧！】。还好 Github 已经为我们准备了各种配置文件，我们想要用哪个，就直接拿来用就好了。详情请戳：</p>
-<blockquote>
-<p><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
-</blockquote>
-<h1 id="删除已经跟踪的文件"><a href="#删除已经跟踪的文件" class="headerlink" title="删除已经跟踪的文件"></a>删除已经跟踪的文件</h1><p>如果文件已经被 Git 跟踪了， 那么这些文件即使被写在了 .gitignore 中，Git 也不会忽略他，还是会继续跟踪，解决办法是输入以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git rm --cached test.txt <span class="comment"># 如果是文件夹，后面再加上 -r</span></span><br><span class="line">git commit -m <span class="string">'delete test.txt'</span></span><br></pre></td></tr></table></figure>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" title="忽略特殊文件 - 廖雪峰的官方网站" target="_blank" rel="noopener">忽略特殊文件 - 廖雪峰的官方网站</a><br><a href="https://segmentfault.com/a/1190000000522997" title=".gitignore 文件使用说明 - change2hao" target="_blank" rel="noopener">.gitignore 文件使用说明 - change2hao</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">.gitignore 的使用</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/05/19/gitignore/" title=".gitignore 的使用">http://www.cylong.com/blog/2016/05/19/gitignore/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>gitignore</tag>
       </tags>
   </entry>
   <entry>
@@ -672,6 +672,54 @@ f1g1ns2.dnspod.net
         <tag>hexo</tag>
         <tag>seo</tag>
         <tag>search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
+    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
+    <content><![CDATA[<hr>
+<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
+<a id="more"></a>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
+</li>
+<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
+<p>回车后就大功告成了。</p>
+</li>
+<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
+</li>
+</ol>
+<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
+<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
+<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
+<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
+</blockquote>
+</li>
+<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
+</li>
+<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
+</ul>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -755,8 +803,8 @@ f1g1ns2.dnspod.net
         <tag>windows</tag>
         <tag>linux</tag>
         <tag>shadowsocks</tag>
-        <tag>android</tag>
         <tag>翻墙</tag>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -786,54 +834,6 @@ f1g1ns2.dnspod.net
         <tag>艾弗森</tag>
         <tag>艾已成诗</tag>
         <tag>篮球</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
-    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
-    <content><![CDATA[<hr>
-<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
-<a id="more"></a>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
-</li>
-<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
-<p>回车后就大功告成了。</p>
-</li>
-<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
-</li>
-</ol>
-<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
-<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
-<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
-<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
-</ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
-<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
-</blockquote>
-</li>
-<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#联系我" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
-</li>
-<li>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</li>
-</ul>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法" target="_blank" rel="noopener">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -869,38 +869,6 @@ f1g1ns2.dnspod.net
         <tag>wsdl</tag>
         <tag>web service client</tag>
         <tag>eclipse</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>集中式和分布式版本控制学习整理</title>
-    <url>/blog/2016/09/26/git-svn/</url>
-    <content><![CDATA[<hr>
-<p>在面试的时候被问到平时喜欢用 Git 还是 SVN，他们之间的区别是什么？这自然就谈到了分布式和集中式的区别。作为一个学生党，免费的 Github 给我提供了很大的便利，我的所有项目都是放在 Github 上，毕竟 Github 还是一个全球最大的同性交友网站 ╮(╯▽╰)╭。下面就说说集中式和分布式版本控制的区别。</p>
-<a id="more"></a>
-<h1 id="为什么使用版本控制"><a href="#为什么使用版本控制" class="headerlink" title="为什么使用版本控制"></a>为什么使用版本控制</h1><p>在我们平时的开发过程中，大部分情况下是团队开发，即使是个人开发，我们也想对整个项目进行代码管理与备份等等。每次复制一份达成压缩包分类命名这样的肯定不是一个河里的解决办法，这只会让我们的磁盘空间越来越小，备份版本越来越多。在团队开发的时候，对代码进行合并管理的时候，总需要一些工具可以自动合并，版本控制系统应运而生。运用版本控制系统，我们可以对代码进行版本管理，可以随时查看之前版本的内容，随时回溯到之前版本中。团队合作的时候也可以自动合并代码，而不需要用一个共享文件，或者是进行定期的备份。</p>
-<h1 id="集中式和分布式"><a href="#集中式和分布式" class="headerlink" title="集中式和分布式"></a>集中式和分布式</h1><p>版本控制系统也分为两类，集中式和分布式版本控制，我们所熟知的 Git 是分布式，SVN 是集中式，下面说说两者的区别。</p>
-<h2 id="集中式"><a href="#集中式" class="headerlink" title="集中式"></a>集中式</h2><p>集中式版本控制系统有一个中央服务器，每个人在工作的时候都需要从中央服务器获取最新版本，修改后提交到中央服务器。其他人再获取最新代码进行更改。这种方式的缺点就是，我们必须有一个中央服务器，由于网络原因没法连接到服务器，或者服务器宕机，我们就没法进行数据获取和提交。而且由于是联网操作，网络环境也会影响到提交和下载速度。</p>
-<p><img src="集中式.jpg" alt="集中式"></p>
-<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>那么分布式版本控制系统是如何解决这些问题的呢？首先，分布式版本控制系统没有所谓的中央服务器，每个站点【就是自己用来开发的电脑】都有一个完整的版本库，我们可以在本地进行修改提交。这样在没有网络的环境下也可以进行开发。当需要进行代码合并的时候，我们只要把自己的版本库推送给你的合作伙伴就可以了，这样他就可以看到你做的更改。同时，他也可以把他的版本库推送给你，这样你就可以看到他的修改了。由于每个人电脑里都是一个完整的版本库，所以自己不小心丢失数据的话，从其他地方里拷贝一份就可以了。不过平时开发中，我们不会用这样笨拙的方式来互相推送代码。毕竟每个人的电脑不是24小时开机，总不能打个电话给他说：我要推送代码给你啦！(╯‵□′)╯︵┻━┻因此，Github 就起到了一个“中央服务器”的作用。我们把代码提交到 Github 上，任何人都可以随时下载合并代码，给我们提供了很多便利。</p>
-<p><img src="分布式.jpg" alt="分布式"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完以上的介绍，很多人可能会比较模糊，我们在开发的过程中不是总需要一个中央服务器嘛？感觉上平时使用 Git 或者 SVN 操作都是一样的啊！出现这种混淆是因为我们平时开发的时候总是有一个中央服务器，总是再联网状态下。首先说明，Git 不需要一个中央服务器，我们平时使用 Github 是为了让我们的团队开发更便利，如果你不嫌麻烦，完全可以不用中央服务器。而 SVN 是必须使用一个中央服务器，而且如果没法联网或者服务器宕机，所有人都没法工作。其次，Git 是可以在断网状态下提交，因为每个人的电脑里都是一个完整的代码仓库，包含提交历史等等。而 SVN 在断网的时候是没法提交的，也没法查看历史记录。当然，Git 优于 SVN 的不仅有上面的这些，还有很多强大的功能优于 SVN。比如强大的分支功能，Git 做一个小小的标记就会产生一个分支。而 SVN 是复制一份代码到分支目录。Git 还可以进行本地回滚【因为自己电脑里也是一个完整的版本库，但是提交到中央服务器上的时候可以减少冗余版本】</p>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>以上这些知识都是参考下面这些连接里的内容，本意是我自己的学习笔记，特此对其进行感谢。</p>
-<blockquote>
-<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000" title="集中式vs分布式 - 廖雪峰的官方网站" target="_blank" rel="noopener">集中式vs分布式 - 廖雪峰的官方网站</a><br><a href="https://www.zhihu.com/question/20093241" title="如何理解 Git 的分布式？ - 知乎" target="_blank" rel="noopener">如何理解 Git 的分布式？ - 知乎</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">集中式和分布式版本控制学习整理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">http://www.cylong.com/blog/2016/09/26/git-svn/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>svn</tag>
-        <tag>分布式版本控制</tag>
-        <tag>集中式版本控制</tag>
       </tags>
   </entry>
   <entry>
@@ -955,6 +923,117 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>集中式和分布式版本控制学习整理</title>
+    <url>/blog/2016/09/26/git-svn/</url>
+    <content><![CDATA[<hr>
+<p>在面试的时候被问到平时喜欢用 Git 还是 SVN，他们之间的区别是什么？这自然就谈到了分布式和集中式的区别。作为一个学生党，免费的 Github 给我提供了很大的便利，我的所有项目都是放在 Github 上，毕竟 Github 还是一个全球最大的同性交友网站 ╮(╯▽╰)╭。下面就说说集中式和分布式版本控制的区别。</p>
+<a id="more"></a>
+<h1 id="为什么使用版本控制"><a href="#为什么使用版本控制" class="headerlink" title="为什么使用版本控制"></a>为什么使用版本控制</h1><p>在我们平时的开发过程中，大部分情况下是团队开发，即使是个人开发，我们也想对整个项目进行代码管理与备份等等。每次复制一份达成压缩包分类命名这样的肯定不是一个河里的解决办法，这只会让我们的磁盘空间越来越小，备份版本越来越多。在团队开发的时候，对代码进行合并管理的时候，总需要一些工具可以自动合并，版本控制系统应运而生。运用版本控制系统，我们可以对代码进行版本管理，可以随时查看之前版本的内容，随时回溯到之前版本中。团队合作的时候也可以自动合并代码，而不需要用一个共享文件，或者是进行定期的备份。</p>
+<h1 id="集中式和分布式"><a href="#集中式和分布式" class="headerlink" title="集中式和分布式"></a>集中式和分布式</h1><p>版本控制系统也分为两类，集中式和分布式版本控制，我们所熟知的 Git 是分布式，SVN 是集中式，下面说说两者的区别。</p>
+<h2 id="集中式"><a href="#集中式" class="headerlink" title="集中式"></a>集中式</h2><p>集中式版本控制系统有一个中央服务器，每个人在工作的时候都需要从中央服务器获取最新版本，修改后提交到中央服务器。其他人再获取最新代码进行更改。这种方式的缺点就是，我们必须有一个中央服务器，由于网络原因没法连接到服务器，或者服务器宕机，我们就没法进行数据获取和提交。而且由于是联网操作，网络环境也会影响到提交和下载速度。</p>
+<p><img src="集中式.jpg" alt="集中式"></p>
+<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>那么分布式版本控制系统是如何解决这些问题的呢？首先，分布式版本控制系统没有所谓的中央服务器，每个站点【就是自己用来开发的电脑】都有一个完整的版本库，我们可以在本地进行修改提交。这样在没有网络的环境下也可以进行开发。当需要进行代码合并的时候，我们只要把自己的版本库推送给你的合作伙伴就可以了，这样他就可以看到你做的更改。同时，他也可以把他的版本库推送给你，这样你就可以看到他的修改了。由于每个人电脑里都是一个完整的版本库，所以自己不小心丢失数据的话，从其他地方里拷贝一份就可以了。不过平时开发中，我们不会用这样笨拙的方式来互相推送代码。毕竟每个人的电脑不是24小时开机，总不能打个电话给他说：我要推送代码给你啦！(╯‵□′)╯︵┻━┻因此，Github 就起到了一个“中央服务器”的作用。我们把代码提交到 Github 上，任何人都可以随时下载合并代码，给我们提供了很多便利。</p>
+<p><img src="分布式.jpg" alt="分布式"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完以上的介绍，很多人可能会比较模糊，我们在开发的过程中不是总需要一个中央服务器嘛？感觉上平时使用 Git 或者 SVN 操作都是一样的啊！出现这种混淆是因为我们平时开发的时候总是有一个中央服务器，总是再联网状态下。首先说明，Git 不需要一个中央服务器，我们平时使用 Github 是为了让我们的团队开发更便利，如果你不嫌麻烦，完全可以不用中央服务器。而 SVN 是必须使用一个中央服务器，而且如果没法联网或者服务器宕机，所有人都没法工作。其次，Git 是可以在断网状态下提交，因为每个人的电脑里都是一个完整的代码仓库，包含提交历史等等。而 SVN 在断网的时候是没法提交的，也没法查看历史记录。当然，Git 优于 SVN 的不仅有上面的这些，还有很多强大的功能优于 SVN。比如强大的分支功能，Git 做一个小小的标记就会产生一个分支。而 SVN 是复制一份代码到分支目录。Git 还可以进行本地回滚【因为自己电脑里也是一个完整的版本库，但是提交到中央服务器上的时候可以减少冗余版本】</p>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><p>以上这些知识都是参考下面这些连接里的内容，本意是我自己的学习笔记，特此对其进行感谢。</p>
+<blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000" title="集中式vs分布式 - 廖雪峰的官方网站" target="_blank" rel="noopener">集中式vs分布式 - 廖雪峰的官方网站</a><br><a href="https://www.zhihu.com/question/20093241" title="如何理解 Git 的分布式？ - 知乎" target="_blank" rel="noopener">如何理解 Git 的分布式？ - 知乎</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">集中式和分布式版本控制学习整理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2016/09/26/git-svn/" title="集中式和分布式版本控制学习整理">http://www.cylong.com/blog/2016/09/26/git-svn/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>svn</tag>
+        <tag>分布式版本控制</tag>
+        <tag>集中式版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 通过 DOM 方式解析、创建 XML</title>
+    <url>/blog/2017/04/04/java-dom-xml/</url>
+    <content><![CDATA[<hr>
+<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
+<a id="more"></a>
+<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
+<li><p>创建 XML Document 对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">"college"</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student.setAttribute(<span class="string">"id"</span>, <span class="string">"0"</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">"cylong"</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">"Hello"</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">"24"</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">"id"</span>, <span class="string">"1"</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">"cylong1"</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">"World"</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">"25"</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生0"</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生1"</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将创建的 XML Document 写入到文件中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">	TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">	Transformer transformer = tf.newTransformer();</span><br><span class="line">	DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">"utf8"</span>);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">"yes"</span>);</span><br><span class="line">	PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">	StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line"> 	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
+<li><p>解析 XML 文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">"Root element : "</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">"student"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">":"</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work" target="_blank" rel="noopener">点此链接</a> 了解其用处。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java" target="_blank" rel="noopener">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/" target="_blank" rel="noopener">How to read XML file in Java – (DOM Parser)</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>dom</tag>
+        <tag>xml</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 集成 Disqus 评论</title>
+    <url>/blog/2017/03/26/hexo-next-disqus/</url>
+    <content><![CDATA[<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
+<blockquote>
+<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
+</blockquote>
+<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
+<a id="more"></a>
+<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
+<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
+<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
+<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
+<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
+<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
+<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
+<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>接下来就可以进入后台管理设置你的评论了。</li>
+</ol>
+<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
+<blockquote>
+<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Jackson - Java Object 与 JSON 之间的转化工具</title>
     <url>/blog/2017/03/31/jackson-java-json/</url>
     <content><![CDATA[<hr>
@@ -997,46 +1076,6 @@ f1g1ns2.dnspod.net
         <tag>java</tag>
         <tag>jackson</tag>
         <tag>json</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 集成 Disqus 评论</title>
-    <url>/blog/2017/03/26/hexo-next-disqus/</url>
-    <content><![CDATA[<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭" target="_blank" rel="noopener">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
-<blockquote>
-<p><a href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成" target="_blank" rel="noopener">Next 第三方服务集成</a></p>
-</blockquote>
-<p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
-<a id="more"></a>
-<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
-<li>登陆 <a href="https://disqus.com" title="Disqus" target="_blank" rel="noopener">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
-<li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png" alt></li>
-<li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png" alt></li>
-<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png" alt></li>
-<li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
-<p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure>
-<p>小于5.1.1 版本，设定 disqus_shortname 的值即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">disqus_shortname: shortname</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-<li>接下来就可以进入后台管理设置你的评论了。</li>
-</ol>
-<h1 id="多说评论迁移至-Disqus"><a href="#多说评论迁移至-Disqus" class="headerlink" title="多说评论迁移至 Disqus"></a>多说评论迁移至 Disqus</h1><p>毕竟多说我也用了一年，积攒了一点评论，就这样放弃非常的舍不得，不过多说导出的评论文件无法直接导入到 Disqus 中，多说导出的是 JSON 文件，Disqus 支持的导入格式是 WordPress 导出的的 XML 文件。在网上找了一些，发现都不好用，于是自己就造了一个轮子，在下面的链接中有详细的说明。欢迎使用并提出宝贵的意见(●’◡’●)</p>
-<blockquote>
-<p><a href="/blog/2017/04/05/duoshuo-to-disqus/" title="多说评论迁移至 Disqus">多说评论迁移至 Disqus</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">Hexo 集成 Disqus 评论</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/" title="Hexo 集成 Disqus 评论">http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1093,42 +1132,56 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Java 通过 DOM 方式解析、创建 XML</title>
-    <url>/blog/2017/04/04/java-dom-xml/</url>
+    <title>2018年立个FLAG-坚持写博客！</title>
+    <url>/blog/2018/06/24/new-2018/</url>
     <content><![CDATA[<hr>
-<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
-<a id="more"></a>
-<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
-<li><p>创建 XML Document 对象</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">"college"</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student.setAttribute(<span class="string">"id"</span>, <span class="string">"0"</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">"cylong"</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">"Hello"</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">"24"</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">"student"</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">"id"</span>, <span class="string">"1"</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">"name"</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">"cylong1"</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">"biography"</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">"World"</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">"age"</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">"25"</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生0"</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">"学生1"</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将创建的 XML Document 写入到文件中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">	TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">	Transformer transformer = tf.newTransformer();</span><br><span class="line">	DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">"utf8"</span>);</span><br><span class="line">	transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">"yes"</span>);</span><br><span class="line">	PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">	StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line"> 	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
-<li><p>解析 XML 文件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">"Root element : "</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">"student"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">":"</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work" target="_blank" rel="noopener">点此链接</a> 了解其用处。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java" target="_blank" rel="noopener">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/" target="_blank" rel="noopener">How to read XML file in Java – (DOM Parser)</a></p>
-</blockquote>
+<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
+<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2017/04/04/java-dom-xml/" title="Java 通过 DOM 方式解析、创建 XML">http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>java</tag>
-        <tag>dom</tag>
-        <tag>xml</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言头文件使用总结</title>
+    <url>/blog/2018/06/25/c-header/</url>
+    <content><![CDATA[<hr>
+<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
+<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
+<a id="more"></a>
+<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
+<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
+<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
+<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
+<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
+<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
+<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>头文件</tag>
       </tags>
   </entry>
   <entry>
@@ -1212,86 +1265,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>2018年立个FLAG-坚持写博客！</title>
-    <url>/blog/2018/06/24/new-2018/</url>
-    <content><![CDATA[<hr>
-<p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p>
-<p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言头文件使用总结</title>
-    <url>/blog/2018/06/25/c-header/</url>
-    <content><![CDATA[<hr>
-<p>在平时工作中看到前人写的一些C头文件，很有感触。自己在写的时候也遇到了很多问题，比如重复引用导致宏或者常量重复定义，不知道该使用双引号还是使用尖括号引用等问题，决定先总结一下。做个笔记，随时复习。o(￣▽￣)ブ</p>
-<h1 id="C语言头文件"><a href="#C语言头文件" class="headerlink" title="C语言头文件"></a>C语言头文件</h1><p>C语言头文件一般包含了函数声明，宏定义，常量等代码。我们在使用#include引用头文件。可以被多个c文件引用，避免了重复代码，减少了错误。让代码更加规范。<br>A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
-<a id="more"></a>
-<h1 id="头文件引用"><a href="#头文件引用" class="headerlink" title="头文件引用"></a>头文件引用</h1><p>系统已经存在了很多头文件，当然，我们也可以自己编写。c文件引用头文件相当于直接复制到文件中，但是这样多个文件要使用这段代码的时候，就产生了很多重复代码，也不方便管理。引用存在两种引用形式。一种<code>#include &quot;cylong.h&quot;</code>，一种是 <code>#include &lt;cylong.h&gt;</code>。那这两种方式有什么区别呢？我们平时使用的时候又怎么用呢？</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cylong.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用系统文件，在系统目录下搜索此头文件。比如<code>#include &lt;stdio.h&gt;</code>等</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br></pre></td></tr></table></figure>
-<p>这种形式是引用用户文件，优先在当前目录下搜索此头文件，然后再去系统目录下搜索此头文件。</p>
-<p>所以无论是我们自己写的头文件还是引用系统头文件，使用<code>#include &quot;cylong.h&quot;</code>都不会出错。但是这样并不标准，标准规定，<b>包含标准头文件或系统头文件时应使用尖括号，包含自定义头文件时可使用双引号。</b></p>
-<h1 id="避免重复引用"><a href="#避免重复引用" class="headerlink" title="避免重复引用"></a>避免重复引用</h1><p>经常在写代码的时候，不经意间，我们会引用同一个头文件两次，那么我们会遇到很多重复定义的错误，为了避免这样的事情发生，我们需要将头文件里的内容放到编译宏中</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CYONG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CYLONG_H</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span> <span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// some codes</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> CYLONG_H</span></span><br></pre></td></tr></table></figure>
-<p>当我们第一次引用的时候，未定义<code>CYLONG_H</code>宏，所以会继续编译下面的代码，当第二次引用的时候，<code>#ifndef CYLONG_H</code>为假，就不会编译下面的代码了，自然不会存在重复定义等问题。</p>
-<h1 id="公共头文件"><a href="#公共头文件" class="headerlink" title="公共头文件"></a>公共头文件</h1><p>在程序代码中，经常很多c文件会引用一些相同的头文件，这个时候，我们就可以定义一个包含这些相同头文件的头文件<code>common.h</code>。例如：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> COMMON_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COMMON_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cylong.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"lsyu.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> COMMON_H</span></span><br></pre></td></tr></table></figure>
-<p>然后我们就可以在每个需要的c文件中引用这个<code>common.h</code>头文件。但是需要注意的是，这个文件里除了头文件引用以外，建议不要再写其他的代码。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<p><a href="http://www.runoob.com/cprogramming/c-header-files.html" title="C 头文件 | 菜鸟教程" target="_blank" rel="noopener">C 头文件 | 菜鸟教程</a><br><a href="http://c.biancheng.net/cpp/biancheng/view/66.html" title="C++ #include—尖括号和双引号的区别 | C语言中文网" target="_blank" rel="noopener">C++ #include—尖括号和双引号的区别 | C语言中文网</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">C语言头文件使用总结</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/25/c-header/" title="C语言头文件使用总结">http://www.cylong.com/blog/2018/06/25/c-header/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>C/C++</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>头文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>愚人节快乐</title>
-    <url>/blog/2019/04/01/april-fools-day/</url>
-    <content><![CDATA[<hr>
-<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
-<a id="more"></a>
-<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
-<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
-</blockquote>
-<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>随笔</tag>
-        <tag>lambda</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java 8 的 Lambda 表达式和 Stream API</title>
     <url>/blog/2019/03/18/lambda/</url>
     <content><![CDATA[<hr>
@@ -1369,6 +1342,85 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
+    <title>拼写单词</title>
+    <url>/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』（字符串），那么我们就认为你掌握了这个单词。返回词汇表 words 中你掌握的所有单词的长度之和。</p>
+<p><strong>注意：每次拼写（指拼写词汇表中的一个单词）时，chars 中的每个字母都只能用一次。</strong></p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：words = [“cat”, “bt”, “hat”, “tree”], chars = “atach”<br>输出：6<br>解释：可以形成字符串 “cat” 和 “hat”，所以答案是 3 + 3 = 6。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：words = [“hello”, “world”, “leetcode”], chars = “welldonehoneyr”<br>输出：10<br>解释：可以形成字符串 “hello” 和 “world”，所以答案是 5 + 5 = 10。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;= words.length &lt;= 1000</li>
+<li>1 &lt;= words[i].length, chars.length &lt;= 100</li>
+<li>所有字符串中都仅包含小写英文字母</li>
+</ul>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>最简单的方法，暴力方法，我们遍历全部的word，判断word的中的所有字符是否都在chars中存在，同时我们标记下已经被记录的字符，防止重复使用。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span>[] charArr = chars.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 判断chars中是否包含word</span></span><br><span class="line">        <span class="keyword">if</span> (findWord(word, charArr)) &#123;</span><br><span class="line">            length += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findWord</span><span class="params">(String word, <span class="keyword">char</span>[] charArr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[charArr.length];</span><br><span class="line">    <span class="keyword">char</span>[] wordArr = word.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordArr.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 从chars中找到word中的字符</span></span><br><span class="line">        <span class="keyword">if</span> (!findChar(wordArr[i], charArr, flag)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findChar</span><span class="params">(<span class="keyword">char</span> c, <span class="keyword">char</span>[] charArr, <span class="keyword">boolean</span>[] flag)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; charArr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (charArr[i] == c &amp;&amp; !flag[i]) &#123;</span><br><span class="line">            <span class="comment">// 保证每个字符只用到一次</span></span><br><span class="line">            flag[i] = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：Ο(M x N)，M为words中所有字符数，N为chars字符数。</li>
+</ul>
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p>显然，对于一个单词 word，只要其中的每个字母的数量都不大于 chars 中对应的字母的数量，那么就可以用 chars 中的字母拼写出 word。由于题目中的限制条件是小写英文字母，所以我们只要使用int[26]数组，分别保存字母表中的字母出现次数和word中字母出现的次数即可。</p>
+<p><img src="图解.gif" alt="图解"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 统计字母表中字符出现的次数</span></span><br><span class="line">    <span class="keyword">int</span>[] charNum = getCharNum(chars);</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 统计word中字符出现的次数</span></span><br><span class="line">        <span class="keyword">int</span>[] wordNum = getCharNum(word);</span><br><span class="line">        <span class="keyword">if</span> (isContain(charNum, wordNum)) &#123;</span><br><span class="line">            len += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isContain</span><span class="params">(<span class="keyword">int</span>[] charNum, <span class="keyword">int</span>[] wordNum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordNum.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 判断如果word中的字符数大于chars中的字符数，则无法拼写单词</span></span><br><span class="line">        <span class="keyword">if</span> (charNum[i] &lt; wordNum[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[] getCharNum(String word) &#123;</span><br><span class="line">    <span class="keyword">int</span>[] charNum = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : word.toCharArray()) &#123;</span><br><span class="line">        charNum[c - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> charNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：Ο(n)，其中 n 为所有字符串的长度和。我们需要遍历每个字符串，包括 chars 以及数组 words 中的每个单词。</li>
+<li>空间复杂度：Ο(S)，其中 S 为字符集大小，在本题中 S 的值为 26（所有字符串仅包含小写字母）。程序运行过程中，最多同时存在两个统计字符数的数组，使用的空间均不超过字符集大小 S，因此空间复杂度为 O(S)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/" title="二叉搜索树的第k大节点 | 力扣（LeetCode）" target="_blank" rel="noopener">拼写单词 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/solution/tong-ji-zi-mu-chu-xian-de-ci-shu-shu-zu-ji-qiao-cj/" title="二叉搜索树的第k大节点 | 题解" target="_blank" rel="noopener">拼写单词 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">拼写单词</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数组</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愚人节快乐</title>
+    <url>/blog/2019/04/01/april-fools-day/</url>
+    <content><![CDATA[<hr>
+<p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p>
+<a id="more"></a>
+<p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+<p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p>
+</blockquote>
+<p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>随笔</tag>
+        <tag>lambda</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两数相加</title>
     <url>/blog/2019/11/25/add-two-numbers/</url>
     <content><![CDATA[<hr>
@@ -1436,8 +1488,168 @@ f1g1ns2.dnspod.net
         <tag>java</tag>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
-        <tag>哈希表</tag>
         <tag>数组</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Z 字形变换</title>
+    <url>/blog/2019/12/30/zigzag-conversion/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。比如输入字符串为 “LEETCODEISHIRING” 行数为 3 时，排列如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L   C   I   R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E   D   H   N</span><br></pre></td></tr></table></figure></p>
+<p>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：”LCIRETOESIIGEDHN”。</p>
+<p><strong>示例 1:</strong></p>
+<blockquote>
+<p>输入: s = “LEETCODEISHIRING”, numRows = 3<br>输出: “LCIRETOESIIGEDHN”</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: s = “LEETCODEISHIRING”, numRows = 4<br>输出: “LDREOEIIECIHNTSG”</p>
+</blockquote>
+<p>解释:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们可以知道numRows为行数，输出的时候我们只要把每行的字符按顺序输出即可，其实上面的输出，为了美观，使用了空格，当我们把空格拿掉，就转换成了下面的输出。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L C I R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E D H N</span><br></pre></td></tr></table></figure></p>
+<p>那么我们只要知道第i个字符，要放到哪一行即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;List&lt;Character&gt;&gt; zList = <span class="keyword">new</span> ArrayList&lt;&gt;(numRows);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.add(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> j; <span class="comment">// 判断字符放到哪一行</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">        <span class="comment">// 多少字母为一个循环</span></span><br><span class="line">        <span class="keyword">int</span> cycle = numRows + numRows - <span class="number">2</span>;</span><br><span class="line">        j = i % cycle;</span><br><span class="line">        j = Math.min(cycle - j, j);</span><br><span class="line">        zList.get(j).add(c);</span><br><span class="line">    &#125;</span><br><span class="line">    StringBuilder sBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.get(i).forEach(sBuilder::append);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sBuilder.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>官方解法和我的思路差不多，只不过他细节上处理的比我好，行数是 <code>numRows</code> 和 <code>len(s)</code> 的较小值，其每行数据没有使用<code>List&lt;Character&gt;</code>，而是使用StringBuilder，另外使用了方向变量<code>goingDown</code>来判断此时在哪一行。以下是官方解法：</p>
+<p>我们可以使用 <code>min(numRows, len(s))</code> 个列表来表示 Z 字形图案中的非空行。从左到右迭代 s，将每个字符添加到合适的行。可以使用当前行和当前方向这两个变量对合适的行进行跟踪。只有当我们向上移动到最上面的行或向下移动到最下面的行时，当前方向才会发生改变。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">    List&lt;StringBuilder&gt; rows = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Math.min(numRows, s.length()); i++)</span><br><span class="line">        rows.add(<span class="keyword">new</span> StringBuilder());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> curRow = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span> goingDown = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">        rows.get(curRow).append(c);</span><br><span class="line">        <span class="keyword">if</span> (curRow == <span class="number">0</span> || curRow == numRows - <span class="number">1</span>)</span><br><span class="line">            goingDown = !goingDown;</span><br><span class="line">        curRow += goingDown ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    StringBuilder ret = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (StringBuilder row : rows)</span><br><span class="line">        ret.append(row);</span><br><span class="line">    <span class="keyword">return</span> ret.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/zigzag-conversion/" title="Z 字形变换 | 力扣（LeetCode）" target="_blank" rel="noopener">Z 字形变换 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/zigzag-conversion/solution/z-zi-xing-bian-huan-by-leetcode/" title="Z 字形变换 | 题解" target="_blank" rel="noopener">Z 字形变换 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">Z 字形变换</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">http://www.cylong.com/blog/2019/12/30/zigzag-conversion/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>字符串</tag>
+        <tag>指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉搜索树的第k大节点</title>
+    <url>/blog/2020/07/15/kda-jie-dian-lcof/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一棵二叉搜索树，请找出其中第k大的节点。</p>
+<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: root = [3, 1, 4, null, 2], k = 1</span><br><span class="line">   3</span><br><span class="line">  / \</span><br><span class="line"> 1   4</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure></p>
+<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: root = [5, 3, 6, 2, 4, null, null, 1], k = 3</span><br><span class="line">       5</span><br><span class="line">      / \</span><br><span class="line">     3   6</span><br><span class="line">    / \</span><br><span class="line">   2   4</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure></p>
+<p>限制：<br>1 ≤ k ≤ 二叉搜索树元素个数</p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>二叉搜索树的中序遍历是递增序列，那么倒序就是递减序列。</p>
+<blockquote>
+<p>中序遍历为“左、根、右”的顺序<br>中序遍历的倒序为“右、根、左”的顺序</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 打印中序遍历</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    dfs(root.left); <span class="comment">// 左</span></span><br><span class="line">    System.out.println(root.val); <span class="comment">// 根</span></span><br><span class="line">    dfs(root.right); <span class="comment">// 右</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以我们只要求出二叉搜索树的中序遍历倒序的第k个节点即可。</p>
+<p><strong>递归解析：</strong></p>
+<ul>
+<li>递归的终止条件：当节点为空的时候，越过了叶子节点，则直接返回;</li>
+<li>递归右子树：dfs(root.right);</li>
+<li>递归操作：先进行k - 1，然后判断 k 是否等于0，是则找到第k大的节点，将节点的值返回。</li>
+<li>递归左子树：dfs(root.left);</li>
+</ul>
+<p><img src="中序遍历.png" alt="中序遍历图解"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="keyword">int</span> res;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">kthLargest</span><span class="params">(TreeNode root, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.k = k;</span><br><span class="line">    dfs(root);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(t.right);</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (--k == <span class="number">0</span>) &#123;</span><br><span class="line">        res = t.val;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(t.left);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<li>时间复杂度 Ο(N) ： 当树退化为链表时（全部为右子节点），无论 k 的值大小，递归深度都为 N ，占用 Ο(N) 时间。</li>
+<li>空间复杂度 Ο(N) ： 当树退化为链表时（全部为右子节点），系统使用 Ο(N) 大小的栈空间。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/" title="二叉搜索树的第k大节点 | 力扣（LeetCode）" target="_blank" rel="noopener">二叉搜索树的第k大节点 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/solution/mian-shi-ti-54-er-cha-sou-suo-shu-de-di-k-da-jie-d/" title="二叉搜索树的第k大节点 | 题解" target="_blank" rel="noopener">二叉搜索树的第k大节点 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/" title="二叉搜索树的第k大节点">二叉搜索树的第k大节点</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/" title="二叉搜索树的第k大节点">http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>树</tag>
+        <tag>二叉树</tag>
+        <tag>二叉搜索树</tag>
+        <tag>递归</tag>
+        <tag>中序遍历</tag>
+        <tag>深度优先搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路经总和</title>
+    <url>/blog/2020/07/06/path-sum/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
+<p><strong>示例:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定如下二叉树，以及目标和 sum = 22</span><br><span class="line">        5</span><br><span class="line">       / \</span><br><span class="line">      4   8</span><br><span class="line">     /   / \</span><br><span class="line">    11  13  4</span><br><span class="line">   /  \      \</span><br><span class="line">  7    2      1</span><br><span class="line">返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li>
+<li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-by-leetcode-solution/" title="路径总和 | 题解" target="_blank" rel="noopener">路径总和 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">路经总和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">http://www.cylong.com/blog/2020/07/06/path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>树</tag>
+        <tag>二叉树</tag>
+        <tag>递归</tag>
+        <tag>中序遍历</tag>
+        <tag>深度优先搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>另一个树的子树</title>
+    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
+<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure></p>
+<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">    /</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解" target="_blank" rel="noopener">另一个树的子树 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>树</tag>
+        <tag>二叉树</tag>
+        <tag>递归</tag>
+        <tag>深度优先搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -1484,115 +1696,6 @@ f1g1ns2.dnspod.net
       </tags>
   </entry>
   <entry>
-    <title>Z 字形变换</title>
-    <url>/blog/2019/12/30/zigzag-conversion/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。比如输入字符串为 “LEETCODEISHIRING” 行数为 3 时，排列如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L   C   I   R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E   D   H   N</span><br></pre></td></tr></table></figure></p>
-<p>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：”LCIRETOESIIGEDHN”。</p>
-<p><strong>示例 1:</strong></p>
-<blockquote>
-<p>输入: s = “LEETCODEISHIRING”, numRows = 3<br>输出: “LCIRETOESIIGEDHN”</p>
-</blockquote>
-<p><strong>示例 2:</strong></p>
-<blockquote>
-<p>输入: s = “LEETCODEISHIRING”, numRows = 4<br>输出: “LDREOEIIECIHNTSG”</p>
-</blockquote>
-<p>解释:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们可以知道numRows为行数，输出的时候我们只要把每行的字符按顺序输出即可，其实上面的输出，为了美观，使用了空格，当我们把空格拿掉，就转换成了下面的输出。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L C I R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E D H N</span><br></pre></td></tr></table></figure></p>
-<p>那么我们只要知道第i个字符，要放到哪一行即可。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;List&lt;Character&gt;&gt; zList = <span class="keyword">new</span> ArrayList&lt;&gt;(numRows);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.add(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> j; <span class="comment">// 判断字符放到哪一行</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">        <span class="comment">// 多少字母为一个循环</span></span><br><span class="line">        <span class="keyword">int</span> cycle = numRows + numRows - <span class="number">2</span>;</span><br><span class="line">        j = i % cycle;</span><br><span class="line">        j = Math.min(cycle - j, j);</span><br><span class="line">        zList.get(j).add(c);</span><br><span class="line">    &#125;</span><br><span class="line">    StringBuilder sBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">        zList.get(i).forEach(sBuilder::append);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sBuilder.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>官方解法和我的思路差不多，只不过他细节上处理的比我好，行数是 <code>numRows</code> 和 <code>len(s)</code> 的较小值，其每行数据没有使用<code>List&lt;Character&gt;</code>，而是使用StringBuilder，另外使用了方向变量<code>goingDown</code>来判断此时在哪一行。以下是官方解法：</p>
-<p>我们可以使用 <code>min(numRows, len(s))</code> 个列表来表示 Z 字形图案中的非空行。从左到右迭代 s，将每个字符添加到合适的行。可以使用当前行和当前方向这两个变量对合适的行进行跟踪。只有当我们向上移动到最上面的行或向下移动到最下面的行时，当前方向才会发生改变。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (numRows == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">    List&lt;StringBuilder&gt; rows = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Math.min(numRows, s.length()); i++)</span><br><span class="line">        rows.add(<span class="keyword">new</span> StringBuilder());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> curRow = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span> goingDown = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">        rows.get(curRow).append(c);</span><br><span class="line">        <span class="keyword">if</span> (curRow == <span class="number">0</span> || curRow == numRows - <span class="number">1</span>)</span><br><span class="line">            goingDown = !goingDown;</span><br><span class="line">        curRow += goingDown ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    StringBuilder ret = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (StringBuilder row : rows)</span><br><span class="line">        ret.append(row);</span><br><span class="line">    <span class="keyword">return</span> ret.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/zigzag-conversion/" title="Z 字形变换 | 力扣（LeetCode）" target="_blank" rel="noopener">Z 字形变换 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/zigzag-conversion/solution/z-zi-xing-bian-huan-by-leetcode/" title="Z 字形变换 | 题解" target="_blank" rel="noopener">Z 字形变换 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">Z 字形变换</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/12/30/zigzag-conversion/" title="Z 字形变换">http://www.cylong.com/blog/2019/12/30/zigzag-conversion/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>字符串</tag>
-        <tag>指针</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>另一个树的子树</title>
-    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
-<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure></p>
-<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">    /</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  / \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解" target="_blank" rel="noopener">另一个树的子树 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/" title="另一个树的子树">http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>递归</tag>
-        <tag>树</tag>
-        <tag>二叉树</tag>
-        <tag>深度优先搜索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>路经总和</title>
-    <url>/blog/2020/07/06/path-sum/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p>
-<p><strong>示例:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定如下二叉树，以及目标和 sum = 22</span><br><span class="line">        5</span><br><span class="line">       / \</span><br><span class="line">      4   8</span><br><span class="line">     /   / \</span><br><span class="line">    11  13  4</span><br><span class="line">   /  \      \</span><br><span class="line">  7    2      1</span><br><span class="line">返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
-<li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li>
-<li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）" target="_blank" rel="noopener">路径总和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-by-leetcode-solution/" title="路径总和 | 题解" target="_blank" rel="noopener">路径总和 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">路经总和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/06/path-sum/" title="路经总和">http://www.cylong.com/blog/2020/07/06/path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>递归</tag>
-        <tag>树</tag>
-        <tag>二叉树</tag>
-        <tag>深度优先搜索</tag>
-        <tag>中序遍历</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>路径总和 II</title>
     <url>/blog/2020/07/07/path-sum-ii/</url>
     <content><![CDATA[<hr>
@@ -1616,104 +1719,62 @@ f1g1ns2.dnspod.net
         <tag>java</tag>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
-        <tag>递归</tag>
         <tag>树</tag>
         <tag>二叉树</tag>
-        <tag>深度优先搜索</tag>
+        <tag>递归</tag>
         <tag>中序遍历</tag>
+        <tag>深度优先搜索</tag>
         <tag>回溯算法</tag>
       </tags>
   </entry>
   <entry>
-    <title>二叉搜索树的第k大节点</title>
-    <url>/blog/2020/07/15/kda-jie-dian-lcof/</url>
+    <title>最长重复子数组</title>
+    <url>/blog/2020/07/01/2020-07-1-maximum-length-of-repeated-subarray/</url>
     <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一棵二叉搜索树，请找出其中第k大的节点。</p>
-<p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: root = [3, 1, 4, null, 2], k = 1</span><br><span class="line">   3</span><br><span class="line">  / \</span><br><span class="line"> 1   4</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure></p>
-<p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: root = [5, 3, 6, 2, 4, null, null, 1], k = 3</span><br><span class="line">       5</span><br><span class="line">      / \</span><br><span class="line">     3   6</span><br><span class="line">    / \</span><br><span class="line">   2   4</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure></p>
-<p>限制：<br>1 ≤ k ≤ 二叉搜索树元素个数</p>
-<a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>二叉搜索树的中序遍历是递增序列，那么倒序就是递减序列。</p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给两个整数数组 A 和 B ，返回两个数组中公共的、长度最长的子数组的长度。</p>
+<p><strong>示例：</strong></p>
 <blockquote>
-<p>中序遍历为“左、根、右”的顺序<br>中序遍历的倒序为“右、根、左”的顺序</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 打印中序遍历</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    dfs(root.left); <span class="comment">// 左</span></span><br><span class="line">    System.out.println(root.val); <span class="comment">// 根</span></span><br><span class="line">    dfs(root.right); <span class="comment">// 右</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>所以我们只要求出二叉搜索树的中序遍历倒序的第k个节点即可。</p>
-<p><strong>递归解析：</strong></p>
-<ul>
-<li>递归的终止条件：当节点为空的时候，越过了叶子节点，则直接返回;</li>
-<li>递归右子树：dfs(root.right);</li>
-<li>递归操作：先进行k - 1，然后判断 k 是否等于0，是则找到第k大的节点，将节点的值返回。</li>
-<li>递归左子树：dfs(root.left);</li>
-</ul>
-<p><img src="中序遍历.png" alt="中序遍历图解"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="keyword">int</span> res;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">kthLargest</span><span class="params">(TreeNode root, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.k = k;</span><br><span class="line">    dfs(root);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(t.right);</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (--k == <span class="number">0</span>) &#123;</span><br><span class="line">        res = t.val;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(t.left);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
-<li>时间复杂度 Ο(N) ： 当树退化为链表时（全部为右子节点），无论 k 的值大小，递归深度都为 N ，占用 Ο(N) 时间。</li>
-<li>空间复杂度 Ο(N) ： 当树退化为链表时（全部为右子节点），系统使用 Ο(N) 大小的栈空间。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/" title="二叉搜索树的第k大节点 | 力扣（LeetCode）" target="_blank" rel="noopener">二叉搜索树的第k大节点 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/solution/mian-shi-ti-54-er-cha-sou-suo-shu-de-di-k-da-jie-d/" title="二叉搜索树的第k大节点 | 题解" target="_blank" rel="noopener">二叉搜索树的第k大节点 | 题解</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/" title="二叉搜索树的第k大节点">二叉搜索树的第k大节点</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/" title="二叉搜索树的第k大节点">http://www.cylong.com/blog/2020/07/15/kda-jie-dian-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>递归</tag>
-        <tag>树</tag>
-        <tag>二叉树</tag>
-        <tag>深度优先搜索</tag>
-        <tag>中序遍历</tag>
-        <tag>二叉搜索树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拼写单词</title>
-    <url>/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』（字符串），那么我们就认为你掌握了这个单词。返回词汇表 words 中你掌握的所有单词的长度之和。</p>
-<p><strong>注意：每次拼写（指拼写词汇表中的一个单词）时，chars 中的每个字母都只能用一次。</strong></p>
-<p><strong>示例 1：</strong></p>
-<blockquote>
-<p>输入：words = [“cat”, “bt”, “hat”, “tree”], chars = “atach”<br>输出：6<br>解释：可以形成字符串 “cat” 和 “hat”，所以答案是 3 + 3 = 6。</p>
-</blockquote>
-<p><strong>示例 2：</strong></p>
-<blockquote>
-<p>输入：words = [“hello”, “world”, “leetcode”], chars = “welldonehoneyr”<br>输出：10<br>解释：可以形成字符串 “hello” 和 “world”，所以答案是 5 + 5 = 10。</p>
+<p>输入：<br>A: [1, 2, 3, 2, 1]<br>B: [3, 2, 1, 4, 7]<br>输出：3<br>解释：长度最长的公共子数组是 [3, 2, 1] 。</p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= words.length &lt;= 1000</li>
-<li>1 &lt;= words[i].length, chars.length &lt;= 100</li>
-<li>所有字符串中都仅包含小写英文字母</li>
+<li>1 &lt;= len(A), len(B) &lt;= 1000</li>
+<li>0 &lt;= A[i], B[i] &lt; 100</li>
 </ul>
 <a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>最简单的方法，暴力方法，我们遍历全部的word，判断word的中的所有字符是否都在chars中存在，同时我们标记下已经被记录的字符，防止重复使用。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span>[] charArr = chars.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 判断chars中是否包含word</span></span><br><span class="line">        <span class="keyword">if</span> (findWord(word, charArr)) &#123;</span><br><span class="line">            length += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findWord</span><span class="params">(String word, <span class="keyword">char</span>[] charArr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[charArr.length];</span><br><span class="line">    <span class="keyword">char</span>[] wordArr = word.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordArr.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 从chars中找到word中的字符</span></span><br><span class="line">        <span class="keyword">if</span> (!findChar(wordArr[i], charArr, flag)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">findChar</span><span class="params">(<span class="keyword">char</span> c, <span class="keyword">char</span>[] charArr, <span class="keyword">boolean</span>[] flag)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; charArr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (charArr[i] == c &amp;&amp; !flag[i]) &#123;</span><br><span class="line">            <span class="comment">// 保证每个字符只用到一次</span></span><br><span class="line">            flag[i] = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="暴力方法"><a href="#暴力方法" class="headerlink" title="暴力方法"></a>暴力方法</h1><p>最简单的方法，暴力方法，我们知道最长公共子数组长度最大值为数组A和B中长度较小值。我们先固定最长值为min(len(A), len(B))，然后遍历A和B，判断此长度是否有公共子数组，找到，则返回此值。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = Math.min(A.length, B.length);</span><br><span class="line">    <span class="keyword">int</span> res_len = len;</span><br><span class="line">    <span class="keyword">while</span> (res_len &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> ai = <span class="number">0</span>; ai + res_len &lt;= len; ai++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> bi = <span class="number">0</span>; bi + res_len &lt;= len; bi++) &#123;</span><br><span class="line">                <span class="comment">// 判断固定长度的子数组是否相等</span></span><br><span class="line">                <span class="keyword">if</span> (subArrayIsSame(A, B, ai, bi, res_len)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> res_len;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果不相等，最大长度减一</span></span><br><span class="line">        res_len--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res_len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">subArrayIsSame</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span> ai, <span class="keyword">int</span> bi, <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (A[ai + i] != B[bi + i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度为Ο(MN)：M为words中所有字符数，N为chars字符数。</li>
+<li>时间复杂度：Ο(N³)，因为要遍历A、B和公共子数组。</li>
+<li>空间复杂度：Ο(1)。</li>
 </ul>
-<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p>显然，对于一个单词 word，只要其中的每个字母的数量都不大于 chars 中对应的字母的数量，那么就可以用 chars 中的字母拼写出 word。由于题目中的限制条件是小写英文字母，所以我们只要使用int[26]数组，分别保存字母表中的字母出现次数和word中字母出现的次数即可。</p>
-<p><img src="图解.gif" alt="图解"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countCharacters</span><span class="params">(String[] words, String chars)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 统计字母表中字符出现的次数</span></span><br><span class="line">    <span class="keyword">int</span>[] charNum = getCharNum(chars);</span><br><span class="line">    <span class="keyword">for</span> (String word : words) &#123;</span><br><span class="line">        <span class="comment">// 统计word中字符出现的次数</span></span><br><span class="line">        <span class="keyword">int</span>[] wordNum = getCharNum(word);</span><br><span class="line">        <span class="keyword">if</span> (isContain(charNum, wordNum)) &#123;</span><br><span class="line">            len += word.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isContain</span><span class="params">(<span class="keyword">int</span>[] charNum, <span class="keyword">int</span>[] wordNum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordNum.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 判断如果word中的字符数大于chars中的字符数，则无法拼写单词</span></span><br><span class="line">        <span class="keyword">if</span> (charNum[i] &lt; wordNum[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[] getCharNum(String word) &#123;</span><br><span class="line">    <span class="keyword">int</span>[] charNum = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : word.toCharArray()) &#123;</span><br><span class="line">        charNum[c - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> charNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h1><p>以题目为例，它们的最长重复子数组是 [3, 2, 1]，在 A 与 B 中的开始位置不同。但如果我们知道了开始位置，我们就可以根据它们将 A 和 B 进行「对齐」，即：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 2, 1]</span><br><span class="line">B =       [3, 2, 1, 4, 7]</span><br><span class="line">           ↑  ↑  ↑</span><br></pre></td></tr></table></figure>
+<p>此时，最长重复子数组在 A 和 B 中的开始位置相同，我们就可以对这两个数组进行一次遍历，得到子数组的长度。我们可以枚举 A 和 B 所有的对齐方式。对齐的方式有两类：第一类为 A 不变，B 的首元素与 A 中的某个元素对齐；第二类为 B 不变，A 的首元素与 B 中的某个元素对齐。对于每一种对齐方式，我们计算它们相对位置相同的重复子数组即可。</p>
+<p><img src="最长重复子数组.gif" alt="最长重复子数组"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lenA = A.length;</span><br><span class="line">    <span class="keyword">int</span> lenB = B.length;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lenA; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = Math.min(lenA - i, lenB);</span><br><span class="line">        <span class="keyword">int</span> maxLen = maxLength(A, B, i, <span class="number">0</span>, len);</span><br><span class="line">        ret = Math.max(ret, maxLen);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lenB; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = Math.min(lenB - i, lenA);</span><br><span class="line">        <span class="keyword">int</span> maxLen = maxLength(A, B, <span class="number">0</span>, i, len);</span><br><span class="line">        ret = Math.max(ret, maxLen);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对齐后计算最长公共子数组</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span> indexA, <span class="keyword">int</span> indexB, <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> maxLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (A[indexA + i] == B[indexB + i]) &#123;</span><br><span class="line">            maxLen++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            maxLen = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ret = Math.max(ret, maxLen);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：Ο(n)，其中 n 为所有字符串的长度和。我们需要遍历每个字符串，包括 chars 以及数组 words 中的每个单词。</li>
-<li>空间复杂度：Ο(S)，其中 S 为字符集大小，在本题中 S 的值为 26（所有字符串仅包含小写字母）。程序运行过程中，最多同时存在两个统计字符数的数组，使用的空间均不超过字符集大小 S，因此空间复杂度为 O(S)。</li>
+<li>时间复杂度： Ο((M + N) × min(M, N))。</li>
+<li>空间复杂度： Ο(1)。<blockquote>
+<p>M 表示数组 A 的长度，N 表示数组 B 的长度。</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>我们使用A[i]，B[j]分别表示两个数组对应下标的值。如果 A[i] == B[j]，那么我们知道 A[i:] 与 B[j:] 的最长公共前缀为 A[i + 1:] 与 B[j + 1:] 的最长公共前缀的长度加一，否则我们知道 A[i:] 与 B[j:] 的最长公共前缀为零。这样我们就可以提出动态规划的解法：令 dp[i][j] 表示 A[i:] 和 B[j:] 的最长公共前缀，那么答案即为所有 dp[i][j] 中的最大值。如果 A[i] == B[j]，那么 dp[i][j] = dp[i + 1][j + 1] + 1，否则 dp[i][j] = 0。<br>考虑到这里 dp[i][j] 的值从 dp[i + 1][j + 1] 转移得到，所以我们需要倒过来，首先计算 dp[len(A) - 1][len(B) - 1]，最后计算 dp[0][0]。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = A.length, m = B.length;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>][m + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = m - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            dp[i][j] = A[i] == B[j] ? dp[i + <span class="number">1</span>][j + <span class="number">1</span>] + <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">            ret = Math.max(ret, dp[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度： O(M × N)。</li>
+<li>空间复杂度： O(M × N)。<blockquote>
+<p>N 表示数组 A 的长度，M 表示数组 B 的长度。</p>
+</blockquote>
+</li>
 </ul>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/" title="二叉搜索树的第k大节点 | 力扣（LeetCode）" target="_blank" rel="noopener">拼写单词 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/solution/tong-ji-zi-mu-chu-xian-de-ci-shu-shu-zu-ji-qiao-cj/" title="二叉搜索树的第k大节点 | 题解" target="_blank" rel="noopener">拼写单词 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/" title="最长重复子数组 | 力扣（LeetCode）" target="_blank" rel="noopener">最长重复子数组 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/solution/zui-chang-zhong-fu-zi-shu-zu-by-leetcode-solution/" title="最长重复子数组 | 题解" target="_blank" rel="noopener">最长重复子数组 | 题解</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">拼写单词</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/" title="拼写单词">http://www.cylong.com/blog/2020/03/17/find-words-that-can-be-formed-by-characters/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/07/01/2020-07-1-maximum-length-of-repeated-subarray/" title="最长重复子数组">最长重复子数组</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/01/2020-07-1-maximum-length-of-repeated-subarray/" title="最长重复子数组">http://www.cylong.com/blog/2020/07/01/2020-07-1-maximum-length-of-repeated-subarray/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1724,7 +1785,8 @@ f1g1ns2.dnspod.net
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>数组</tag>
-        <tag>字符串</tag>
+        <tag>动态规划</tag>
+        <tag>滑动窗口</tag>
       </tags>
   </entry>
 </search>
