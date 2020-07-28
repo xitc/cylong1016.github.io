@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="笑话人生cylong、博客、软件、Java、Git、Web、Html、CSS、JS、PHP">
+  <meta name="keywords" content="java,leetcode,学习笔记,整数,字符串,有限状态机,">
 
 
 
@@ -82,16 +82,18 @@
 
 
 
-<meta name="description" content="见兔而顾犬，未为晚也；亡羊而补牢，未为迟也。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="笑话人生">
-<meta property="og:url" content="http://www.cylong.com/tags/队列/index.html">
+<meta name="description" content="题目描述请你来实现一个 atoi 函数，使其能将字符串转换成整数。首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：  如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。 假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。 该字符串在有效的整数部分之后也可能会存">
+<meta name="keywords" content="java,leetcode,学习笔记,整数,字符串,有限状态机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串转换整数">
+<meta property="og:url" content="http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/index.html">
 <meta property="og:site_name" content="笑话人生">
-<meta property="og:description" content="见兔而顾犬，未为晚也；亡羊而补牢，未为迟也。">
+<meta property="og:description" content="题目描述请你来实现一个 atoi 函数，使其能将字符串转换成整数。首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：  如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。 假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。 该字符串在有效的整数部分之后也可能会存">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-20T16:51:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="笑话人生">
-<meta name="twitter:description" content="见兔而顾犬，未为晚也；亡羊而补牢，未为迟也。">
+<meta name="twitter:title" content="字符串转换整数">
+<meta name="twitter:description" content="题目描述请你来实现一个 atoi 函数，使其能将字符串转换成整数。首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：  如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。 假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。 该字符串在有效的整数部分之后也可能会存">
 
 
 
@@ -109,7 +111,7 @@
   };
 </script>
 
-  <title> 标签: 队列 | 笑话人生 </title>
+  <title> 字符串转换整数 | 笑话人生 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,44 +272,212 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2>
-        队列
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                字符串转换整数
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2019-12-21T00:51:08+08:00" content="2019-12-21">
+              2019-12-21
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2019/12/21/string-to-integer-atoi/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="blog/2019/12/21/string-to-integer-atoi/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-eye"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>请你来实现一个 atoi 函数，使其能将字符串转换成整数。首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：</p>
+<ul>
+<li>如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。</li>
+<li>假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。</li>
+<li>该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。</li>
+</ul>
+<p><strong>注意：</strong> 假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。在任何情况下，若函数不能进行有效的转换时，请返回 0 。</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li>本题中的空白字符只包括空格字符 ‘ ‘ 。</li>
+<li>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−2³¹,  2³¹ − 1]。如果数值超过这个范围，请返回  INT_MAX (2³¹ − 1) 或 INT_MIN (−2³¹) 。</li>
+</ul>
+<p><strong>示例 1:</strong></p>
+<blockquote>
+<p>输入: “42”<br>输出: 42</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: “   -42”<br>输出: -42<br>解释: 第一个非空白字符为 ‘-‘, 它是一个负号。我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。</p>
+</blockquote>
+<p><strong>示例 3:</strong></p>
+<blockquote>
+<p>输入: “4193 with words”<br>输出: 4193<br>解释: 转换截止于数字 ‘3’ ，因为它的下一个字符不为数字。</p>
+</blockquote>
+<p><strong>示例 4:</strong></p>
+<blockquote>
+<p>输入: “words and 987”<br>输出: 0<br>解释: 第一个非空字符是 ‘w’, 但它不是数字或正、负号。因此无法执行有效的转换。</p>
+</blockquote>
+<p><strong>示例 5:</strong></p>
+<blockquote>
+<p>输入: “-91283472332”<br>输出: -2147483648<br>解释: 数字 “-91283472332” 超过 32 位有符号整数范围。因此返回 INT_MIN (−2³¹) 。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="正常遍历"><a href="#正常遍历" class="headerlink" title="正常遍历"></a>正常遍历</h1><p>正常遍历字符串，首先去掉空格，然后用flag记录正负，接下来遍历字符串中的数字，不断的转换为整数，直到遍历到无用字符为止。考虑到溢出的情况。我们在计算result的时候，先判断计算后的值是否对int行溢出了，使用表达式 <code>(Integer.MAX_VALUE - (c - &#39;0&#39;)) * 1.0 / 10 &gt;= result</code> 判断即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    str = str.trim();</span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (str.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str.charAt(<span class="number">0</span>) == <span class="string">'-'</span>) &#123;</span><br><span class="line">        flag = <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Character.isDigit(str.charAt(<span class="number">0</span>))) &#123;</span><br><span class="line">        result += str.charAt(<span class="number">0</span>) - <span class="string">'0'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str.charAt(<span class="number">0</span>) != <span class="string">'+'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">char</span> c = str.charAt(i);</span><br><span class="line">        <span class="keyword">if</span> (Character.isDigit(c)) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((Integer.MAX_VALUE - (c - <span class="string">'0'</span>)) * <span class="number">1.0</span> / <span class="number">10</span> &gt;= result) &#123;</span><br><span class="line">                result = result * <span class="number">10</span> + c - <span class="string">'0'</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> flag ? Integer.MIN_VALUE : Integer.MAX_VALUE;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> flag ? -result : result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，其中 n 为字符串的长度。我们只需要依次处理所有的字符，处理每个字符需要的时间为 O(1)。</li>
+<li>空间复杂度：Ο(1)。</li>
+</ul>
+<h1 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h1><p>针对有限状态机的学习还需要深入，先参考下官方的解答：<a href="https://leetcode-cn.com/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/" title="字符串转换整数 | 题解" target="_blank" rel="noopener">字符串转换整数 | 题解</a></p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/string-to-integer-atoi/" title="字符串转换整数 | 力扣（LeetCode）" target="_blank" rel="noopener">字符串转换整数 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/" title="字符串转换整数 | 题解" target="_blank" rel="noopener">字符串转换整数 | 题解</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href="http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/" title="字符串转换整数">字符串转换整数</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/" title="字符串转换整数">http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
 
-      <h1 class="post-title">
+      
+    </div>
+    
+    <div>
+      
         
-            <a class="post-title-link" href="/blog/2019/11/26/longest-substring-without-repeating-characters/" itemprop="url">
-              
-                <span itemprop="name">无重复字符的最长子串</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-26T23:12:36+08:00" content="2019-11-26">
-          11-26
-        </time>
-      </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
+          
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
+          
+            <a href="/tags/整数/" rel="tag">#整数</a>
+          
+            <a href="/tags/字符串/" rel="tag">#字符串</a>
+          
+            <a href="/tags/有限状态机/" rel="tag">#有限状态机</a>
+          
+        </div>
+      
 
-    </header>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/11/26/longest-substring-without-repeating-characters/" rel="next" title="无重复字符的最长子串">
+                <i class="fa fa-chevron-left"></i> 无重复字符的最长子串
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/12/30/zigzag-conversion/" rel="prev" title="Z 字形变换">
+                Z 字形变换 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -315,6 +485,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -334,8 +515,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="cylong">
           <p class="site-author-name" itemprop="name">cylong</p>
@@ -473,6 +663,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正常遍历"><span class="nav-number">2.</span> <span class="nav-text">正常遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.1.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有限状态机"><span class="nav-number">3.</span> <span class="nav-text">有限状态机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">4.</span> <span class="nav-text">来源</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -596,6 +797,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
@@ -612,9 +817,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'cylong1016';
-      var disqus_identifier = 'tags/队列/index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = 'blog/2019/12/21/string-to-integer-atoi/';
+      var disqus_title = '字符串转换整数';
+      var disqus_url = 'http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -625,6 +830,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
