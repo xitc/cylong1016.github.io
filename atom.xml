@@ -172,9 +172,9 @@
     
       <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="动态规划" scheme="http://www.cylong.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
       <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+      <category term="动态规划" scheme="http://www.cylong.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -250,6 +250,46 @@
       <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
       <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>根据身高重建队列</title>
+    <link href="http://www.cylong.com/blog/2020/04/09/queue-reconstruction-by-height/"/>
+    <id>http://www.cylong.com/blog/2020/04/09/queue-reconstruction-by-height/</id>
+    <published>2020-04-09T04:48:12.000Z</published>
+    <updated>2020-04-09T04:48:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>假设有打乱顺序的一群人站成一个队列。 每个人由一个整数对(h, k)表示，其中h是这个人的身高，k是排在这个人前面且身高大于或等于h的人数。 编写一个算法来重建这个队列。</p><p><strong>注意：</strong> 总人数少于1100人。</p><p><strong>示例</strong></p><blockquote><p>输入: [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]<br>输出: [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>让我们从最简单的情况下思考，当队列中所有人的 (h, k) 都是相同的高度 h，只有 k 不同时，解决方案很简单：每个人在队列的索引 index = k。</p><p><img src="所有人等高.jpg" alt="所有人等高"></p><p>即使不是所有人都是同一高度，这个策略也是可行的。因为个子矮的人相对于个子高的人是 “看不见” 的，所以可以先安排个子高的人。下图中我们先安排身高为 7 的人，将它放置在与 k 值相等的索引上；再安排身高为 6 的人，同样的将它放置在与 k 值相等的索引上。</p><p><img src="不等高.jpg" alt="不等高"></p><p>该策略可以递归进行：</p><ul><li>将最高的人按照 k 值升序排序，然后将它们放置到输出队列中与 k 值相等的索引位置上。</li><li>按降序取下一个高度，同样按 k 值对该身高的人升序排序，然后逐个插入到输出队列中与 k 值相等的索引位置上。</li><li>直到完成为止。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] reconstructQueue(<span class="keyword">int</span>[][] people) &#123;</span><br><span class="line">    <span class="comment">// 按照高度降序排列，同高度的人，按照k值升序排列。</span></span><br><span class="line">    Arrays.sort(people, (o1, o2) -&gt; o1[<span class="number">0</span>] == o2[<span class="number">0</span>] ? o1[<span class="number">1</span>] - o2[<span class="number">1</span>] : o2[<span class="number">0</span>] - o1[<span class="number">0</span>]);</span><br><span class="line">    LinkedList&lt;<span class="keyword">int</span>[]&gt; list = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="comment">// 逐个地把它们放在输出队列中，索引等于它们的 k 值。</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] person : people) &#123;</span><br><span class="line">        list.add(person[<span class="number">1</span>], person);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list.toArray(<span class="keyword">new</span> <span class="keyword">int</span>[list.size()][]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul><li>时间复杂度：O(N²)，排序使用了 O(NlogN) 的时间，每个人插入到输出队列中需要 O(k) 的时间，其中 k 是当前输出队列的元素个数。总共的时间复杂度为O(N²)。</li><li>空间复杂度：O(N)，输出队列使用的空间。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/queue-reconstruction-by-height/" title="根据身高重建队列 | 力扣（LeetCode）" target="_blank" rel="noopener">根据身高重建队列 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/queue-reconstruction-by-height/solution/gen-ju-shen-gao-zhong-jian-dui-lie-by-leetcode/" title="根据身高重建队列 | 题解" target="_blank" rel="noopener">根据身高重建队列 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/04/09/queue-reconstruction-by-height/" title="根据身高重建队列">根据身高重建队列</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/04/09/queue-reconstruction-by-height/" title="根据身高重建队列">http://www.cylong.com/blog/2020/04/09/queue-reconstruction-by-height/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;假设有打乱顺序的一群人站成一个队列。 每个人由一个整数对(h, k)表示，其中h是这个人的身高，k是排在这个人前面且身高大于或等于h的人数。 编写一个算法来重建这个队列。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 总人数少于1100人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]&lt;br&gt;输出: [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="贪心算法" scheme="http://www.cylong.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -521,9 +561,9 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="整数" scheme="http://www.cylong.com/tags/%E6%95%B4%E6%95%B0/"/>
-    
       <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+      <category term="整数" scheme="http://www.cylong.com/tags/%E6%95%B4%E6%95%B0/"/>
     
       <category term="有限状态机" scheme="http://www.cylong.com/tags/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/"/>
     
@@ -566,15 +606,15 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
       <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
     
       <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-      <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
       <category term="队列" scheme="http://www.cylong.com/tags/%E9%98%9F%E5%88%97/"/>
+    
+      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   
@@ -781,30 +821,6 @@
       <category term="C/C++" scheme="http://www.cylong.com/tags/C-C/"/>
     
       <category term="头文件" scheme="http://www.cylong.com/tags/%E5%A4%B4%E6%96%87%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018年立个FLAG-坚持写博客！</title>
-    <link href="http://www.cylong.com/blog/2018/06/24/new-2018/"/>
-    <id>http://www.cylong.com/blog/2018/06/24/new-2018/</id>
-    <published>2018-06-24T11:51:41.000Z</published>
-    <updated>2018-06-24T11:51:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！</p><p>FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻<br><a id="more"></a></p><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">2018年立个FLAG-坚持写博客！</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2018/06/24/new-2018/" title="2018年立个FLAG-坚持写博客！">http://www.cylong.com/blog/2018/06/24/new-2018/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;时隔一年，终于想起来还有博客这种事情。工作忙的昏天黑地，但是又学不到什么太多的东西，看到很多周围的同学变得越来越厉害，有自己的目标，我也不想一直这样平淡的度过，总的想点提升不是？开始为自己的将来做准备吧！&lt;/p&gt;
-&lt;p&gt;FLAG我就立在这了！一定要坚持下去！积少成多！(╯‵□′)╯︵┻━┻&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.cylong.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://www.cylong.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
