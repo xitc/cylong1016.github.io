@@ -216,6 +216,96 @@
   </entry>
   
   <entry>
+    <title>顺时针打印矩阵</title>
+    <link href="http://www.cylong.com/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/"/>
+    <id>http://www.cylong.com/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/</id>
+    <published>2020-06-04T18:05:55.000Z</published>
+    <updated>2020-06-04T18:05:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。</p><p><strong>示例 1：</strong></p><blockquote><p>输入：matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]<br>输出：[1, 2, 3, 6, 9, 8, 7, 4, 5]</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>输入：matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]<br>输出：[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]</p></blockquote><p><strong>限制：</strong></p><blockquote><p>0 &lt;= matrix.length &lt;= 100<br>0 &lt;= matrix[i].length &lt;= 100</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>可以模拟打印矩阵的路径。初始位置是矩阵的左上角，初始方向是向右，当路径超出界限或者进入之前访问过的位置时，则顺时针旋转，进入下一个方向。判断路径是否进入之前访问过的位置需要使用一个与输入矩阵大小相同的辅助矩阵 visited，其中的每个元素表示该位置是否被访问过。当一个元素被访问时，将 visited 中的对应位置的元素设为已访问。</p><p>如何判断路径是否结束？由于矩阵中的每个元素都被访问一次，因此路径的长度即为矩阵中的元素数量，当路径的长度达到矩阵中的元素数量时即为完整路径，将该路径返回。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] spiralOrder(<span class="keyword">int</span>[][] matrix) &#123;</span><br><span class="line">    <span class="keyword">if</span> (matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span> || matrix[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> rows = matrix.length;</span><br><span class="line">    <span class="keyword">int</span> columns = matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="comment">// 判断路径是否被访问过</span></span><br><span class="line">    <span class="keyword">boolean</span>[][] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[rows][columns];</span><br><span class="line">    <span class="keyword">int</span> total = rows * columns;</span><br><span class="line">    <span class="comment">// 总路径长度为矩阵的元素数量</span></span><br><span class="line">    <span class="keyword">int</span>[] order = <span class="keyword">new</span> <span class="keyword">int</span>[total];</span><br><span class="line">    <span class="keyword">int</span> row = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> column = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 移动的方向</span></span><br><span class="line">    <span class="keyword">int</span>[][] directions = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">int</span> directionIndex = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; total; i++) &#123;</span><br><span class="line">        order[i] = matrix[row][column];</span><br><span class="line">        visited[row][column] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">int</span> nextRow = row + directions[directionIndex][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> nextColumn = column + directions[directionIndex][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (nextRow &lt; <span class="number">0</span> || nextRow &gt;= rows || nextColumn &lt; <span class="number">0</span> || nextColumn &gt;= columns</span><br><span class="line">                || visited[nextRow][nextColumn]) &#123;</span><br><span class="line">            directionIndex = (directionIndex + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        row += directions[directionIndex][<span class="number">0</span>];</span><br><span class="line">        column += directions[directionIndex][<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> order;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul><li>时间复杂度：O(mn)，其中 m 和 n 分别是输入矩阵的行数和列数。矩阵中的每个元素都要被访问一次。</li><li>空间复杂度：O(mn)。需要创建一个大小为 m × n 的矩阵 visited 记录每个位置是否被访问过。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/" title="顺时针打印矩阵 | 力扣（LeetCode）" target="_blank" rel="noopener">顺时针打印矩阵 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/solution/shun-shi-zhen-da-yin-ju-zhen-by-leetcode-solution/" title="顺时针打印矩阵 | 题解" target="_blank" rel="noopener">顺时针打印矩阵 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/" title="顺时针打印矩阵">顺时针打印矩阵</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/" title="顺时针打印矩阵">http://www.cylong.com/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入：matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]&lt;br&gt;输出：[1, 2, 3, 6, 9, 8, 7, 4, 5]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入：matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]&lt;br&gt;输出：[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0 &amp;lt;= matrix.length &amp;lt;= 100&lt;br&gt;0 &amp;lt;= matrix[i].length &amp;lt;= 100&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="回溯算法" scheme="http://www.cylong.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="记忆化" scheme="http://www.cylong.com/tags/%E8%AE%B0%E5%BF%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求1-n的和</title>
+    <link href="http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/"/>
+    <id>http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/</id>
+    <published>2020-06-02T16:13:13.000Z</published>
+    <updated>2020-06-02T16:13:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>求 1+2+…+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p><p><strong>示例 1：</strong></p><blockquote><p>输入: n = 3<br>输出: 6</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>输入: n = 9<br>输出: 45</p></blockquote><p><strong>限制：</strong></p><blockquote><p>1 &lt;= n &lt;= 10000</p></blockquote><a id="more"></a><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>由于题目限制了很多，其中比较常用的for循环方法也被禁用，那么不用for循环，最容易想到的就是递归，于是我们很容易就能写出递归的版本</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">0</span> ? <span class="number">0</span> : n + sumNums(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但是题目要求不允许使用条件判断语句，那么我们是否能使用别的办法来确定递归出口呢？答案就是逻辑运算符的短路性质。以逻辑运算符 &amp;&amp; 为例，对于 A &amp;&amp; B 这个表达式，如果 A 表达式返回 false ，那么 A &amp;&amp; B 已经确定为 false ，此时不会去执行表达式 B。同理，对于逻辑运算符 ||， 对于 A || B 这个表达式，如果 A 表达式返回 true ，那么 A || B 已经确定为 true ，此时不会去执行表达式 B。</p><p>利用这一特性，我们可以将判断是否为递归的出口看作 A &amp;&amp; B 表达式中的 A 部分，递归的主体函数看作 B 部分。如果不是递归出口，则返回 true，并继续执行表达式 B 的部分，否则递归结束。当然，你也可以用逻辑运算符 || 给出类似的实现，这里我们只提供结合逻辑运算符 &amp;&amp; 的递归实现。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> flag = n &gt; <span class="number">0</span> &amp;&amp; (n += sumNums(n - <span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(n)，递归函数递归 n 次，每次递归中计算时间复杂度为 O(1)，因此总时间复杂度为 O(n)。</li><li>空间复杂度：Ο(n)，递归函数的空间复杂度取决于递归调用栈的深度，这里递归函数调用栈深度为 O(n)，因此空间复杂度为 O(n)。</li></ul><h1 id="Java流API"><a href="#Java流API" class="headerlink" title="Java流API"></a>Java流API</h1><p>其实这种数学计算，包含求和，求大小等等操作，Java引入很多方便的方法，此题使用了Java流API <code>IntStream.range(1, n + 1).sum()</code>，求指定范围的整数和。关于流API的介绍可以参考：</p><blockquote><p><a href="/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API">Java 8 的 Lambda 表达式和 Stream API</a></p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> IntStream.range(<span class="number">1</span>, n + <span class="number">1</span>).sum();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" title="求1-n的和 | 力扣（LeetCode）" target="_blank" rel="noopener">求1-n的和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/solution/qiu-12n-by-leetcode-solution/" title="求1-n的和 | 题解" target="_blank" rel="noopener">求1-n的和 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/" title="求1-n的和">求1-n的和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/" title="求1-n的和">http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;求 1+2+…+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: n = 3&lt;br&gt;输出: 6&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: n = 9&lt;br&gt;输出: 45&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1 &amp;lt;= n &amp;lt;= 10000&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>拥有最多糖果的孩子</title>
     <link href="http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/"/>
     <id>http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/</id>
@@ -252,6 +342,8 @@
     
       <category term="java" scheme="http://www.cylong.com/tags/java/"/>
     
+      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
+    
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
@@ -259,8 +351,6 @@
       <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
     
       <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
     
   </entry>
   
@@ -339,11 +429,11 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="动态规划" scheme="http://www.cylong.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
       <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
     
       <category term="记忆化递归" scheme="http://www.cylong.com/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E9%80%92%E5%BD%92/"/>
+    
+      <category term="动态规划" scheme="http://www.cylong.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
       <category term="滚动数组" scheme="http://www.cylong.com/tags/%E6%BB%9A%E5%8A%A8%E6%95%B0%E7%BB%84/"/>
     
@@ -383,9 +473,9 @@
     
       <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
     
-      <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
-    
       <category term="贪心算法" scheme="http://www.cylong.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -702,13 +792,13 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
       <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
     
       <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
       <category term="队列" scheme="http://www.cylong.com/tags/%E9%98%9F%E5%88%97/"/>
-    
-      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
     
       <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
@@ -804,68 +894,6 @@
       <category term="哈希表" scheme="http://www.cylong.com/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
       <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>两数之和</title>
-    <link href="http://www.cylong.com/blog/2019/11/06/two-sum/"/>
-    <id>http://www.cylong.com/blog/2019/11/06/two-sum/</id>
-    <published>2019-11-06T14:59:38.000Z</published>
-    <updated>2019-11-06T14:59:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p><p><strong>示例:</strong></p><blockquote><p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。&lt;br&gt;你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;给定 nums = [2, 7, 11, 15], target = 9&lt;br&gt;因为 nums[0] + nums[1] = 2 + 7 = 9&lt;br&gt;所以返回 [0, 1]&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="哈希表" scheme="http://www.cylong.com/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-      <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>愚人节快乐</title>
-    <link href="http://www.cylong.com/blog/2019/04/01/april-fools-day/"/>
-    <id>http://www.cylong.com/blog/2019/04/01/april-fools-day/</id>
-    <published>2019-04-01T14:35:22.000Z</published>
-    <updated>2019-04-01T14:35:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】</p><a id="more"></a><p>一行代码能搞定的事情从不会多写【为了美观我还是换行了】。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    .map(x -&gt; (<span class="keyword">int</span>)(Math.random() * <span class="number">1000</span> + <span class="number">1</span>))</span><br><span class="line">    .distinct()</span><br><span class="line">    .sorted()</span><br><span class="line">    .forEach(System.out::println);</span><br></pre></td></tr></table></figure><p>自从 Java 8 增加了 Lambda 表达式和 Stream API 后，很多操作都非常的方便，可以参考我上一篇博客：</p><blockquote><p><a href="http://www.cylong.com/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API | 笑话人生">Java 8 的 Lambda 表达式和 Stream API | 笑话人生</a></p></blockquote><p><span style="background-color:#000000">其实这就是一篇愚人节凑数用的博客，顺便祝愿下女票可以找到心仪的实习，相信自己，努力终将不会白费 (^_^)</span></p><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">愚人节快乐</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/04/01/april-fools-day/" title="愚人节快乐">http://www.cylong.com/blog/2019/04/01/april-fools-day/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;事情起因是看到一个面试题，原题大概是，生成 N 个 1 到 1000 之间的随机数(N &amp;lt;= 1000)，对于重复的数字，只取其中一个，并对结果进行从小到大排序。正好前几天了解了下 Java 的 Lambda 表达式和 Stream API，突然想起来，这可以一行代码搞定啊。于是就尝试的写了一下。【原题还是比较复杂的，我就提取了精华部分】&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://www.cylong.com/categories/Java/"/>
-    
-    
-      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-      <category term="随笔" scheme="http://www.cylong.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="lambda" scheme="http://www.cylong.com/tags/lambda/"/>
     
   </entry>
   
