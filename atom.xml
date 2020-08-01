@@ -86,6 +86,8 @@
     
       <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
     
+      <category term="回溯算法" scheme="http://www.cylong.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
       <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
     
       <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
@@ -93,8 +95,6 @@
       <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
     
       <category term="中序遍历" scheme="http://www.cylong.com/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
-    
-      <category term="回溯算法" scheme="http://www.cylong.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -212,6 +212,47 @@
       <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
       <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>验证回文串</title>
+    <link href="http://www.cylong.com/blog/2020/06/19/valid-palindrome/"/>
+    <id>http://www.cylong.com/blog/2020/06/19/valid-palindrome/</id>
+    <published>2020-06-19T09:43:28.000Z</published>
+    <updated>2020-06-19T09:43:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。<br><strong>说明：</strong> 本题中，我们将空字符串定义为有效的回文串。</p><p><strong>示例 1:</strong></p><blockquote><p>输入: “A man, a plan, a canal: Panama”<br>输出: true</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>输入: “race a car”<br>输出: false</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们先假设，字符串中仅包含英文字母，那么判断是否是回文串，我们只需要使用两个指针i和j，同时指向字符串的首尾，然后判断i和j指向的字母是否相等，然后同时进行 <code>i++</code> 和 <code>j--</code> 操作，直到 <code>i &gt;= j</code>。用这个思路解决此题，由于字符串中包含很多非英文字母，那么我们就需要多一步处理，如果i和j指向的字符不是英文字母，那么我们就不断的进行 <code>i++</code> 和 <code>j--</code> 操作，直到i和j指向的字符是英文字母，然后进行比较即可。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = s.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(i))) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(j))) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j &amp;&amp; Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul><li>时间复杂度：O(n)，其中 n 是字符串的长度。</li><li>空间复杂度：O(1)，只需要额外的常数级别的空间。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/valid-palindrome/" title="验证回文串 | 力扣（LeetCode）" target="_blank" rel="noopener">验证回文串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/valid-palindrome/solution/yan-zheng-hui-wen-chuan-by-leetcode-solution/" title="验证回文串 | 题解" target="_blank" rel="noopener">验证回文串 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/06/19/valid-palindrome/" title="验证回文串">验证回文串</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/19/valid-palindrome/" title="验证回文串">http://www.cylong.com/blog/2020/06/19/valid-palindrome/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。&lt;br&gt;&lt;strong&gt;说明：&lt;/strong&gt; 本题中，我们将空字符串定义为有效的回文串。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: “A man, a plan, a canal: Panama”&lt;br&gt;输出: true&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: “race a car”&lt;br&gt;输出: false&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+      <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
@@ -850,55 +891,6 @@
       <category term="整数" scheme="http://www.cylong.com/tags/%E6%95%B4%E6%95%B0/"/>
     
       <category term="有限状态机" scheme="http://www.cylong.com/tags/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无重复字符的最长子串</title>
-    <link href="http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/"/>
-    <id>http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/</id>
-    <published>2019-11-26T15:12:36.000Z</published>
-    <updated>2019-11-26T15:12:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。</p><p><strong>示例 1:</strong></p><blockquote><p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>输入: “bbbbb”<br>输出: 1<br>解释: 因为无重复字符的最长子串是 “b”，所以其长度为 1。</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p>输入: “pwwkew”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。<br>注意，你的答案必须是子串的长度，”pwke” 是一个子序列，不是子串。</p></blockquote><a id="more"></a><h1 id="队列实现"><a href="#队列实现" class="headerlink" title="队列实现"></a>队列实现</h1><p>本题是计算最长的不重复子串，而子串肯定是连续的。我们肯定都能想到，要遍历下输入的字符串，那么遍历的过程中，我们需要做什么呢？既然是计算字串的长度，那么我们遍历的过程中就要将字串保存下来。同时，每次保存新的字符的时候，需要判断原有的子串中是否包含了这个字符，如果包含了，那么我们要从字串的第一个字符开始，一直删除字符，直到不存在即将要加入的字符，然后计算当前子串的长度，与之前计算的长度比较，取较大值。拿 <code>abcdefce</code> 举例，我们遍历到第二个c字符的时候，已有的不含有重复字符的子串是 <code>abcdef</code> ，当要把c加入到已有的子串的时候，需要将前面的  <code>abc</code> 删除，那么新的子串为 <code>defc</code>。由于子串有后进后出的特性，于是我们使用队列来保存子串。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring1</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    Queue&lt;Character&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> length = s.length();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">        <span class="keyword">while</span> (queue.contains(c)) &#123;</span><br><span class="line">            queue.poll();</span><br><span class="line">        &#125;</span><br><span class="line">        queue.offer(c);</span><br><span class="line">        count = Math.max(queue.size(), count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="双指针实现"><a href="#双指针实现" class="headerlink" title="双指针实现"></a>双指针实现</h1><p>双指针实现的思路和队列的实现一致，只不过使用两个指针i和j来指向子串的两端，判断 <code>s.substring(i, j)</code> 中是否包含当前的字符，若包含，则移动左指针i++，否则移动右指针j++。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s.length() &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> s.length();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> maxLength = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &lt; s.length()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!s.substring(i, j).contains(String.valueOf(s.charAt(j)))) &#123;</span><br><span class="line">            maxLength = Math.max(maxLength, j - i + <span class="number">1</span>);</span><br><span class="line">            j++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxLength;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" title="无重复字符的最长子串 | 力扣（LeetCode）" target="_blank" rel="noopener">无重复字符的最长子串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/" title="无重复字符的最长子串 | 题解" target="_blank" rel="noopener">无重复字符的最长子串 | 题解</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/" title="无重复字符的最长子串">无重复字符的最长子串</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/" title="无重复字符的最长子串">http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “abcabcbb”&lt;br&gt;输出: 3&lt;br&gt;解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “bbbbb”&lt;br&gt;输出: 1&lt;br&gt;解释: 因为无重复字符的最长子串是 “b”，所以其长度为 1。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “pwwkew”&lt;br&gt;输出: 3&lt;br&gt;解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。&lt;br&gt;注意，你的答案必须是子串的长度，”pwke” 是一个子序列，不是子串。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-      <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
-    
-      <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-      <category term="队列" scheme="http://www.cylong.com/tags/%E9%98%9F%E5%88%97/"/>
-    
-      <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   

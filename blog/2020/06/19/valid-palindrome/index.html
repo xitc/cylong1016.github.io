@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="java,leetcode,学习笔记,哈希表,数组,">
+  <meta name="keywords" content="java,leetcode,学习笔记,字符串,指针,双指针,">
 
 
 
@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="题目描述给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例:  给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]">
-<meta name="keywords" content="java,leetcode,学习笔记,哈希表,数组">
+<meta name="description" content="题目描述给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。说明： 本题中，我们将空字符串定义为有效的回文串。 示例 1:  输入: “A man, a plan, a canal: Panama”输出: true  示例 2:  输入: “race a car”输出: false">
+<meta name="keywords" content="java,leetcode,学习笔记,字符串,指针,双指针">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两数之和">
-<meta property="og:url" content="http://www.cylong.com/blog/2019/11/06/two-sum/index.html">
+<meta property="og:title" content="验证回文串">
+<meta property="og:url" content="http://www.cylong.com/blog/2020/06/19/valid-palindrome/index.html">
 <meta property="og:site_name" content="笑话人生">
-<meta property="og:description" content="题目描述给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例:  给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]">
+<meta property="og:description" content="题目描述给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。说明： 本题中，我们将空字符串定义为有效的回文串。 示例 1:  输入: “A man, a plan, a canal: Panama”输出: true  示例 2:  输入: “race a car”输出: false">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-06T14:59:38.000Z">
+<meta property="og:updated_time" content="2020-06-19T09:43:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两数之和">
-<meta name="twitter:description" content="题目描述给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例:  给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]">
+<meta name="twitter:title" content="验证回文串">
+<meta name="twitter:description" content="题目描述给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。说明： 本题中，我们将空字符串定义为有效的回文串。 示例 1:  输入: “A man, a plan, a canal: Panama”输出: true  示例 2:  输入: “race a car”输出: false">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> 两数之和 | 笑话人生 </title>
+  <title> 验证回文串 | 笑话人生 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +293,7 @@
             
             
               
-                两数之和
+                验证回文串
               
             
           </h1>
@@ -305,8 +305,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2019-11-06T22:59:38+08:00" content="2019-11-06">
-              2019-11-06
+            <time itemprop="dateCreated" datetime="2020-06-19T17:43:28+08:00" content="2020-06-19">
+              2020-06-19
             </time>
           </span>
 
@@ -335,8 +335,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/blog/2019/11/06/two-sum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="blog/2019/11/06/two-sum/" itemprop="commentsCount"></span>
+                <a href="/blog/2020/06/19/valid-palindrome/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="blog/2020/06/19/valid-palindrome/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -365,22 +365,28 @@
 
       
         <hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<p><strong>示例:</strong></p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。<br><strong>说明：</strong> 本题中，我们将空字符串定义为有效的回文串。</p>
+<p><strong>示例 1:</strong></p>
 <blockquote>
-<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+<p>输入: “A man, a plan, a canal: Panama”<br>输出: true</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: “race a car”<br>输出: false</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>使用哈希表将会使问题特别简单，首先，我们将使用一次遍历将数组中的元素加入到Map中，key是当前元素的值，value是当前元素的索引。接下来，我们进行第二次遍历，第二次遍历我们将查找当前元素的目标元素（target−nums[i]）是否在Map中，如果在，即找到目标值，返回两个元素的索引。注意一点的是，目标元素不能是当前元素！</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(complement)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实际上，我们把上面的两步合成一步，只用一次遍历即可完成，当遍历到第i个值后，我们把此元素的需要的目标值保存到Map中，后续遍历，找到目标的值，即完成遍历。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(nums[i]), i&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        map.put(target - nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们先假设，字符串中仅包含英文字母，那么判断是否是回文串，我们只需要使用两个指针i和j，同时指向字符串的首尾，然后判断i和j指向的字母是否相等，然后同时进行 <code>i++</code> 和 <code>j--</code> 操作，直到 <code>i &gt;= j</code>。用这个思路解决此题，由于字符串中包含很多非英文字母，那么我们就需要多一步处理，如果i和j指向的字符不是英文字母，那么我们就不断的进行 <code>i++</code> 和 <code>j--</code> 操作，直到i和j指向的字符是英文字母，然后进行比较即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = s.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(i))) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(j))) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j &amp;&amp; Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<li>时间复杂度：O(n)，其中 n 是字符串的长度。</li>
+<li>空间复杂度：O(1)，只需要额外的常数级别的空间。</li>
+</ul>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/two-sum" title="两数之和 | 力扣（LeetCode）" target="_blank" rel="noopener">两数之和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/" title="两数之和 | 题解" target="_blank" rel="noopener">两数之和 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/valid-palindrome/" title="验证回文串 | 力扣（LeetCode）" target="_blank" rel="noopener">验证回文串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/valid-palindrome/solution/yan-zheng-hui-wen-chuan-by-leetcode-solution/" title="验证回文串 | 题解" target="_blank" rel="noopener">验证回文串 | 题解</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">两数之和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2019/11/06/two-sum/" title="两数之和">http://www.cylong.com/blog/2019/11/06/two-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href="http://www.cylong.com/blog/2020/06/19/valid-palindrome/" title="验证回文串">验证回文串</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/06/19/valid-palindrome/" title="验证回文串">http://www.cylong.com/blog/2020/06/19/valid-palindrome/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 
       
@@ -408,9 +414,11 @@
           
             <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
           
-            <a href="/tags/哈希表/" rel="tag">#哈希表</a>
+            <a href="/tags/字符串/" rel="tag">#字符串</a>
           
-            <a href="/tags/数组/" rel="tag">#数组</a>
+            <a href="/tags/指针/" rel="tag">#指针</a>
+          
+            <a href="/tags/双指针/" rel="tag">#双指针</a>
           
         </div>
       
@@ -419,16 +427,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/04/01/april-fools-day/" rel="next" title="愚人节快乐">
-                <i class="fa fa-chevron-left"></i> 愚人节快乐
+              <a href="/blog/2020/06/16/remove-nth-node-from-end-of-list/" rel="next" title="删除链表的倒数第N个节点">
+                <i class="fa fa-chevron-left"></i> 删除链表的倒数第N个节点
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/11/07/roman-to-integer/" rel="prev" title="罗马数字转整数">
-                罗马数字转整数 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2020/06/22/subtree-of-another-tree/" rel="prev" title="另一个树的子树">
+                另一个树的子树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,7 +645,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">3.</span> <span class="nav-text">来源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复杂度分析"><span class="nav-number">3.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">4.</span> <span class="nav-text">来源</span></a></li></ol></div>
             
           </div>
         </section>
@@ -785,9 +793,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'cylong1016';
-      var disqus_identifier = 'blog/2019/11/06/two-sum/';
-      var disqus_title = '两数之和';
-      var disqus_url = 'http://www.cylong.com/blog/2019/11/06/two-sum/';
+      var disqus_identifier = 'blog/2020/06/19/valid-palindrome/';
+      var disqus_title = '验证回文串';
+      var disqus_url = 'http://www.cylong.com/blog/2020/06/19/valid-palindrome/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
