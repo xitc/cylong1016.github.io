@@ -384,7 +384,7 @@
 <h1 id="双指针实现"><a href="#双指针实现" class="headerlink" title="双指针实现"></a>双指针实现</h1><p>双指针实现的思路和队列的实现一致，只不过使用两个指针i和j来指向子串的两端，判断 <code>s.substring(i, j)</code> 中是否包含当前的字符，若包含，则移动左指针i++，否则移动右指针j++。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s.length() &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> s.length();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> maxLength = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &lt; s.length()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!s.substring(i, j).contains(String.valueOf(s.charAt(j)))) &#123;</span><br><span class="line">            maxLength = Math.max(maxLength, j - i + <span class="number">1</span>);</span><br><span class="line">            j++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxLength;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" title="无重复字符的最长子串 | 力扣（LeetCode）" target="_blank" rel="noopener">无重复字符的最长子串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/" title="无重复字符的最长子串 | 题解" target="_blank" rel="noopener">无重复字符的最长子串 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" title="无重复字符的最长子串 | 力扣（LeetCode）" target="_blank" rel="noopener">无重复字符的最长子串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/" title="无重复字符的最长子串 | 题解（LeetCode）" target="_blank" rel="noopener">无重复字符的最长子串 | 题解（LeetCode）</a></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -516,7 +516,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">55</span>
+              <span class="site-state-item-count">56</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -533,7 +533,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">80</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -690,7 +690,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共50.8k字</span>
+  <span class="post-count">博客共51.4k字</span>
 </div>
 
         

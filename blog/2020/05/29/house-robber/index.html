@@ -401,7 +401,7 @@
 <p>上述方法使用了数组存储结果。考虑到每间房屋的最高总金额只和该房屋的前两间房屋的最高总金额相关，因此可以使用滚动数组，在每个时刻只需要存储前两间房屋的最高总金额。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rob</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> length = nums.length;</span><br><span class="line">    <span class="keyword">if</span> (length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> first = nums[<span class="number">0</span>], second = Math.max(nums[<span class="number">0</span>], nums[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = second;</span><br><span class="line">        second = Math.max(first + nums[i], second);</span><br><span class="line">        first = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/house-robber/" title="打家劫舍 | 力扣（LeetCode）" target="_blank" rel="noopener">打家劫舍 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcode-solution/" title="打家劫舍 | 题解" target="_blank" rel="noopener">打家劫舍 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/house-robber/" title="打家劫舍 | 力扣（LeetCode）" target="_blank" rel="noopener">打家劫舍 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcode-solution/" title="打家劫舍 | 题解（LeetCode）" target="_blank" rel="noopener">打家劫舍 | 题解（LeetCode）</a></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -531,7 +531,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">55</span>
+              <span class="site-state-item-count">56</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -548,7 +548,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">80</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -705,7 +705,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共50.8k字</span>
+  <span class="post-count">博客共51.4k字</span>
 </div>
 
         

@@ -374,7 +374,7 @@
 <p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解" target="_blank" rel="noopener">另一个树的子树 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解（LeetCode）" target="_blank" rel="noopener">另一个树的子树 | 题解（LeetCode）</a></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -504,7 +504,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">55</span>
+              <span class="site-state-item-count">56</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -521,7 +521,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">80</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -678,7 +678,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共50.8k字</span>
+  <span class="post-count">博客共51.4k字</span>
 </div>
 
         

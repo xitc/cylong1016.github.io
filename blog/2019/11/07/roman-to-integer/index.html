@@ -400,7 +400,7 @@
 <p><img src="罗马数字转整数.png" alt="罗马数字转整数"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    HashMap&lt;Character, Integer&gt; kv = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">7</span>);</span><br><span class="line">    kv.put(<span class="string">'I'</span>, <span class="number">1</span>);</span><br><span class="line">    kv.put(<span class="string">'V'</span>, <span class="number">5</span>);</span><br><span class="line">    kv.put(<span class="string">'X'</span>, <span class="number">10</span>);</span><br><span class="line">    kv.put(<span class="string">'L'</span>, <span class="number">50</span>);</span><br><span class="line">    kv.put(<span class="string">'C'</span>, <span class="number">100</span>);</span><br><span class="line">    kv.put(<span class="string">'D'</span>, <span class="number">500</span>);</span><br><span class="line">    kv.put(<span class="string">'M'</span>, <span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">char</span>[] roman = s.toCharArray();</span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; roman.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span> &lt; roman.length &amp;&amp; kv.get(roman[i]) &lt; kv.get(roman[i + <span class="number">1</span>])) &#123;</span><br><span class="line">            result -= kv.get(roman[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result += kv.get(roman[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/roman-to-integer/" title="罗马数字转整数 | 力扣（LeetCode）" target="_blank" rel="noopener">罗马数字转整数 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/roman-to-integer/solution/yong-shi-9993nei-cun-9873jian-dan-jie-fa-by-donesp/" title="罗马数字转整数 | 题解" target="_blank" rel="noopener">罗马数字转整数 | 题解</a></p>
+<p><a href="https://leetcode-cn.com/problems/roman-to-integer/" title="罗马数字转整数 | 力扣（LeetCode）" target="_blank" rel="noopener">罗马数字转整数 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/roman-to-integer/solution/yong-shi-9993nei-cun-9873jian-dan-jie-fa-by-donesp/" title="罗马数字转整数 | 题解（LeetCode）" target="_blank" rel="noopener">罗马数字转整数 | 题解（LeetCode）</a></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -526,7 +526,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">55</span>
+              <span class="site-state-item-count">56</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -543,7 +543,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">80</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -700,7 +700,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共50.8k字</span>
+  <span class="post-count">博客共51.4k字</span>
 </div>
 
         
