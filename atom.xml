@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cylong.com/"/>
-  <updated>2020-07-15T05:03:36.000Z</updated>
+  <updated>2020-07-15T15:04:31.000Z</updated>
   <id>http://www.cylong.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>验证二叉搜索树</title>
+    <link href="http://www.cylong.com/blog/2020/07/15/validate-binary-search-tree/"/>
+    <id>http://www.cylong.com/blog/2020/07/15/validate-binary-search-tree/</id>
+    <published>2020-07-15T15:04:31.000Z</published>
+    <updated>2020-07-15T15:04:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树，判断其是否是一个有效的二叉搜索树。假设一个二叉搜索树具有如下特征：</p><ul><li>节点的左子树只包含小于当前节点的数。</li><li>节点的右子树只包含大于当前节点的数。</li><li>所有左子树和右子树自身必须也是二叉搜索树。</li></ul><p><strong>示例 1:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    2</span><br><span class="line">   / \</span><br><span class="line">  1   3</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure></p><p><strong>示例 2:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    5</span><br><span class="line">   / \</span><br><span class="line">  1   4</span><br><span class="line">     / \</span><br><span class="line">    3   6</span><br><span class="line">输出: false</span><br><span class="line">解释: 输入为: [5, 1, 4, null, null, 3, 6]。根节点的值为 5 ，但是其右子节点值为 4 。</span><br></pre></td></tr></table></figure></p><a id="more"></a><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>由题目给出的信息我们可以知道：如果该二叉树的左子树不为空，则左子树上所有节点的值均小于它的根节点的值；若它的右子树不空，则右子树上所有节点的值均大于它的根节点的值；它的左右子树也为二叉搜索树。</p><p>于是我们设计一个递归函数 <code>isValidBST(root, lower, upper)</code> 来递归判断，函数表示考虑以 root 为根的子树，判断子树中所有节点的值是否都在 (l, r) 的范围内（注意是开区间）。如果 root 节点的值 val 不在 ((l, r) 的范围内说明不满足条件直接返回，否则我们要继续递归调用检查它的左右子树是否满足，如果都满足才说明这是一棵二叉搜索树。</p><p>那么根据二叉搜索树的性质，在递归调用左子树时，我们需要把上界 upper 改为 root.val，即调用 <code>isValidBST(root.left, lower, root.val)</code>，因为左子树里所有节点的值均小于它的根节点的值。同理递归调用右子树时，我们需要把下界 lower 改为 root.val，即调用 <code>isValidBST(root.right, root.val, upper)</code>。函数递归调用的入口为 <code>isValidBST(root, -inf, +inf)</code>， inf 表示一个无穷大的值。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 无穷大和无穷小用null表示，这里不能用Integer.MAX_VALUE和Integer.MIN_VALUE</span></span><br><span class="line">    <span class="keyword">return</span> isValidBST(root, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode node, Integer lower, Integer upper)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> val = node.val;</span><br><span class="line">    <span class="keyword">if</span> (lower != <span class="keyword">null</span> &amp;&amp; val &lt;= lower) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (upper != <span class="keyword">null</span> &amp;&amp; val &gt;= upper) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!isValidBST(node.right, val, upper)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!isValidBST(node.left, lower, val)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(n)，其中 n 为二叉树的节点个数。在递归调用的时候二叉树的每个节点最多被访问一次，因此时间复杂度为 O(n)。</li><li>空间复杂度：O(n)，其中 n 为二叉树的节点个数。递归函数在递归过程中需要为每一层递归函数分配栈空间，所以这里需要额外的空间且该空间取决于递归的深度，即二叉树的高度。最坏情况下二叉树为一条链，树的高度为 n ，递归最深达到 n 层，故最坏情况下空间复杂度为 O(n) 。</li></ul><h1 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h1><p>我们知道二叉搜索树「中序遍历」得到的值构成的序列一定是升序的，中序遍历是二叉树的一种遍历方式，它先遍历左子树，再遍历根节点，最后遍历右子树。而我们二叉搜索树保证了左子树的节点的值均小于根节点的值，根节点的值均小于右子树的值，因此中序遍历以后得到的序列一定是升序序列。这启示我们在中序遍历的时候实时检查当前节点的值是否大于前一个中序遍历到的节点的值即可。如果均大于说明这个序列是升序的，整棵树是二叉搜索树，否则不是。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> pre = Long.MIN_VALUE;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 访问左子树</span></span><br><span class="line">    <span class="keyword">if</span> (!isValidBST(root.left)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 访问当前节点：如果当前节点小于等于中序遍历的前一个节点，说明不满足BST，返回 false；否则继续遍历。</span></span><br><span class="line">    <span class="keyword">if</span> (root.val &lt;= pre) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    pre = root.val;</span><br><span class="line">    <span class="comment">// 访问右子树</span></span><br><span class="line">    <span class="keyword">return</span> isValidBST(root.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(n)，其中 n 为二叉树的节点个数。在递归调用的时候二叉树的每个节点最多被访问一次，因此时间复杂度为 O(n)。</li><li>空间复杂度：O(n)，其中 n 为二叉树的节点个数。递归函数在递归过程中需要为每一层递归函数分配栈空间，所以这里需要额外的空间且该空间取决于递归的深度，即二叉树的高度。最坏情况下二叉树为一条链，树的高度为 n ，递归最深达到 n 层，故最坏情况下空间复杂度为 O(n) 。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/validate-binary-search-tree/" title="验证二叉搜索树 | 力扣（LeetCode）" target="_blank" rel="noopener">验证二叉搜索树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/validate-binary-search-tree/solution/yan-zheng-er-cha-sou-suo-shu-by-leetcode-solution/" title="验证二叉搜索树 | 题解（LeetCode）" target="_blank" rel="noopener">验证二叉搜索树 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/07/15/validate-binary-search-tree/" title="验证二叉搜索树">验证二叉搜索树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/07/15/validate-binary-search-tree/" title="验证二叉搜索树">http://www.cylong.com/blog/2020/07/15/validate-binary-search-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个二叉树，判断其是否是一个有效的二叉搜索树。假设一个二叉搜索树具有如下特征：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;节点的左子树只包含小于当前节点的数。&lt;/li&gt;
+&lt;li&gt;节点的右子树只包含大于当前节点的数。&lt;/li&gt;
+&lt;li&gt;所有左子树和右子树自身必须也是二叉搜索树。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   / \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  1   3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   / \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  1   4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     / \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    3   6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: false&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;解释: 输入为: [5, 1, 4, null, null, 3, 6]。根节点的值为 5 ，但是其右子节点值为 4 。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
+    
+      <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+      <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="中序遍历" scheme="http://www.cylong.com/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
+      <category term="二叉搜索树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉搜索树的第k大节点</title>
@@ -463,9 +509,9 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
       <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
       <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
     
@@ -557,11 +603,11 @@
     
       <category term="java" scheme="http://www.cylong.com/tags/java/"/>
     
-      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
-    
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
     
       <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
     
@@ -604,13 +650,13 @@
     
       <category term="java" scheme="http://www.cylong.com/tags/java/"/>
     
-      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
-    
       <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="流API" scheme="http://www.cylong.com/tags/%E6%B5%81API/"/>
     
       <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
     
@@ -735,9 +781,9 @@
     
       <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
     
-      <category term="贪心算法" scheme="http://www.cylong.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
-    
       <category term="排序" scheme="http://www.cylong.com/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="贪心算法" scheme="http://www.cylong.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -781,9 +827,9 @@
     
       <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
       <category term="数组" scheme="http://www.cylong.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -826,47 +872,6 @@
       <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
       <category term="几何" scheme="http://www.cylong.com/tags/%E5%87%A0%E4%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回文数</title>
-    <link href="http://www.cylong.com/blog/2020/01/10/palindrome-number/"/>
-    <id>http://www.cylong.com/blog/2020/01/10/palindrome-number/</id>
-    <published>2020-01-10T08:31:59.000Z</published>
-    <updated>2020-01-10T08:31:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p><p><strong>示例 1:</strong></p><blockquote><p>输入: 121<br>输出: true</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。</p></blockquote><a id="more"></a><p>针对输入是负数的情况下，一定不是回文数，因为没有整数是以负号结尾的。接下来考虑，既然回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。那么我们将整数反转，判断反转后的数和原来的数是否相等，就可以判断此整数是否是回文数。关于整数反转的操作，可以参考另外一道Leetcode题目：<a href="/blog/2020/01/04/reverse-integer/" title="整数反转">整数反转</a></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> origin = x;</span><br><span class="line">    <span class="comment">// 使用long防止整数反转溢出</span></span><br><span class="line">    <span class="keyword">long</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">        x = x / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 若反转后的值溢出，则一定不是回文数</span></span><br><span class="line">    <span class="keyword">if</span> (result &gt; Integer.MAX_VALUE || result &lt; Integer.MIN_VALUE) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>) result == origin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>考虑到反转溢出的情况，若整数反转后溢出，那么肯定原来的值和反转后的值不相等，也就是说其实我们上面并不需要特意的去判断反转后的整数是否溢出，于是代码优化如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> origin = x;</span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">        x = x / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result == origin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul><li>时间复杂度：O(logn)，对于每次迭代，我们会将输入除以 10，因此时间复杂度为 O(logn)，也可以理解为输入的整数的位数。</li><li>空间复杂度：Ο(1)。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/palindrome-number/" title="回文数 | 力扣（LeetCode）" target="_blank" rel="noopener">回文数 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/palindrome-number/solution/hui-wen-shu-by-leetcode-solution/" title="回文数 | 题解（LeetCode）" target="_blank" rel="noopener">回文数 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href="http://www.cylong.com/blog/2020/01/10/palindrome-number/" title="回文数">回文数</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href="http://www.cylong.com/blog/2020/01/10/palindrome-number/" title="回文数">http://www.cylong.com/blog/2020/01/10/palindrome-number/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: 121&lt;br&gt;输出: true&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: -121&lt;br&gt;输出: false&lt;br&gt;解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: 10&lt;br&gt;输出: false&lt;br&gt;解释: 从右向左读, 为 01 。因此它不是一个回文数。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-      <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-      <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-      <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="整数" scheme="http://www.cylong.com/tags/%E6%95%B4%E6%95%B0/"/>
     
   </entry>
   
