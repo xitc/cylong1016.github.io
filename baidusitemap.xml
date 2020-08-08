@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.cylong.com/blog/2020/07/23/minimum-path-sum/</loc>
+    <lastmod>2020-07-23</lastmod>
+  </url>  <url>
     <loc>http://www.cylong.com/blog/2020/07/16/reverse-linked-list/</loc>
     <lastmod>2020-07-15</lastmod>
   </url>  <url>
@@ -58,31 +61,31 @@
     <loc>http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
-    <loc>http://www.cylong.com/blog/2016/07/01/wsdl-to-java/</loc>
+    <loc>http://www.cylong.com/blog/2016/06/09/iverson/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
-    <loc>http://www.cylong.com/blog/2016/06/09/iverson/</loc>
+    <loc>http://www.cylong.com/blog/2016/07/01/wsdl-to-java/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
     <loc>http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
-    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
     <loc>http://www.cylong.com/blog/2016/04/29/apache-404/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
-    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
-    <lastmod>2020-06-06</lastmod>
-  </url>  <url>
-    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
     <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
     <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
+    <lastmod>2020-06-06</lastmod>
+  </url>  <url>
+    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>  <url>
     <loc>http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/</loc>

@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>http://www.cylong.com/blog/2020/07/23/minimum-path-sum/</loc>
+    
+    <lastmod>2020-07-23T01:24:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cylong.com/blog/2020/07/16/reverse-linked-list/</loc>
     
     <lastmod>2020-07-15T16:29:26.000Z</lastmod>
@@ -156,14 +163,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/07/01/wsdl-to-java/</loc>
+    <loc>http://www.cylong.com/blog/2016/06/09/iverson/</loc>
     
     <lastmod>2020-06-06T08:31:19.080Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/06/09/iverson/</loc>
+    <loc>http://www.cylong.com/blog/2016/07/01/wsdl-to-java/</loc>
     
     <lastmod>2020-06-06T08:31:19.080Z</lastmod>
     
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -191,14 +198,7 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/02/preferred-domain/</loc>
-    
-    <lastmod>2020-06-06T08:31:19.057Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/09/windows-linux-new-file/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
@@ -213,6 +213,13 @@
   
   <url>
     <loc>http://www.cylong.com/blog/2016/05/19/gitignore/</loc>
+    
+    <lastmod>2020-06-06T08:31:19.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
     
     <lastmod>2020-06-06T08:31:19.057Z</lastmod>
     
