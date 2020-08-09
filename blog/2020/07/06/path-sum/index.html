@@ -370,7 +370,7 @@
 <a id="more"></a>
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
 <li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li>
 <li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li>
 </ul>
@@ -507,7 +507,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -642,7 +642,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复杂度分析"><span class="nav-number">3.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">4.</span> <span class="nav-text">来源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.1.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">3.</span> <span class="nav-text">来源</span></a></li></ol></div>
             
           </div>
         </section>
@@ -681,7 +681,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共58.9k字</span>
+  <span class="post-count">博客共59.5k字</span>
 </div>
 
         

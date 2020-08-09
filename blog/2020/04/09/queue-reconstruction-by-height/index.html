@@ -386,7 +386,7 @@
 <li>直到完成为止。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] reconstructQueue(<span class="keyword">int</span>[][] people) &#123;</span><br><span class="line">    <span class="comment">// 按照高度降序排列，同高度的人，按照k值升序排列。</span></span><br><span class="line">    Arrays.sort(people, (o1, o2) -&gt; o1[<span class="number">0</span>] == o2[<span class="number">0</span>] ? o1[<span class="number">1</span>] - o2[<span class="number">1</span>] : o2[<span class="number">0</span>] - o1[<span class="number">0</span>]);</span><br><span class="line">    LinkedList&lt;<span class="keyword">int</span>[]&gt; list = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="comment">// 逐个地把它们放在输出队列中，索引等于它们的 k 值。</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] person : people) &#123;</span><br><span class="line">        list.add(person[<span class="number">1</span>], person);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list.toArray(<span class="keyword">new</span> <span class="keyword">int</span>[list.size()][]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><ul>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
 <li>时间复杂度：O(N²)，排序使用了 O(NlogN) 的时间，每个人插入到输出队列中需要 O(k) 的时间，其中 k 是当前输出队列的元素个数。总共的时间复杂度为O(N²)。</li>
 <li>空间复杂度：O(N)，输出队列使用的空间。</li>
 </ul>
@@ -521,7 +521,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -656,7 +656,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复杂度分析"><span class="nav-number">3.</span> <span class="nav-text">复杂度分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">4.</span> <span class="nav-text">来源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度分析"><span class="nav-number">2.1.</span> <span class="nav-text">复杂度分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来源"><span class="nav-number">3.</span> <span class="nav-text">来源</span></a></li></ol></div>
             
           </div>
         </section>
@@ -695,7 +695,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客共58.9k字</span>
+  <span class="post-count">博客共59.5k字</span>
 </div>
 
         
