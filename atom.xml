@@ -23,10 +23,11 @@
     <published>2020-08-10T15:11:59.000Z</published>
     <updated>2020-08-10T15:11:59.000Z</updated>
     
-    <content type="html"><![CDATA[<hr><a id="more"></a><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >Hexo博客和NexT主题版本升级</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >http://www.cylong.com/blog/2020/08/10/update-hexo-next/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<hr><p>使用 <a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a> 搭建博客也有4年之久，同时也是一直使用 <a href="http://theme-next.iissnan.com/" title="Next">NexT</a> 主题，最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。而且也经常看到很多同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 <a href="https://github.com/iissnan/hexo-theme-next" title="iissnan">iissnan</a> 名下迁移至 <a href="https://github.com/theme-next" title="theme-next">theme-next</a> 组织。</p><a id="more"></a><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >Hexo博客和NexT主题版本升级</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >http://www.cylong.com/blog/2020/08/10/update-hexo-next/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
     
     
-    <summary type="html">&lt;hr&gt;</summary>
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;使用 &lt;a href=&quot;https://hexo.io/zh-cn/&quot; title=&quot;Hexo&quot;&gt;Hexo&lt;/a&gt; 搭建博客也有4年之久，同时也是一直使用 &lt;a href=&quot;http://theme-next.iissnan.com/&quot; title=&quot;Next&quot;&gt;NexT&lt;/a&gt; 主题，最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。而且也经常看到很多同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next&quot; title=&quot;iissnan&quot;&gt;iissnan&lt;/a&gt; 名下迁移至 &lt;a href=&quot;https://github.com/theme-next&quot; title=&quot;theme-next&quot;&gt;theme-next&lt;/a&gt; 组织。&lt;/p&gt;</summary>
     
     
     
