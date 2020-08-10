@@ -6,7 +6,7 @@
   <link href="http://www.cylong.com/atom.xml" rel="self"/>
   
   <link href="http://www.cylong.com/"/>
-  <updated>2020-07-30T15:45:14.000Z</updated>
+  <updated>2020-08-10T15:11:59.000Z</updated>
   <id>http://www.cylong.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客和NexT主题版本升级</title>
+    <link href="http://www.cylong.com/blog/2020/08/10/update-hexo-next/"/>
+    <id>http://www.cylong.com/blog/2020/08/10/update-hexo-next/</id>
+    <published>2020-08-10T15:11:59.000Z</published>
+    <updated>2020-08-10T15:11:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><a id="more"></a><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >Hexo博客和NexT主题版本升级</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo博客和NexT主题版本升级' >http://www.cylong.com/blog/2020/08/10/update-hexo-next/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="http://www.cylong.com/categories/Hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://www.cylong.com/tags/hexo/"/>
+    
+    <category term="next" scheme="http://www.cylong.com/tags/next/"/>
+    
+  </entry>
   
   <entry>
     <title>黄金矿工</title>
@@ -837,52 +860,6 @@
     <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
     
     <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>删除链表的倒数第N个节点</title>
-    <link href="http://www.cylong.com/blog/2020/06/16/remove-nth-node-from-end-of-list/"/>
-    <id>http://www.cylong.com/blog/2020/06/16/remove-nth-node-from-end-of-list/</id>
-    <published>2020-06-15T18:35:53.000Z</published>
-    <updated>2020-06-15T18:35:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。</p><p><strong>示例：</strong></p><blockquote><p>给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.<br>当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</p></blockquote><p><strong>说明：</strong></p><blockquote><p>给定的 n 保证是有效的。</p></blockquote><p><strong>进阶：</strong></p><blockquote><p>你能尝试使用一趟扫描实现吗？</p></blockquote><a id="more"></a><h1 id="两次遍历"><a href="#两次遍历" class="headerlink" title="两次遍历"></a>两次遍历</h1><p>最简单的思路，我们发现其实是删除从列表开头数起的第 <code>(L - n + 1)</code> 个结点，其中 L 是列表的长度。只要我们找到列表的长度 L，这个问题就很容易解决。我们先遍历一次链表，求出链表的长度 L，然后再遍历一次链表，删除倒数第 n 个节点即可。需要注意的是如果 <code>L = n</code>，那么要直接返回 <code>head.next</code>。</p><p><img src="%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86.png" alt="两次遍历"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">    ListNode node = head;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        len++;</span><br><span class="line">        node = node.next;</span><br><span class="line">    &#125; <span class="keyword">while</span> (node != <span class="keyword">null</span>);</span><br><span class="line">    <span class="keyword">if</span> (len == n) &#123;</span><br><span class="line">        <span class="keyword">return</span> head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">    node = head;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (++index == len - n) &#123;</span><br><span class="line">            node.next = node.next.next;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        node = node.next;</span><br><span class="line">    &#125; <span class="keyword">while</span> (node != <span class="keyword">null</span>);</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line"></span><br><span class="line">    ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(L)，该算法对列表进行了两次遍历，首先计算了列表的长度 L 其次找到第 <code>L - n</code> 个结点。 操作执行了 <code>2L - n</code> 步，时间复杂度为 O(L)。</li><li>空间复杂度：O(1)，只需要额外的常数级别的空间。</li></ul><h1 id="一次遍历"><a href="#一次遍历" class="headerlink" title="一次遍历"></a>一次遍历</h1><p>上述算法可以优化为只使用一次遍历。我们可以使用两个指针而不是一个指针。第一个指针从列表的开头向前移动 <code>n + 1</code> 步，而第二个指针将从列表的开头出发。现在，这两个指针被 n 个结点分开。我们通过同时移动两个指针向前来保持这个恒定的间隔，直到第一个指针到达最后一个结点。此时第二个指针将指向从最后一个结点数起的第 n 个结点。我们重新链接第二个指针所引用的结点的 next 指针指向该结点的下下个结点。</p><p><img src="%E4%B8%80%E6%AC%A1%E9%81%8D%E5%8E%86.png" alt="一次遍历"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    dummy.next = head;</span><br><span class="line">    ListNode first = dummy;</span><br><span class="line">    ListNode second = dummy;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n + <span class="number">1</span>; i++) &#123;</span><br><span class="line">        first = first.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (first != <span class="keyword">null</span>) &#123;</span><br><span class="line">        first = first.next;</span><br><span class="line">        second = second.next;</span><br><span class="line">    &#125;</span><br><span class="line">    second.next = second.next.next;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line"></span><br><span class="line">    ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(L)，该算法对含有 L 个结点的列表进行了一次遍历。因此时间复杂度为 O(L)。</li><li>空间复杂度：O(1)，只需要额外的常数级别的空间。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" title="删除链表的倒数第N个节点 | 力扣（LeetCode）">删除链表的倒数第N个节点 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/shan-chu-lian-biao-de-dao-shu-di-nge-jie-dian-by-l/" title="删除链表的倒数第N个节点 | 题解（LeetCode）">删除链表的倒数第N个节点 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/06/16/remove-nth-node-from-end-of-list/' title='删除链表的倒数第N个节点' >删除链表的倒数第N个节点</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/16/remove-nth-node-from-end-of-list/' title='删除链表的倒数第N个节点' >http://www.cylong.com/blog/2020/06/16/remove-nth-node-from-end-of-list/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    
-    <summary type="html">&lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;给定一个链表: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 和 n = 2.&lt;br&gt;当删除了倒数第二个节点后，链表变为 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;给定的 n 保证是有效的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你能尝试使用一趟扫描实现吗？&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-    <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-    <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-    <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-    <category term="指针" scheme="http://www.cylong.com/tags/%E6%8C%87%E9%92%88/"/>
-    
-    <category term="双指针" scheme="http://www.cylong.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-    <category term="滑动窗口" scheme="http://www.cylong.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   

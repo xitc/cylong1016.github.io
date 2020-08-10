@@ -20,21 +20,22 @@
     var CONFIG = {"hostname":"www.cylong.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在2017年6月1日关闭服务，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经">
+  <meta name="description" content="前言从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在2017年6月1日关闭服务，不得不换一个。在我刚开始使用 NexT 主题的时候，只支持多说和 Disqus，目前已经">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 集成 Disqus 评论">
 <meta property="og:url" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/index.html">
 <meta property="og:site_name" content="笑话人生">
-<meta property="og:description" content="前言从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在2017年6月1日关闭服务，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经">
+<meta property="og:description" content="前言从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在2017年6月1日关闭服务，不得不换一个。在我刚开始使用 NexT 主题的时候，只支持多说和 Disqus，目前已经">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/disqus_index.png">
 <meta property="og:image" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/disqus_intent.png">
 <meta property="og:image" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/disqus_create.png">
 <meta property="og:image" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/disqus_settings.png">
 <meta property="article:published_time" content="2017-03-26T14:36:12.000Z">
-<meta property="article:modified_time" content="2020-06-06T08:31:19.084Z">
+<meta property="article:modified_time" content="2020-08-10T15:21:54.727Z">
 <meta property="article:author" content="cylong">
 <meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
 <meta property="article:tag" content="插件">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/disqus_index.png">
@@ -252,7 +253,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-06 16:31:19" itemprop="dateModified" datetime="2020-06-06T16:31:19+08:00">2020-06-06</time>
+                <time title="修改时间：2020-08-10 23:21:54" itemprop="dateModified" datetime="2020-08-10T23:21:54+08:00">2020-08-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -297,18 +298,18 @@
 
       
         <hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a target="_blank" rel="noopener" href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 Next 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从创建博客的时候我就纠结用国内的多说还是国外的 Disqus，鉴于多说是国内的，是中文的，而且相比国内其他的系统更加稳定，功能多样，毅然选择了多说。不过后来多说经常崩溃，总是看不到评论，一直想换成 Disqus 或者国内其他的评论系统。这次好了，不用纠结了，用了一年的多说即将在<a target="_blank" rel="noopener" href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" title="重要通知: 多说即将关闭">2017年6月1日关闭服务</a>，不得不换一个。在我刚开始使用 NexT 主题的时候，只支持多说和 Disqus，目前已经支持了很多，可以参考：</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成">Next 第三方服务集成</a></p>
+<p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html" title="Next 第三方服务集成">NexT 第三方服务集成</a></p>
 </blockquote>
 <p>我后来还是选择了 Disqus 作为新的评论系统，虽然 Disqus 在国内有时候被墙掉了，英文读起来也比较费劲，但是强大的功能和用户体验让我对 Disqus 爱不释手。至于国内也有很多评论系统可以代替多说，但是根据先前的一些系统来看，最后都没有走下去呢╮(╯▽╰)╭。 我觉得 Disqus 不会半路 GG 吧 (╯‵□′)╯︵┻━┻</p>
 <a id="more"></a>
 
-<h1 id="Next-主题集成-Disqus"><a href="#Next-主题集成-Disqus" class="headerlink" title="Next 主题集成 Disqus"></a>Next 主题集成 Disqus</h1><ol>
+<h1 id="NexT-主题集成-Disqus"><a href="#NexT-主题集成-Disqus" class="headerlink" title="NexT 主题集成 Disqus"></a>NexT 主题集成 Disqus</h1><ol>
 <li>登陆 <a target="_blank" rel="noopener" href="https://disqus.com/" title="Disqus">Disqus</a>，点击 <code>GET STARTED</code> 开始创建站点，之后就可以点击右上角的 <code>Admin</code> 进入后台管理。<br><img src="disqus_index.png" alt="Disqus 创建站点"></li>
 <li>点击第二条 <code>I want to install Disqus on my site</code>。<br><img src="disqus_intent.png"></li>
 <li>按照表单填写信息，记住 <code>Website Name</code> 这条属性。<br><img src="disqus_create.png"></li>
-<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 Next 主题的可以参考下】<br><img src="disqus_settings.png"></li>
+<li>接下来按照指引填写信息，完成第三步 <code>3.Configure Disqus</code> 后点击最下面 <code>Complete Setup</code> 完成创建。【中间会有一个嵌入代码的案例，不是 NexT 主题的可以参考下】<br><img src="disqus_settings.png"></li>
 <li>接下来配置主题下面的 <code>config.yml</code> 文件。<blockquote>
 <p>大于等于5.1.1版本，将 disqus 下的 enable 设定为 true，同时提供您的 shortname。 count 用于指定是否显示评论数量。</p>
 </blockquote>
@@ -357,6 +358,7 @@
           
           <div class="post-tags">
               <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
               <a href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i> 插件</a>
           </div>
 
@@ -438,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Next-%E4%B8%BB%E9%A2%98%E9%9B%86%E6%88%90-Disqus"><span class="nav-number">2.</span> <span class="nav-text">Next 主题集成 Disqus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA%E8%BF%81%E7%A7%BB%E8%87%B3-Disqus"><span class="nav-number">3.</span> <span class="nav-text">多说评论迁移至 Disqus</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NexT-%E4%B8%BB%E9%A2%98%E9%9B%86%E6%88%90-Disqus"><span class="nav-number">2.</span> <span class="nav-text">NexT 主题集成 Disqus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%AF%B4%E8%AF%84%E8%AE%BA%E8%BF%81%E7%A7%BB%E8%87%B3-Disqus"><span class="nav-number">3.</span> <span class="nav-text">多说评论迁移至 Disqus</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -454,7 +456,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -467,7 +469,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">80</span>
+        <span class="site-state-item-count">81</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
