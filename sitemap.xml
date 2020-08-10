@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
     
     <lastmod>2020-06-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</loc>
+    <loc>http://www.cylong.com/blog/2016/05/10/struts2-jsp-param/</loc>
     
     <lastmod>2020-06-06</lastmod>
     
@@ -508,14 +508,14 @@
 
   
   <url>
-    <loc>http://www.cylong.com/tags/github/</loc>
+    <loc>http://www.cylong.com/tags/hexo/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/hexo/</loc>
+    <loc>http://www.cylong.com/tags/github/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -690,14 +690,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/%E7%BF%BB%E5%A2%99/</loc>
+    <loc>http://www.cylong.com/tags/android/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/android/</loc>
+    <loc>http://www.cylong.com/tags/%E7%BF%BB%E5%A2%99/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -788,20 +788,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/dom/</loc>
-    <lastmod>2020-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/tags/xml/</loc>
-    <lastmod>2020-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/tags/disqus/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
@@ -810,6 +796,20 @@
   
   <url>
     <loc>http://www.cylong.com/tags/SwitchyOmega/</loc>
+    <lastmod>2020-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/dom/</loc>
+    <lastmod>2020-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/xml/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -998,6 +998,13 @@
   </url>
   
   <url>
+    <loc>http://www.cylong.com/tags/%E6%A0%88/</loc>
+    <lastmod>2020-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.cylong.com/tags/%E6%A0%91/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
@@ -1013,13 +1020,6 @@
   
   <url>
     <loc>http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2020-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/tags/%E6%A0%88/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

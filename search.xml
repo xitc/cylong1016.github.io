@@ -126,8 +126,8 @@ f1g1ns2.dnspod.net</code></pre>
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>hexo</tag>
+        <tag>github</tag>
         <tag>git</tag>
         <tag>node.js</tag>
       </tags>
@@ -311,6 +311,40 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Apache 如何设置 404 错误页面</title>
+    <url>/blog/2016/04/29/apache-404/</url>
+    <content><![CDATA[<hr>
+<p>当我们浏览网站的时候，有时候会发现访问的页面不存在了，页面会有“你访问的页面不存在了，跳转到主页”或者“404 Not Found”等等的提示。我们通常称之为 404 页面。所谓的 404 页面就是当用户输入一个错误或非存在的链接时，显示的一个页面。当 Web 服务器接到类似请求时，会返回一个 404 状态码，告诉浏览器要请求的资源并不存在。显示的 404 页面主要作用是告诉用户，你输入的网址多请求的页面是不存在的或者是一个错误的链接，引导用户进入网站的其他页面。但是 Web 的默认 404 页面非常的简陋，对用户很不友好，这就需要我们自己定义个性化的 404 页面，提升用户体验。</p>
+<a id="more"></a>
+
+<h1 id="Apache-设置-404-错误页面"><a href="#Apache-设置-404-错误页面" class="headerlink" title="Apache 设置 404 错误页面"></a>Apache 设置 404 错误页面</h1><p>在 <code>.htaccess</code> 文件中加入代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ErrorDocument 404 &#x2F;404.html</span><br></pre></td></tr></table></figure>
+
+<p>之后在网站根目录建立一个 <code>404.html</code> 文件，编写你的 404 页面。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>不要将 404 页面直接指向到网站主页，这可能导致你的首页不被搜索引擎收录。</li>
+<li>/404.html 不要带域名，比如(错误写法：<a href="http://www.cylong.com/404.html">http://www.cylong.com/404.html</a>)，否则返回的状态码不是 404，而是 302、200。</li>
+</ul>
+<h1 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO(搜索引擎优化)"></a>SEO(搜索引擎优化)</h1><p>404 状态码对搜索引擎是非常重要的。需要注意的是，有时候我们看到一个 404 的错误页面，但返回的状态码可能并不是 404。用户并不会关心状态码是多少，但是对于搜索引擎就不一样了。当搜索引擎获取到404 状态码，就表示此 URL 已经失效，页面已经不存在了。搜索引擎就不会索引这个页面，并且删除数据库中的索引。若返回的是 200，搜索引擎就会对此 URL 建立索引，这样就会产生多个不同的 URL 具有相同的页面内容，搜索引擎就认为你的网站有大量重复的内容，可能会被降权。</p>
+<p>所以当我们自定义错误页面的时候，一定要保证状态码也是 404，不仅要对用户友好，也要对搜索引擎友好。</p>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://bbs.20z.com/thread-5162-1-1.html" title="网站如何设置404页面，什么是404错误，404页面代码怎么写">网站如何设置404页面，什么是404错误，404页面代码怎么写</a><br><a href="http://www.yzznl.cn/archives/19.html" title="园子博客 - 如何设置404页面">园子博客 - 如何设置404页面</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2016/04/29/apache-404/' title='Apache 如何设置 404 错误页面' >Apache 如何设置 404 错误页面</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/04/29/apache-404/' title='Apache 如何设置 404 错误页面' >http://www.cylong.com/blog/2016/04/29/apache-404/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Apache</category>
+      </categories>
+      <tags>
+        <tag>apache</tag>
+        <tag>seo</tag>
+        <tag>htaccess</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 集成多说评论 + 多说分享 + 美化多说</title>
     <url>/blog/2016/04/25/hexo-next-duoshuo/</url>
     <content><![CDATA[<hr>
@@ -380,40 +414,6 @@ f1g1ns2.dnspod.net</code></pre>
       <tags>
         <tag>hexo</tag>
         <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Apache 如何设置 404 错误页面</title>
-    <url>/blog/2016/04/29/apache-404/</url>
-    <content><![CDATA[<hr>
-<p>当我们浏览网站的时候，有时候会发现访问的页面不存在了，页面会有“你访问的页面不存在了，跳转到主页”或者“404 Not Found”等等的提示。我们通常称之为 404 页面。所谓的 404 页面就是当用户输入一个错误或非存在的链接时，显示的一个页面。当 Web 服务器接到类似请求时，会返回一个 404 状态码，告诉浏览器要请求的资源并不存在。显示的 404 页面主要作用是告诉用户，你输入的网址多请求的页面是不存在的或者是一个错误的链接，引导用户进入网站的其他页面。但是 Web 的默认 404 页面非常的简陋，对用户很不友好，这就需要我们自己定义个性化的 404 页面，提升用户体验。</p>
-<a id="more"></a>
-
-<h1 id="Apache-设置-404-错误页面"><a href="#Apache-设置-404-错误页面" class="headerlink" title="Apache 设置 404 错误页面"></a>Apache 设置 404 错误页面</h1><p>在 <code>.htaccess</code> 文件中加入代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ErrorDocument 404 &#x2F;404.html</span><br></pre></td></tr></table></figure>
-
-<p>之后在网站根目录建立一个 <code>404.html</code> 文件，编写你的 404 页面。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>不要将 404 页面直接指向到网站主页，这可能导致你的首页不被搜索引擎收录。</li>
-<li>/404.html 不要带域名，比如(错误写法：<a href="http://www.cylong.com/404.html">http://www.cylong.com/404.html</a>)，否则返回的状态码不是 404，而是 302、200。</li>
-</ul>
-<h1 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO(搜索引擎优化)"></a>SEO(搜索引擎优化)</h1><p>404 状态码对搜索引擎是非常重要的。需要注意的是，有时候我们看到一个 404 的错误页面，但返回的状态码可能并不是 404。用户并不会关心状态码是多少，但是对于搜索引擎就不一样了。当搜索引擎获取到404 状态码，就表示此 URL 已经失效，页面已经不存在了。搜索引擎就不会索引这个页面，并且删除数据库中的索引。若返回的是 200，搜索引擎就会对此 URL 建立索引，这样就会产生多个不同的 URL 具有相同的页面内容，搜索引擎就认为你的网站有大量重复的内容，可能会被降权。</p>
-<p>所以当我们自定义错误页面的时候，一定要保证状态码也是 404，不仅要对用户友好，也要对搜索引擎友好。</p>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://bbs.20z.com/thread-5162-1-1.html" title="网站如何设置404页面，什么是404错误，404页面代码怎么写">网站如何设置404页面，什么是404错误，404页面代码怎么写</a><br><a href="http://www.yzznl.cn/archives/19.html" title="园子博客 - 如何设置404页面">园子博客 - 如何设置404页面</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2016/04/29/apache-404/' title='Apache 如何设置 404 错误页面' >Apache 如何设置 404 错误页面</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/04/29/apache-404/' title='Apache 如何设置 404 错误页面' >http://www.cylong.com/blog/2016/04/29/apache-404/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Apache</category>
-      </categories>
-      <tags>
-        <tag>apache</tag>
-        <tag>seo</tag>
-        <tag>htaccess</tag>
       </tags>
   </entry>
   <entry>
@@ -505,6 +505,35 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Windows 10 Metro 应用闪退、无法打开修复方法</title>
+    <url>/blog/2016/05/15/windows-10-metro-error/</url>
+    <content><![CDATA[<hr>
+<p>最近在使用 WindowsModernAppsTools 研究 <a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows Metro 应用翻墙</a> 问题，由于我的手贱删除了些不该删除的东西，导致我的系统中很多 Win 10 应用没法打开了，比如日历、资讯、天气、必应词典等等都打不开了。虽然平时不常用，但是强迫症的我表示没法忍受啊！于是找了很多资料，终于搞定了！</p>
+<a id="more"></a>
+
+<p><strong>注意：</strong> 我说的应用都是 Windows 应用商店里的应用。</p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 PowerShell。在结果中的 PowerShell 上 <code>右键-&gt;以管理员身份运行</code>。</li>
+<li>输入以下命令：<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Get-AppXPackage -AllUsers | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register <span class="string">&quot;<span class="subst">$($_.InstallLocation)</span>\AppXManifest.xml&quot;</span>&#125;</span><br></pre></td></tr></table></figure></li>
+<li>回车后等待命令执行完毕即可。</li>
+<li>以上其实是对应用进行了重置</li>
+</ol>
+<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
+<p><a href="http://www.ithome.com/html/win10/166832.htm" title="Win10应用商店、应用打不开或闪退的解决方法 - IT之家">Win10应用商店、应用打不开或闪退的解决方法 - IT之家</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/' title='Windows 10 Metro 应用闪退、无法打开修复方法' >Windows 10 Metro 应用闪退、无法打开修复方法</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/' title='Windows 10 Metro 应用闪退、无法打开修复方法' >http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Struts2 参数依赖注入失败</title>
     <url>/blog/2016/05/10/struts2-jsp-param/</url>
     <content><![CDATA[<hr>
@@ -544,35 +573,6 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>ssh</tag>
         <tag>java</tag>
         <tag>jsp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用闪退、无法打开修复方法</title>
-    <url>/blog/2016/05/15/windows-10-metro-error/</url>
-    <content><![CDATA[<hr>
-<p>最近在使用 WindowsModernAppsTools 研究 <a href="http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/" title="Windows 10 Metro 应用使用本地 Shadowsocks 代理">Windows Metro 应用翻墙</a> 问题，由于我的手贱删除了些不该删除的东西，导致我的系统中很多 Win 10 应用没法打开了，比如日历、资讯、天气、必应词典等等都打不开了。虽然平时不常用，但是强迫症的我表示没法忍受啊！于是找了很多资料，终于搞定了！</p>
-<a id="more"></a>
-
-<p><strong>注意：</strong> 我说的应用都是 Windows 应用商店里的应用。</p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li>键盘组合键 <span class="fa fa-windows"></span> + S，呼出 Cortana，然后输入 PowerShell。在结果中的 PowerShell 上 <code>右键-&gt;以管理员身份运行</code>。</li>
-<li>输入以下命令：<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Get-AppXPackage -AllUsers | Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register <span class="string">&quot;<span class="subst">$($_.InstallLocation)</span>\AppXManifest.xml&quot;</span>&#125;</span><br></pre></td></tr></table></figure></li>
-<li>回车后等待命令执行完毕即可。</li>
-<li>以上其实是对应用进行了重置</li>
-</ol>
-<h1 id="参考资料-amp-感谢"><a href="#参考资料-amp-感谢" class="headerlink" title="参考资料&amp;感谢"></a>参考资料&amp;感谢</h1><blockquote>
-<p><a href="http://www.ithome.com/html/win10/166832.htm" title="Win10应用商店、应用打不开或闪退的解决方法 - IT之家">Win10应用商店、应用打不开或闪退的解决方法 - IT之家</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/' title='Windows 10 Metro 应用闪退、无法打开修复方法' >Windows 10 Metro 应用闪退、无法打开修复方法</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/' title='Windows 10 Metro 应用闪退、无法打开修复方法' >http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -654,8 +654,8 @@ f1g1ns2.dnspod.net</code></pre>
         <category>Search</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>hexo</tag>
+        <tag>github</tag>
         <tag>git</tag>
         <tag>seo</tag>
         <tag>爬虫</tag>
@@ -732,56 +732,6 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>hexo</tag>
         <tag>seo</tag>
         <tag>search</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
-    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
-    <content><![CDATA[<hr>
-<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
-<a id="more"></a>
-
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
-</li>
-<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
-<p>回车后就大功告成了。</p>
-</li>
-<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
-</li>
-</ol>
-<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
-<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
-<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
-<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
-</ul>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
-<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
-</blockquote>
-</li>
-<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#%E8%81%94%E7%B3%BB%E6%88%91" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
-</li>
-<li><p>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</p>
-</li>
-</ul>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/' title='Windows 10 Metro 应用使用本地 Shadowsocks 代理' >Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/' title='Windows 10 Metro 应用使用本地 Shadowsocks 代理' >http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -866,8 +816,58 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>windows</tag>
         <tag>linux</tag>
         <tag>shadowsocks</tag>
-        <tag>翻墙</tag>
         <tag>android</tag>
+        <tag>翻墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 10 Metro 应用使用本地 Shadowsocks 代理</title>
+    <url>/blog/2016/06/07/windows-10-metro-shadowsocks/</url>
+    <content><![CDATA[<hr>
+<p>Windows 8/10 的应用是不允许访问 localhost(127.0.0.1)，所以你配置了 Shadowsocks 代理，Windows 10 应用也无法翻墙， 因为Shadowsocks 的代理地址正好是 localhost(127.0.0.1)。这个时候我们就需要祭出 Windows 10 自带的程序：CheckNetIsolation。通过这个程序，你可以设置排除哪个应用的限制，使其可以翻墙。</p>
+<a id="more"></a>
+
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
+<li><p>寻找应用的 SID：键盘组合键 <span class="fa fa-windows"></span> + R，然后输入 <code>regedit</code>，打开注册表管理器，找到以下注册表项：<br>HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings<br>在其中找到你想要使用代理的应用，DisplayName 就是应用名，左边的项就是 SID。比如我找的是 Twitter。如下图：<br><img src="regedit_sid.png" alt="注册表项示例"><br>【PS： 你可以鼠标放在 SID 上右键-&gt;重命名，然后就可以复制整个 SID 了】</p>
+</li>
+<li><p>键盘组合键 <span class="fa fa-windows"></span> + X，然后按 A【命令提示符（管理员）】，打开终端后输入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CheckNetIsolation loopbackexempt -a -p=SID <span class="comment"># 上一步你复制的 SID</span></span><br></pre></td></tr></table></figure>
+<p>回车后就大功告成了。</p>
+</li>
+<li><p>打开 Twitter 试一下<br><img src="twitter.png" alt="Twitter 翻墙成功"></p>
+</li>
+</ol>
+<h1 id="CheckNetIsolation-参数"><a href="#CheckNetIsolation-参数" class="headerlink" title="CheckNetIsolation 参数"></a>CheckNetIsolation 参数</h1><ul>
+<li>CheckNetIsolation.exe loopbackexempt -a -p=SID 添加指定程序到列表</li>
+<li>CheckNetIsolation.exe loopbackexempt -d -p=SID 从列表删除指定程序</li>
+<li>CheckNetIsolation.exe loopbackexempt -s 列出环回免除的应用列表</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p>有些小伙伴可能会使用 WindowsModernAppsTools 来使 Windows 10 应用翻墙，这个软件也是使用了 CheckNetIsolation，另外最好不要随便动 Windows 10 应用的数据，说不定不小心删除了什么就导致应用崩溃了，切记切记。前车之鉴请参考：</p>
+<blockquote>
+<p><a href="http://www.cylong.com/blog/2016/05/15/windows-10-metro-error/" title="Windows 10 Metro 应用闪退、无法打开修复方法">Windows 10 Metro 应用闪退、无法打开修复方法</a></p>
+</blockquote>
+</li>
+<li><p>Facebook 的 Windows 10 应用没法翻墙。我找了很多资料，大家的讨论也是只有 Facebook 没法翻墙，其他的都可以。有知道原因并能解决的小伙伴欢迎 <a href="http://www.cylong.com/about/#%E8%81%94%E7%B3%BB%E6%88%91" title="骚扰我">骚扰我</a> 或者在下面留言 (●’◡’●)</p>
+</li>
+<li><p>即使都是 Twitter 应用，但是不同的电脑 SID 可能不同。</p>
+</li>
+</ul>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://plus.google.com/u/0/107096807950211631844/posts/CdTT2becCRm" title="Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法">Microsoft Edge 浏览器用上 shadowsocks 代理翻墙方法</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/' title='Windows 10 Metro 应用使用本地 Shadowsocks 代理' >Windows 10 Metro 应用使用本地 Shadowsocks 代理</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/' title='Windows 10 Metro 应用使用本地 Shadowsocks 代理' >http://www.cylong.com/blog/2016/06/07/windows-10-metro-shadowsocks/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>shadowsocks</tag>
+        <tag>翻墙</tag>
       </tags>
   </entry>
   <entry>
@@ -1110,46 +1110,6 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Java 通过 DOM 方式解析、创建 XML</title>
-    <url>/blog/2017/04/04/java-dom-xml/</url>
-    <content><![CDATA[<hr>
-<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
-<a id="more"></a>
-
-<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
-<li>创建 XML Document 对象<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">&quot;college&quot;</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        student.setAttribute(<span class="string">&quot;id&quot;</span>, <span class="string">&quot;0&quot;</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">&quot;cylong&quot;</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">&quot;biography&quot;</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">&quot;Hello&quot;</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">&quot;age&quot;</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">&quot;24&quot;</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">&quot;id&quot;</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">&quot;cylong1&quot;</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">&quot;biography&quot;</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">&quot;World&quot;</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">&quot;age&quot;</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">&quot;25&quot;</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">&quot;学生0&quot;</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">&quot;学生1&quot;</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>将创建的 XML Document 写入到文件中<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">    Transformer transformer = tf.newTransformer();</span><br><span class="line">    DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">    transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">    transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">&quot;yes&quot;</span>);</span><br><span class="line">    PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">    StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line">     e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
-<li><p>解析 XML 文件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">&quot;Root element : &quot;</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">&quot;:&quot;</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work">点此链接</a> 了解其用处。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
-<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/">How to read XML file in Java – (DOM Parser)</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2017/04/04/java-dom-xml/' title='Java 通过 DOM 方式解析、创建 XML' >Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2017/04/04/java-dom-xml/' title='Java 通过 DOM 方式解析、创建 XML' >http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>dom</tag>
-        <tag>xml</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多说评论迁移至 Disqus - Java 实现</title>
     <url>/blog/2017/04/05/duoshuo-to-disqus/</url>
     <content><![CDATA[<hr>
@@ -1281,6 +1241,46 @@ f1g1ns2.dnspod.net</code></pre>
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 通过 DOM 方式解析、创建 XML</title>
+    <url>/blog/2017/04/04/java-dom-xml/</url>
+    <content><![CDATA[<hr>
+<h1 id="DOM-简介"><a href="#DOM-简介" class="headerlink" title="DOM 简介"></a>DOM 简介</h1><p>DOM（Document Object Model) 是 W3C 处理 XML 的标准 API，不仅 Java 其他很多语言，比如 Javascript、PHP等等语言都实现了该标准。Java 类库支持 DOM 操作【也就是说不需要下载依赖其他包】。DOM 以树状结构组织节点和信息的集合，这种结构允许开发人员对 XML 文档进行增删改查。为了分析该树状结构，我们需要加载整个 XML 文档进行构造分析，所以消耗资源比较大，建议在操作小文件的时候使用。</p>
+<a id="more"></a>
+
+<h1 id="创建-XML-文档"><a href="#创建-XML-文档" class="headerlink" title="创建 XML 文档"></a>创建 XML 文档</h1><ol>
+<li>创建 XML Document 对象<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建 XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> XML Document 对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月5日 上午12:19:41</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Document <span class="title">createXMLDocument</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();</span><br><span class="line">    DocumentBuilder builder = <span class="keyword">null</span>;</span><br><span class="line">    Document document = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        builder = factory.newDocumentBuilder();</span><br><span class="line">        document = builder.newDocument();</span><br><span class="line">        Element root = document.createElement(<span class="string">&quot;college&quot;</span>);</span><br><span class="line">        document.appendChild(root);</span><br><span class="line"></span><br><span class="line">        Element student = document.createElement(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        student.setAttribute(<span class="string">&quot;id&quot;</span>, <span class="string">&quot;0&quot;</span>);</span><br><span class="line">        Element name = document.createElement(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        name.appendChild(document.createTextNode(<span class="string">&quot;cylong&quot;</span>));</span><br><span class="line">        student.appendChild(name);</span><br><span class="line">        Element biography = document.createElement(<span class="string">&quot;biography&quot;</span>);</span><br><span class="line">        biography.appendChild(document.createCDATASection(<span class="string">&quot;Hello&quot;</span>));</span><br><span class="line">        student.appendChild(biography);</span><br><span class="line">        Element age = document.createElement(<span class="string">&quot;age&quot;</span>);</span><br><span class="line">        age.appendChild(document.createTextNode(<span class="string">&quot;24&quot;</span>));</span><br><span class="line">        student.appendChild(age);</span><br><span class="line"></span><br><span class="line">        Element student1 = document.createElement(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        student1.setAttribute(<span class="string">&quot;id&quot;</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">        Element name1 = document.createElement(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        name1.appendChild(document.createTextNode(<span class="string">&quot;cylong1&quot;</span>));</span><br><span class="line">        student1.appendChild(name1);</span><br><span class="line">        Element biography1 = document.createElement(<span class="string">&quot;biography&quot;</span>);</span><br><span class="line">        biography1.appendChild(document.createCDATASection(<span class="string">&quot;World&quot;</span>));</span><br><span class="line">        student1.appendChild(biography1);</span><br><span class="line">        Element age1 = document.createElement(<span class="string">&quot;age&quot;</span>);</span><br><span class="line">        age1.appendChild(document.createTextNode(<span class="string">&quot;25&quot;</span>));</span><br><span class="line">        student1.appendChild(age1);</span><br><span class="line"></span><br><span class="line">        root.appendChild(document.createComment(<span class="string">&quot;学生0&quot;</span>));</span><br><span class="line">        root.appendChild(student);</span><br><span class="line">        root.appendChild(document.createComment(<span class="string">&quot;学生1&quot;</span>));</span><br><span class="line">        root.appendChild(student1);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> document;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将创建的 XML Document 写入到文件中<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将创建的 XML Document 写入到文件中</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> document</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path 文件路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:39:32</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeXML</span><span class="params">(Document document, String path)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">    Transformer transformer = tf.newTransformer();</span><br><span class="line">    DOMSource source = <span class="keyword">new</span> DOMSource(document);</span><br><span class="line">    transformer.setOutputProperty(OutputKeys.ENCODING, <span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">    transformer.setOutputProperty(OutputKeys.INDENT, <span class="string">&quot;yes&quot;</span>);</span><br><span class="line">    PrintWriter pw = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(path));</span><br><span class="line">    StreamResult result = <span class="keyword">new</span> StreamResult(pw);</span><br><span class="line">    transformer.transform(source, result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerConfigurationException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (IllegalArgumentException e) &#123;</span><br><span class="line">     e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (TransformerException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="解析-XML-文档"><a href="#解析-XML-文档" class="headerlink" title="解析 XML 文档"></a>解析 XML 文档</h1><ol>
+<li><p>解析 XML 文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 解析 XML 文档</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> path XML 文档路径</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> cylong</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 2017年4月3日 上午2:48:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parserXML</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line">        DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line">        Document document = db.parse(path);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// optional, but recommended</span></span><br><span class="line">        <span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">        document.getDocumentElement().normalize();</span><br><span class="line"></span><br><span class="line">        Element root = document.getDocumentElement();</span><br><span class="line">        System.out.println(<span class="string">&quot;Root element : &quot;</span> + root.getNodeName());</span><br><span class="line">        NodeList students = root.getElementsByTagName(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; students.getLength(); i++) &#123;</span><br><span class="line">            Node student = students.item(i);</span><br><span class="line">            System.out.println(student.getNodeName());</span><br><span class="line"></span><br><span class="line">            NodeList info = student.getChildNodes();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; info.getLength(); j++) &#123;</span><br><span class="line">                Node meta = info.item(j);</span><br><span class="line">                <span class="keyword">if</span> (meta.getNodeType() == Node.ELEMENT_NODE) &#123;</span><br><span class="line">                    System.out.println(meta.getNodeName() + <span class="string">&quot;:&quot;</span> + meta.getTextContent());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ParserConfigurationException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SAXException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意<br>可以 <a href="http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work">点此链接</a> 了解其用处。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// optional, but recommended</span></span><br><span class="line"><span class="comment">// read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work</span></span><br><span class="line">document.getDocumentElement().normalize();</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h1 id="参考-amp-感谢"><a href="#参考-amp-感谢" class="headerlink" title="参考&amp;感谢"></a>参考&amp;感谢</h1><blockquote>
+<p><a href="https://github.com/cylong1016/CodeJava/blob/master/src/cylong/xml/ParserXML.java">Github 完整的代码案例</a><br><a href="https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/">How to read XML file in Java – (DOM Parser)</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2017/04/04/java-dom-xml/' title='Java 通过 DOM 方式解析、创建 XML' >Java 通过 DOM 方式解析、创建 XML</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2017/04/04/java-dom-xml/' title='Java 通过 DOM 方式解析、创建 XML' >http://www.cylong.com/blog/2017/04/04/java-dom-xml/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>dom</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
@@ -2124,6 +2124,116 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>拥有最多糖果的孩子</title>
+    <url>/blog/2020/06/01/kids-with-the-greatest-number-of-candies/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有最 的糖果。<br><strong>注意：</strong> 允许有多个孩子同时拥有最多的糖果数目。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：candies = [2, 3, 5, 1, 3], extraCandies = 3<br>输出：[true, true, true, false, true]<br>解释：<br>孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。<br>孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。<br>孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。<br>孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。<br>孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：candies = [4, 2, 1, 1, 2], extraCandies = 1<br>输出：[true, false, false, false, false]<br>解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。</p>
+</blockquote>
+<p><strong>示例 3：</strong></p>
+<blockquote>
+<p>输入：candies = [12, 1, 12], extraCandies = 10<br>输出：[true, false, true]</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<blockquote>
+<p>2 &lt;= candies.length &lt;= 100<br>1 &lt;= candies[i] &lt;= 100<br>1 &lt;= extraCandies &lt;= 50</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们只要先遍历一遍小朋友拥有的糖果数，找出最大值，然后再遍历一次小朋友的糖果数，加上额外的糖果，是否大于等于之前求出的最大值即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Boolean&gt; <span class="title">kidsWithCandies</span><span class="params">(<span class="keyword">int</span>[] candies, <span class="keyword">int</span> extraCandies)</span> </span>&#123;</span><br><span class="line">    OptionalInt max = Arrays.stream(candies).max();</span><br><span class="line">    List&lt;Boolean&gt; result = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : candies) &#123;</span><br><span class="line">        result.add(num + extraCandies &gt;= max.getAsInt());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此题使用了Java流API <code>Arrays.stream(candies).max()</code>，可以很方便的处理集合或者数组相关的问题，比如数组求和，求最大值等等。关于流API的介绍可以参考：</p>
+<blockquote>
+<p><a href="/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API">Java 8 的 Lambda 表达式和 Stream API</a></p>
+</blockquote>
+<p>另外此题是六一儿童节LeetCode的每日一题，官方是想让我们过一个快乐的六一啊，在这里也祝各位大孩子们六一儿童节快乐^o^/</p>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，我们首先使用 O(n) 的时间预处理出所有小朋友拥有的糖果数目最大值。对于每一个小朋友，我们需要 O(1) 的时间判断这个小朋友是否可以拥有最多的糖果，故渐进时间复杂度为 O(n)。</li>
+<li>空间复杂度：Ο(1)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/" title="拥有最多糖果的孩子 | 力扣（LeetCode）">拥有最多糖果的孩子 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/solution/yong-you-zui-duo-tang-guo-de-hai-zi-by-leetcode-so/" title="拥有最多糖果的孩子 | 题解（LeetCode）">拥有最多糖果的孩子 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/' title='拥有最多糖果的孩子' >拥有最多糖果的孩子</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/' title='拥有最多糖果的孩子' >http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>流API</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数组</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>求1-n的和</title>
+    <url>/blog/2020/06/03/qiu-12n-lcof/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>求 1+2+…+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入: n = 3<br>输出: 6</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入: n = 9<br>输出: 45</p>
+</blockquote>
+<p><strong>限制：</strong></p>
+<blockquote>
+<p>1 &lt;= n &lt;= 10000</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>由于题目限制了很多，其中比较常用的for循环方法也被禁用，那么不用for循环，最容易想到的就是递归，于是我们很容易就能写出递归的版本</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">0</span> ? <span class="number">0</span> : n + sumNums(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是题目要求不允许使用条件判断语句，那么我们是否能使用别的办法来确定递归出口呢？答案就是逻辑运算符的短路性质。以逻辑运算符 &amp;&amp; 为例，对于 A &amp;&amp; B 这个表达式，如果 A 表达式返回 false ，那么 A &amp;&amp; B 已经确定为 false ，此时不会去执行表达式 B。同理，对于逻辑运算符 ||， 对于 A || B 这个表达式，如果 A 表达式返回 true ，那么 A || B 已经确定为 true ，此时不会去执行表达式 B。</p>
+<p>利用这一特性，我们可以将判断是否为递归的出口看作 A &amp;&amp; B 表达式中的 A 部分，递归的主体函数看作 B 部分。如果不是递归出口，则返回 true，并继续执行表达式 B 的部分，否则递归结束。当然，你也可以用逻辑运算符 || 给出类似的实现，这里我们只提供结合逻辑运算符 &amp;&amp; 的递归实现。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> flag = n &gt; <span class="number">0</span> &amp;&amp; (n += sumNums(n - <span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，递归函数递归 n 次，每次递归中计算时间复杂度为 O(1)，因此总时间复杂度为 O(n)。</li>
+<li>空间复杂度：Ο(n)，递归函数的空间复杂度取决于递归调用栈的深度，这里递归函数调用栈深度为 O(n)，因此空间复杂度为 O(n)。</li>
+</ul>
+<h1 id="Java流API"><a href="#Java流API" class="headerlink" title="Java流API"></a>Java流API</h1><p>其实这种数学计算，包含求和，求大小等等操作，Java引入很多方便的方法，此题使用了Java流API <code>IntStream.range(1, n + 1).sum()</code>，求指定范围的整数和。关于流API的介绍可以参考：</p>
+<blockquote>
+<p><a href="/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API">Java 8 的 Lambda 表达式和 Stream API</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> IntStream.range(<span class="number">1</span>, n + <span class="number">1</span>).sum();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" title="求1-n的和 | 力扣（LeetCode）">求1-n的和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/solution/qiu-12n-by-leetcode-solution/" title="求1-n的和 | 题解（LeetCode）">求1-n的和 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/' title='求1-n的和' >求1-n的和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/' title='求1-n的和' >http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>流API</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>顺时针打印矩阵</title>
     <url>/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/</url>
     <content><![CDATA[<hr>
@@ -2296,61 +2406,6 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>拥有最多糖果的孩子</title>
-    <url>/blog/2020/06/01/kids-with-the-greatest-number-of-candies/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有最 的糖果。<br><strong>注意：</strong> 允许有多个孩子同时拥有最多的糖果数目。</p>
-<p><strong>示例 1：</strong></p>
-<blockquote>
-<p>输入：candies = [2, 3, 5, 1, 3], extraCandies = 3<br>输出：[true, true, true, false, true]<br>解释：<br>孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。<br>孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。<br>孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。<br>孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。<br>孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。</p>
-</blockquote>
-<p><strong>示例 2：</strong></p>
-<blockquote>
-<p>输入：candies = [4, 2, 1, 1, 2], extraCandies = 1<br>输出：[true, false, false, false, false]<br>解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。</p>
-</blockquote>
-<p><strong>示例 3：</strong></p>
-<blockquote>
-<p>输入：candies = [12, 1, 12], extraCandies = 10<br>输出：[true, false, true]</p>
-</blockquote>
-<p><strong>提示：</strong></p>
-<blockquote>
-<p>2 &lt;= candies.length &lt;= 100<br>1 &lt;= candies[i] &lt;= 100<br>1 &lt;= extraCandies &lt;= 50</p>
-</blockquote>
-<a id="more"></a>
-
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们只要先遍历一遍小朋友拥有的糖果数，找出最大值，然后再遍历一次小朋友的糖果数，加上额外的糖果，是否大于等于之前求出的最大值即可。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Boolean&gt; <span class="title">kidsWithCandies</span><span class="params">(<span class="keyword">int</span>[] candies, <span class="keyword">int</span> extraCandies)</span> </span>&#123;</span><br><span class="line">    OptionalInt max = Arrays.stream(candies).max();</span><br><span class="line">    List&lt;Boolean&gt; result = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : candies) &#123;</span><br><span class="line">        result.add(num + extraCandies &gt;= max.getAsInt());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此题使用了Java流API <code>Arrays.stream(candies).max()</code>，可以很方便的处理集合或者数组相关的问题，比如数组求和，求最大值等等。关于流API的介绍可以参考：</p>
-<blockquote>
-<p><a href="/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API">Java 8 的 Lambda 表达式和 Stream API</a></p>
-</blockquote>
-<p>另外此题是六一儿童节LeetCode的每日一题，官方是想让我们过一个快乐的六一啊，在这里也祝各位大孩子们六一儿童节快乐^o^/</p>
-<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：O(n)，我们首先使用 O(n) 的时间预处理出所有小朋友拥有的糖果数目最大值。对于每一个小朋友，我们需要 O(1) 的时间判断这个小朋友是否可以拥有最多的糖果，故渐进时间复杂度为 O(n)。</li>
-<li>空间复杂度：Ο(1)。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/" title="拥有最多糖果的孩子 | 力扣（LeetCode）">拥有最多糖果的孩子 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/solution/yong-you-zui-duo-tang-guo-de-hai-zi-by-leetcode-so/" title="拥有最多糖果的孩子 | 题解（LeetCode）">拥有最多糖果的孩子 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/' title='拥有最多糖果的孩子' >拥有最多糖果的孩子</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/' title='拥有最多糖果的孩子' >http://www.cylong.com/blog/2020/06/01/kids-with-the-greatest-number-of-candies/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>流API</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>数组</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>验证回文串</title>
     <url>/blog/2020/06/19/valid-palindrome/</url>
     <content><![CDATA[<hr>
@@ -2390,46 +2445,6 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>字符串</tag>
         <tag>指针</tag>
         <tag>双指针</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>另一个树的子树</title>
-    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    &#x2F; \</span><br><span class="line">   4   5</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    &#x2F; \</span><br><span class="line">   4   5</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">    &#x2F;</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解（LeetCode）">另一个树的子树 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/' title='另一个树的子树' >另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/' title='另一个树的子树' >http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>递归</tag>
-        <tag>树</tag>
-        <tag>二叉树</tag>
-        <tag>深度优先搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -2477,61 +2492,6 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>学习笔记</tag>
         <tag>队列</tag>
         <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>求1-n的和</title>
-    <url>/blog/2020/06/03/qiu-12n-lcof/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>求 1+2+…+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p>
-<p><strong>示例 1：</strong></p>
-<blockquote>
-<p>输入: n = 3<br>输出: 6</p>
-</blockquote>
-<p><strong>示例 2：</strong></p>
-<blockquote>
-<p>输入: n = 9<br>输出: 45</p>
-</blockquote>
-<p><strong>限制：</strong></p>
-<blockquote>
-<p>1 &lt;= n &lt;= 10000</p>
-</blockquote>
-<a id="more"></a>
-
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>由于题目限制了很多，其中比较常用的for循环方法也被禁用，那么不用for循环，最容易想到的就是递归，于是我们很容易就能写出递归的版本</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">0</span> ? <span class="number">0</span> : n + sumNums(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>但是题目要求不允许使用条件判断语句，那么我们是否能使用别的办法来确定递归出口呢？答案就是逻辑运算符的短路性质。以逻辑运算符 &amp;&amp; 为例，对于 A &amp;&amp; B 这个表达式，如果 A 表达式返回 false ，那么 A &amp;&amp; B 已经确定为 false ，此时不会去执行表达式 B。同理，对于逻辑运算符 ||， 对于 A || B 这个表达式，如果 A 表达式返回 true ，那么 A || B 已经确定为 true ，此时不会去执行表达式 B。</p>
-<p>利用这一特性，我们可以将判断是否为递归的出口看作 A &amp;&amp; B 表达式中的 A 部分，递归的主体函数看作 B 部分。如果不是递归出口，则返回 true，并继续执行表达式 B 的部分，否则递归结束。当然，你也可以用逻辑运算符 || 给出类似的实现，这里我们只提供结合逻辑运算符 &amp;&amp; 的递归实现。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> flag = n &gt; <span class="number">0</span> &amp;&amp; (n += sumNums(n - <span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：O(n)，递归函数递归 n 次，每次递归中计算时间复杂度为 O(1)，因此总时间复杂度为 O(n)。</li>
-<li>空间复杂度：Ο(n)，递归函数的空间复杂度取决于递归调用栈的深度，这里递归函数调用栈深度为 O(n)，因此空间复杂度为 O(n)。</li>
-</ul>
-<h1 id="Java流API"><a href="#Java流API" class="headerlink" title="Java流API"></a>Java流API</h1><p>其实这种数学计算，包含求和，求大小等等操作，Java引入很多方便的方法，此题使用了Java流API <code>IntStream.range(1, n + 1).sum()</code>，求指定范围的整数和。关于流API的介绍可以参考：</p>
-<blockquote>
-<p><a href="/blog/2019/03/18/lambda/" title="Java 8 的 Lambda 表达式和 Stream API">Java 8 的 Lambda 表达式和 Stream API</a></p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> IntStream.range(<span class="number">1</span>, n + <span class="number">1</span>).sum();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" title="求1-n的和 | 力扣（LeetCode）">求1-n的和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/qiu-12n-lcof/solution/qiu-12n-by-leetcode-solution/" title="求1-n的和 | 题解（LeetCode）">求1-n的和 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/' title='求1-n的和' >求1-n的和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/' title='求1-n的和' >http://www.cylong.com/blog/2020/06/03/qiu-12n-lcof/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>流API</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>递归</tag>
       </tags>
   </entry>
   <entry>
@@ -2599,6 +2559,46 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>数组</tag>
         <tag>滑动窗口</tag>
         <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>另一个树的子树</title>
+    <url>/blog/2020/06/22/subtree-of-another-tree/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s:</span><br><span class="line">     3</span><br><span class="line">    &#x2F; \</span><br><span class="line">   4   5</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定的树 s：</span><br><span class="line">     3</span><br><span class="line">    &#x2F; \</span><br><span class="line">   4   5</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">    &#x2F;</span><br><span class="line">   0</span><br><span class="line"></span><br><span class="line">给定的树 t：</span><br><span class="line">   4</span><br><span class="line">  &#x2F; \</span><br><span class="line"> 1   2</span><br><span class="line">返回 false。</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>首先我们需要一个可以判断二叉树是否是相同树的方法，使用递归方式处理，递归的结束条件就是 t1 或者 t2 为空，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEqual</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isEqual(t1.left, t2.left) &amp;&amp; isEqual(t1.right, t2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来，回到原题，判断树 t 是否是树 s 的子树，同样使用递归，不断的判断树 s 的左子树和右子树，是否包含子树 t，递归的结束条件就是树 s 为空，或者树 s 与树 t 相等。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubtree</span><span class="params">(TreeNode s, TreeNode t)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEqual(s, t)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isSubtree(s.left, t) || isSubtree(s.right, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" title="另一个树的子树 | 力扣（LeetCode）">另一个树的子树 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/subtree-of-another-tree/solution/" title="另一个树的子树 | 题解（LeetCode）">另一个树的子树 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/' title='另一个树的子树' >另一个树的子树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/' title='另一个树的子树' >http://www.cylong.com/blog/2020/06/22/subtree-of-another-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>递归</tag>
+        <tag>树</tag>
+        <tag>二叉树</tag>
+        <tag>深度优先搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -2719,6 +2719,56 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>恢复空格</title>
+    <url>/blog/2020/07/09/re-space-lcci/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>哦，不！你不小心把一个长篇文章中的空格、标点都删掉了，并且大写也弄成了小写。像句子”I reset the computer. It still didn’t boot!”已经变成了”iresetthecomputeritstilldidntboot”。在处理标点符号和大小写之前，你得先把它断成词语。当然了，你有一本厚厚的词典dictionary，不过，有些词没在词典里。假设文章用sentence表示，设计一个算法，把文章断开，要求未识别的字符最少，返回未识别的字符数。</p>
+<p><strong>示例：</strong></p>
+<blockquote>
+<p>输入：<br>dictionary = [“looked”, “just”, “like”, “her”, “brother”]<br>sentence = “jesslookedjustliketimherbrother”<br>输出： 7<br>解释： 断句后为”jess looked just like tim her brother”，共7个未识别字符。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li>0 &lt;= len(sentence) &lt;= 1000</li>
+<li>dictionary中总字符数不超过 150000。</li>
+<li>你可以认为dictionary和sentence中只包含小写字母。</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>这里采用动态规划，创建一个数组 dp 用来记录结果。句子从前往后看，其中 <code>dp[0]=0</code> 表示句子是空字符串时没有未识别的字符，dp[i] 表示句子前 i 个字符中最少的未识别字符数。然后来找状态转移方程。对于前 i 个字符，即句子字符串的 [0,i)，它可能是由最前面的 [0,j) 子字符串加上一个字典匹配的单词得到，也就是 <code>dp[i]=dp[j]</code>, <code>j &lt; i</code>；也可能没找到字典中的单词，可以用它前 <code>i - 1</code> 个字符的结果加上一个没有匹配到的第 i 个字符，即 <code>dp[i] = dp[i-1] + 1</code>。要注意的是，即使前面存在匹配的单词，也不能保证哪一种剩下的字符最少，所以每轮都要比较一次最小值。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">respace</span><span class="params">(String[] dictionary, String sentence)</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; dic = Arrays.asList(dictionary);</span><br><span class="line">    <span class="keyword">int</span> len = sentence.length();</span><br><span class="line">    <span class="comment">// dp[i]表示sentence前i个字符所得结果</span></span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[len + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;  <span class="comment">// 先假设当前字符作为单词不在字典中</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (dic.contains(sentence.substring(j, i))) &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], dp[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[len];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：Ο(n²)，其中 n 是字符串长度。</li>
+<li>空间复杂度：O(n)，其中 n 是字符串长度，保存dp的中间值。</li>
+</ul>
+<h1 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h1><p>这里重点讲述Trie字典树的解法。首先看一个字典树的例子：</p>
+<p><img src="%E5%AD%97%E5%85%B8%E6%A0%91.png" alt="字典树"></p>
+<p>该树包含的单词集合为 {“at”, “bee”, “ben”, “bt”, “q”}。每一个节点保存一个字符，因为题目说只包含小写字母，所以一个节点最多可以有 26 个子节点。每次查找单词都从空白的根节点开始，比如查找单词 “cat”，第一个字符 ‘c’ 就不存在，直接返回 false；查找单词 “bee”，根节点下有 b，b 的子节点有 e，下面还有 e 所以查到了。但是如果查找单词”be”,同样的方法 ‘b’ 和 ‘e’ 都存在，但是字典里没有 “be” 这个单词，所以在树里还需要一个 boolean 变量表示当前节点是不是一个单词的结尾，如图绿色表示。如果往字典中插入一个 “be” 单词，此时 b 节点下的 e 节点也应该标绿，此时再查找 “be”，在 e 节点发现它是个单词，所以返回 true。</p>
+<p>使用字典树可利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">respace</span><span class="params">(String[] dictionary, String sentence)</span> </span>&#123;</span><br><span class="line">    root = <span class="keyword">new</span> TrieNode();</span><br><span class="line">    makeTrie(dictionary);   <span class="comment">//创建字典树</span></span><br><span class="line">    <span class="keyword">int</span> n = sentence.length();</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    <span class="comment">//这里从sentence最后一个字符开始</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        dp[i] = n - i;    <span class="comment">//初始默认后面全不匹配</span></span><br><span class="line">        TrieNode node = root;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> c = sentence.charAt(j) - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[c] == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="comment">//例如&quot;abcde&quot;,i=1,j=2 可找出长度关系</span></span><br><span class="line">                dp[i] = Math.min(dp[i], j - i + <span class="number">1</span> + dp[j + <span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[c].isWord) &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], dp[j + <span class="number">1</span>]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], j - i + <span class="number">1</span> + dp[j + <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            node = node.childs[c];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeTrie</span><span class="params">(String[] dictionary)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (String str : dictionary) &#123;</span><br><span class="line">        TrieNode node = root;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; str.length(); k++) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = str.charAt(k) - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[i] == <span class="keyword">null</span>) &#123;</span><br><span class="line">                node.childs[i] = <span class="keyword">new</span> TrieNode();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node.childs[i];</span><br><span class="line">        &#125;</span><br><span class="line">        node.isWord = <span class="keyword">true</span>; <span class="comment">//单词的结尾</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义一个TrieNode类型。</span></span><br><span class="line"><span class="comment"> * 这里不用建一个变量来存当前节点表示的字符，</span></span><br><span class="line"><span class="comment"> * 因为只要该节点不为null，就说明存在这个字符</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TrieNode</span> </span>&#123;</span><br><span class="line">    TrieNode[] childs;</span><br><span class="line">    <span class="keyword">boolean</span> isWord;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TrieNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        childs = <span class="keyword">new</span> TrieNode[<span class="number">26</span>];</span><br><span class="line">        isWord = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/re-space-lcci/" title="恢复空格 | 力扣（LeetCode）">恢复空格 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/re-space-lcci/solution/cong-bao-li-ru-shou-you-hua-yi-ji-triezi-dian-shu-/" title="恢复空格 | 题解（LeetCode）">恢复空格 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/07/09/re-space-lcci/' title='恢复空格' >恢复空格</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/09/re-space-lcci/' title='恢复空格' >http://www.cylong.com/blog/2020/07/09/re-space-lcci/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>字符串</tag>
+        <tag>动态规划</tag>
+        <tag>字典树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三角形最小路径和</title>
     <url>/blog/2020/07/14/triangle/</url>
     <content><![CDATA[<hr>
@@ -2799,56 +2849,6 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>动态规划</tag>
         <tag>滚动数组</tag>
         <tag>深度优先搜索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>恢复空格</title>
-    <url>/blog/2020/07/09/re-space-lcci/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>哦，不！你不小心把一个长篇文章中的空格、标点都删掉了，并且大写也弄成了小写。像句子”I reset the computer. It still didn’t boot!”已经变成了”iresetthecomputeritstilldidntboot”。在处理标点符号和大小写之前，你得先把它断成词语。当然了，你有一本厚厚的词典dictionary，不过，有些词没在词典里。假设文章用sentence表示，设计一个算法，把文章断开，要求未识别的字符最少，返回未识别的字符数。</p>
-<p><strong>示例：</strong></p>
-<blockquote>
-<p>输入：<br>dictionary = [“looked”, “just”, “like”, “her”, “brother”]<br>sentence = “jesslookedjustliketimherbrother”<br>输出： 7<br>解释： 断句后为”jess looked just like tim her brother”，共7个未识别字符。</p>
-</blockquote>
-<p><strong>提示：</strong></p>
-<ul>
-<li>0 &lt;= len(sentence) &lt;= 1000</li>
-<li>dictionary中总字符数不超过 150000。</li>
-<li>你可以认为dictionary和sentence中只包含小写字母。</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>这里采用动态规划，创建一个数组 dp 用来记录结果。句子从前往后看，其中 <code>dp[0]=0</code> 表示句子是空字符串时没有未识别的字符，dp[i] 表示句子前 i 个字符中最少的未识别字符数。然后来找状态转移方程。对于前 i 个字符，即句子字符串的 [0,i)，它可能是由最前面的 [0,j) 子字符串加上一个字典匹配的单词得到，也就是 <code>dp[i]=dp[j]</code>, <code>j &lt; i</code>；也可能没找到字典中的单词，可以用它前 <code>i - 1</code> 个字符的结果加上一个没有匹配到的第 i 个字符，即 <code>dp[i] = dp[i-1] + 1</code>。要注意的是，即使前面存在匹配的单词，也不能保证哪一种剩下的字符最少，所以每轮都要比较一次最小值。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">respace</span><span class="params">(String[] dictionary, String sentence)</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; dic = Arrays.asList(dictionary);</span><br><span class="line">    <span class="keyword">int</span> len = sentence.length();</span><br><span class="line">    <span class="comment">// dp[i]表示sentence前i个字符所得结果</span></span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[len + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;  <span class="comment">// 先假设当前字符作为单词不在字典中</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (dic.contains(sentence.substring(j, i))) &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], dp[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[len];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：Ο(n²)，其中 n 是字符串长度。</li>
-<li>空间复杂度：O(n)，其中 n 是字符串长度，保存dp的中间值。</li>
-</ul>
-<h1 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h1><p>这里重点讲述Trie字典树的解法。首先看一个字典树的例子：</p>
-<p><img src="%E5%AD%97%E5%85%B8%E6%A0%91.png" alt="字典树"></p>
-<p>该树包含的单词集合为 {“at”, “bee”, “ben”, “bt”, “q”}。每一个节点保存一个字符，因为题目说只包含小写字母，所以一个节点最多可以有 26 个子节点。每次查找单词都从空白的根节点开始，比如查找单词 “cat”，第一个字符 ‘c’ 就不存在，直接返回 false；查找单词 “bee”，根节点下有 b，b 的子节点有 e，下面还有 e 所以查到了。但是如果查找单词”be”,同样的方法 ‘b’ 和 ‘e’ 都存在，但是字典里没有 “be” 这个单词，所以在树里还需要一个 boolean 变量表示当前节点是不是一个单词的结尾，如图绿色表示。如果往字典中插入一个 “be” 单词，此时 b 节点下的 e 节点也应该标绿，此时再查找 “be”，在 e 节点发现它是个单词，所以返回 true。</p>
-<p>使用字典树可利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">respace</span><span class="params">(String[] dictionary, String sentence)</span> </span>&#123;</span><br><span class="line">    root = <span class="keyword">new</span> TrieNode();</span><br><span class="line">    makeTrie(dictionary);   <span class="comment">//创建字典树</span></span><br><span class="line">    <span class="keyword">int</span> n = sentence.length();</span><br><span class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    <span class="comment">//这里从sentence最后一个字符开始</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        dp[i] = n - i;    <span class="comment">//初始默认后面全不匹配</span></span><br><span class="line">        TrieNode node = root;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> c = sentence.charAt(j) - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[c] == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="comment">//例如&quot;abcde&quot;,i=1,j=2 可找出长度关系</span></span><br><span class="line">                dp[i] = Math.min(dp[i], j - i + <span class="number">1</span> + dp[j + <span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[c].isWord) &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], dp[j + <span class="number">1</span>]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                dp[i] = Math.min(dp[i], j - i + <span class="number">1</span> + dp[j + <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            node = node.childs[c];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeTrie</span><span class="params">(String[] dictionary)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (String str : dictionary) &#123;</span><br><span class="line">        TrieNode node = root;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; str.length(); k++) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = str.charAt(k) - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node.childs[i] == <span class="keyword">null</span>) &#123;</span><br><span class="line">                node.childs[i] = <span class="keyword">new</span> TrieNode();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node.childs[i];</span><br><span class="line">        &#125;</span><br><span class="line">        node.isWord = <span class="keyword">true</span>; <span class="comment">//单词的结尾</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义一个TrieNode类型。</span></span><br><span class="line"><span class="comment"> * 这里不用建一个变量来存当前节点表示的字符，</span></span><br><span class="line"><span class="comment"> * 因为只要该节点不为null，就说明存在这个字符</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TrieNode</span> </span>&#123;</span><br><span class="line">    TrieNode[] childs;</span><br><span class="line">    <span class="keyword">boolean</span> isWord;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TrieNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        childs = <span class="keyword">new</span> TrieNode[<span class="number">26</span>];</span><br><span class="line">        isWord = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/re-space-lcci/" title="恢复空格 | 力扣（LeetCode）">恢复空格 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/re-space-lcci/solution/cong-bao-li-ru-shou-you-hua-yi-ji-triezi-dian-shu-/" title="恢复空格 | 题解（LeetCode）">恢复空格 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/07/09/re-space-lcci/' title='恢复空格' >恢复空格</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/09/re-space-lcci/' title='恢复空格' >http://www.cylong.com/blog/2020/07/09/re-space-lcci/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>字符串</tag>
-        <tag>动态规划</tag>
-        <tag>字典树</tag>
       </tags>
   </entry>
   <entry>
@@ -3015,55 +3015,6 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>最小路径和</title>
-    <url>/blog/2020/07/23/minimum-path-sum/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
-<p><strong>说明：</strong> 每次只能向下或者向右移动一步。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入:</span><br><span class="line">[</span><br><span class="line">  [1,3,1],</span><br><span class="line">  [1,5,1],</span><br><span class="line">  [4,2,1]</span><br><span class="line">]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 因为路径 1→3→1→1→1 的总和最小。</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>此题是典型的动态规划问题，由于路径的方向只能是向下或向右，因此网格的第一行的每个元素只能从左上角元素开始向右移动到达，网格的第一列的每个元素只能从左上角元素开始向下移动到达，此时的路径是唯一的，因此每个元素对应的最小路径和即为对应的路径上的数字总和。对于不在第一行和第一列的元素，可以从其上方相邻元素向下移动一步到达，或者从其左方相邻元素向右移动一步到达，元素对应的最小路径和等于其上方相邻元素与其左方相邻元素两者对应的最小路径和中的最小值加上当前元素的值。</p>
-<p>创建二维数组 dp，与原始网格的大小相同，dp[i][j] 表示从左上角出发到 (i, j) 位置的最小路径和。显然，dp[0][0]=grid[0][0]。对于 dp 中的其余元素，通过以下状态转移方程计算元素值。</p>
-<ul>
-<li>当 i &gt; 0 且 j = 0 时，dp[i][0] = dp[i − 1][0] + grid[i][0]。</li>
-<li>当 i = 0 且 j &gt; 0 时，dp[0][j] = dp[0][j − 1] + grid[0][j]。</li>
-<li>当 i &gt; 0 且 j &gt; 0 时，dp[i][j] = min(dp[i − 1][j], dp[i][j − 1]) + grid[i][j]。</li>
-</ul>
-<p>最后得到 dp[m − 1][n − 1] 的值即为从网格左上角到网格右下角的最小路径和。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length == <span class="number">0</span> || grid[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> row = grid.length;</span><br><span class="line">    <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[row][col];</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = grid[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        dp[i][<span class="number">0</span>] = grid[i][<span class="number">0</span>] + dp[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</span><br><span class="line">        dp[<span class="number">0</span>][j] = grid[<span class="number">0</span>][j] + dp[<span class="number">0</span>][j - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] + grid[i][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</span><br><span class="line">            dp[i][j] = grid[i][j] + Math.min(dp[i - <span class="number">1</span>][j], dp[i][j - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[row - <span class="number">1</span>][col - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：Ο(mn)，其中 m 和 n 分别是网格的行数和列数。需要对整个网格遍历一次，计算 dp 的每个元素的值。</li>
-<li>空间复杂度：O(mn)，其中 m 和 n 分别是网格的行数和列数。创建一个二维数组 dp，和网格大小相同。空间复杂度可以优化，例如每次只存储上一行的 dp 值，则可以将空间复杂度优化到 O(n)。</li>
-</ul>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>在我不会动态规划之前，其实第一次想到的会是递归处理，不过现在会了，还是动态规划香哈哈哈，在这里我仅仅说一下递归解题思路。</p>
-<p>我们从 [0, 0] 坐标出发，最短路径是 <code>f[0][0] + min(f[0][1], f[1][0])</code> ，针对 f[0][1] 和 f[1][0] 继续进行递归处理。这里需要注意的一点是，我们在计算 f<a href="https://leetcode-cn.com/problems/minimum-path-sum/" title="最小路径和 | 力扣（LeetCode）">0</a> 和 f[1][0] 的时候，会重复计算 f[0][1]，所以我们使用一个 min[i][j] 数组保存 [i, j] 坐标到右下角的最小路径，这样就避免的重复计算。</p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/" title="最小路径和 | 力扣（LeetCode）">最小路径和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/minimum-path-sum/solution/zui-xiao-lu-jing-he-by-leetcode-solution/" title="最小路径和 | 题解（LeetCode）">最小路径和 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/07/23/minimum-path-sum/' title='最小路径和' >最小路径和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/23/minimum-path-sum/' title='最小路径和' >http://www.cylong.com/blog/2020/07/23/minimum-path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>数组</tag>
-        <tag>递归</tag>
-        <tag>记忆化</tag>
-        <tag>动态规划</tag>
-        <tag>深度优先搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>除数博弈</title>
     <url>/blog/2020/07/24/divisor-game/</url>
     <content><![CDATA[<hr>
@@ -3137,6 +3088,55 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>数学归纳法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最小路径和</title>
+    <url>/blog/2020/07/23/minimum-path-sum/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<p><strong>说明：</strong> 每次只能向下或者向右移动一步。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入:</span><br><span class="line">[</span><br><span class="line">  [1,3,1],</span><br><span class="line">  [1,5,1],</span><br><span class="line">  [4,2,1]</span><br><span class="line">]</span><br><span class="line">输出: 7</span><br><span class="line">解释: 因为路径 1→3→1→1→1 的总和最小。</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>此题是典型的动态规划问题，由于路径的方向只能是向下或向右，因此网格的第一行的每个元素只能从左上角元素开始向右移动到达，网格的第一列的每个元素只能从左上角元素开始向下移动到达，此时的路径是唯一的，因此每个元素对应的最小路径和即为对应的路径上的数字总和。对于不在第一行和第一列的元素，可以从其上方相邻元素向下移动一步到达，或者从其左方相邻元素向右移动一步到达，元素对应的最小路径和等于其上方相邻元素与其左方相邻元素两者对应的最小路径和中的最小值加上当前元素的值。</p>
+<p>创建二维数组 dp，与原始网格的大小相同，dp[i][j] 表示从左上角出发到 (i, j) 位置的最小路径和。显然，dp[0][0]=grid[0][0]。对于 dp 中的其余元素，通过以下状态转移方程计算元素值。</p>
+<ul>
+<li>当 i &gt; 0 且 j = 0 时，dp[i][0] = dp[i − 1][0] + grid[i][0]。</li>
+<li>当 i = 0 且 j &gt; 0 时，dp[0][j] = dp[0][j − 1] + grid[0][j]。</li>
+<li>当 i &gt; 0 且 j &gt; 0 时，dp[i][j] = min(dp[i − 1][j], dp[i][j − 1]) + grid[i][j]。</li>
+</ul>
+<p>最后得到 dp[m − 1][n − 1] 的值即为从网格左上角到网格右下角的最小路径和。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length == <span class="number">0</span> || grid[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> row = grid.length;</span><br><span class="line">    <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[row][col];</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = grid[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        dp[i][<span class="number">0</span>] = grid[i][<span class="number">0</span>] + dp[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</span><br><span class="line">        dp[<span class="number">0</span>][j] = grid[<span class="number">0</span>][j] + dp[<span class="number">0</span>][j - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] + grid[i][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</span><br><span class="line">            dp[i][j] = grid[i][j] + Math.min(dp[i - <span class="number">1</span>][j], dp[i][j - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[row - <span class="number">1</span>][col - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：Ο(mn)，其中 m 和 n 分别是网格的行数和列数。需要对整个网格遍历一次，计算 dp 的每个元素的值。</li>
+<li>空间复杂度：O(mn)，其中 m 和 n 分别是网格的行数和列数。创建一个二维数组 dp，和网格大小相同。空间复杂度可以优化，例如每次只存储上一行的 dp 值，则可以将空间复杂度优化到 O(n)。</li>
+</ul>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>在我不会动态规划之前，其实第一次想到的会是递归处理，不过现在会了，还是动态规划香哈哈哈，在这里我仅仅说一下递归解题思路。</p>
+<p>我们从 [0, 0] 坐标出发，最短路径是 <code>f[0][0] + min(f[0][1], f[1][0])</code> ，针对 f[0][1] 和 f[1][0] 继续进行递归处理。这里需要注意的一点是，我们在计算 f<a href="https://leetcode-cn.com/problems/minimum-path-sum/" title="最小路径和 | 力扣（LeetCode）">0</a> 和 f[1][0] 的时候，会重复计算 f[0][1]，所以我们使用一个 min[i][j] 数组保存 [i, j] 坐标到右下角的最小路径，这样就避免的重复计算。</p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/" title="最小路径和 | 力扣（LeetCode）">最小路径和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/minimum-path-sum/solution/zui-xiao-lu-jing-he-by-leetcode-solution/" title="最小路径和 | 题解（LeetCode）">最小路径和 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/07/23/minimum-path-sum/' title='最小路径和' >最小路径和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/23/minimum-path-sum/' title='最小路径和' >http://www.cylong.com/blog/2020/07/23/minimum-path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数组</tag>
+        <tag>递归</tag>
+        <tag>记忆化</tag>
+        <tag>动态规划</tag>
+        <tag>深度优先搜索</tag>
       </tags>
   </entry>
   <entry>
