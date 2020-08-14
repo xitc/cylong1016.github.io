@@ -3410,7 +3410,7 @@ f1g1ns2.dnspod.net</code></pre>
     <title>Hexo 博客和 NexT 主题版本升级</title>
     <url>/blog/2020/08/10/update-hexo-next/</url>
     <content><![CDATA[<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用 <a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a> 搭建博客也有4年之久，也是一直使用 <a href="http://theme-next.iissnan.com/" title="Next">NexT</a> 主题，NexT 的简洁大方美观，特别符合我的审美。最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。经常看到很多同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 <a href="https://github.com/iissnan/hexo-theme-next" title="iissnan">iissnan</a> 名下迁移至 <a href="https://github.com/theme-next" title="theme-next">theme-next</a> 组织。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用 <a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a> 搭建博客也有4年之久，也是一直使用 <a href="http://theme-next.iissnan.com/" title="Next">NexT</a> 主题，NexT 的简洁大方美观，特别符合我的审美。最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。经常看到很多的同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 <a href="https://github.com/iissnan/hexo-theme-next" title="iissnan">iissnan</a> 名下迁移至 <a href="https://github.com/theme-next" title="theme-next">theme-next</a> 组织。</p>
 <a id="more"></a>
 
 <h1 id="Hexo-搭建个人博客"><a href="#Hexo-搭建个人博客" class="headerlink" title="Hexo 搭建个人博客"></a>Hexo 搭建个人博客</h1><p>在这里可能有些小伙伴是第一次接触 Hexo 和 NexT，先给大家一些参考文档，助力大家搭建一个属于自己的博客。</p>
@@ -3478,6 +3478,50 @@ f1g1ns2.dnspod.net</code></pre>
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字符串相加</title>
+    <url>/blog/2020/08/03/add-strings/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个字符串形式的非负整数 num1 和 num2 ，计算它们的和。</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li>num1 和 num2 的长度都小于 5100</li>
+<li>num1 和 num2 都只包含数字 0-9</li>
+<li>num1 和 num2 都不包含任何前导零</li>
+<li>你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们只需要对两个大整数模拟「竖式加法」的过程。竖式加法就是我们平常学习生活中常用地对两个整数相加的方法，回想一下我们在纸上对两个整数相加的操作，是不是如下图将相同数位对齐，从低到高逐位相加，如果当前位和超过 10，则向高位进一位？因此我们只要将这个过程用代码写出来即可。我们使用两个变量分别指向两个数的末尾，进行加法操作，同时使用 carry 保存进位，若两个字符串不一样长，我们两个字符串遍历完成后，要继续遍历未计算的字符串，最后，别忘了，如果进位是 1 的话，要把进位加到最终的结果中。</p>
+<img src="/blog/2020/08/03/add-strings/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0.png" class="" title="字符串相加]">
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">addStrings</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index1 = num1.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> index2 = num2.length() - <span class="number">1</span>;</span><br><span class="line">    StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;=<span class="number">0</span> &amp;&amp; index2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n1 = num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">int</span> n2 = num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(n1, n2, carry, res);</span><br><span class="line">        index1--;</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n1 = num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(n1, <span class="number">0</span>, carry, res);</span><br><span class="line">        index1--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (index2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n2 = num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(<span class="number">0</span>, n2, carry, res);</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res.append(carry);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.reverse().toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addNum</span><span class="params">(<span class="keyword">int</span> n1, <span class="keyword">int</span> n2, <span class="keyword">int</span> carry, StringBuilder res)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = n1 + n2 + carry;</span><br><span class="line">    res.append(sum % <span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> sum / <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里，我们其实不需要这么长的代码，判断最后哪个字符串更长，针对短的字符串，我们进行补 0 操作即可。也不需要判断是否有进位，最后还要记得加上去。我们可以简化代码如下。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">addStrings</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index1 = num1.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> index2 = num2.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;= <span class="number">0</span> || index2 &gt;= <span class="number">0</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> x = index1 &gt;= <span class="number">0</span> ? num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> y = index2 &gt;= <span class="number">0</span> ? num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = x + y + carry;</span><br><span class="line">        res.append(sum % <span class="number">10</span>);</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        index1--;</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line">    res.reverse();</span><br><span class="line">    <span class="keyword">return</span> res.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：Ο(max(m, n))，其中 m 和 n 分别是两个字符串的长度。竖式加法的次数取决于较大数的位数。</li>
+<li>空间复杂度：O(n)。除答案外我们只需要常数空间存放若干的变量。但是解法中使用到了 StringBuilder，空间复杂度为 O(n)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/add-strings/" title="字符串相加 | 力扣（LeetCode）">字符串相加 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/" title="字符串相加 | 题解（LeetCode）">字符串相加 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/03/add-strings/' title='字符串相加' >字符串相加</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/03/add-strings/' title='字符串相加' >http://www.cylong.com/blog/2020/08/03/add-strings/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
 </search>
