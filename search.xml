@@ -3713,4 +3713,47 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>二分查找</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计数二进制子串</title>
+    <url>/blog/2020/08/10/count-binary-substrings/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1都是组合在一起的。重复出现的子串要计算它们出现的次数。</p>
+<p><strong>示例 1:</strong></p>
+<blockquote>
+<p>输入: “00110011”<br>输出: 6<br>解释: 有 6 个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。<br>请注意，一些重复出现的子串要计算它们出现的次数。<br>另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: “10101”<br>输出: 4<br>解释: 有4个子串：“10”，“01”，“10”，“01”，它们具有相同数量的连续1和0。</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>s.length 在1到50,000之间。<br>s 只包含“0”或“1”字符。</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>刚开始看到，可能没什么思路，但是我们仔细阅读题目，可以慢慢找到规律，首先针对一个满足题意的子串，假如是“000111”，那么满足题意的子串就同时有三种，“000111”和“0011”和“01”。可以发现，满足条件的子串，是以01为中心，左边不断补0，右边不断补1而成，每补一次，就多一个满足条件的子串。针对以10为中心同理。所以我们只要找到位置 i 的字符串和位置 i + 1 的字符串不等，并以此为中心左右扩展，左边的字符等于位置 i 的字符，右边的字符等于位置 i + 1 的字符。扩展一次，满足条件的子串次数就加一。遍历完全部字符后，就能得到答案。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countBinarySubstrings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>[] sArr = s.toCharArray();</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sArr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sArr[i] != sArr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">int</span> m = i;</span><br><span class="line">            <span class="keyword">int</span> n = i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (m &gt;= <span class="number">0</span> &amp;&amp; n &lt; sArr.length &amp;&amp; sArr[m--] == sArr[i] &amp;&amp; sArr[n++] == sArr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">                ans++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)。</li>
+<li>空间复杂度：O(n)。这里使用 <code>s.toCharArray()</code> 仅仅是为了效率，其实可以使用 s.charAt()，这样空间复杂度就是 O(1) 了。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/count-binary-substrings/" title="计数二进制子串 | 力扣（LeetCode）">计数二进制子串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/" title="计数二进制子串 | 题解（LeetCode）">计数二进制子串 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/count-binary-substrings/' title='计数二进制子串' >计数二进制子串</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/count-binary-substrings/' title='计数二进制子串' >http://www.cylong.com/blog/2020/08/10/count-binary-substrings/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
 </search>

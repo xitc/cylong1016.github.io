@@ -6,7 +6,7 @@
   <link href="http://www.cylong.com/atom.xml" rel="self"/>
   
   <link href="http://www.cylong.com/"/>
-  <updated>2020-08-10T15:11:59.000Z</updated>
+  <updated>2020-08-10T15:48:04.000Z</updated>
   <id>http://www.cylong.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计数二进制子串</title>
+    <link href="http://www.cylong.com/blog/2020/08/10/count-binary-substrings/"/>
+    <id>http://www.cylong.com/blog/2020/08/10/count-binary-substrings/</id>
+    <published>2020-08-10T15:48:04.000Z</published>
+    <updated>2020-08-10T15:48:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1都是组合在一起的。重复出现的子串要计算它们出现的次数。</p><p><strong>示例 1:</strong></p><blockquote><p>输入: “00110011”<br>输出: 6<br>解释: 有 6 个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。<br>请注意，一些重复出现的子串要计算它们出现的次数。<br>另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>输入: “10101”<br>输出: 4<br>解释: 有4个子串：“10”，“01”，“10”，“01”，它们具有相同数量的连续1和0。</p></blockquote><p><strong>注意：</strong></p><blockquote><p>s.length 在1到50,000之间。<br>s 只包含“0”或“1”字符。</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>刚开始看到，可能没什么思路，但是我们仔细阅读题目，可以慢慢找到规律，首先针对一个满足题意的子串，假如是“000111”，那么满足题意的子串就同时有三种，“000111”和“0011”和“01”。可以发现，满足条件的子串，是以01为中心，左边不断补0，右边不断补1而成，每补一次，就多一个满足条件的子串。针对以10为中心同理。所以我们只要找到位置 i 的字符串和位置 i + 1 的字符串不等，并以此为中心左右扩展，左边的字符等于位置 i 的字符，右边的字符等于位置 i + 1 的字符。扩展一次，满足条件的子串次数就加一。遍历完全部字符后，就能得到答案。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countBinarySubstrings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>[] sArr = s.toCharArray();</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sArr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sArr[i] != sArr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">int</span> m = i;</span><br><span class="line">            <span class="keyword">int</span> n = i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (m &gt;= <span class="number">0</span> &amp;&amp; n &lt; sArr.length &amp;&amp; sArr[m--] == sArr[i] &amp;&amp; sArr[n++] == sArr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">                ans++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(n)。</li><li>空间复杂度：O(n)。这里使用 <code>s.toCharArray()</code> 仅仅是为了效率，其实可以使用 s.charAt()，这样空间复杂度就是 O(1) 了。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/count-binary-substrings/" title="计数二进制子串 | 力扣（LeetCode）">计数二进制子串 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/" title="计数二进制子串 | 题解（LeetCode）">计数二进制子串 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/count-binary-substrings/' title='计数二进制子串' >计数二进制子串</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/count-binary-substrings/' title='计数二进制子串' >http://www.cylong.com/blog/2020/08/10/count-binary-substrings/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1都是组合在一起的。重复出现的子串要计算它们出现的次数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: “00110011”&lt;br&gt;输出: 6&lt;br&gt;解释: 有 6 个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。&lt;br&gt;请注意，一些重复出现的子串要计算它们出现的次数。&lt;br&gt;另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: “10101”&lt;br&gt;输出: 4&lt;br&gt;解释: 有4个子串：“10”，“01”，“10”，“01”，它们具有相同数量的连续1和0。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;s.length 在1到50,000之间。&lt;br&gt;s 只包含“0”或“1”字符。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+    <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+    <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+    <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 博客和 NexT 主题版本升级</title>
@@ -822,44 +860,6 @@
     <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
     
     <category term="回溯算法" scheme="http://www.cylong.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
-    
-    <category term="二叉树" scheme="http://www.cylong.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    
-    <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
-    
-    <category term="中序遍历" scheme="http://www.cylong.com/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>路经总和</title>
-    <link href="http://www.cylong.com/blog/2020/07/06/path-sum/"/>
-    <id>http://www.cylong.com/blog/2020/07/06/path-sum/</id>
-    <published>2020-07-06T14:49:19.000Z</published>
-    <updated>2020-07-06T14:49:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。<br><strong>说明: 叶子节点是指没有子节点的节点。</strong></p><p><strong>示例:</strong> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">给定如下二叉树，以及目标和 sum &#x3D; 22</span><br><span class="line">        5</span><br><span class="line">       &#x2F; \</span><br><span class="line">      4   8</span><br><span class="line">     &#x2F;   &#x2F; \</span><br><span class="line">    11  13  4</span><br><span class="line">   &#x2F;  \      \</span><br><span class="line">  7    2      1</span><br><span class="line">返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</span><br></pre></td></tr></table></figure><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>此题使用递归解决思路就会比较清晰，针对 root 节点，我们求其左右两棵子树的路径和是否为 root.val - sum，针对左右子树，同样递归解决。递归的结束条件就是遍历到叶子节点，直接判断 sum 是否等于 val 即可。因为到达叶子节点的时候，sum 的值已经被减去走过的路径的值了。需要注意的是给定的 root 可能为空。同样的，递归的结束条件也要判断节点是否为空。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum == root.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：Ο(N)，其中 N 是树的节点数。对每个节点访问一次。</li><li>空间复杂度：Ο(H)，其中 H 是树的高度。空间复杂度主要取决于递归时栈空间的开销，最坏情况下，树呈现链状，空间复杂度为 Ο(N)。平均情况下树的高度与节点数的对数正相关，空间复杂度为 Ο(logN)。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/path-sum/" title="路径总和 | 力扣（LeetCode）">路径总和 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-by-leetcode-solution/" title="路径总和 | 题解（LeetCode）">路径总和 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/07/06/path-sum/' title='路经总和' >路经总和</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/06/path-sum/' title='路经总和' >http://www.cylong.com/blog/2020/07/06/path-sum/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    
-    <summary type="html">&lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。&lt;br&gt;&lt;strong&gt;说明: 叶子节点是指没有子节点的节点。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt; &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;给定如下二叉树，以及目标和 sum &amp;#x3D; 22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &amp;#x2F; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      4   8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#x2F;   &amp;#x2F; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    11  13  4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#x2F;  \      \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  7    2      1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&amp;gt;4-&amp;gt;11-&amp;gt;2。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-    <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-    <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-    <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="递归" scheme="http://www.cylong.com/tags/%E9%80%92%E5%BD%92/"/>
     
     <category term="树" scheme="http://www.cylong.com/tags/%E6%A0%91/"/>
     
