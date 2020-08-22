@@ -2284,6 +2284,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>指针</tag>
         <tag>记忆化</tag>
         <tag>回溯算法</tag>
+        <tag>矩阵</tag>
       </tags>
   </entry>
   <entry>
@@ -3347,6 +3348,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>数组</tag>
         <tag>递归</tag>
         <tag>深度优先搜索</tag>
+        <tag>矩阵</tag>
       </tags>
   </entry>
   <entry>
@@ -3754,6 +3756,51 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>java</tag>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
+        <tag>字符串</tag>
+        <tag>双指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>被围绕的区域</title>
+    <url>/blog/2020/08/11/surrounded-regions/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二维的矩阵，包含 ‘X’ 和 ‘O’（字母 O）。找到所有被 ‘X’ 围绕的区域，并将这些区域里所有的 ‘O’ 用 ‘X’ 填充。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：</span><br><span class="line"></span><br><span class="line">X X X X</span><br><span class="line">X O O X</span><br><span class="line">X X O X</span><br><span class="line">X O X X</span><br><span class="line"></span><br><span class="line">运行你的函数后，矩阵变为：</span><br><span class="line"></span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X O X X</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>解释:</strong> 被围绕的区间不会存在于边界上，换句话说，任何边界上的 ‘O’ 都不会被填充为 ‘X’。 任何不在边界上，或不与边界上的 ‘O’ 相连的 ‘O’ 最终都会被填充为 ‘X’。如果两个元素在水平或垂直方向相邻，则称它们是“相连”的。</p>
+<a id="more"></a>
+
+<h1 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h1><p>遇到矩阵的问题，无非就是广度优先搜索或者深度优先搜索，我个人比较喜欢使用递归方式的深度优先搜索，也是比较容易理解的一种方式。本题要求将所有被字母 ‘X’ 包围的字母 ‘O’ 都变为字母 ‘X’ ，但很难判断哪些 ‘O’ 是被包围的，哪些 ‘O’ 不是被包围的。但是我们注意题目中的一句话：任何边界上的 ‘O’ 都不会被填充为 ‘X’。与边界上的 ‘O’ 相连的 ‘O’ 也都不会被填充为 ‘X’。根据这个思路，我们只要遍历矩阵的边界上的 ‘O’，以边界上的所有 ‘O’ 此为起点，找到所有与边界相连的字母 ‘O’，最后我们遍历整个矩阵，针对每个字母，如果这个字母被标记了，那么就保持原来的 ‘O’，如果没有被标记，那么就置为 ‘X’ 即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (board == <span class="keyword">null</span> || board.length == <span class="number">0</span> || board[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> rowLen = board.length;</span><br><span class="line">    <span class="keyword">int</span> colLen = board[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span>[][] direct = <span class="keyword">new</span> <span class="keyword">int</span>[][]&#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">int</span> directIndex = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> row = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> col = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span>[][] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[rowLen][colLen];</span><br><span class="line">    <span class="comment">// 顺时针遍历矩阵的边界</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= ((rowLen + colLen) &lt;&lt; <span class="number">1</span>) - <span class="number">4</span>; i++) &#123;</span><br><span class="line">        updateBoard(board, row, col, visited);</span><br><span class="line">        <span class="keyword">int</span> nextRow = row + direct[directIndex][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> nextCol = col + direct[directIndex][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (nextRow &lt; <span class="number">0</span> || nextRow &gt;= rowLen || nextCol &lt; <span class="number">0</span> || nextCol &gt;= colLen) &#123;</span><br><span class="line">            directIndex = (directIndex + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        row += direct[directIndex][<span class="number">0</span>];</span><br><span class="line">        col += direct[directIndex][<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 针对每个字母，如果这个字母被标记了，那么就保持原来的 &#x27;O&#x27;，如果没有被标记，那么就置为 &#x27;X&#x27;。</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rowLen; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; colLen; j++) &#123;</span><br><span class="line">            board[i][j] = visited[i][j] ? <span class="string">&#x27;O&#x27;</span> : <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateBoard</span><span class="params">(<span class="keyword">char</span>[][] board, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">boolean</span>[][] visited)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span> || y &lt; <span class="number">0</span> || x &gt;= board.length || y &gt;= board[<span class="number">0</span>].length || visited[x][y] || board[x][y] == <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    visited[x][y] = <span class="keyword">true</span>;</span><br><span class="line">    updateBoard(board, x + <span class="number">1</span>, y, visited);</span><br><span class="line">    updateBoard(board, x, y + <span class="number">1</span>, visited);</span><br><span class="line">    updateBoard(board, x - <span class="number">1</span>, y, visited);</span><br><span class="line">    updateBoard(board, x, y - <span class="number">1</span>, visited);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用了 <code>visited[x][y]</code> 表示是否被标记，其实可以遍历到 ‘O’ 的时候，将此位置的字符改成任何其他字符，比如 ‘#’，之后遍历整个矩阵的时候，我们将其还原为 ‘O’ 即可，这样就不用使用额外的空间来标记了。另外遍历矩阵的边界，我使用的是从 <code>board[0][0]</code> 开始顺时针遍历矩阵的边界，其实不用这么麻烦，只要分别遍历矩阵的第一行，最后一行，第一列，最后一列即可，我这样做主要是为了复习下之前的一道题：</p>
+<blockquote>
+<p><a href="/blog/2020/06/05/shun-shi-zhen-da-yin-ju-zhen-lcof/" title="顺时针打印矩阵 | 笑话人生">顺时针打印矩阵 | 笑话人生</a></p>
+</blockquote>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n × m)，其中 n 和 m 分别为矩阵的行数和列数。深度优先搜索过程中，每一个点至多只会被标记一次。</li>
+<li>空间复杂度：O(n × m)，其中 n 和 m 分别为矩阵的行数和列数。主要为深度优先搜索的栈的开销。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/surrounded-regions/" title="被围绕的区域 | 力扣（LeetCode）">被围绕的区域 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/surrounded-regions/solution/bei-wei-rao-de-qu-yu-by-leetcode-solution/" title="被围绕的区域 | 题解（LeetCode）">被围绕的区域 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/11/surrounded-regions/' title='被围绕的区域' >被围绕的区域</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/11/surrounded-regions/' title='被围绕的区域' >http://www.cylong.com/blog/2020/08/11/surrounded-regions/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>递归</tag>
+        <tag>回溯算法</tag>
+        <tag>深度优先搜索</tag>
+        <tag>广度优先搜索</tag>
+        <tag>矩阵</tag>
       </tags>
   </entry>
 </search>
