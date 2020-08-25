@@ -2236,6 +2236,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>递归</tag>
+        <tag>剑指Offer</tag>
       </tags>
   </entry>
   <entry>
@@ -2283,6 +2284,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>数组</tag>
         <tag>指针</tag>
         <tag>记忆化</tag>
+        <tag>剑指Offer</tag>
         <tag>回溯算法</tag>
         <tag>矩阵</tag>
       </tags>
@@ -2537,6 +2539,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>队列</tag>
+        <tag>剑指Offer</tag>
         <tag>栈</tag>
       </tags>
   </entry>
@@ -2721,6 +2724,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>数组</tag>
+        <tag>程序员面试金典</tag>
         <tag>数学</tag>
       </tags>
   </entry>
@@ -2771,6 +2775,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>学习笔记</tag>
         <tag>字符串</tag>
         <tag>动态规划</tag>
+        <tag>程序员面试金典</tag>
         <tag>字典树</tag>
       </tags>
   </entry>
@@ -2908,6 +2913,7 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>递归</tag>
+        <tag>剑指Offer</tag>
         <tag>树</tag>
         <tag>二叉树</tag>
         <tag>深度优先搜索</tag>
@@ -3347,8 +3353,8 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>学习笔记</tag>
         <tag>数组</tag>
         <tag>递归</tag>
-        <tag>深度优先搜索</tag>
         <tag>矩阵</tag>
+        <tag>深度优先搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -3409,80 +3415,6 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Hexo 博客和 NexT 主题版本升级</title>
-    <url>/blog/2020/08/10/update-hexo-next/</url>
-    <content><![CDATA[<hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用 <a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a> 搭建博客也有4年之久，也是一直使用 <a href="http://theme-next.iissnan.com/" title="Next">NexT</a> 主题，NexT 的简洁大方美观，特别符合我的审美。最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。经常看到很多的同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 <a href="https://github.com/iissnan/hexo-theme-next" title="iissnan">iissnan</a> 名下迁移至 <a href="https://github.com/theme-next" title="theme-next">theme-next</a> 组织。</p>
-<a id="more"></a>
-
-<h1 id="Hexo-搭建个人博客"><a href="#Hexo-搭建个人博客" class="headerlink" title="Hexo 搭建个人博客"></a>Hexo 搭建个人博客</h1><p>在这里可能有些小伙伴是第一次接触 Hexo 和 NexT，先给大家一些参考文档，助力大家搭建一个属于自己的博客。</p>
-<blockquote>
-<p><a href="/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客 | 笑话人生">Hexo + Git 搭建免费的个人博客 | 笑话人生</a><br><a href="/categories/Hexo/" title="分类：Hexo | 笑话人生">分类：Hexo | 笑话人生</a></p>
-</blockquote>
-<h1 id="升级-Hexo"><a href="#升级-Hexo" class="headerlink" title="升级 Hexo"></a>升级 Hexo</h1><p>Hexo 版本升级可以通过 npm 实现，相关命令如下：</p>
-<ol>
-<li><p>全局升级 hexo-cli</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check</span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>升级系统中的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade</span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新全局包</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新生产环境依赖包</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 Hexo 版本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo v</span><br><span class="line">hexo: 5.0.2 # 升级到 5.0.2版本</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Windows_NT 10.0.18362 win32 x64</span><br><span class="line">node: 14.7.0</span><br><span class="line">v8: 8.4.371.19-node.12</span><br><span class="line">uv: 1.38.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 83</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2020a</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 package.json</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;5.0.2&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^5.0.2&quot;,</span><br><span class="line">    &quot;hexo-admin&quot;: &quot;^2.3.0&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^2.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.9&quot;,</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-searchdb&quot;: &quot;^1.3.2&quot;,</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^2.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^1.1.0&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;,</span><br><span class="line">    &quot;particles.js&quot;: &quot;^2.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h1 id="升级-NexT"><a href="#升级-NexT" class="headerlink" title="升级 NexT"></a>升级 NexT</h1><p>NexT 主题升级从 v5 升级到 v7，跨度很大，但是官方提供了升级指导：<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md" title="从 NexT v5.1.x 更新">从 NexT v5.1.x 更新</a>，这里我把我的升级过程分享给大家，也是自己摸索的一种比较方便的升级方式，同时也方便后面继续进行升级。</p>
-<ol>
-<li><p>克隆新的仓库到任一异于 next 的目录（如 next-reloaded）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;cylong1016&#x2F;hexo-theme-next themes&#x2F;next-reloaded</span><br></pre></td></tr></table></figure>
-<p>如此，你可以在不修改原有的 NexT v5.1.x 目录的同时使用 next-reloaded 目录中的新版本主题。这里，我是 Fork 了主仓库 theme-next/hexo-theme-next ，方便自己后续进行定制化修改，需要更新的时候，直接从主仓库拉取最新代码即可。</p>
-</li>
-<li><p>在 Hexo 的主配置文件中设置主题：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next-reloaded</span><br></pre></td></tr></table></figure>
-<p>如此，你的 next-reloaded 主题将在生成站点时被加载。如果你遇到了任何错误、或只是不喜欢这一新版本，你可以随时切换回旧的 v5.1.x 版本。</p>
-</li>
-<li><p>更新语言配置<br>从 v6.0.3 版本起，zh-Hans 改名为 zh-CN：<a href="https://github.com/theme-next/hexo-theme-next/releases/tag/v6.0.3">https://github.com/theme-next/hexo-theme-next/releases/tag/v6.0.3</a><br>升级到 v6.0.3 及以后版本的用户，需要显式修改 Hexo 主配置文件 _config.yml 里的 language 配置，否则语言显示不正确。</p>
-</li>
-<li><p>修改主题的 _config.yml 文件<br>这里，我们不直接修改主题的_config.yml 文件，因为这样操作，后续 <code>git pull</code> 更新的时候，需要解决冲突问题，即使是手动下载 release 版本，也要手动合并 _config.yml 文件。所以我们选择 NexT 提供的方式2，创建自己单独的 next.yml 进行配置：</p>
-<blockquote>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/DATA-FILES.md" title="数据文件">数据文件</a></p>
-</blockquote>
-</li>
-<li><p>我大概花了几个小时时间将之前全部的配置搞定了，大家可以参考：</p>
-<blockquote>
-<p><a href="https://github.com/cylong1016/HexoBlog/blob/master/source/_data/next.yml">https://github.com/cylong1016/HexoBlog/blob/master/source/_data/next.yml</a></p>
-</blockquote>
-</li>
-</ol>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>至此花了半天时间，把 Hexo 和 NexT 主题全部升级完成，主要还是刚开始用的时候不太熟悉，后续也过了4年都没更新，所以这次花了比较多的时间，相信后面熟悉后，紧随版本，更新就会很快了。</p>
-<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p><a href="https://www.tanxiaoyao.com/post/59005" title="升级博客Hexo版本和Next主题版本踩坑记录 | 叹逍遥的博客">升级博客Hexo版本和Next主题版本踩坑记录 | 叹逍遥的博客</a><br><a href="https://blog.csdn.net/whjkm/article/details/81088518" title="Hexo版本升级和Next主题升级之坑 | HJ_彼岸">Hexo版本升级和Next主题升级之坑 | HJ_彼岸</a><br><a href="https://blog.tangbao.me/2019/08/update-hexo-next-and-add-comment-and-view-number/" title="升级Hexo及NexT主题及添加评论和阅读数 | tangbao&#39;s Blog">升级Hexo及NexT主题及添加评论和阅读数 | tangbao’s Blog</a></p>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo 博客和 NexT 主题版本升级' >Hexo 博客和 NexT 主题版本升级</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo 博客和 NexT 主题版本升级' >http://www.cylong.com/blog/2020/08/10/update-hexo-next/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>字符串相加</title>
     <url>/blog/2020/08/03/add-strings/</url>
     <content><![CDATA[<hr>
@@ -3524,6 +3456,65 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>leetcode</tag>
         <tag>学习笔记</tag>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>魔术索引</title>
+    <url>/blog/2020/08/04/magic-index-lcci/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>魔术索引。 在数组 A[0…n-1] 中，有所谓的魔术索引，满足条件 A[i] = i 。给定一个有序整数数组，编写一种方法找出魔术索引，若有的话，在数组 A 中找出一个魔术索引，如果没有，则返回 -1。若有多个魔术索引，返回索引值最小的一个。</p>
+<p><strong>示例1:</strong></p>
+<blockquote>
+<p>输入: nums = [0, 2, 3, 4, 5]<br>输出: 0<br>说明: 0 下标的元素为 0</p>
+</blockquote>
+<p><strong>示例2:</strong></p>
+<blockquote>
+<p>输入: nums = [1, 1, 1]<br>输出: 1</p>
+</blockquote>
+<p><strong>说明:</strong></p>
+<blockquote>
+<p>nums 长度在 [1, 1000000] 之间</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h1><p>最简单的方法，我们只要从头遍历整个数组，找到最小的 A[i] = i 返回即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] == i) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，其中 n 为数组的长度。</li>
+<li>空间复杂度：O(1)。</li>
+</ul>
+<h1 id="二分查找剪枝"><a href="#二分查找剪枝" class="headerlink" title="二分查找剪枝"></a>二分查找剪枝</h1><p>本方法我们是进行一定程度的优化，在一些情况下会达到较优的时间复杂度，在最差情况下仍会退化成线性的时间复杂度。现在我们假设，题目中的魔术索引仅有一个，我们假设这个答案为 i，那么意味着 [0…i−1] 的值均小于自身的下标，[i+1…n−1] 的值均大于自身的下标【不理解的同学用反证法即可证明】。那么我们只要使用二分法查找数组中的元素，在 O(log n) 的时间内找到答案 A[i] = i 所在的下标。但是题目中魔术索引可能有多个，我们就需要对二分查找做一些处理。针对二分查找做一下剪枝，策略如下：</p>
+<ul>
+<li>每次我们选择数组中间的元素，如果当前中间元素左半部分有满足条件的答案，那么这个位置往后的右半边元素我们都不再考虑，只要寻找左半部分满足条件的答案即可。</li>
+<li>接下来我们继续查看左半部分是否有满足条件的答案，否则如果没有的话我们仍然需要在右半边寻找，使用的策略同上。</li>
+</ul>
+<p>显然，此剪枝策略在 [−1, 0, 1, 2, 4] 这种答案为数组的最后一个元素的情况下会退化成线性的时间复杂度，但是在一些情况下会有不错的表现。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> findMagicIndex(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (start == end) &#123;</span><br><span class="line">        <span class="keyword">return</span> nums[start] == start ? start : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = start + ((end - start) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> index = findMagicIndex(nums, start, mid);</span><br><span class="line">    <span class="keyword">if</span> (index != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> findMagicIndex(nums, mid + <span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：最坏情况下会达到 O(n) 的时间复杂度，其中 n 为数组的长度。</li>
+<li>空间复杂度：递归函数的空间取决于调用的栈深度，而最坏情况下我们会递归 n 层，即栈深度为 O(n)，因此空间复杂度最坏情况下为 O(n)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/magic-index-lcci/" title="魔术索引 | 力扣（LeetCode）">魔术索引 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/magic-index-lcci/solution/mo-zhu-suo-yin-by-leetcode-solution/" title="魔术索引 | 题解（LeetCode）">魔术索引 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/04/magic-index-lcci/' title='魔术索引' >魔术索引</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/04/magic-index-lcci/' title='魔术索引' >http://www.cylong.com/blog/2020/08/04/magic-index-lcci/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数组</tag>
+        <tag>递归</tag>
+        <tag>程序员面试金典</tag>
+        <tag>二分查找</tag>
       </tags>
   </entry>
   <entry>
@@ -3658,64 +3649,6 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>魔术索引</title>
-    <url>/blog/2020/08/04/magic-index-lcci/</url>
-    <content><![CDATA[<hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>魔术索引。 在数组 A[0…n-1] 中，有所谓的魔术索引，满足条件 A[i] = i 。给定一个有序整数数组，编写一种方法找出魔术索引，若有的话，在数组 A 中找出一个魔术索引，如果没有，则返回 -1。若有多个魔术索引，返回索引值最小的一个。</p>
-<p><strong>示例1:</strong></p>
-<blockquote>
-<p>输入: nums = [0, 2, 3, 4, 5]<br>输出: 0<br>说明: 0 下标的元素为 0</p>
-</blockquote>
-<p><strong>示例2:</strong></p>
-<blockquote>
-<p>输入: nums = [1, 1, 1]<br>输出: 1</p>
-</blockquote>
-<p><strong>说明:</strong></p>
-<blockquote>
-<p>nums 长度在 [1, 1000000] 之间</p>
-</blockquote>
-<a id="more"></a>
-
-<h1 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h1><p>最简单的方法，我们只要从头遍历整个数组，找到最小的 A[i] = i 返回即可。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] == i) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：O(n)，其中 n 为数组的长度。</li>
-<li>空间复杂度：O(1)。</li>
-</ul>
-<h1 id="二分查找剪枝"><a href="#二分查找剪枝" class="headerlink" title="二分查找剪枝"></a>二分查找剪枝</h1><p>本方法我们是进行一定程度的优化，在一些情况下会达到较优的时间复杂度，在最差情况下仍会退化成线性的时间复杂度。现在我们假设，题目中的魔术索引仅有一个，我们假设这个答案为 i，那么意味着 [0…i−1] 的值均小于自身的下标，[i+1…n−1] 的值均大于自身的下标【不理解的同学用反证法即可证明】。那么我们只要使用二分法查找数组中的元素，在 O(log n) 的时间内找到答案 A[i] = i 所在的下标。但是题目中魔术索引可能有多个，我们就需要对二分查找做一些处理。针对二分查找做一下剪枝，策略如下：</p>
-<ul>
-<li>每次我们选择数组中间的元素，如果当前中间元素左半部分有满足条件的答案，那么这个位置往后的右半边元素我们都不再考虑，只要寻找左半部分满足条件的答案即可。</li>
-<li>接下来我们继续查看左半部分是否有满足条件的答案，否则如果没有的话我们仍然需要在右半边寻找，使用的策略同上。</li>
-</ul>
-<p>显然，此剪枝策略在 [−1, 0, 1, 2, 4] 这种答案为数组的最后一个元素的情况下会退化成线性的时间复杂度，但是在一些情况下会有不错的表现。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> findMagicIndex(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMagicIndex</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (start == end) &#123;</span><br><span class="line">        <span class="keyword">return</span> nums[start] == start ? start : -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = start + ((end - start) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> index = findMagicIndex(nums, start, mid);</span><br><span class="line">    <span class="keyword">if</span> (index != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> findMagicIndex(nums, mid + <span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
-<li>时间复杂度：最坏情况下会达到 O(n) 的时间复杂度，其中 n 为数组的长度。</li>
-<li>空间复杂度：递归函数的空间取决于调用的栈深度，而最坏情况下我们会递归 n 层，即栈深度为 O(n)，因此空间复杂度最坏情况下为 O(n)。</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/magic-index-lcci/" title="魔术索引 | 力扣（LeetCode）">魔术索引 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/magic-index-lcci/solution/mo-zhu-suo-yin-by-leetcode-solution/" title="魔术索引 | 题解（LeetCode）">魔术索引 | 题解（LeetCode）</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/04/magic-index-lcci/' title='魔术索引' >魔术索引</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/04/magic-index-lcci/' title='魔术索引' >http://www.cylong.com/blog/2020/08/04/magic-index-lcci/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>leetcode</tag>
-        <tag>学习笔记</tag>
-        <tag>数组</tag>
-        <tag>递归</tag>
-        <tag>二分查找</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计数二进制子串</title>
     <url>/blog/2020/08/10/count-binary-substrings/</url>
     <content><![CDATA[<hr>
@@ -3761,6 +3694,80 @@ f1g1ns2.dnspod.net</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Hexo 博客和 NexT 主题版本升级</title>
+    <url>/blog/2020/08/10/update-hexo-next/</url>
+    <content><![CDATA[<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用 <a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a> 搭建博客也有4年之久，也是一直使用 <a href="http://theme-next.iissnan.com/" title="Next">NexT</a> 主题，NexT 的简洁大方美观，特别符合我的审美。最近 Hexo 更新到 5.0.0 版本了，也是临时起意，想要更新下 Hexo 的版本，同时也一起更新下 NexT 主题，毕竟从4年前开始使用后，就再也没有升级过这两个的版本了。经常看到很多的同学都升级到新版本的 NexT 主题，界面展示和功能都有较大提升。NexT 主题不仅由之前的 5.1.x 更新至 7.x，主仓库也从 <a href="https://github.com/iissnan/hexo-theme-next" title="iissnan">iissnan</a> 名下迁移至 <a href="https://github.com/theme-next" title="theme-next">theme-next</a> 组织。</p>
+<a id="more"></a>
+
+<h1 id="Hexo-搭建个人博客"><a href="#Hexo-搭建个人博客" class="headerlink" title="Hexo 搭建个人博客"></a>Hexo 搭建个人博客</h1><p>在这里可能有些小伙伴是第一次接触 Hexo 和 NexT，先给大家一些参考文档，助力大家搭建一个属于自己的博客。</p>
+<blockquote>
+<p><a href="/blog/2016/04/19/hexo-git/" title="Hexo + Git 搭建免费的个人博客 | 笑话人生">Hexo + Git 搭建免费的个人博客 | 笑话人生</a><br><a href="/categories/Hexo/" title="分类：Hexo | 笑话人生">分类：Hexo | 笑话人生</a></p>
+</blockquote>
+<h1 id="升级-Hexo"><a href="#升级-Hexo" class="headerlink" title="升级 Hexo"></a>升级 Hexo</h1><p>Hexo 版本升级可以通过 npm 实现，相关命令如下：</p>
+<ol>
+<li><p>全局升级 hexo-cli</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check</span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级系统中的插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade</span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新全局包</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新生产环境依赖包</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看 Hexo 版本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo v</span><br><span class="line">hexo: 5.0.2 # 升级到 5.0.2版本</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Windows_NT 10.0.18362 win32 x64</span><br><span class="line">node: 14.7.0</span><br><span class="line">v8: 8.4.371.19-node.12</span><br><span class="line">uv: 1.38.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 83</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2020a</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看 package.json</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;5.0.2&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^5.0.2&quot;,</span><br><span class="line">    &quot;hexo-admin&quot;: &quot;^2.3.0&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^2.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.9&quot;,</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-searchdb&quot;: &quot;^1.3.2&quot;,</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^2.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^1.1.0&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^2.0.0&quot;,</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;,</span><br><span class="line">    &quot;particles.js&quot;: &quot;^2.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="升级-NexT"><a href="#升级-NexT" class="headerlink" title="升级 NexT"></a>升级 NexT</h1><p>NexT 主题升级从 v5 升级到 v7，跨度很大，但是官方提供了升级指导：<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md" title="从 NexT v5.1.x 更新">从 NexT v5.1.x 更新</a>，这里我把我的升级过程分享给大家，也是自己摸索的一种比较方便的升级方式，同时也方便后面继续进行升级。</p>
+<ol>
+<li><p>克隆新的仓库到任一异于 next 的目录（如 next-reloaded）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;cylong1016&#x2F;hexo-theme-next themes&#x2F;next-reloaded</span><br></pre></td></tr></table></figure>
+<p>如此，你可以在不修改原有的 NexT v5.1.x 目录的同时使用 next-reloaded 目录中的新版本主题。这里，我是 Fork 了主仓库 theme-next/hexo-theme-next ，方便自己后续进行定制化修改，需要更新的时候，直接从主仓库拉取最新代码即可。</p>
+</li>
+<li><p>在 Hexo 的主配置文件中设置主题：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next-reloaded</span><br></pre></td></tr></table></figure>
+<p>如此，你的 next-reloaded 主题将在生成站点时被加载。如果你遇到了任何错误、或只是不喜欢这一新版本，你可以随时切换回旧的 v5.1.x 版本。</p>
+</li>
+<li><p>更新语言配置<br>从 v6.0.3 版本起，zh-Hans 改名为 zh-CN：<a href="https://github.com/theme-next/hexo-theme-next/releases/tag/v6.0.3">https://github.com/theme-next/hexo-theme-next/releases/tag/v6.0.3</a><br>升级到 v6.0.3 及以后版本的用户，需要显式修改 Hexo 主配置文件 _config.yml 里的 language 配置，否则语言显示不正确。</p>
+</li>
+<li><p>修改主题的 _config.yml 文件<br>这里，我们不直接修改主题的_config.yml 文件，因为这样操作，后续 <code>git pull</code> 更新的时候，需要解决冲突问题，即使是手动下载 release 版本，也要手动合并 _config.yml 文件。所以我们选择 NexT 提供的方式2，创建自己单独的 next.yml 进行配置：</p>
+<blockquote>
+<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/DATA-FILES.md" title="数据文件">数据文件</a></p>
+</blockquote>
+</li>
+<li><p>我大概花了几个小时时间将之前全部的配置搞定了，大家可以参考：</p>
+<blockquote>
+<p><a href="https://github.com/cylong1016/HexoBlog/blob/master/source/_data/next.yml">https://github.com/cylong1016/HexoBlog/blob/master/source/_data/next.yml</a></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>至此花了半天时间，把 Hexo 和 NexT 主题全部升级完成，主要还是刚开始用的时候不太熟悉，后续也过了4年都没更新，所以这次花了比较多的时间，相信后面熟悉后，紧随版本，更新就会很快了。</p>
+<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p><a href="https://www.tanxiaoyao.com/post/59005" title="升级博客Hexo版本和Next主题版本踩坑记录 | 叹逍遥的博客">升级博客Hexo版本和Next主题版本踩坑记录 | 叹逍遥的博客</a><br><a href="https://blog.csdn.net/whjkm/article/details/81088518" title="Hexo版本升级和Next主题升级之坑 | HJ_彼岸">Hexo版本升级和Next主题升级之坑 | HJ_彼岸</a><br><a href="https://blog.tangbao.me/2019/08/update-hexo-next-and-add-comment-and-view-number/" title="升级Hexo及NexT主题及添加评论和阅读数 | tangbao&#39;s Blog">升级Hexo及NexT主题及添加评论和阅读数 | tangbao’s Blog</a></p>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo 博客和 NexT 主题版本升级' >Hexo 博客和 NexT 主题版本升级</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/10/update-hexo-next/' title='Hexo 博客和 NexT 主题版本升级' >http://www.cylong.com/blog/2020/08/10/update-hexo-next/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>被围绕的区域</title>
     <url>/blog/2020/08/11/surrounded-regions/</url>
     <content><![CDATA[<hr>
@@ -3798,9 +3805,9 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>学习笔记</tag>
         <tag>递归</tag>
         <tag>回溯算法</tag>
+        <tag>矩阵</tag>
         <tag>深度优先搜索</tag>
         <tag>广度优先搜索</tag>
-        <tag>矩阵</tag>
       </tags>
   </entry>
   <entry>
