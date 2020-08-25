@@ -3310,13 +3310,13 @@ f1g1ns2.dnspod.net</code></pre>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入:</span><br><span class="line"></span><br><span class="line">[[&#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;],</span><br><span class="line"> [&#39;E&#39;, &#39;E&#39;, &#39;M&#39;, &#39;E&#39;, &#39;E&#39;],</span><br><span class="line"> [&#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;],</span><br><span class="line"> [&#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;, &#39;E&#39;]]</span><br><span class="line"></span><br><span class="line">Click : [3,0]</span><br><span class="line"></span><br><span class="line">输出:</span><br><span class="line"></span><br><span class="line">[[&#39;B&#39;, &#39;1&#39;, &#39;E&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;M&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;1&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;]]</span><br></pre></td></tr></table></figure>
 
 <p><strong>解释:</strong></p>
-<img src="/blog/2020/07/28/minesweeper/minesweeper_example_1.png" class="" title="示例1]">
+<img src="/blog/2020/07/28/minesweeper/minesweeper_example_1.png" class="" title="示例1">
 
 <p><strong>示例 2：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入:</span><br><span class="line"></span><br><span class="line">[[&#39;B&#39;, &#39;1&#39;, &#39;E&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;M&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;1&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;]]</span><br><span class="line"></span><br><span class="line">Click : [1,2]</span><br><span class="line"></span><br><span class="line">输出:</span><br><span class="line"></span><br><span class="line">[[&#39;B&#39;, &#39;1&#39;, &#39;E&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;X&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;1&#39;, &#39;1&#39;, &#39;1&#39;, &#39;B&#39;],</span><br><span class="line"> [&#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;, &#39;B&#39;]]</span><br></pre></td></tr></table></figure>
 
 <p><strong>解释:</strong></p>
-<img src="/blog/2020/07/28/minesweeper/minesweeper_example_2.png" class="" title="示例2]">
+<img src="/blog/2020/07/28/minesweeper/minesweeper_example_2.png" class="" title="示例2">
 
 <p><strong>注意：</strong></p>
 <ol>
@@ -3497,7 +3497,7 @@ f1g1ns2.dnspod.net</code></pre>
 <a id="more"></a>
 
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们只需要对两个大整数模拟「竖式加法」的过程。竖式加法就是我们平常学习生活中常用地对两个整数相加的方法，回想一下我们在纸上对两个整数相加的操作，是不是如下图将相同数位对齐，从低到高逐位相加，如果当前位和超过 10，则向高位进一位？因此我们只要将这个过程用代码写出来即可。我们使用两个变量分别指向两个数的末尾，进行加法操作，同时使用 carry 保存进位，若两个字符串不一样长，我们两个字符串遍历完成后，要继续遍历未计算的字符串，最后，别忘了，如果进位是 1 的话，要把进位加到最终的结果中。</p>
-<img src="/blog/2020/08/03/add-strings/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0.png" class="" title="字符串相加]">
+<img src="/blog/2020/08/03/add-strings/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0.png" class="" title="字符串相加">
 
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">addStrings</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index1 = num1.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> index2 = num2.length() - <span class="number">1</span>;</span><br><span class="line">    StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;=<span class="number">0</span> &amp;&amp; index2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n1 = num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">int</span> n2 = num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(n1, n2, carry, res);</span><br><span class="line">        index1--;</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n1 = num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(n1, <span class="number">0</span>, carry, res);</span><br><span class="line">        index1--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (index2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> n2 = num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        carry = addNum(<span class="number">0</span>, n2, carry, res);</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res.append(carry);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.reverse().toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addNum</span><span class="params">(<span class="keyword">int</span> n1, <span class="keyword">int</span> n2, <span class="keyword">int</span> carry, StringBuilder res)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = n1 + n2 + carry;</span><br><span class="line">    res.append(sum % <span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> sum / <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -3826,7 +3826,7 @@ f1g1ns2.dnspod.net</code></pre>
 <a id="more"></a>
 
 <h1 id="竖式乘法"><a href="#竖式乘法" class="headerlink" title="竖式乘法"></a>竖式乘法</h1><p>第一种方式比较简单，我们只要回想起我们平时计算乘法的方法。如果 num1 和 num2 之一是 0，则直接返回 0 即可。如果 num1 和 num2 都不是 0，则可以通过模拟「竖式乘法」的方法计算乘积。从右往左遍历乘数，将乘数的每一位与被乘数相乘得到对应的结果，再将每次得到的结果累加。需要注意的是，num2 除了最低位以外，其余的每一位的运算结果都需要补 0。</p>
-<img src="/blog/2020/08/13/multiply-strings/%E5%81%9A%E5%8A%A0%E6%B3%95.png" class="" title="做加法]">
+<img src="/blog/2020/08/13/multiply-strings/%E5%81%9A%E5%8A%A0%E6%B3%95.png" class="" title="做加法">
 
 <p>关于字符串相加的代码，可以参考：<a href="/blog/2020/08/03/add-strings/" title="字符串相加 | 笑话人生">字符串相加 | 笑话人生</a></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">multiply</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&quot;0&quot;</span>.equals(num1) || <span class="string">&quot;0&quot;</span>.equals(num2)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String result = <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = num2.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">int</span> n1 = num2.charAt(i) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        StringBuilder tmpResult = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = num2.length() - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">            tmpResult.append(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = num1.length() - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">int</span> n2 = num1.charAt(j) - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            <span class="keyword">int</span> tmp = n1 * n2 + carry;</span><br><span class="line">            carry = tmp / <span class="number">10</span>;</span><br><span class="line">            tmpResult.append(tmp % <span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            tmpResult.append(carry);</span><br><span class="line">        &#125;</span><br><span class="line">        result = addString(result, tmpResult.reverse().toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">addString</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index1 = num1.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> index2 = num2.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">    StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">while</span> (index1 &gt;= <span class="number">0</span> || index2 &gt;= <span class="number">0</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> x = index1 &gt;= <span class="number">0</span> ? num1.charAt(index1) - <span class="string">&#x27;0&#x27;</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> y = index2 &gt;= <span class="number">0</span> ? num2.charAt(index2) - <span class="string">&#x27;0&#x27;</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = x + y + carry;</span><br><span class="line">        res.append(sum % <span class="number">10</span>);</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        index1--;</span><br><span class="line">        index2--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res.reverse().toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3869,7 +3869,7 @@ f1g1ns2.dnspod.net</code></pre>
     <content><![CDATA[<hr>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个由一些闭区间组成的列表，每个区间列表都是成对不相交的，并且已经排序。返回这两个区间列表的交集。<br>（形式上，闭区间 [a, b]（其中 <code>a &lt;= b</code>）表示实数 x 的集合，而 <code>a &lt;= x &lt;= b</code>。两个闭区间的交集是一组实数，要么为空集，要么为闭区间。例如，[1, 3] 和 [2, 4] 的交集为 [2, 3]。）</p>
 <p><strong>示例：</strong></p>
-<img src="/blog/2020/08/15/interval-list-intersections/%E9%97%AD%E5%8C%BA%E9%97%B4%E5%88%97%E8%A1%A8.png" class="" title="闭区间列表]">
+<img src="/blog/2020/08/15/interval-list-intersections/%E9%97%AD%E5%8C%BA%E9%97%B4%E5%88%97%E8%A1%A8.png" class="" title="闭区间列表">
 
 <blockquote>
 <p>输入：A = [[0, 2], [5, 10], [13, 23], [24, 25]], B = [[1, 5], [8, 12], [15, 24], [25, 26]]<br>输出：[[1, 2], [5, 5], [8, 10], [15, 23], [24, 24], [25, 25]]</p>
@@ -3963,6 +3963,63 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>树</tag>
         <tag>二叉树</tag>
         <tag>深度优先搜索</tag>
+        <tag>平衡二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将二叉搜索树变平衡</title>
+    <url>/blog/2020/08/20/balance-a-binary-search-tree/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一棵二叉搜索树，请你返回一棵平衡后的二叉搜索树，新生成的树应该与原来的树有着相同的节点值。如果一棵二叉搜索树中，每个节点的两棵子树高度差不超过 1 ，我们就称这棵二叉搜索树是平衡的。如果有多种构造方法，请你返回任意一种。</p>
+<p><strong>示例：</strong></p>
+<img src="/blog/2020/08/20/balance-a-binary-search-tree/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.png" class="" title="二叉搜索树">
+<img src="/blog/2020/08/20/balance-a-binary-search-tree/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.png" class="" title="平衡二叉搜索树">
+
+<blockquote>
+<p>输入：root = [1, null, 2, null, 3, null, 4, null, null]<br>输出：[2, 1, 3, null, null, null, 4]<br>解释：这不是唯一的正确答案，[3, 1, 4, null, 2, null, null] 也是一个可行的构造方案。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ol>
+<li>树节点的数目在 1 到 10^4 之间。</li>
+<li>树节点的值互不相同，且在 1 到 10^5 之间。</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>「平衡」要求它是一棵空树或它的左右两个子树的高度差的绝对值不超过 1，这很容易让我们产生这样的想法——左右子树的大小越「平均」，这棵树会不会越平衡？于是一种贪心策略就形成了：我们可以通过中序遍历将原来的二叉搜索树转化为一个有序序列，然后对这个有序序列递归建树，对于区间 [L, R]：</p>
+<ul>
+<li>取 <code>mid = (L + R) / 2</code>，即中心位置做为当前节点的值。</li>
+<li>如果 <code>L ≤ mid − 1</code>，那么递归地将区间 <code>[L, mid − 1]</code> 作为当前节点的左子树。</li>
+<li>如果 <code>mid + 1 ≤ R</code>，那么递归地将区间 <code>[mid + 1, R]</code> 作为当前节点的右子树。</li>
+</ul>
+<p>经过证明此方法是可行的，关于证明方式在此不做赘述，想要了解的同学可以参考下面官方的题解。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;Integer&gt; treeValList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">balanceBST</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    dfsGetTreeValList(root);</span><br><span class="line">    <span class="keyword">return</span> buildBalanceBST(<span class="number">0</span>, treeValList.size() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">buildBalanceBST</span><span class="params">(<span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mid = right - ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">    TreeNode node = <span class="keyword">new</span> TreeNode(treeValList.get(mid));</span><br><span class="line">    node.left = left &lt; mid ? buildBalanceBST(left, mid - <span class="number">1</span>) : <span class="keyword">null</span>;</span><br><span class="line">    node.right = mid &lt; right ? buildBalanceBST(mid + <span class="number">1</span>, right) : <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfsGetTreeValList</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    dfsGetTreeValList(node.left);</span><br><span class="line">    treeValList.add(node.val);</span><br><span class="line">    dfsGetTreeValList(node.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">        val = x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n)，获得中序遍历的时间代价是 O(n)；建立平衡二叉树的时建立每个点的时间代价为 O(1)，总时间也是 O(n)。故渐进时间复杂度为 O(n)。</li>
+<li>空间复杂度：O(n)，这里使用了一个数组作为辅助空间，存放中序遍历后的有序序列，故渐进空间复杂度为 O(n)。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/balance-a-binary-search-tree/" title="将二叉搜索树变平衡 | 力扣（LeetCode）">将二叉搜索树变平衡 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/balance-a-binary-search-tree/solution/jiang-er-cha-sou-suo-shu-bian-ping-heng-by-leetcod/" title="将二叉搜索树变平衡 | 题解（LeetCode）">将二叉搜索树变平衡 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/20/balance-a-binary-search-tree/' title='将二叉搜索树变平衡' >将二叉搜索树变平衡</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/20/balance-a-binary-search-tree/' title='将二叉搜索树变平衡' >http://www.cylong.com/blog/2020/08/20/balance-a-binary-search-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>贪心算法</tag>
+        <tag>递归</tag>
+        <tag>树</tag>
+        <tag>二叉树</tag>
+        <tag>深度优先搜索</tag>
+        <tag>中序遍历</tag>
+        <tag>二叉搜索树</tag>
         <tag>平衡二叉树</tag>
       </tags>
   </entry>
