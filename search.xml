@@ -3922,7 +3922,7 @@ f1g1ns2.dnspod.net</code></pre>
   </entry>
   <entry>
     <title>平衡二叉树</title>
-    <url>/blog/2020/08/25/balanced-binary-tree/</url>
+    <url>/blog/2020/08/17/balanced-binary-tree/</url>
     <content><![CDATA[<hr>
 <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树，判断它是否是高度平衡的二叉树。本题中，一棵高度平衡二叉树定义为：一个二叉树每个节点的左右两个子树的高度差的绝对值不超过1。</p>
 <p><strong>示例 1:</strong></p>
@@ -3949,7 +3949,7 @@ f1g1ns2.dnspod.net</code></pre>
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/25/balanced-binary-tree/' title='平衡二叉树' >平衡二叉树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/25/balanced-binary-tree/' title='平衡二叉树' >http://www.cylong.com/blog/2020/08/25/balanced-binary-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/17/balanced-binary-tree/' title='平衡二叉树' >平衡二叉树</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/17/balanced-binary-tree/' title='平衡二叉树' >http://www.cylong.com/blog/2020/08/17/balanced-binary-tree/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 ]]></content>
       <categories>
