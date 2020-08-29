@@ -322,7 +322,8 @@
 </li>
 </ol>
 <h1 id="首页文章显示查看原文按钮"><a href="#首页文章显示查看原文按钮" class="headerlink" title="首页文章显示查看原文按钮"></a>首页文章显示查看原文按钮</h1><p>我们常常想在首页只显示文章的概述，而不是文章的全部，用一个 <code>阅读全文</code> 的字样代替，要怎么做呢？如下图：</p>
-<p><img src="%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png" alt="阅读全文样例"></p>
+<img src="/blog/2016/04/25/hexo-faq/%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87.png" class="" title="阅读全文">
+
 <p>在文章中只要写成如下格式即可：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是摘要</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">这是全文</span><br></pre></td></tr></table></figure>
 
@@ -340,7 +341,9 @@
 
 <h1 id="配置-SSH-公钥免去部署的时候输入密码"><a href="#配置-SSH-公钥免去部署的时候输入密码" class="headerlink" title="配置 SSH 公钥免去部署的时候输入密码"></a>配置 SSH 公钥免去部署的时候输入密码</h1><figure class="highlight sh"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo:</span><br><span class="line">    github: git@github.com:cylong1016/cylong1016.github.io.git <span class="comment"># Github SSH</span></span><br><span class="line">    <span class="comment"># github: https://github.com/cylong1016/cylong1016.github.io.git # Github HTTPS</span></span><br><span class="line">    coding: git@git.coding.net:cylong1016/cylong1016.git <span class="comment"># Coding SSH</span></span><br><span class="line">    <span class="comment"># coding: https://git.coding.net/cylong1016/cylong1016.git # Coding HTTPS</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<p>上面的代码是 _config.yml 中部署的代码，分别是部署到 Github 和 Coding 上的两种方式，使用 HTTPS 方式的话每次部署都需要输入用户名和密码，很麻烦。<br><img src="OpenSSH.png" alt="OpenSSH"><br>所以我选择使用 SSH 的方式，此方式是本机与远程仓库建立对接，这样部署的时候就不需要输入用户名和密码了。但是需要以下的配置：</p>
+<p>上面的代码是 _config.yml 中部署的代码，分别是部署到 Github 和 Coding 上的两种方式，使用 HTTPS 方式的话每次部署都需要输入用户名和密码，很麻烦。</p>
+<img src="/blog/2016/04/25/hexo-faq/OpenSSH.png" class="" title="OpenSSH">
+<p>所以我选择使用 SSH 的方式，此方式是本机与远程仓库建立对接，这样部署的时候就不需要输入用户名和密码了。但是需要以下的配置：</p>
 <p>打开终端或者 Git Bash，依次输入：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.ssh    <span class="comment"># 如果之前没有这个文件夹就创建此文件夹</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh       <span class="comment"># 进入到 .ssh 文件夹中</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;youremail@example.com&quot;</span>    <span class="comment"># 生成密钥</span></span><br><span class="line"><span class="comment"># 接着会提示输入 file 和 passphrase，直接回车就行。</span></span><br><span class="line"><span class="comment"># 接着会看到下面的输出：</span></span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /home/cylong/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /home/cylong/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">fd:56:db:23:db:bf:df:54:0a:6a:43:51:13:34:22:b6 youremail@example.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接着输入</span></span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
 <p>然后打开 <a target="_blank" rel="noopener" href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>【Github】，点击 <code>New SSH key</code>，复制 <code>id_rsa.pub</code> 中的所有内容到 Key 框中，在 Title 框中输入方便自己记忆的名字【比如我的是 Personal Ubuntu】。<a target="_blank" rel="noopener" href="https://coding.net/user/account/setting/keys">https://coding.net/user/account/setting/keys</a>【Coding】也一样，但是需要注意的是注册邮箱要一样，否则要两个 SSH。最后输入 <code>ssh -T git@github.com</code> 和 <code>ssh -T git@git.coding.net</code> 测试是否配置成功。</p>
@@ -554,7 +557,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">89</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

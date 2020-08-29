@@ -307,9 +307,11 @@
 <a id="more"></a>
 
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>让我们从最简单的情况下思考，当队列中所有人的 (h, k) 都是相同的高度 h，只有 k 不同时，解决方案很简单：每个人在队列的索引 index = k。</p>
-<p><img src="%E6%89%80%E6%9C%89%E4%BA%BA%E7%AD%89%E9%AB%98.jpg" alt="所有人等高"></p>
+<img src="/blog/2020/04/09/queue-reconstruction-by-height/%E6%89%80%E6%9C%89%E4%BA%BA%E7%AD%89%E9%AB%98.jpg" class="" title="所有人等高的情况">
+
 <p>即使不是所有人都是同一高度，这个策略也是可行的。因为个子矮的人相对于个子高的人是 “看不见” 的，所以可以先安排个子高的人。下图中我们先安排身高为 7 的人，将它放置在与 k 值相等的索引上；再安排身高为 6 的人，同样的将它放置在与 k 值相等的索引上。</p>
-<p><img src="%E4%B8%8D%E7%AD%89%E9%AB%98.jpg" alt="不等高"></p>
+<img src="/blog/2020/04/09/queue-reconstruction-by-height/%E4%B8%8D%E7%AD%89%E9%AB%98.jpg" class="" title="不等高的情况">
+
 <p>该策略可以递归进行：</p>
 <ul>
 <li>将最高的人按照 k 值升序排序，然后将它们放置到输出队列中与 k 值相等的索引位置上。</li>
@@ -474,7 +476,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">89</span>
+        <span class="site-state-item-count">90</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
