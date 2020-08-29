@@ -4030,4 +4030,260 @@ f1g1ns2.dnspod.net</code></pre>
         <tag>平衡二叉树</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数字范围按位与</title>
+    <url>/blog/2020/08/26/bitwise-and-of-numbers-range/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定范围 [m, n]，其中 0 &lt;= m &lt;= n &lt;= 2147483647，返回此范围内所有数字的按位与（包含 m, n 两端点）。</p>
+<p><strong>示例 1:</strong> </p>
+<blockquote>
+<p>输入: [5, 7]<br>输出: 4</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入: [0, 1]<br>输出: 0</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>我们观察按位与运算的性质。对于一系列的位，例如 [1, 1, 0, 1, 1]，只要有一个零的位，那么这一系列位的按位与运算结果都将为零。对于此题，我们将一系列数字变成二进制展示，如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">-</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p>上面表格中，我将[0, 16] 全部展开成8进制展示，上图中，我们任意取出一个范围，比如[9, 12]，我们可以发现，对所有数字执行按位与运算的结果是所有对应二进制字符串的公共前缀再用零补上后面的剩余位。那么这个规律是否正确呢？我们可以进行简单的证明。假设对于所有这些二进制串，前 i 位均相同，第 i + 1 位开始不同，由于 [m, n] 连续，所以第 i + 1 位在 [m, n] 的数字范围从小到大列举出来一定是前面全部是 0，后面全部是 1，在上图中对应 [9, 11] 均为 0，[12, 12] 均为 1。并且一定存在连续的两个数 x 和 x + 1，满足 x 的第 i + 1 位为 0，后面全为 1，x + 1 的第 i + 1 位为 1，后面全为 0，对应上图中的例子即为 11 和 12。这种形如 0111… 和 1000… 的二进制串的按位与的结果一定为 0000…，因此第 i + 1 位开始的剩余位均为 0，前 i 位由于均相同，因此按位与结果不变。最后的答案即为二进制字符串的公共前缀再用零补上后面的剩余位。</p>
+<p>进一步来说，所有这些二进制字符串的公共前缀也即指定范围的起始和结束数字 m 和 n 的公共前缀（即在上面的示例中分别为 9 和 12）。因此，最终我们可以将问题重新表述为：给定两个整数，我们要找到它们对应的二进制字符串的公共前缀。</p>
+<h1 id="位移操作"><a href="#位移操作" class="headerlink" title="位移操作"></a>位移操作</h1><p>我们的想法是将两个数字不断向右移动，直到数字相等，即数字被缩减为它们的公共前缀。计算移动的次数，然后，通过将公共前缀向左移动相同次数，将零添加到公共前缀的右边以获得最终结果。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rangeBitwiseAnd</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (m != n) &#123;</span><br><span class="line">        m = m &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> m &lt;&lt; count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(logn)。算法的时间复杂度取决于 m 和 n 的二进制位数，由于 m ≤ n，因此时间复杂度取决于 n 的二进制位数。</li>
+<li>空间复杂度：O(1)。我们只需要常数空间存放若干变量。</li>
+</ul>
+<h1 id="Brian-Kernighan-算法"><a href="#Brian-Kernighan-算法" class="headerlink" title="Brian Kernighan 算法"></a>Brian Kernighan 算法</h1><p>还有一个位移相关的算法叫做「Brian Kernighan 算法」，它用于清除二进制串中最右边的 1。Brian Kernighan 算法的关键在于我们每次对 n 和 n − 1 之间进行按位与运算后，n 中最右边的 1 会被抹去变成 0。</p>
+<img src="/blog/2020/08/26/bitwise-and-of-numbers-range/BK%E7%AE%97%E6%B3%95.png" class="" title="BK算法">
+
+<p>基于上述技巧，我们可以用它来计算两个二进制字符串的公共前缀。其思想是，对于给定的范围 [m, n]（m &lt; n），我们可以对数字 n 迭代地应用上述技巧，清除最右边的 1，直到它小于或等于 m，此时非公共前缀部分的 1 均被消去。因此最后我们返回 n 即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rangeBitwiseAnd</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (m &lt; n) &#123;</span><br><span class="line">        n = n &amp; (n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(logn)。和位移方法类似，算法的时间复杂度取决于 m 和 n 二进制展开的位数。尽管和位移方法具有相同的渐近复杂度，但 Brian Kernighan 的算法需要的迭代次数会更少，因为它跳过了两个数字之间的所有零位。</li>
+<li>空间复杂度：O(1)。我们只需要常数空间存放若干变量。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/" title="数字范围按位与 | 力扣（LeetCode）">数字范围按位与 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/solution/shu-zi-fan-wei-an-wei-yu-by-leetcode-solution/" title="数字范围按位与 | 题解（LeetCode）">数字范围按位与 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/26/bitwise-and-of-numbers-range/' title='数字范围按位与' >数字范围按位与</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/26/bitwise-and-of-numbers-range/' title='数字范围按位与' >http://www.cylong.com/blog/2020/08/26/bitwise-and-of-numbers-range/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数学</tag>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
 </search>
