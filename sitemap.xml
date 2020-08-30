@@ -613,6 +613,20 @@
   </url>
   
   <url>
+    <loc>http://www.cylong.com/tags/node-js/</loc>
+    <lastmod>2020-08-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/next/</loc>
+    <lastmod>2020-08-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.cylong.com/tags/%E8%89%BE%E5%BC%97%E6%A3%AE/</loc>
     <lastmod>2020-08-30</lastmod>
     <changefreq>daily</changefreq>
@@ -635,20 +649,6 @@
   
   <url>
     <loc>http://www.cylong.com/tags/%E6%B5%81%E5%B9%B4/</loc>
-    <lastmod>2020-08-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/tags/node-js/</loc>
-    <lastmod>2020-08-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/tags/next/</loc>
     <lastmod>2020-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -872,13 +872,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/disqus/</loc>
-    <lastmod>2020-08-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/tags/dom/</loc>
     <lastmod>2020-08-30</lastmod>
     <changefreq>daily</changefreq>
@@ -887,6 +880,13 @@
   
   <url>
     <loc>http://www.cylong.com/tags/xml/</loc>
+    <lastmod>2020-08-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/disqus/</loc>
     <lastmod>2020-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
