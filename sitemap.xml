@@ -620,20 +620,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/node-js/</loc>
-    <lastmod>2020-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.cylong.com/tags/next/</loc>
-    <lastmod>2020-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/tags/%E8%89%BE%E5%BC%97%E6%A3%AE/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
@@ -656,6 +642,20 @@
   
   <url>
     <loc>http://www.cylong.com/tags/%E6%B5%81%E5%B9%B4/</loc>
+    <lastmod>2020-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/node-js/</loc>
+    <lastmod>2020-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/next/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -753,13 +753,6 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/tags/gitignore/</loc>
-    <lastmod>2020-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.cylong.com/tags/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
@@ -768,6 +761,13 @@
   
   <url>
     <loc>http://www.cylong.com/tags/search/</loc>
+    <lastmod>2020-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.cylong.com/tags/gitignore/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1287,14 +1287,14 @@
   </url>
   
   <url>
-    <loc>http://www.cylong.com/categories/Git/</loc>
+    <loc>http://www.cylong.com/categories/Search/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.cylong.com/categories/Search/</loc>
+    <loc>http://www.cylong.com/categories/Git/</loc>
     <lastmod>2020-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
