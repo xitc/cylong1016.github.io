@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/</loc>
+    <lastmod>2020-09-04</lastmod>
+  </url>
+  <url>
     <loc>http://www.cylong.com/blog/2020/09/02/binary-tree-traverse/</loc>
     <lastmod>2020-09-02</lastmod>
   </url>
@@ -259,10 +263,6 @@
   <url>
     <loc>http://www.cylong.com/blog/2019/12/30/zigzag-conversion/</loc>
     <lastmod>2019-12-30</lastmod>
-  </url>
-  <url>
-    <loc>http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/</loc>
-    <lastmod>2019-12-20</lastmod>
   </url>
   <url>
     <loc>http://www.cylong.com/blog/2019/11/26/longest-substring-without-repeating-characters/</loc>
