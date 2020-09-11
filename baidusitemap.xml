@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.cylong.com/blog/2016/11/08/three-number/</loc>
+    <lastmod>2020-09-10</lastmod>
+  </url>
+  <url>
     <loc>http://www.cylong.com/blog/2019/12/21/string-to-integer-atoi/</loc>
     <lastmod>2020-09-04</lastmod>
   </url>
@@ -189,10 +193,6 @@
     <lastmod>2020-06-06</lastmod>
   </url>
   <url>
-    <loc>http://www.cylong.com/blog/2016/11/08/three-number/</loc>
-    <lastmod>2020-06-06</lastmod>
-  </url>
-  <url>
     <loc>http://www.cylong.com/blog/2016/06/09/iverson/</loc>
     <lastmod>2020-06-06</lastmod>
   </url>
@@ -279,6 +279,14 @@
   <url>
     <loc>http://www.cylong.com/blog/2019/11/06/two-sum/</loc>
     <lastmod>2019-11-06</lastmod>
+  </url>
+  <url>
+    <loc>http://www.cylong.com/blog/2019/09/10/hashmap/</loc>
+    <lastmod>2019-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.cylong.com/blog/2019/09/10/jstack/</loc>
+    <lastmod>2019-09-10</lastmod>
   </url>
   <url>
     <loc>http://www.cylong.com/blog/2019/04/01/april-fools-day/</loc>

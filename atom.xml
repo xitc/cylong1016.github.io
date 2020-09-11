@@ -43,8 +43,6 @@
     <category term="数据结构与算法" scheme="http://www.cylong.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="算法" scheme="http://www.cylong.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
     <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
     
     <category term="链表" scheme="http://www.cylong.com/tags/%E9%93%BE%E8%A1%A8/"/>
@@ -68,6 +66,8 @@
     <category term="前序遍历" scheme="http://www.cylong.com/tags/%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
     
     <category term="后序遍历" scheme="http://www.cylong.com/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
+    <category term="数据结构与算法" scheme="http://www.cylong.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

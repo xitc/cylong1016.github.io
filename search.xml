@@ -1044,10 +1044,12 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
 </blockquote>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>LeetCode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
+        <tag>C/C++</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4432,7 +4434,6 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
         <category>数据结构与算法</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>leetcode</tag>
         <tag>链表</tag>
         <tag>队列</tag>
@@ -4445,6 +4446,209 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
         <tag>广度优先搜索</tag>
         <tag>前序遍历</tag>
         <tag>后序遍历</tag>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jstack 使用介绍</title>
+    <url>/blog/2019/09/10/jstack/</url>
+    <content><![CDATA[<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在项目中遇到一个问题，我们服务提供给外部的一个接口 queryXXX 一直返回 429 错误（Too Many Requests），接口没有返回值，而且服务越用越卡，要重启一下才能恢复。于是马上就想到是不是因为这个接口产生了死循环，导致接口无法正确返回，同时导致后台 CPU 和内存占用飙升，顺着这个思路定位下去，确实顺利的找到的问题所在。</p>
+<a id="more"></a>
+
+<h1 id="定位思路"><a href="#定位思路" class="headerlink" title="定位思路"></a>定位思路</h1><ol>
+<li>查看服务的后台 CPU 和内存占用，发现服务占用的内存和 CPU 过高。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br><span class="line">free -h</span><br></pre></td></tr></table></figure></li>
+<li>通过 jps/ps/top 命令找到 CPU 和内存占用高的进程 ID 找到，top -H -p PID，找到占用率高的线程ID。</li>
+<li>jstack -l PID &gt; stack.txt</li>
+<li>找到日志里面的线程ID（注意第三步的线程地址是十进制，日志里的是十六进制）对应接口服务，发现 queryXXX 接口的状态一直是 RUNNING 状态，卡死。</li>
+<li>定位后发现代码中使用了流 API 的 parallelStream 导致的问题，原因是 parallelStream 是并行操作，我们这边使用了 HashMap，HashMap 是非线程安全的，并发插入数据在 resize() 方法中产生循环链表导致死循环（JDK8 已经解决），导致 queryXXX 接口的状态一直是 RUNNING，无返回值，CPU和内存飙升。调用服务方在没有接受到返回的时候不断请求这个服务，于是产生了 429 错误。</li>
+<li>我们这边 HashMap 是局部变量，解决方法是将 parallelStream 并行流修改为 stream 串行流。如果此 HashMap 是那种全局变量，涉及并发操作，则可以改成使用 ConcurrentHashMap。</li>
+</ol>
+<p>关于 HashMap 的介绍可以参考：</p>
+<blockquote>
+<p><a href="/blog/2019/09/10/hashmap/" title="浅谈 HashMap | 笑话人生">浅谈 HashMap | 笑话人生</a></p>
+</blockquote>
+<h1 id="使用介绍"><a href="#使用介绍" class="headerlink" title="使用介绍"></a>使用介绍</h1><p>JStack 是 java 自带的工具，在 jdk\bin\jstack.exe 位置。以下是 Windows 的示范，在 Linux 系统上功能更多。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">PS C:\Program Files\Java\jdk-11.0.2\bin&gt; .\jstack</span><br><span class="line">Usage:</span><br><span class="line">    jstack [-l][-e] &lt;pid&gt;</span><br><span class="line">        (to connect to running process)</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">    -l  long listing. Prints additional information about locks</span><br><span class="line">    -e  extended listing. Prints additional information about threads</span><br><span class="line">    -? -h --<span class="built_in">help</span> -<span class="built_in">help</span> to <span class="built_in">print</span> this <span class="built_in">help</span> message</span><br></pre></td></tr></table></figure>
+
+<p>一般常用的是以下的命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jstack -l [PID]</span><br><span class="line">jstack -F [PID]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-l</code> 选项会打印额外的信息，比如说锁信息。</li>
+<li>当进程挂起(hung)时，上面的命令可能没有响应，这时需要使用 <code>-F</code> 参数来强制执行 thread dump。</li>
+</ul>
+<p>接下来我们就可以分析打印的堆栈信息进行分析，比如我上面列举的那个问题：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Section</th>
+<th align="center">Example</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">线程名字</td>
+<td align="center">main 和 Reference Handler</td>
+<td>可读的线程名字，这个名字可以通过 Thread 方法 setName 设定</td>
+</tr>
+<tr>
+<td align="center">线程 ID</td>
+<td align="center">#1</td>
+<td>每一个 Thread 对象的唯一 ID，这个 ID 是自动生成的，从 1 开始，通过 getId 方法获得</td>
+</tr>
+<tr>
+<td align="center">是否守护线程</td>
+<td align="center">daemon</td>
+<td>这个标签用来标记线程是否是守护线程，如果是会有标记，如果不是这没有</td>
+</tr>
+<tr>
+<td align="center">优先级</td>
+<td align="center">prio=10</td>
+<td>Java 线程的优先级，可以通过 setPriority 方法设置</td>
+</tr>
+<tr>
+<td align="center">OS 线程的优先级</td>
+<td align="center">os_prio</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">CPU 时间</td>
+<td align="center">cpu=94.43ms</td>
+<td>线程获得 CPU 的时间</td>
+</tr>
+<tr>
+<td align="center">elapsed</td>
+<td align="center">elapsed=509136.51s</td>
+<td>线程启动后经过的 wall clock time</td>
+</tr>
+<tr>
+<td align="center">Address</td>
+<td align="center">tid</td>
+<td>Java 线程的地址，这个地址表示的是 JNI native Thread Object 的指针地址</td>
+</tr>
+<tr>
+<td align="center">OS 线程 ID</td>
+<td align="center">nid</td>
+<td>The unique ID of the OS thread to which the Java Thread is mapped</td>
+</tr>
+<tr>
+<td align="center">线程状态</td>
+<td align="center">Running</td>
+<td>线程当前状态，线程状态下面就是线程的堆栈信息</td>
+</tr>
+</tbody></table>
+<p>线程的运行状态：</p>
+<ul>
+<li>New: 线程对象创建，不可执行。</li>
+<li>Runnable: 调用 thread.start() 进入 runnable，获得 CPU 时间即可执行。</li>
+<li>Running: 执行状态。</li>
+<li>Waiting: thread.join() 或调用锁对象 wait() 进入该状态，当前线程会保持该状态直到其他线程发送通知到该对象。</li>
+<li>Timed_Waiting：执行 Thread.sleep(long)、thread.join(long) 或 obj.wait(long) 等就会进该状态，与 Waiting 的区别在于 Timed_Waiting 的等待有时间限制；</li>
+<li>Blocked: 等待锁，进入同步方法，同步代码块，如果没有获取到锁会进入该状态。该线程尝试进入一个被其他线程占用的 synchronized 块，当前线程直到锁被释放之前一直都是 blocked 状态。</li>
+<li>Dead：执行结束，或者抛出了未捕获的异常之后。</li>
+<li>Deadlock: 死锁。</li>
+<li>Waiting on condition：等待某个资源或条件发生来唤醒自己。</li>
+<li>Waiting on monitor entry：在等待获取锁。</li>
+<li>terminated: 线程已经结束 run() 并且通知其他线程 joining。</li>
+</ul>
+<p>此文开头解决的问题，由于是公司项目，不方便贴上定位的过程日志和代码，所以就先记录下定位的思路和基本概念。</p>
+<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><blockquote>
+<p><a href="https://www.cnblogs.com/kongzhongqijing/articles/3630264.html" title="java命令--jstack 工具 | milkty">java命令–jstack 工具 | milkty</a><br><a href="http://einverne.github.io/post/2017/09/jstack-usage.html" title="每天学习一个命令：jstack 打印 Java 进程堆栈信息 | Ein Verne">每天学习一个命令：jstack 打印 Java 进程堆栈信息 | Ein Verne</a><br><a href="https://skyao.gitbooks.io/leaning-java-performance-tuning/content/cpu/threaddump/dump/jstack.html" title="Java 性能调优学习笔记">Java 性能调优学习笔记</a><br><a href="https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/using_threaddumps.html" title="Using Thread Dumps | Oracle">Using Thread Dumps | Oracle</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='Jstack 使用介绍' >Jstack 使用介绍</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='Jstack 使用介绍' >http://www.cylong.com/blog/2019/09/10/jstack/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>jstack</tag>
+        <tag>调试工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈 HashMap</title>
+    <url>/blog/2019/09/10/hashmap/</url>
+    <content><![CDATA[<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>HashMap 是 Java 编程中非常常用的一种数据结构，在各种面试中也是频繁出现的问题。我是一次定位问题，发现了服务后台 CPU 和内存飙升，原因是使用 HashMap 的时候，并发插入数据在 resize() 方法中产生循环链表导致死循环（JDK8 已经解决）。看到代码中大量的 HashMap，不自然的就想先了解下 HashMap 的实现原理和其线程安全问题。此文主要是介绍 HashMap 的实现原理，关于如何定位 CPU 和内存飙升问题，可以看另外一篇博客：</p>
+<blockquote>
+<p><a href="/blog/2019/09/10/jstack/" title="Jstack 使用介绍 | 笑话人生">Jstack 使用介绍 | 笑话人生</a></p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h1><p>HashMap 是一种存储 <code>key -&gt; value </code>键值对的数据结构，每一个键值对称为 Entry，这些 Entry 存储在一个 table 数组中，每个 Entry 是一个链表结构，有一个 next 指针指向下一个元素。接下来我们看一下比较重要的代码。</p>
+<img src="/blog/2019/09/10/hashmap/%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84.jpg" class="" title="存储结构">
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Basic hash bin node, used for most entries.  (See below for</span></span><br><span class="line"><span class="comment"> * TreeNode subclass, and in LinkedHashMap for its Entry subclass.)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; <span class="keyword">implements</span> <span class="title">Map</span>.<span class="title">Entry</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> hash;</span><br><span class="line">    <span class="keyword">final</span> K key;</span><br><span class="line">    V value;</span><br><span class="line">    Node&lt;K,V&gt; next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The table, initialized on first use, and resized as</span></span><br><span class="line"><span class="comment"> * necessary. When allocated, length is always a power of two.</span></span><br><span class="line"><span class="comment"> * (We also tolerate length zero in some operations to allow</span></span><br><span class="line"><span class="comment"> * bootstrapping mechanics that are currently not needed.)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">transient</span> Node&lt;K,V&gt;[] table;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The number of key-value mappings contained in this map.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">transient</span> <span class="keyword">int</span> size;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The number of times this HashMap has been structurally modified</span></span><br><span class="line"><span class="comment"> * Structural modifications are those that change the number of mappings in</span></span><br><span class="line"><span class="comment"> * the HashMap or otherwise modify its internal structure (e.g.,</span></span><br><span class="line"><span class="comment"> * rehash).  This field is used to make iterators on Collection-views of</span></span><br><span class="line"><span class="comment"> * the HashMap fail-fast.  (See ConcurrentModificationException).</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">transient</span> <span class="keyword">int</span> modCount;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The next size value at which to resize (capacity * load factor).</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@serial</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// (The javadoc description is true upon serialization.</span></span><br><span class="line"><span class="comment">// Additionally, if the table array has not been allocated, this</span></span><br><span class="line"><span class="comment">// field holds the initial array capacity, or zero signifying</span></span><br><span class="line"><span class="comment">// DEFAULT_INITIAL_CAPACITY.)</span></span><br><span class="line"><span class="keyword">int</span> threshold;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The load factor for the hash table.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@serial</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">final</span> <span class="keyword">float</span> loadFactor;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Node 就是上面说的 Entry 的实现，用来保存键值对，实现了 Map.Entry 接口。其中 hash 的值是通过 hash() 方法计算出来，key 和 value 是存入的值，next 是出现哈希冲突的时候，会使用 next 指向链表中的下一个元素对象。</li>
+<li>table 存储 Entry 的数组，初始长度是 DEFAULT_INITIAL_CAPACITY = 16。</li>
+<li>size 是实际存储的键值对数量。</li>
+<li>modCount 记录内部结构发生的次数，比如 put、remove 操作等。常见的一边遍历元素一边删除元素的操作就会报 java.util.ConcurrentModificationException。</li>
+<li>loadFactor 负载因子，默认是 DEFAULT_LOAD_FACTOR = 0.75f。</li>
+<li>threshold 允许存储的最大元素数量是通过 table 数组长度 * loadFactor 负载因子得出。</li>
+</ul>
+<h1 id="put-操作"><a href="#put-操作" class="headerlink" title="put 操作"></a>put 操作</h1><p>在 put 操作中，将元素 key 进行 hash 计算并找到 table 的数组下标，将 Entry 直接放入数组中，作为头元素，若通过算法得到的该数组元素已经有了元素（俗称 hash 冲突，链表结构出现的实际意义也就是为了解决 hash 冲突的问题）。当新来的 Entry 映射到冲突的数组位置时，只需要插入到对应的链表即可。接下来直接在源码上解释。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Implements Map.put and related methods.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> hash hash for key</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> key the key</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> value the value to put</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> onlyIfAbsent if true, don&#x27;t change existing value</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> evict if false, the table is in creation mode.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> previous value, or null if none</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">final</span> V <span class="title">putVal</span><span class="params">(<span class="keyword">int</span> hash, K key, V value, <span class="keyword">boolean</span> onlyIfAbsent,</span></span></span><br><span class="line"><span class="function"><span class="params">               <span class="keyword">boolean</span> evict)</span> </span>&#123;</span><br><span class="line">    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; <span class="keyword">int</span> n, i;</span><br><span class="line">    <span class="comment">// 首先判断 table 数组是否为空，为空则创建 table。</span></span><br><span class="line">    <span class="keyword">if</span> ((tab = table) == <span class="keyword">null</span> || (n = tab.length) == <span class="number">0</span>)</span><br><span class="line">        n = (tab = resize()).length;</span><br><span class="line">    <span class="keyword">if</span> ((p = tab[i = (n - <span class="number">1</span>) &amp; hash]) == <span class="keyword">null</span>)</span><br><span class="line">        <span class="comment">// 如果通过 (n - 1) &amp; hash 找到的数组元素为空，则直接创建新的 node，作为头节点。</span></span><br><span class="line">        tab[i] = newNode(hash, key, value, <span class="keyword">null</span>);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        Node&lt;K,V&gt; e; K k;</span><br><span class="line">        <span class="comment">// 找到数组元素，判断是相同的 key 值。</span></span><br><span class="line">        <span class="keyword">if</span> (p.hash == hash &amp;&amp;</span><br><span class="line">            ((k = p.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k))))</span><br><span class="line">            e = p;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (p <span class="keyword">instanceof</span> TreeNode)</span><br><span class="line">            <span class="comment">// 如果是红黑树结构，则向树插入数据</span></span><br><span class="line">            e = ((TreeNode&lt;K,V&gt;)p).putTreeVal(<span class="keyword">this</span>, tab, hash, key, value);</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 该数组元素 hash 相等，key 不等，同时链表长度 &lt; 8。进行遍历寻找元素，有就覆盖无则新建</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> binCount = <span class="number">0</span>; ; ++binCount) &#123;</span><br><span class="line">                <span class="keyword">if</span> ((e = p.next) == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="comment">// 向链表尾插入数据</span></span><br><span class="line">                    p.next = newNode(hash, key, value, <span class="keyword">null</span>);</span><br><span class="line">                    <span class="keyword">if</span> (binCount &gt;= TREEIFY_THRESHOLD - <span class="number">1</span>) <span class="comment">// -1 for 1st</span></span><br><span class="line">                        <span class="comment">// 链表长度 &gt;=8 结构转为红黑树</span></span><br><span class="line">                        treeifyBin(tab, hash);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (e.hash == hash &amp;&amp;</span><br><span class="line">                    ((k = e.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k))))</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                p = e;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果是存在的元素，则根据条件是否覆盖之前的值。</span></span><br><span class="line">        <span class="keyword">if</span> (e != <span class="keyword">null</span>) &#123; <span class="comment">// existing mapping for key</span></span><br><span class="line">            V oldValue = e.value;</span><br><span class="line">            <span class="keyword">if</span> (!onlyIfAbsent || oldValue == <span class="keyword">null</span>)</span><br><span class="line">                e.value = value;</span><br><span class="line">            afterNodeAccess(e);</span><br><span class="line">            <span class="keyword">return</span> oldValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 内部结构变化次数 +1</span></span><br><span class="line">    ++modCount;</span><br><span class="line">    <span class="comment">// 当 map 的实际大小大于了 threshold 则进行 resize 操作，将最大存储数量变为原来的两倍。</span></span><br><span class="line">    <span class="keyword">if</span> (++size &gt; threshold)</span><br><span class="line">        resize();</span><br><span class="line">    afterNodeInsertion(evict);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里确定 table 的数组下标使用的 hash 算法是 <code>(n - 1) &amp; hash(key)</code>，相对于取模运算，使用位运算效率更高。key 值的 hash 计算是高 16bit 不变，低 16bit 和高 16bit 做了一个异或。主要是为了保证 n 太小的时候，高低位均能参与下标的计算。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Computes key.hashCode() and spreads (XORs) higher bits of hash</span></span><br><span class="line"><span class="comment"> * to lower.  Because the table uses power-of-two masking, sets of</span></span><br><span class="line"><span class="comment"> * hashes that vary only in bits above the current mask will</span></span><br><span class="line"><span class="comment"> * always collide. (Among known examples are sets of Float keys</span></span><br><span class="line"><span class="comment"> * holding consecutive whole numbers in small tables.)  So we</span></span><br><span class="line"><span class="comment"> * apply a transform that spreads the impact of higher bits</span></span><br><span class="line"><span class="comment"> * downward. There is a tradeoff between speed, utility, and</span></span><br><span class="line"><span class="comment"> * quality of bit-spreading. Because many common sets of hashes</span></span><br><span class="line"><span class="comment"> * are already reasonably distributed (so don&#x27;t benefit from</span></span><br><span class="line"><span class="comment"> * spreading), and because we use trees to handle large sets of</span></span><br><span class="line"><span class="comment"> * collisions in bins, we just XOR some shifted bits in the</span></span><br><span class="line"><span class="comment"> * cheapest possible way to reduce systematic lossage, as well as</span></span><br><span class="line"><span class="comment"> * to incorporate impact of the highest bits that would otherwise</span></span><br><span class="line"><span class="comment"> * never be used in index calculations because of table bounds.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">hash</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> h;</span><br><span class="line">    <span class="keyword">return</span> (key == <span class="keyword">null</span>) ? <span class="number">0</span> : (h = key.hashCode()) ^ (h &gt;&gt;&gt; <span class="number">16</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="get-操作"><a href="#get-操作" class="headerlink" title="get 操作"></a>get 操作</h1><p>get 方法通过 hash 寻找到 Entry 数组下标，找到头节点，然后顺着对应链表的头节点，一个一个向下来查找。由于 JDK8 引用了红黑树结构，在链表元素过多时，JDK8 的实现将比 JDK7 在 get 和 put 操作上效率高上很多。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Implements Map.get and related methods.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> hash hash for key</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> key the key</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> the node, or null if none</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">final</span> Node&lt;K,V&gt; <span class="title">getNode</span><span class="params">(<span class="keyword">int</span> hash, Object key)</span> </span>&#123;</span><br><span class="line">    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; first, e; <span class="keyword">int</span> n; K k;</span><br><span class="line">    <span class="keyword">if</span> ((tab = table) != <span class="keyword">null</span> &amp;&amp; (n = tab.length) &gt; <span class="number">0</span> &amp;&amp;</span><br><span class="line">        (first = tab[(n - <span class="number">1</span>) &amp; hash]) != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (first.hash == hash &amp;&amp; <span class="comment">// always check first node</span></span><br><span class="line">            ((k = first.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k))))</span><br><span class="line">            <span class="keyword">return</span> first;</span><br><span class="line">        <span class="keyword">if</span> ((e = first.next) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (first <span class="keyword">instanceof</span> TreeNode)</span><br><span class="line">                <span class="keyword">return</span> ((TreeNode&lt;K,V&gt;)first).getTreeNode(hash, key);</span><br><span class="line">            <span class="keyword">do</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (e.hash == hash &amp;&amp;</span><br><span class="line">                    ((k = e.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k))))</span><br><span class="line">                    <span class="keyword">return</span> e;</span><br><span class="line">            &#125; <span class="keyword">while</span> ((e = e.next) != <span class="keyword">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="resize-操作"><a href="#resize-操作" class="headerlink" title="resize 操作"></a>resize 操作</h1><p>当 map 的实际大小大于了 threshold 则进行 resize 操作，将最大存储数量变为原来的两倍。接下来我们看一下源码。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Initializes or doubles table size.  If null, allocates in</span></span><br><span class="line"><span class="comment"> * accord with initial capacity target held in field threshold.</span></span><br><span class="line"><span class="comment"> * Otherwise, because we are using power-of-two expansion, the</span></span><br><span class="line"><span class="comment"> * elements from each bin must either stay at same index, or move</span></span><br><span class="line"><span class="comment"> * with a power of two offset in the new table.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> the table</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">final</span> Node&lt;K,V&gt;[] resize() &#123;</span><br><span class="line">    Node&lt;K,V&gt;[] oldTab = table;</span><br><span class="line">    <span class="keyword">int</span> oldCap = (oldTab == <span class="keyword">null</span>) ? <span class="number">0</span> : oldTab.length;</span><br><span class="line">    <span class="keyword">int</span> oldThr = threshold;</span><br><span class="line">    <span class="keyword">int</span> newCap, newThr = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (oldCap &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 超过最大限制，不进行扩容</span></span><br><span class="line">        <span class="keyword">if</span> (oldCap &gt;= MAXIMUM_CAPACITY) &#123;</span><br><span class="line">            threshold = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">return</span> oldTab;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 进行原始长度2倍扩容</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((newCap = oldCap &lt;&lt; <span class="number">1</span>) &lt; MAXIMUM_CAPACITY &amp;&amp;</span><br><span class="line">                 oldCap &gt;= DEFAULT_INITIAL_CAPACITY)</span><br><span class="line">            newThr = oldThr &lt;&lt; <span class="number">1</span>; <span class="comment">// double threshold</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 第一次初始化</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (oldThr &gt; <span class="number">0</span>) <span class="comment">// initial capacity was placed in threshold</span></span><br><span class="line">        newCap = oldThr;</span><br><span class="line">    <span class="keyword">else</span> &#123;               <span class="comment">// zero initial threshold signifies using defaults</span></span><br><span class="line">        newCap = DEFAULT_INITIAL_CAPACITY;</span><br><span class="line">        newThr = (<span class="keyword">int</span>)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 第一次初始化</span></span><br><span class="line">    <span class="keyword">if</span> (newThr == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">float</span> ft = (<span class="keyword">float</span>)newCap * loadFactor;</span><br><span class="line">        newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (<span class="keyword">float</span>)MAXIMUM_CAPACITY ?</span><br><span class="line">                  (<span class="keyword">int</span>)ft : Integer.MAX_VALUE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 新的最大允许元素数量值</span></span><br><span class="line">    threshold = newThr;</span><br><span class="line">    <span class="meta">@SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)</span></span><br><span class="line">    <span class="comment">// 新的 table 数组 </span></span><br><span class="line">    Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])<span class="keyword">new</span> Node[newCap];</span><br><span class="line">    table = newTab;</span><br><span class="line">    <span class="keyword">if</span> (oldTab != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 遍历老数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; oldCap; ++j) &#123;</span><br><span class="line">            Node&lt;K,V&gt; e;</span><br><span class="line">            <span class="keyword">if</span> ((e = oldTab[j]) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                oldTab[j] = <span class="keyword">null</span>;</span><br><span class="line">                <span class="comment">// 直接按照原始索引放入新数组中</span></span><br><span class="line">                <span class="keyword">if</span> (e.next == <span class="keyword">null</span>)</span><br><span class="line">                    newTab[e.hash &amp; (newCap - <span class="number">1</span>)] = e;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> TreeNode)</span><br><span class="line">                    ((TreeNode&lt;K,V&gt;)e).split(<span class="keyword">this</span>, newTab, j, oldCap);</span><br><span class="line">                <span class="keyword">else</span> &#123; <span class="comment">// preserve order</span></span><br><span class="line">                    <span class="comment">// 遍历链表</span></span><br><span class="line">                    Node&lt;K,V&gt; loHead = <span class="keyword">null</span>, loTail = <span class="keyword">null</span>;</span><br><span class="line">                    Node&lt;K,V&gt; hiHead = <span class="keyword">null</span>, hiTail = <span class="keyword">null</span>;</span><br><span class="line">                    Node&lt;K,V&gt; next;</span><br><span class="line">                    <span class="keyword">do</span> &#123;</span><br><span class="line">                        next = e.next;</span><br><span class="line">                        <span class="keyword">if</span> ((e.hash &amp; oldCap) == <span class="number">0</span>) &#123;</span><br><span class="line">                            <span class="keyword">if</span> (loTail == <span class="keyword">null</span>)</span><br><span class="line">                                loHead = e;</span><br><span class="line">                            <span class="keyword">else</span></span><br><span class="line">                                loTail.next = e;</span><br><span class="line">                            loTail = e;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span> &#123;</span><br><span class="line">                            <span class="keyword">if</span> (hiTail == <span class="keyword">null</span>)</span><br><span class="line">                                hiHead = e;</span><br><span class="line">                            <span class="keyword">else</span></span><br><span class="line">                                hiTail.next = e;</span><br><span class="line">                            hiTail = e;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">while</span> ((e = next) != <span class="keyword">null</span>);</span><br><span class="line">                    <span class="keyword">if</span> (loTail != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        loTail.next = <span class="keyword">null</span>;</span><br><span class="line">                        newTab[j] = loHead;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (hiTail != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        hiTail.next = <span class="keyword">null</span>;</span><br><span class="line">                        newTab[j + oldCap] = hiHead;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newTab;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h1><p>HashMap 是非线程安全的，在多线程环境下对某个 HashMap 进行并行操作，可能会产生很多不可预期的情况。</p>
+<h2 id="多线程-put-导致元素丢失"><a href="#多线程-put-导致元素丢失" class="headerlink" title="多线程 put 导致元素丢失"></a>多线程 put 导致元素丢失</h2><p>实验代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">        list.add(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    list.forEach(i -&gt; map.put(i, i));</span><br><span class="line">    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">10000</span>; i &lt; <span class="number">20000</span>; i++) &#123;</span><br><span class="line">            map.put(i, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">20000</span>; i &lt; <span class="number">30000</span>; i++) &#123;</span><br><span class="line">            map.put(i, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">    System.out.println(map.entrySet().size());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：29402，元素少了很多。</p>
+<p>这里很好理解，我们看 put 的代码，假设我们的线程1和线程2同时在执行 put 方法。其中的的 key 值计算后落入了 table 的同一个位置。这个时候，两个线程同时执行<code>p.next = newNode(hash, key, value, null);</code>，此时两个线程的元素值就会互相覆盖掉。</p>
+<h2 id="put-的同时-get-数据，可能会导致-get-的数据为-null"><a href="#put-的同时-get-数据，可能会导致-get-的数据为-null" class="headerlink" title="put 的同时 get 数据，可能会导致 get 的数据为 null"></a>put 的同时 get 数据，可能会导致 get 的数据为 null</h2><p>put 的时候，可能会产生 resize 操作，我们发现 resize 有如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])<span class="keyword">new</span> Node[newCap];</span><br><span class="line">table = newTab;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码会让新的 table 为空，这个时候调用 get 方法会获取到 null 数据。</p>
+<h2 id="JDK7-中并发-put-会造成循环链表"><a href="#JDK7-中并发-put-会造成循环链表" class="headerlink" title="JDK7 中并发 put 会造成循环链表"></a>JDK7 中并发 put 会造成循环链表</h2><p>此问题在 JDK8 中已经解决，在这里是提醒下自己 JDK7 中的 resize 操作会产生循环链表导致死循环，毕竟之前项目中确确实实遇到了死循环的问题。</p>
+<blockquote>
+<p><a href="/blog/2019/09/10/jstack/" title="Jstack 使用介绍 | 笑话人生">Jstack 使用介绍 | 笑话人生</a></p>
+</blockquote>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li><p><strong>什么时候会使用 HashMap？他有什么特点？</strong><br>是基于 Map 接口的实现，存储键值对时，它可以接收 null 的键值，HashMap 存储着 Entry 对象。HashMap 是非线程安全的。如果需要线程安全，则使用 ConcurrentHashMap，否则使用 HashMap 就足够了。</p>
+</li>
+<li><p><strong>你知道 HashMap 的工作原理吗？equals() 和 hashCode() 的都有什么作用？</strong><br>通过对 key 的 hashCode() 计算下标 <code>n - 1 &amp; hash</code>，从而获得 table 下标的位置，然后用 key.equals() 方法去链表或树中去查找对应的节点。get 和 put 方法如上介绍。</p>
+</li>
+<li><p><strong>你知道 hash 的实现吗？为什么要这样实现？</strong><br>在 Java 1.8 的实现中，是通过 key.hashCode() 的高16位异或低16位实现的：<code>(h = k.hashCode()) ^ (h &gt;&gt;&gt; 16)</code>，主要是从速度、功效、质量来考虑的，这么做可以在 table 的长度 n 比较小的时候，也能保证考虑到高低 bit 都参与到 hash 的计算中，同时不会有太大的开销。</p>
+</li>
+<li><p><strong>如果 HashMap 的大小超过了负载因子(load factor)定义的容量，怎么办？</strong><br>如果超过了负载因子(默认0.75)，则会重新 resize 一个原来长度两倍的 HashMap，并且重新调用 hash 方法。</p>
+</li>
+</ol>
+<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><blockquote>
+<p><a href="https://juejin.im/post/6844903744711163911" title="HashMap底层实现原理 | 忆逝">HashMap 底层实现原理 | 忆逝</a><br><a href="https://zhuanlan.zhihu.com/p/31610616" title="什么是HashMap | 小灰">什么是HashMap | 小灰</a><br><a href="https://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/" title="Java HashMap工作原理及实现 | Yikun">Java HashMap工作原理及实现 | Yikun</a><br><a href="https://juejin.im/post/6844903796225605640" title="深入解读HashMap线程安全性问题 | Mr羽墨青衫">深入解读HashMap线程安全性问题 | Mr羽墨青衫</a><br><a href="https://crossoverjie.top/2018/07/23/java-senior/ConcurrentHashMap/" title="HashMap? ConcurrentHashMap? 相信看完这篇没人能难住你！ | crossoverJie">HashMap? ConcurrentHashMap? 相信看完这篇没人能难住你！ | crossoverJie</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2019/09/10/hashmap/' title='浅谈 HashMap' >浅谈 HashMap</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2019/09/10/hashmap/' title='浅谈 HashMap' >http://www.cylong.com/blog/2019/09/10/hashmap/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>数组</tag>
+        <tag>链表</tag>
+        <tag>数据结构与算法</tag>
+        <tag>hashmap</tag>
+        <tag>红黑树</tag>
+        <tag>线程安全</tag>
+        <tag>面试总结</tag>
       </tags>
   </entry>
 </search>
