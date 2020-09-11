@@ -4482,59 +4482,59 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
 <table>
 <thead>
 <tr>
-<th align="center">Section</th>
-<th align="center">Example</th>
+<th>Section</th>
+<th>Example</th>
 <th>解释</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">线程名字</td>
-<td align="center">main 和 Reference Handler</td>
+<td>线程名字</td>
+<td>main 和 Reference Handler</td>
 <td>可读的线程名字，这个名字可以通过 Thread 方法 setName 设定</td>
 </tr>
 <tr>
-<td align="center">线程 ID</td>
-<td align="center">#1</td>
+<td>线程 ID</td>
+<td>#1</td>
 <td>每一个 Thread 对象的唯一 ID，这个 ID 是自动生成的，从 1 开始，通过 getId 方法获得</td>
 </tr>
 <tr>
-<td align="center">是否守护线程</td>
-<td align="center">daemon</td>
+<td>是否守护线程</td>
+<td>daemon</td>
 <td>这个标签用来标记线程是否是守护线程，如果是会有标记，如果不是这没有</td>
 </tr>
 <tr>
-<td align="center">优先级</td>
-<td align="center">prio=10</td>
+<td>优先级</td>
+<td>prio=10</td>
 <td>Java 线程的优先级，可以通过 setPriority 方法设置</td>
 </tr>
 <tr>
-<td align="center">OS 线程的优先级</td>
-<td align="center">os_prio</td>
+<td>OS 线程的优先级</td>
+<td>os_prio</td>
 <td></td>
 </tr>
 <tr>
-<td align="center">CPU 时间</td>
-<td align="center">cpu=94.43ms</td>
+<td>CPU 时间</td>
+<td>cpu=94.43ms</td>
 <td>线程获得 CPU 的时间</td>
 </tr>
 <tr>
-<td align="center">elapsed</td>
-<td align="center">elapsed=509136.51s</td>
+<td>elapsed</td>
+<td>elapsed=509136.51s</td>
 <td>线程启动后经过的 wall clock time</td>
 </tr>
 <tr>
-<td align="center">Address</td>
-<td align="center">tid</td>
+<td>Address</td>
+<td>tid</td>
 <td>Java 线程的地址，这个地址表示的是 JNI native Thread Object 的指针地址</td>
 </tr>
 <tr>
-<td align="center">OS 线程 ID</td>
-<td align="center">nid</td>
+<td>OS 线程 ID</td>
+<td>nid</td>
 <td>The unique ID of the OS thread to which the Java Thread is mapped</td>
 </tr>
 <tr>
-<td align="center">线程状态</td>
-<td align="center">Running</td>
+<td>线程状态</td>
+<td>Running</td>
 <td>线程当前状态，线程状态下面就是线程的堆栈信息</td>
 </tr>
 </tbody></table>
