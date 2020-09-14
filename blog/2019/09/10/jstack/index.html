@@ -22,7 +22,7 @@
 
   <meta name="description" content="前言在项目中遇到一个问题，我们服务提供给外部的一个接口 queryXXX 一直返回 429 错误（Too Many Requests），接口没有返回值，而且服务越用越卡，要重启一下才能恢复。于是马上就想到是不是因为这个接口产生了死循环，导致接口无法正确返回，同时导致后台 CPU 和内存占用飙升，顺着这个思路定位下去，确实顺利的找到的问题所在。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jstack 使用介绍">
+<meta property="og:title" content="JStack 使用介绍">
 <meta property="og:url" content="http://www.cylong.com/blog/2019/09/10/jstack/index.html">
 <meta property="og:site_name" content="笑话人生">
 <meta property="og:description" content="前言在项目中遇到一个问题，我们服务提供给外部的一个接口 queryXXX 一直返回 429 错误（Too Many Requests），接口没有返回值，而且服务越用越卡，要重启一下才能恢复。于是马上就想到是不是因为这个接口产生了死循环，导致接口无法正确返回，同时导致后台 CPU 和内存占用飙升，顺着这个思路定位下去，确实顺利的找到的问题所在。">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Jstack 使用介绍 | 笑话人生</title>
+  <title>JStack 使用介绍 | 笑话人生</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77162231-1"></script>
     <script>
@@ -231,7 +231,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Jstack 使用介绍
+          JStack 使用介绍
         </h1>
 
         <div class="post-meta">
@@ -290,11 +290,12 @@
 <a id="more"></a>
 
 <h1 id="定位思路"><a href="#定位思路" class="headerlink" title="定位思路"></a>定位思路</h1><ol>
-<li>查看服务的后台 CPU 和内存占用，发现服务占用的内存和 CPU 过高。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br><span class="line">free -h</span><br></pre></td></tr></table></figure></li>
-<li>通过 jps/ps/top 命令找到 CPU 和内存占用高的进程 ID 找到，top -H -p PID，找到占用率高的线程ID。</li>
-<li>jstack -l PID &gt; stack.txt</li>
-<li>找到日志里面的线程ID（注意第三步的线程地址是十进制，日志里的是十六进制）对应接口服务，发现 queryXXX 接口的状态一直是 RUNNING 状态，卡死。</li>
-<li>定位后发现代码中使用了流 API 的 parallelStream 导致的问题，原因是 parallelStream 是并行操作，我们这边使用了 HashMap，HashMap 是非线程安全的，并发插入数据在 resize() 方法中产生循环链表导致死循环（JDK8 已经解决），导致 queryXXX 接口的状态一直是 RUNNING，无返回值，CPU和内存飙升。调用服务方在没有接受到返回的时候不断请求这个服务，于是产生了 429 错误。</li>
+<li>执行 <code>free -m/free -h</code> 查看服务的后台 CPU 和内存占用，发现服务占用的内存和 CPU 过高。</li>
+<li>执行 <code>jps/ps/top</code> 命令找到 CPU 和内存占用高的进程 ID(32033)。</li>
+<li>执行 <code>top -H -p 32033</code>，找到 %CPU 和 %MEM 占用高的 PID(60958)，转换成16进制 ee1e。</li>
+<li>执行 <code>jstack -l 32033 &gt; stack.txt</code>，打印调用栈信息。</li>
+<li>找到 stack.txt 日志里面的 <code>nid=0xee1e</code>（注意第三步的是十进制，日志里的是十六进制）对应接口服务，分析调用栈，发现 queryXXX 接口的状态一直是 RUNNING 状态，卡死。</li>
+<li>定位后发现代码中使用了流 API 的 parallelStream 导致的问题，原因是 parallelStream 是并行操作，我们这边使用了 HashMap，HashMap 是非线程安全的，并发插入数据在 resize() 方法中产生循环链表导致死循环（JDK8 已经解决），导致 queryXXX 接口的状态一直是 RUNNING，无返回值，CPU 和内存飙升。调用服务方在没有接受到返回的时候不断请求这个服务，于是产生了 429 错误。</li>
 <li>我们这边 HashMap 是局部变量，解决方法是将 parallelStream 并行流修改为 stream 串行流。如果此 HashMap 是那种全局变量，涉及并发操作，则可以改成使用 ConcurrentHashMap。</li>
 </ol>
 <p>关于 HashMap 的介绍可以参考：</p>
@@ -391,7 +392,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p>文章标题：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='Jstack 使用介绍' >Jstack 使用介绍</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='Jstack 使用介绍' >http://www.cylong.com/blog/2019/09/10/jstack/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+<p>文章标题：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='JStack 使用介绍' >JStack 使用介绍</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2019/09/10/jstack/' title='JStack 使用介绍' >http://www.cylong.com/blog/2019/09/10/jstack/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
 </blockquote>
 
     </div>
@@ -741,7 +742,7 @@
   var disqus_config = function() {
     this.page.url = "http://www.cylong.com/blog/2019/09/10/jstack/";
     this.page.identifier = "blog/2019/09/10/jstack/";
-    this.page.title = "Jstack 使用介绍";
+    this.page.title = "JStack 使用介绍";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
