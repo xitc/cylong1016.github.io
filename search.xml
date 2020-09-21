@@ -4741,4 +4741,63 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
         <tag>欧拉路径</tag>
       </tags>
   </entry>
+  <entry>
+    <title>钥匙和房间</title>
+    <url>/blog/2020/08/31/keys-and-rooms/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>有 N 个房间，开始时你位于 0 号房间。每个房间有不同的号码：0，1，2，…，N - 1，并且房间里可能有一些钥匙能使你进入下一个房间。在形式上，对于每个房间 i 都有一个钥匙列表 rooms[i]，每个钥匙 rooms[i][j] 由 [0, 1，…，N - 1] 中的一个整数表示，其中 N = rooms.length。 钥匙 rooms[i][j] = v 可以打开编号为 v 的房间。</p>
+<p>最初，除 0 号房间外的其余所有房间都被锁住。你可以自由地在房间之间来回走动。如果能进入每个房间返回 true，否则返回 false。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入: [<a href="https://leetcode-cn.com/problems/keys-and-rooms/" title="钥匙和房间 | 力扣（LeetCode）">1</a>,<a href="https://leetcode-cn.com/problems/keys-and-rooms/solution/yao-chi-he-fang-jian-by-leetcode-solution/" title="钥匙和房间 | 题解（LeetCode）">2</a>,[3],[]]<br>输出: true<br>解释:<br>我们从 0 号房间开始，拿到钥匙 1。<br>之后我们去 1 号房间，拿到钥匙 2。<br>然后我们去 2 号房间，拿到钥匙 3。<br>最后我们去了 3 号房间。<br>由于我们能够进入每个房间，我们返回 true。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：[[1,3],[3,0,1],<a href="https://leetcode-cn.com/problems/keys-and-rooms/solution/yao-chi-he-fang-jian-by-leetcode-solution/" title="钥匙和房间 | 题解（LeetCode）">2</a>,[0]]<br>输出：false<br>解释：我们不能进入 2 号房间。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ol>
+<li>1 &lt;= rooms.length &lt;= 1000</li>
+<li>0 &lt;= rooms[i].length &lt;= 1000</li>
+<li>所有房间中的钥匙数量总计不超过 3000。</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h1><p>此题我们将房间理解成节点，房间 A 到房间 B 理解成边，这样这道题就变成了，我们从图的 0 点出发，能否到达所有节点的问题。</p>
+<p>具体实现上，我们使用一个变量 count 记录访问过的房间数，每次访问过一个房间后就标记为访问过 <code>visited[room] = true</code>，并将 <code>count++</code> ，如果最后 count 等于房间的数量，那么就说明可以访问所有的房间。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">boolean</span>[] visited;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canVisitAllRooms</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; rooms)</span> </span>&#123;</span><br><span class="line">    visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[rooms.size()];</span><br><span class="line">    visitRooms(rooms, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> count == rooms.size();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">visitRooms</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; rooms, Integer room)</span> </span>&#123;</span><br><span class="line">    visited[room] = <span class="keyword">true</span>;</span><br><span class="line">    count++;</span><br><span class="line">    List&lt;Integer&gt; keyList = rooms.get(room);</span><br><span class="line">    <span class="keyword">for</span> (Integer nextRoom : keyList) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!visited[nextRoom]) &#123;</span><br><span class="line">            visitRooms(rooms, nextRoom);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n + m)，其中 n 是房间的数量，m 是所有房间中的钥匙数量的总数。</li>
+<li>空间复杂度：O(n)，其中 n 是房间的数量。主要为栈空间的开销。</li>
+</ul>
+<h1 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h1><p>同样的，我们可以使用广度优先搜索解决此问题。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canVisitAllRooms</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; rooms)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = rooms.size();</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span>[] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">    Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">    visited[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">    queue.offer(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> room = queue.poll();</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> key : rooms.get(room)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!visited[key]) &#123;</span><br><span class="line">                visited[key] = <span class="keyword">true</span>;</span><br><span class="line">                queue.offer(key);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(n + m)，其中 n 是房间的数量，m 是所有房间中的钥匙数量的总数。</li>
+<li>空间复杂度：O(n)，其中 n 是房间的数量。主要为队列的开销。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/keys-and-rooms/" title="钥匙和房间 | 力扣（LeetCode）">钥匙和房间 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/keys-and-rooms/solution/yao-chi-he-fang-jian-by-leetcode-solution/" title="钥匙和房间 | 题解（LeetCode）">钥匙和房间 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/08/31/keys-and-rooms/' title='钥匙和房间' >钥匙和房间</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/08/31/keys-and-rooms/' title='钥匙和房间' >http://www.cylong.com/blog/2020/08/31/keys-and-rooms/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>队列</tag>
+        <tag>递归</tag>
+        <tag>深度优先搜索</tag>
+        <tag>广度优先搜索</tag>
+        <tag>图</tag>
+      </tags>
+  </entry>
 </search>
