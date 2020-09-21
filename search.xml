@@ -4749,7 +4749,7 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
 <p>最初，除 0 号房间外的其余所有房间都被锁住。你可以自由地在房间之间来回走动。如果能进入每个房间返回 true，否则返回 false。</p>
 <p><strong>示例 1：</strong></p>
 <blockquote>
-<p>输入: [<a href="https://leetcode-cn.com/problems/keys-and-rooms/" title="钥匙和房间 | 力扣（LeetCode）">1</a>,<a href="https://leetcode-cn.com/problems/keys-and-rooms/solution/yao-chi-he-fang-jian-by-leetcode-solution/" title="钥匙和房间 | 题解（LeetCode）">2</a>,[3],[]]<br>输出: true<br>解释:<br>我们从 0 号房间开始，拿到钥匙 1。<br>之后我们去 1 号房间，拿到钥匙 2。<br>然后我们去 2 号房间，拿到钥匙 3。<br>最后我们去了 3 号房间。<br>由于我们能够进入每个房间，我们返回 true。</p>
+<p>输入: [[1],[2],[3],[]]<br>输出: true<br>解释:<br>我们从 0 号房间开始，拿到钥匙 1。<br>之后我们去 1 号房间，拿到钥匙 2。<br>然后我们去 2 号房间，拿到钥匙 3。<br>最后我们去了 3 号房间。<br>由于我们能够进入每个房间，我们返回 true。</p>
 </blockquote>
 <p><strong>示例 2：</strong></p>
 <blockquote>
