@@ -4873,4 +4873,54 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
         <tag>零和博弈</tag>
       </tags>
   </entry>
+  <entry>
+    <title>汉明距离</title>
+    <url>/blog/2020/09/08/hamming-distance/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。给出两个整数 x 和 y，计算它们之间的汉明距离。</p>
+<p><strong>示例:</strong></p>
+<blockquote>
+<p>输入: x = 1, y = 4<br>输出: 2<br>解释:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1   (0 0 0 1)</span><br><span class="line">4   (0 1 0 0)</span><br><span class="line">       ↑   ↑</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h1 id="位移运算"><a href="#位移运算" class="headerlink" title="位移运算"></a>位移运算</h1><p>根据题意，我们直接使用异或运算两个整数，结果是相同位为 1，不同位为 0，这样我们直接计算异或后整数的 1 的位数，就是汉明距离。检查某一位是否是 1， 可以使用取模运算(i % 2)或者 AND 与运算(i &amp; 1)。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xor = x ^ y;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (xor != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (xor % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            ans += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        xor = xor &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(1)，在 Java 中 Integer 的大小是固定的，处理时间也是固定的。 32 位整数需要 32 次迭代。</li>
+<li>空间复杂度：O(1)，使用恒定大小的空间。</li>
+</ul>
+<h1 id="Brian-Kernighan-算法"><a href="#Brian-Kernighan-算法" class="headerlink" title="Brian Kernighan 算法"></a>Brian Kernighan 算法</h1><p>上面例子中，遇到最右边的 1 后，如果可以跳过中间的 0，直接跳到下一个 1，效率会高很多。这是布赖恩·克尼根位计数算法的基本思想。该算法使用特定比特位和算术运算移除等于 1 的最右比特位。</p>
+<p>当我们在 number 和 number - 1 上做 AND 位运算时，原数字 number 的最右边等于 1 的比特会被移除。</p>
+<img src="/blog/2020/09/08/hamming-distance/BrianKernighan%E7%AE%97%E6%B3%95.png" class="" title="Brian Kernighan 算法">
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xor = x ^ y;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (xor != <span class="number">0</span>) &#123;</span><br><span class="line">        ans += <span class="number">1</span>;</span><br><span class="line">        xor = xor &amp; (xor - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(1)，在 Java 中 Integer 的大小是固定的，处理时间也是固定的。 但是该方法需要的迭代操作更少。</li>
+<li>空间复杂度：O(1)，使用恒定大小的空间。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/hamming-distance/" title="汉明距离 | 力扣（LeetCode）">预测赢家 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/hamming-distance/solution/yi-ming-ju-chi-by-leetcode/" title="汉明距离 | 题解（LeetCode）">预测赢家 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/09/08/hamming-distance/' title='汉明距离' >汉明距离</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/09/08/hamming-distance/' title='汉明距离' >http://www.cylong.com/blog/2020/09/08/hamming-distance/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>数学</tag>
+        <tag>位运算</tag>
+        <tag>Brian Kernighan 算法</tag>
+      </tags>
+  </entry>
 </search>

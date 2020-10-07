@@ -6,7 +6,7 @@
   <link href="http://www.cylong.com/atom.xml" rel="self"/>
   
   <link href="http://www.cylong.com/"/>
-  <updated>2020-09-21T15:30:34.000Z</updated>
+  <updated>2020-09-07T16:10:52.000Z</updated>
   <id>http://www.cylong.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汉明距离</title>
+    <link href="http://www.cylong.com/blog/2020/09/08/hamming-distance/"/>
+    <id>http://www.cylong.com/blog/2020/09/08/hamming-distance/</id>
+    <published>2020-09-07T16:10:52.000Z</published>
+    <updated>2020-09-07T16:10:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。给出两个整数 x 和 y，计算它们之间的汉明距离。</p><p><strong>示例:</strong></p><blockquote><p>输入: x = 1, y = 4<br>输出: 2<br>解释:</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1   (0 0 0 1)</span><br><span class="line">4   (0 1 0 0)</span><br><span class="line">       ↑   ↑</span><br></pre></td></tr></table></figure><a id="more"></a><h1 id="位移运算"><a href="#位移运算" class="headerlink" title="位移运算"></a>位移运算</h1><p>根据题意，我们直接使用异或运算两个整数，结果是相同位为 1，不同位为 0，这样我们直接计算异或后整数的 1 的位数，就是汉明距离。检查某一位是否是 1， 可以使用取模运算(i % 2)或者 AND 与运算(i &amp; 1)。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xor = x ^ y;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (xor != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (xor % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            ans += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        xor = xor &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(1)，在 Java 中 Integer 的大小是固定的，处理时间也是固定的。 32 位整数需要 32 次迭代。</li><li>空间复杂度：O(1)，使用恒定大小的空间。</li></ul><h1 id="Brian-Kernighan-算法"><a href="#Brian-Kernighan-算法" class="headerlink" title="Brian Kernighan 算法"></a>Brian Kernighan 算法</h1><p>上面例子中，遇到最右边的 1 后，如果可以跳过中间的 0，直接跳到下一个 1，效率会高很多。这是布赖恩·克尼根位计数算法的基本思想。该算法使用特定比特位和算术运算移除等于 1 的最右比特位。</p><p>当我们在 number 和 number - 1 上做 AND 位运算时，原数字 number 的最右边等于 1 的比特会被移除。</p><img src="/blog/2020/09/08/hamming-distance/BrianKernighan%E7%AE%97%E6%B3%95.png" class="" title="Brian Kernighan 算法"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> xor = x ^ y;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (xor != <span class="number">0</span>) &#123;</span><br><span class="line">        ans += <span class="number">1</span>;</span><br><span class="line">        xor = xor &amp; (xor - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(1)，在 Java 中 Integer 的大小是固定的，处理时间也是固定的。 但是该方法需要的迭代操作更少。</li><li>空间复杂度：O(1)，使用恒定大小的空间。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/hamming-distance/" title="汉明距离 | 力扣（LeetCode）">预测赢家 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/hamming-distance/solution/yi-ming-ju-chi-by-leetcode/" title="汉明距离 | 题解（LeetCode）">预测赢家 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/09/08/hamming-distance/' title='汉明距离' >汉明距离</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/09/08/hamming-distance/' title='汉明距离' >http://www.cylong.com/blog/2020/09/08/hamming-distance/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;
+&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。给出两个整数 x 和 y，计算它们之间的汉明距离。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入: x = 1, y = 4&lt;br&gt;输出: 2&lt;br&gt;解释:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1   (0 0 0 1)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4   (0 1 0 0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       ↑   ↑&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
+    
+    
+    <category term="java" scheme="http://www.cylong.com/tags/java/"/>
+    
+    <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
+    
+    <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="数学" scheme="http://www.cylong.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="位运算" scheme="http://www.cylong.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    <category term="Brian Kernighan 算法" scheme="http://www.cylong.com/tags/Brian-Kernighan-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉树的遍历</title>
@@ -878,61 +915,6 @@
     <category term="深度优先搜索" scheme="http://www.cylong.com/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
     
     <category term="广度优先搜索" scheme="http://www.cylong.com/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有效的括号</title>
-    <link href="http://www.cylong.com/blog/2020/07/27/valid-parentheses/"/>
-    <id>http://www.cylong.com/blog/2020/07/27/valid-parentheses/</id>
-    <published>2020-07-27T08:59:21.000Z</published>
-    <updated>2020-07-27T08:59:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。有效字符串需满足：</p><ul><li>左括号必须用相同类型的右括号闭合。</li><li>左括号必须以正确的顺序闭合。</li></ul><p><strong>注意：</strong> 空字符串可被认为是有效字符串。</p><p><strong>示例 1:</strong></p><blockquote><p>输入: “()”<br>输出: true</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>输入: “()[]{}”<br>输出: true</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p>输入: “(]”<br>输出: false</p></blockquote><p><strong>示例 4:</strong></p><blockquote><p>输入: “([)]”<br>输出: false</p></blockquote><p><strong>示例 5:</strong></p><blockquote><p>输入: “{[]}”<br>输出: true</p></blockquote><a id="more"></a><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>括号匹配是典型的代码分析问题，我们遍历字符串，每次处理一个括号，使用栈来保存这个括号。同时我们使用一个map来保存三种括号的开括号和闭括号。每次处理当前括号的时候，我们判断当前栈顶的元素是否是此括号对应的开括号，是的话，我们将弹出栈顶元素。否则我们将当前括号入栈。最后，如果栈的元素为空，那么可知此字符串是有效的字符串。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Stack&lt;Character&gt; parenthesesStack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    HashMap&lt;Character, Character&gt; parenthesesMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    parenthesesMap.put(<span class="string">&#x27;(&#x27;</span>, <span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">    parenthesesMap.put(<span class="string">&#x27;[&#x27;</span>, <span class="string">&#x27;]&#x27;</span>);</span><br><span class="line">    parenthesesMap.put(<span class="string">&#x27;&#123;&#x27;</span>, <span class="string">&#x27;&#125;&#x27;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> parentheses : s.toCharArray()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!parenthesesStack.isEmpty() &amp;&amp; Character.valueOf(parentheses)</span><br><span class="line">                .equals(parenthesesMap.get(parenthesesStack.peek()))) &#123;</span><br><span class="line">            parenthesesStack.pop();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            parenthesesStack.push(parentheses);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> parenthesesStack.isEmpty();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul><li>时间复杂度：O(n)，因为我们一次只遍历给定的字符串中的一个字符并在栈上进行 O(1) 的推入和弹出操作。</li><li>空间复杂度：O(n)，当我们将所有的开括号都推到栈上时以及在最糟糕的情况下，我们最终要把所有括号推到栈上。例如 ((((((((((。</li></ul><h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote><p><a href="https://leetcode-cn.com/problems/valid-parentheses/" title="有效的括号 | 力扣（LeetCode）">有效的括号 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-by-leetcode/" title="有效的括号 | 题解（LeetCode）">有效的括号 | 题解（LeetCode）</a></p></blockquote><hr><blockquote><p>文章标题：<a href='http://www.cylong.com/blog/2020/07/27/valid-parentheses/' title='有效的括号' >有效的括号</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/07/27/valid-parentheses/' title='有效的括号' >http://www.cylong.com/blog/2020/07/27/valid-parentheses/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p></blockquote>]]></content>
-    
-    
-    <summary type="html">&lt;hr&gt;
-&lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。有效字符串需满足：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;左括号必须用相同类型的右括号闭合。&lt;/li&gt;
-&lt;li&gt;左括号必须以正确的顺序闭合。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 空字符串可被认为是有效字符串。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “()”&lt;br&gt;输出: true&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “()[]{}”&lt;br&gt;输出: true&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “(]”&lt;br&gt;输出: false&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 4:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “([)]”&lt;br&gt;输出: false&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;示例 5:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入: “{[]}”&lt;br&gt;输出: true&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="LeetCode" scheme="http://www.cylong.com/categories/LeetCode/"/>
-    
-    
-    <category term="java" scheme="http://www.cylong.com/tags/java/"/>
-    
-    <category term="leetcode" scheme="http://www.cylong.com/tags/leetcode/"/>
-    
-    <category term="学习笔记" scheme="http://www.cylong.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="字符串" scheme="http://www.cylong.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="栈" scheme="http://www.cylong.com/tags/%E6%A0%88/"/>
     
   </entry>
   
