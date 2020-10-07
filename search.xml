@@ -4834,7 +4834,7 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
 </ul>
 <h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>定义二维数组 dp，其行数和列数都等于数组的长度，dp[i][j] 表示当数组剩下的部分为下标 i 到下标 j 时，当前玩家与另一个玩家的分数之差的最大值，注意当前玩家不一定是先手。</p>
 <ul>
-<li>只有当 i ≤ j 时，数组剩下的部分才有意义，因此当 i &gt; j 时，dp[i][j]=0。</li>
+<li>只有当 i ≤ j 时，数组剩下的部分才有意义，因此当 i &gt; j 时，dp[i][j] = 0。</li>
 <li>当 i = j 时，只剩一个数字，当前玩家只能拿取这个数字，因此对于所有 0 ≤ i &lt; nums.length，都有 dp[i][i] = nums[i]。</li>
 <li>当 i &lt; j 时，当前玩家可以选择 nums[i] 或 nums[j]，然后轮到另一个玩家在数组剩下的部分选取数字。在两种方案中，当前玩家会选择最优的方案，使得自己的分数最大化。因此可以得到如下状态转移方程：<blockquote>
 <p>dp[i][j] = max(nums[i] − dp[i+1][j], nums[j] − dp[i][j − 1])</p>
@@ -4852,7 +4852,7 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
 <li>空间复杂度：O(n)，其中 n 是数组的长度。空间复杂度取决于额外创建的数组 dp，如果不优化空间，则空间复杂度是 O(n²)，使用一维数组优化之后空间复杂度可以降至 O(n)。</li>
 </ul>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
-<p><a href="https://leetcode-cn.com/problems/keys-and-rooms/" title="预测赢家 | 力扣（LeetCode）">预测赢家 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/predict-the-winner/solution/yu-ce-ying-jia-by-leetcode-solution/" title="预测赢家 | 题解（LeetCode）">预测赢家 | 题解（LeetCode）</a></p>
+<p><a href="https://leetcode-cn.com/problems/predict-the-winner/" title="预测赢家 | 力扣（LeetCode）">预测赢家 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/predict-the-winner/solution/yu-ce-ying-jia-by-leetcode-solution/" title="预测赢家 | 题解（LeetCode）">预测赢家 | 题解（LeetCode）</a></p>
 </blockquote>
 <hr>
 <blockquote>
