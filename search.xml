@@ -5005,4 +5005,62 @@ DNSPod 设置：<img src="/blog/2016/05/22/github-baidu-spider-exception/dns-par
         <tag>学习笔记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>环形链表</title>
+    <url>/blog/2020/10/09/linked-list-cycle/</url>
+    <content><![CDATA[<hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个链表，判断链表中是否有环。如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</p>
+<p>如果链表中存在环，则返回 true 。 否则，返回 false 。</p>
+<p><strong>进阶：</strong></p>
+<p>你能用 O(1)（即，常量）内存解决此问题吗？</p>
+<p><strong>示例 1：</strong></p>
+<img src="/blog/2020/10/09/linked-list-cycle/circularlinkedlist.png" class="" title="环形链表">
+<blockquote>
+<p>输入：head = [3, 2, 0, -4], pos = 1<br>输出：true<br>解释：链表中有一个环，其尾部连接到第二个节点。</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>比较简单的方法是遍历整个链表，将每个元素都加入到 HashSet 中，根据 HashSet 的没有重复元素的特性，当遇到重复的元素，说明遍历这个链表访问了重复的元素，即链表中有环。HashSet 是使用 HashMap 实现的，关于实现细节可以直接看源码。</p>
+<blockquote>
+<p><a href="/blog/2019/09/10/hashmap/" title="浅谈 HashMap | 笑话人生">浅谈 HashMap | 笑话人生</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    HashSet&lt;ListNode&gt; visit = <span class="keyword">new</span> HashSet&lt;ListNode&gt;();</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!visit.add(head)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> val;</span><br><span class="line">   ListNode next;</span><br><span class="line">   ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">       val = x;</span><br><span class="line">       next = <span class="keyword">null</span>;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(N)，其中 N 是链表中的节点数。最坏情况下我们需要遍历每个节点一次。</li>
+<li>空间复杂度：O(N)，其中 N 是链表中的节点数。主要为哈希表的开销，最坏情况下我们需要将每个节点插入到哈希表中一次。</li>
+</ul>
+<h1 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h1><p>我们定义两个指针，一快一慢。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ListNode slow = head;</span><br><span class="line">    ListNode fast = head.next;</span><br><span class="line">    <span class="keyword">while</span> (slow != fast) &#123;</span><br><span class="line">        <span class="keyword">if</span> (fast == <span class="keyword">null</span> || fast.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
+<li>时间复杂度：O(N)，其中 N 是链表中的节点数。<ul>
+<li>当链表中不存在环时，快指针将先于慢指针到达链表尾部，链表中每个节点至多被访问两次。</li>
+<li>当链表中存在环时，每一轮移动后，快慢指针的距离将减小一。而初始距离为环的长度，因此至多移动 N 轮。</li>
+</ul>
+</li>
+<li>空间复杂度：O(1)。我们只使用了两个指针的额外空间。</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><blockquote>
+<p><a href="https://leetcode-cn.com/problems/linked-list-cycle/" title="环形链表 | 力扣（LeetCode）">环形链表 | 力扣（LeetCode）</a><br><a href="https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode-solution/" title="环形链表 | 题解（LeetCode）">环形链表 | 题解（LeetCode）</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>文章标题：<a href='http://www.cylong.com/blog/2020/10/09/linked-list-cycle/' title='环形链表' >环形链表</a><br>文章作者：<a href="http://www.cylong.com/about/" title="cylong">cylong</a><br>文章链接：<a href='http://www.cylong.com/blog/2020/10/09/linked-list-cycle/' title='环形链表' >http://www.cylong.com/blog/2020/10/09/linked-list-cycle/</a><br>有问题或者建议欢迎在下方评论。欢迎转载、引用，但希望标明出处，感激不尽(●’◡’●)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>leetcode</tag>
+        <tag>学习笔记</tag>
+        <tag>哈希表</tag>
+        <tag>链表</tag>
+        <tag>指针</tag>
+        <tag>双指针</tag>
+        <tag>hashset</tag>
+      </tags>
+  </entry>
 </search>
