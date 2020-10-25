@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cylong.com/blog/2020/10/15/populating-next-right-pointers-in-each-node/</loc>
+    
+    <lastmod>2020-10-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cylong.com/blog/2020/10/09/linked-list-cycle/</loc>
     
     <lastmod>2020-10-09</lastmod>
