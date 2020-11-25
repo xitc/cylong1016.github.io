@@ -35,6 +35,9 @@
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="指针">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://www.cylong.com/blog/2020/09/18/remove-duplicates-from-sorted-array/">
@@ -306,7 +309,7 @@
 <a id="more"></a>
 
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>题目中是一个排序后的数组，那么相同的元素一定是排列在一起的，我们可以使用两个指针 i 和 j，我们不断的移动j指针，只要 nums[i]=nums[j]，我们就进行 j++ 操作，跳过重复项，直到 nums[i]≠nums[j] 的时候，说明遇到了下一个非重复项，于是我们就将 num[j] 的值复制到 num[i + 1] 的位置，接着重复此流程，遍历完全部数组。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public int removeDuplicates(int[] nums) &#123;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    for (int j &#x3D; 1; j &lt; nums.length; j++) &#123;</span><br><span class="line">        if (nums[i] !&#x3D; nums[j]) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            nums[i] &#x3D; nums[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return i + 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] != nums[j]) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><ul>
 <li>时间复杂度：O(n)，假设数组的长度是 n，那么 i 和 j 分别最多遍历 n 步。</li>
@@ -351,6 +354,9 @@
               <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
               <a href="/tags/leetcode/" rel="tag"><i class="fa fa-tag"></i> leetcode</a>
               <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 数组</a>
+              <a href="/tags/%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 指针</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
           </div>
 
         
@@ -464,7 +470,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-count">94</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -553,7 +559,7 @@
   <span class="author" itemprop="copyrightHolder">cylong</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-    <span class="post-count">| 博客共90.8k字</span>
+    <span class="post-count">| 博客共91.7k字</span>
   </div>
 
         
