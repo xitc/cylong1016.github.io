@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.cylong.com/blog/2020/11/25/sum-root-to-leaf-numbers/</loc>
+    <loc>http://www.cylong.com/blog/2020/07/24/divisor-game/</loc>
     <lastmod>2020-11-25</lastmod>
   </url>
   <url>
-    <loc>http://www.cylong.com/blog/2020/07/24/divisor-game/</loc>
-    <lastmod>2020-11-10</lastmod>
+    <loc>http://www.cylong.com/blog/2020/10/29/sum-root-to-leaf-numbers/</loc>
+    <lastmod>2020-10-29</lastmod>
   </url>
   <url>
     <loc>http://www.cylong.com/blog/2020/10/27/binary-tree-preorder-traversal/</loc>
